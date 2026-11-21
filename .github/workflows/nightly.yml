@@ -12,6 +12,7 @@ permissions:
   contents: write               # save tonight's data back to the repository
   pages: write                  # publish the site
   id-token: write
+  actions: read                 # lets deploy-pages find the uploaded site
 
 concurrency:
   group: nightly
