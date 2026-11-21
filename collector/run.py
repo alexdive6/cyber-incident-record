@@ -218,7 +218,10 @@ class Run:
         for src in CFG["sources"]:
             if src.get("kind") != "rss":
                 continue
-            for i, url in enumerate(src.get("feeds") or [src["url"]]):
+            # "feeds" is a list of feed URLs for multi-feed sources; elsewhere it is
+            # a display label ("what this source feeds on the page"), so ignore strings.
+            urls = src.get("feeds") if isinstance(src.get("feeds"), list) else [src["url"]]
+            for i, url in enumerate(urls):
                 key = src["id"] + (f"-{i}" if i else "")
                 parsed = self.track(src, lambda u=url, k=key: fetch.parse_feed(fetch.get(u, k)))
                 for it in parsed or []:
