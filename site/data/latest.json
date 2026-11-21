@@ -3,7 +3,7 @@
 "meta": {
 "edition": "2026-11-21",
 "prev": "2026-11-19",
-"compiled": "2026-11-21T16:45-05:00",
+"compiled": "2026-11-21T17:06-05:00",
 "tz": "America/New_York",
 "mode": "live",
 "nextRun": "2026-11-22T02:00-05:00",
@@ -16,608 +16,8 @@
 "apache-axis-1118"
 ],
 "health": {
-"ok": 8,
+"ok": 30,
 "failed": [
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'M'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'f'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 't'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: ''"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'f'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'x'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: ''"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: ''"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'z'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: '-'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 'y'"
-},
-{
-"n": "Microsoft Security Update Guide",
-"err": "unknown url type: 's'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'G'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'v'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'm'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 't'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: ''"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'v'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 's'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "CISA alerts and advisories",
-"err": "unknown url type: 's'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'G'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'v'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'm'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 't'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: ''"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'v'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 's'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "UK NCSC",
-"err": "unknown url type: 's'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'F'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'h'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: ''"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'l'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 't'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 's'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: ''"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: ''"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 't'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'h'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 't'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: ''"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'p'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 't'"
-},
-{
-"n": "CERT-FR (ANSSI)",
-"err": "unknown url type: 's'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'G'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'm'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: ''"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 's'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'u'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 't'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'y'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: ''"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'v'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 's'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "BSI CERT-Bund WID",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'G'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'v'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'm'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 't'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: ''"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'v'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Canadian Centre for Cyber Security",
-"err": "unknown url type: 's'"
-},
 {
 "n": "Australian Cyber Security Centre",
 "err": "https://www.cyber.gov.au/rss/alerts: The read operation timed out"
@@ -625,1278 +25,6 @@
 {
 "n": "Australian Cyber Security Centre",
 "err": "https://www.cyber.gov.au/rss/advisories: The read operation timed out"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'C'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 't'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: ''"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 's'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'l'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 's'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'u'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "CERT/CC vulnerability notes",
-"err": "unknown url type: 's'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'C'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 't'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'l'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: ''"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 's'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'f'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 't'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'w'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: ''"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'v'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 's'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "MS-ISAC / CIS advisories",
-"err": "unknown url type: 's'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 'A'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 't'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 't'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 'k'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 's'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: ''"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: ''"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 'b'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 'h'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "The Record (Recorded Future News)",
-"err": "unknown url type: 's'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 'A'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 't'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 't'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 'k'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 's'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: ''"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: ''"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 'b'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 'h'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "BleepingComputer",
-"err": "unknown url type: 's'"
-},
-{
-"n": "SecurityWeek",
-"err": "unknown url type: 'A'"
-},
-{
-"n": "SecurityWeek",
-"err": "unknown url type: 't'"
-},
-{
-"n": "SecurityWeek",
-"err": "unknown url type: 't'"
-},
-{
-"n": "SecurityWeek",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "SecurityWeek",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "SecurityWeek",
-"err": "unknown url type: 'k'"
-},
-{
-"n": "SecurityWeek",
-"err": "unknown url type: 's'"
-},
-{
-"n": "SecurityWeek",
-"err": "unknown url type: ','"
-},
-{
-"n": "SecurityWeek",
-"err": "unknown url type: ''"
-},
-{
-"n": "SecurityWeek",
-"err": "unknown url type: 'f'"
-},
-{
-"n": "SecurityWeek",
-"err": "unknown url type: 'l'"
-},
-{
-"n": "SecurityWeek",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "SecurityWeek",
-"err": "unknown url type: 'w'"
-},
-{
-"n": "SecurityWeek",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Dark Reading",
-"err": "unknown url type: 'A'"
-},
-{
-"n": "Dark Reading",
-"err": "unknown url type: 't'"
-},
-{
-"n": "Dark Reading",
-"err": "unknown url type: 't'"
-},
-{
-"n": "Dark Reading",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Dark Reading",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "Dark Reading",
-"err": "unknown url type: 'k'"
-},
-{
-"n": "Dark Reading",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Dark Reading",
-"err": "unknown url type: ','"
-},
-{
-"n": "Dark Reading",
-"err": "unknown url type: ''"
-},
-{
-"n": "Dark Reading",
-"err": "unknown url type: 'f'"
-},
-{
-"n": "Dark Reading",
-"err": "unknown url type: 'l'"
-},
-{
-"n": "Dark Reading",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Dark Reading",
-"err": "unknown url type: 'w'"
-},
-{
-"n": "Dark Reading",
-"err": "unknown url type: 's'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 'P'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 'l'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 'y'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: ''"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: ''"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 't'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 't'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 'k'"
-},
-{
-"n": "CyberScoop",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Krebs on Security",
-"err": "unknown url type: 'I'"
-},
-{
-"n": "Krebs on Security",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "Krebs on Security",
-"err": "unknown url type: 'v'"
-},
-{
-"n": "Krebs on Security",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Krebs on Security",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Krebs on Security",
-"err": "unknown url type: 't'"
-},
-{
-"n": "Krebs on Security",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "Krebs on Security",
-"err": "unknown url type: 'g'"
-},
-{
-"n": "Krebs on Security",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Krebs on Security",
-"err": "unknown url type: 't'"
-},
-{
-"n": "Krebs on Security",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "Krebs on Security",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "Krebs on Security",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "Krebs on Security",
-"err": "unknown url type: 's'"
-},
-{
-"n": "The Hacker News",
-"err": "unknown url type: 'A'"
-},
-{
-"n": "The Hacker News",
-"err": "unknown url type: 't'"
-},
-{
-"n": "The Hacker News",
-"err": "unknown url type: 't'"
-},
-{
-"n": "The Hacker News",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "The Hacker News",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "The Hacker News",
-"err": "unknown url type: 'k'"
-},
-{
-"n": "The Hacker News",
-"err": "unknown url type: 's'"
-},
-{
-"n": "The Hacker News",
-"err": "unknown url type: ','"
-},
-{
-"n": "The Hacker News",
-"err": "unknown url type: ''"
-},
-{
-"n": "The Hacker News",
-"err": "unknown url type: 'f'"
-},
-{
-"n": "The Hacker News",
-"err": "unknown url type: 'l'"
-},
-{
-"n": "The Hacker News",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "The Hacker News",
-"err": "unknown url type: 'w'"
-},
-{
-"n": "The Hacker News",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Help Net Security",
-"err": "unknown url type: 'A'"
-},
-{
-"n": "Help Net Security",
-"err": "unknown url type: 't'"
-},
-{
-"n": "Help Net Security",
-"err": "unknown url type: 't'"
-},
-{
-"n": "Help Net Security",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Help Net Security",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "Help Net Security",
-"err": "unknown url type: 'k'"
-},
-{
-"n": "Help Net Security",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Help Net Security",
-"err": "unknown url type: ','"
-},
-{
-"n": "Help Net Security",
-"err": "unknown url type: ''"
-},
-{
-"n": "Help Net Security",
-"err": "unknown url type: 'f'"
-},
-{
-"n": "Help Net Security",
-"err": "unknown url type: 'l'"
-},
-{
-"n": "Help Net Security",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Help Net Security",
-"err": "unknown url type: 'w'"
-},
-{
-"n": "Help Net Security",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 'A'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 't'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 't'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 'k'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: ','"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: ''"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 'b'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 'h'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Infosecurity Magazine",
-"err": "unknown url type: 's'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'D'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'l'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'y'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: ''"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'h'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'l'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: ''"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 's'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: ','"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: ''"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 's'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'g'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: ''"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 't'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "SANS Internet Storm Center",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'C'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'm'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'p'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'g'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: ''"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'p'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: ''"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'v'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Cisco Talos",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'C'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'm'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'p'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'g'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: ''"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'p'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: ''"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'v'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Unit 42",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 'S'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 't'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 't'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: ''"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 'c'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 't'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 's'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: ','"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: ''"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 'z'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 'e'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: '-'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 'd'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 'y'"
-},
-{
-"n": "Google Threat Intelligence",
-"err": "unknown url type: 's'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'I'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 't'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'u'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 's'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'i'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'n'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: ''"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'w'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'a'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'l'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'k'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: '-'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 't'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'h'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'r'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'o'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'u'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'g'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 'h'"
-},
-{
-"n": "The DFIR Report",
-"err": "unknown url type: 's'"
 }
 ],
 "total": 31
@@ -4759,6 +2887,10 @@
 [
 "20 Nov",
 "Added to CISA's exploited list."
+],
+[
+"21 Nov",
+"New reporting: Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge"
 ]
 ],
 "fix": "Upgrade to 6.1.6 or later (6.1.7 recommended) or block the XML-RPC endpoint. Not yet on CISA's exploited list at the time of writing.",
@@ -4766,7 +2898,8 @@
 "owRoller",
 "soRoller",
 "corgea",
-"r7947132cac"
+"r7947132cac",
+"ra3eac34b29"
 ],
 "reg": "GLOBAL",
 "updated": "2026-11-21"
@@ -5787,6 +3920,358 @@
 "s": [
 "r479aa059af"
 ]
+},
+{
+"id": "jpmorgan-confirms-customer-data-breach-1120",
+"k": "inc",
+"t": "JPMorgan Confirms Customer Data Breach Following Third-Party Compromise",
+"sev": "high",
+"iso": "2026-11-20",
+"added": "2026-11-21",
+"when": "20 Nov",
+"where": "Global",
+"e": "third",
+"tags": [
+"finance",
+"ransom",
+"vendor"
+],
+"sec": "FIN",
+"reg": "GLOBAL",
+"conf": "confirmed",
+"sum": "Ransomware actor N0n has claimed attacks on JPMorgan, Visa and Mastercard, reportedly leaking customer data on its dark web site",
+"how": "Through a third party or supplier.",
+"tl": [
+[
+"20 Nov",
+"Reported by Infosecurity"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r4ebef484f9"
+]
+},
+{
+"id": "amazon-says-chinese-hackers-used-1120",
+"k": "inc",
+"t": "Amazon says Chinese hackers used Cairn AI tool to discover apparent zero-day during attack on university",
+"sev": "med",
+"iso": "2026-11-20",
+"added": "2026-11-21",
+"when": "20 Nov",
+"where": "China",
+"e": "flaw",
+"tags": [
+"ai",
+"state"
+],
+"sec": "HEALTH",
+"reg": "APAC",
+"conf": "reported",
+"sum": "A China-linked threat actor used the open source AI penetration testing tool Cairn to persistently attack two universities, and in one case, possibly discover a zero-day bug, researchers said.",
+"how": "Software flaw exploited.",
+"tl": [
+[
+"20 Nov",
+"Reported by The Record"
+],
+[
+"20 Nov",
+"Reported by BleepingComputer"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"rcd038ca0a2",
+"r0abe422151"
+]
+},
+{
+"id": "whatsapp-patches-3-security-flaws-1120",
+"k": "inc",
+"t": "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
+"sev": "med",
+"iso": "2026-11-20",
+"added": "2026-11-21",
+"when": "20 Nov",
+"where": "Global",
+"e": "flaw",
+"tags": [],
+"sec": "X",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "Meta-owned WhatsApp has addressed security vulnerabilities, including one impacting its Android app that it suspects may have been exploited in connection with scam messages. The vulnerability, tracked as CVE-2026-23871 (CVSS score: 3.5), has been described as a case of incomplete validation of external ad-reply URLs in WhatsApp for Android and WhatsApp Business for Android before 2.26.17.4.",
+"how": "Software flaw exploited.",
+"tl": [
+[
+"20 Nov",
+"Reported by The Hacker News"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r6cc616c5c6"
+]
+},
+{
+"id": "bell-canada-says-agentic-hacker-1120",
+"k": "inc",
+"t": "Bell Canada says 'agentic' hacker stole enterprise customer data",
+"sev": "high",
+"iso": "2026-11-20",
+"added": "2026-11-21",
+"when": "20 Nov",
+"where": "Canada",
+"e": "undisc",
+"tags": [
+"ai"
+],
+"sec": "TEL",
+"reg": "AMER",
+"conf": "confirmed",
+"sum": "Bell Canada has confirmed that an \"agentic\" threat actor breached its systems on November 17, 2026, and stole enterprise customer data, including information from a system used to order and provision telecommunications circuits. [...]",
+"how": "Not disclosed.",
+"tl": [
+[
+"20 Nov",
+"Reported by BleepingComputer"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r6c623452a1"
+]
+},
+{
+"id": "container-store-restores-systems-after-1120",
+"k": "inc",
+"t": "Container Store restores systems after cyberattack",
+"sev": "med",
+"iso": "2026-11-20",
+"added": "2026-11-21",
+"when": "20 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [],
+"sec": "RETAIL",
+"reg": "GLOBAL",
+"conf": "confirmed",
+"sum": "The firm’s parent company, Neighborhood Intelligence, said in a statement that The Container Store has “restored its website and systems following a cybersecurity incident this past weekend.”",
+"how": "Not disclosed.",
+"tl": [
+[
+"20 Nov",
+"Reported by The Record"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"redfeced150"
+]
+},
+{
+"id": "china-s-armory-castle-lays-1120",
+"k": "inc",
+"t": "China's 'Armory Castle' Lays Siege to VMware vCenter Zero-Day",
+"sev": "med",
+"iso": "2026-11-20",
+"added": "2026-11-21",
+"when": "20 Nov",
+"where": "China",
+"e": "flaw",
+"tags": [],
+"sec": "X",
+"reg": "APAC",
+"conf": "reported",
+"sum": "During the last wave of major VMware vCenter security updates, a China-nexus threat group likely already had its next zero-day up its sleeve.",
+"how": "Software flaw exploited.",
+"tl": [
+[
+"20 Nov",
+"Reported by Dark Reading"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"ra9aa37cedd"
+]
+},
+{
+"id": "west-virginia-legislature-hit-with-1120",
+"k": "inc",
+"t": "West Virginia Legislature hit with cyber incident affecting IT systems",
+"sev": "crit",
+"iso": "2026-11-20",
+"added": "2026-11-21",
+"when": "20 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [],
+"sec": "GOV",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "A cybersecurity incident that began Thursday was still ongoing Friday in the West Virginia Legislature. A spokesperson said the disruption did not spread to other government entities.",
+"how": "Not disclosed.",
+"tl": [
+[
+"20 Nov",
+"Reported by The Record"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"rf0b8696c25"
+]
+},
+{
+"id": "dialing-for-data-inside-the-1120",
+"k": "inc",
+"t": "Dialing for Data: Inside the Com’s High-Profile Heists",
+"sev": "med",
+"iso": "2026-11-20",
+"added": "2026-11-21",
+"when": "20 Nov",
+"where": "Global",
+"e": "social",
+"tags": [
+"human",
+"ransom"
+],
+"sec": "HEALTH",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "Our analysis of Com affiliate vishing attacks, cloud data theft and extortion campaigns targeting healthcare and finance, with actionable defense guidance.",
+"how": "Phishing or social engineering.",
+"tl": [
+[
+"20 Nov",
+"Reported by Unit 42"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"rec3643e6e5"
+]
+},
+{
+"id": "cto-of-ransomwarehelp-indicted-for-1120",
+"k": "inc",
+"t": "CTO of ‘RansomwareHelp’ Indicted for Wire Fraud",
+"sev": "high",
+"iso": "2026-11-20",
+"added": "2026-11-21",
+"when": "20 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [
+"finance",
+"ransom"
+],
+"sec": "CRYPTO",
+"reg": "AMER",
+"conf": "reported",
+"sum": "The chief technology officer and co-founder of ransomwarehelp.com, a six year old Florida business that claimed to use \"advanced cryptographic tools\" to restore data locked by ransomware, has been charged with wire fraud after an FBI sting operation found the company was simply paying the attackers for a decryption key and charging victims a markup for work that was never performed.",
+"how": "Not disclosed.",
+"tl": [
+[
+"20 Nov",
+"Reported by Krebs"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r93138fbb4d"
+]
+},
+{
+"id": "attackers-ai-agents-found-a-1121",
+"k": "inc",
+"t": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
+"sev": "med",
+"iso": "2026-11-21",
+"added": "2026-11-21",
+"when": "21 Nov",
+"where": "China",
+"e": "flaw",
+"tags": [
+"ai",
+"state"
+],
+"sec": "HEALTH",
+"reg": "APAC",
+"conf": "reported",
+"sum": "Suspected China-linked hackers used autonomous AI agents to find a previously unknown flaw in MONAI Label, an open-source medical imaging server, and gain root access to a university server, Amazon Threat Intelligence said this week. The flaw allows an attacker with no account to write files outside the server's storage folder, and it affects MONAI Label 0.8.5 and earlier in the default setup,",
+"how": "Software flaw exploited.",
+"tl": [
+[
+"21 Nov",
+"Reported by The Hacker News"
+],
+[
+"21 Nov",
+"Reported by SecurityWeek"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r16765aea3b",
+"r6231e48f3b"
+]
+},
+{
+"id": "fbi-reportedly-hacked-again-this-1121",
+"k": "inc",
+"t": "FBI reportedly hacked again, this time targeting nationwide police database",
+"sev": "high",
+"iso": "2026-11-21",
+"added": "2026-11-21",
+"when": "21 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [],
+"sec": "GOV",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "FBI systems have reportedly been breached for the second time in two months, this time targeting the agency's National Crime Information Center (NCIC), which is used to share information between local, state, and federal law enforcement agencies. [...]",
+"how": "Not disclosed.",
+"tl": [
+[
+"21 Nov",
+"Reported by BleepingComputer"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"refef5bd50b"
+]
+},
+{
+"id": "microsoft-entra-connect-health-flaw-1121",
+"k": "inc",
+"t": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
+"sev": "high",
+"iso": "2026-11-21",
+"added": "2026-11-21",
+"when": "21 Nov",
+"where": "Global",
+"e": "flaw",
+"tags": [],
+"sec": "HEALTH",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "Microsoft is warning organizations that it suffered a data breach after attackers exploited a vulnerability in its Entra Connect Health service to gain unauthorized access to administrator email addresses and tenant configuration information. [...]",
+"how": "Software flaw exploited.",
+"tl": [
+[
+"21 Nov",
+"Reported by BleepingComputer"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r1e1dbef95d"
+]
 }
 ],
 "ledger": [
@@ -6744,7 +5229,8 @@
 "rw": false,
 "desc": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-118527.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.008
+"epss": 0.008,
+"cvss": 7.0
 },
 {
 "cve": "CVE-2026-97229",
@@ -6785,7 +5271,8 @@
 "rw": false,
 "desc": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing ESP input processing to decrypt shared fragments in place. This vulnerability can be chained with CVE-2026-109618 and CVE-2026-109619 to implant PHP webshells…",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.172
+"epss": 0.172,
+"cvss": 7.8
 },
 {
 "cve": "CVE-2026-41709",
@@ -6812,7 +5299,8 @@
 "rw": false,
 "desc": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.8162
+"epss": 0.8162,
+"cvss": 9.3
 },
 {
 "cve": "CVE-2026-111497",
@@ -6867,7 +5355,8 @@
 "desc": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "arista-velocloud-orchestrator-1023",
-"epss": 0.0767
+"epss": 0.0767,
+"cvss": 9.4
 },
 {
 "cve": "CVE-2026-110447",
@@ -6880,7 +5369,8 @@
 "desc": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "collabora-collabora-online-built-in-1023",
-"epss": 0.7615
+"epss": 0.7615,
+"cvss": 9.2
 },
 {
 "cve": "CVE-2026-96656",
@@ -6893,7 +5383,8 @@
 "desc": "Plex Media Server contains an external control of file name or path vulnerability which can allow an admin user to write arbitrary files that may be executed on load. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96655.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "plex",
-"epss": 0.1977
+"epss": 0.1977,
+"cvss": 8.6
 },
 {
 "cve": "CVE-2026-96655",
@@ -6906,7 +5397,8 @@
 "desc": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability that could allow an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96656.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "plex",
-"epss": 0.1072
+"epss": 0.1072,
+"cvss": 5.3
 },
 {
 "cve": "CVE-2026-96654",
@@ -6919,7 +5411,8 @@
 "desc": "Plex Media Server contains an improper neutralization of encoded URI schemes in a web page vulnerability that could allow an attacker to call other plugins' functions and supply their own parameters. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96655, and CVE-2026-96656.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "plex",
-"epss": 0.1269
+"epss": 0.1269,
+"cvss": 6.9
 },
 {
 "cve": "CVE-2026-96652",
@@ -6932,7 +5425,8 @@
 "desc": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability which could allow an attacker using any X-Plex-Token value to include a full URL in the 'protocol' parameter and force the Plex server to POST to the attacker's chosen destination. This vulnerability can be chained with CVE-2026-96654, CVE-2026-96655, and CVE-2026-96656.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "plex",
-"epss": 0.149
+"epss": 0.149,
+"cvss": 5.3
 },
 {
 "cve": "CVE-2026-110936",
@@ -6945,7 +5439,8 @@
 "desc": "Siemens Software Center contains an uncontrolled search path element vulnerability that could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "siemens-software-center-1020",
-"epss": 0.0097
+"epss": 0.0097,
+"cvss": 8.4
 },
 {
 "cve": "CVE-2026-106931",
@@ -6958,7 +5453,8 @@
 "desc": "EG Secure Solutions SiteGuard Server Edition contains an OS command injection vulnerability which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "eg-secure-solutions-siteguard-server-1020",
-"epss": 0.0253
+"epss": 0.0253,
+"cvss": 8.5
 },
 {
 "cve": "CVE-2026-102764",
@@ -6985,7 +5481,8 @@
 "desc": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "fortinet-multiple-products-1016",
-"epss": 0.014
+"epss": 0.014,
+"cvss": 6.5
 },
 {
 "cve": "CVE-2026-21589",
@@ -6998,7 +5495,8 @@
 "desc": "Multiple Atlassian products (Bitbucket Data Center ,Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible and Fisheye) contain a files or directories accessible to external parties vulnerability which could allow an unauthenticated attacker to access specific files within the web application root directory in…",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "atlassian-multiple-products-1015",
-"epss": 0.9095
+"epss": 0.9095,
+"cvss": 9.3
 },
 {
 "cve": "CVE-2026-76519",
@@ -7025,7 +5523,8 @@
 "desc": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceivers.do endpoint. This vulnerability can be chained with CVE-2026-105133.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "ahsay-ahsaycbs-1014",
-"epss": 0.8176
+"epss": 0.8176,
+"cvss": 10.0
 },
 {
 "cve": "CVE-2026-105133",
@@ -7038,7 +5537,8 @@
 "desc": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be chained with CVE-2026-105134.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "ahsay-ahsaycbs-1014",
-"epss": 0.8448
+"epss": 0.8448,
+"cvss": 6.9
 },
 {
 "cve": "CVE-2026-0322",
@@ -7051,7 +5551,8 @@
 "desc": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "palo-alto-networks-pan-os-1014",
-"epss": 0.0215
+"epss": 0.0215,
+"cvss": 8.6
 },
 {
 "cve": "CVE-2026-96951",
@@ -7078,7 +5579,8 @@
 "desc": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "ivanti",
-"epss": 0.931
+"epss": 0.931,
+"cvss": 8.6
 },
 {
 "cve": "CVE-2023-22894",
@@ -7091,7 +5593,8 @@
 "desc": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. This vulnerability can be chained with…",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "strapi-strapi-1008",
-"epss": 0.0411
+"epss": 0.0411,
+"cvss": 4.9
 },
 {
 "cve": "CVE-2021-3199",
@@ -7117,7 +5620,8 @@
 "desc": "Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "apache-struts-1008",
-"epss": 0.9692
+"epss": 0.9692,
+"cvss": 8.1
 },
 {
 "cve": "CVE-2015-5477",
@@ -7130,7 +5634,8 @@
 "desc": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "isc-bind-1008",
-"epss": 0.9958
+"epss": 0.9958,
+"cvss": 7.5
 },
 {
 "cve": "CVE-2015-3306",
@@ -7274,6 +5779,34 @@
 }
 ],
 "advisories": [
+{
+"d": "2026-11-21",
+"org": "Canada CCCS",
+"t": "Apache security advisory (AV26-1188)",
+"s": "rd52c03bd18",
+"url": "https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-1188"
+},
+{
+"d": "2026-11-20",
+"org": "Canada CCCS",
+"t": "VMware security advisory (AV26-1185) – Update 1",
+"s": "rf4159f374f",
+"url": "https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-1185"
+},
+{
+"d": "2026-11-20",
+"org": "Canada CCCS",
+"t": "Cisco security advisory (AV26-1073) – Update 1",
+"s": "r84075b2874",
+"url": "https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1073"
+},
+{
+"d": "2026-11-20",
+"org": "Canada CCCS",
+"t": "SAP security advisory – November 2025 monthly rollup (AV25-738) – Update 1",
+"s": "rdcf5161444",
+"url": "https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2025-monthly-rollup-av25-738"
+},
 {
 "d": "2026-11-18",
 "org": "F5 / nginx",
@@ -8254,6 +6787,82 @@
 "r479aa059af": [
 "ransomware.live: MT5 algo-trading farm (OneFunded funded account, WINSERVER) listed by the PixelLeaks ransomwa",
 "https://www.ransomware.live/id/TVQ1IGFsZ28tdHJhZGluZyBmYXJtIChPbmVGdW5kZWQgZnVuZGVkIGFjY291bnQsIFdJTlNFUlZFUilAUGl4ZWxMZWFrcw=="
+],
+"rd52c03bd18": [
+"Canada CCCS: Apache security advisory (AV26-1188)",
+"https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-1188"
+],
+"rf4159f374f": [
+"Canada CCCS: VMware security advisory (AV26-1185) – Update 1",
+"https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-1185"
+],
+"r84075b2874": [
+"Canada CCCS: Cisco security advisory (AV26-1073) – Update 1",
+"https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1073"
+],
+"rdcf5161444": [
+"Canada CCCS: SAP security advisory – November 2025 monthly rollup (AV25-738) – Update 1",
+"https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2025-monthly-rollup-av25-738"
+],
+"r4ebef484f9": [
+"Infosecurity: JPMorgan Confirms Customer Data Breach Following Third-Party Compromise",
+"https://www.infosecurity-magazine.com/news/jpmorgan-data-breach-third-party/"
+],
+"rcd038ca0a2": [
+"The Record: Amazon says Chinese hackers used Cairn AI tool to discover apparent zero-day during attack on univ",
+"https://therecord.media/amazon-research-cairn-ai-university-attacks-possible-zero-day"
+],
+"r0abe422151": [
+"BleepingComputer: Hackers use autonomous AI tool Cairn to find zero-day, take over server",
+"https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/"
+],
+"r6cc616c5c6": [
+"The Hacker News: WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
+"https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html"
+],
+"r6c623452a1": [
+"BleepingComputer: Bell Canada says 'agentic' hacker stole enterprise customer data",
+"https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/"
+],
+"redfeced150": [
+"The Record: Container Store restores systems after cyberattack",
+"https://therecord.media/container-store-restores-systems-cyberattack"
+],
+"ra9aa37cedd": [
+"Dark Reading: China's 'Armory Castle' Lays Siege to VMware vCenter Zero-Day",
+"https://www.darkreading.com/cyberattacks-data-breaches/china-armory-castle-vmware-vcenter-zero-day"
+],
+"rf0b8696c25": [
+"The Record: West Virginia Legislature hit with cyber incident affecting IT systems",
+"https://therecord.media/west-virginia-legislature-cyberattack"
+],
+"rec3643e6e5": [
+"Unit 42: Dialing for Data: Inside the Com’s High-Profile Heists",
+"https://unit42.paloaltonetworks.com/com-affiliate-vishing-attacks/"
+],
+"r93138fbb4d": [
+"Krebs: CTO of ‘RansomwareHelp’ Indicted for Wire Fraud",
+"https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/"
+],
+"ra3eac34b29": [
+"The Hacker News: Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
+"https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html"
+],
+"r16765aea3b": [
+"The Hacker News: Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
+"https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html"
+],
+"r6231e48f3b": [
+"SecurityWeek: Amazon: China-Linked Hackers’ AI Agents Exploited Medical Software Zero-Day",
+"https://www.securityweek.com/amazon-china-linked-hackers-ai-agents-exploited-medical-software-zero-day/"
+],
+"refef5bd50b": [
+"BleepingComputer: FBI reportedly hacked again, this time targeting nationwide police database",
+"https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/"
+],
+"r1e1dbef95d": [
+"BleepingComputer: Microsoft Entra Connect Health flaw exploited to steal tenant data",
+"https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/"
 ]
 },
 "claimStats": {

@@ -2,7 +2,7 @@
  "meta": {
   "edition": "2026-11-21",
   "prev": "2026-11-19",
-  "compiled": "2026-11-21T16:45-05:00",
+  "compiled": "2026-11-21T17:06-05:00",
   "tz": "America/New_York",
   "mode": "live",
   "nextRun": "2026-11-22T02:00-05:00",
@@ -15,608 +15,8 @@
    "apache-axis-1118"
   ],
   "health": {
-   "ok": 8,
+   "ok": 30,
    "failed": [
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'M'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'f'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'f'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'x'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'z'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: '-'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 'y'"
-    },
-    {
-     "n": "Microsoft Security Update Guide",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'G'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'v'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'm'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'v'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "CISA alerts and advisories",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'G'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'v'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'm'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'v'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "UK NCSC",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'F'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'h'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'l'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'h'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'p'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "CERT-FR (ANSSI)",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'G'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'm'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'u'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'y'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'v'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "BSI CERT-Bund WID",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'G'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'v'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'm'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'v'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Canadian Centre for Cyber Security",
-     "err": "unknown url type: 's'"
-    },
     {
      "n": "Australian Cyber Security Centre",
      "err": "https://www.cyber.gov.au/rss/alerts: The read operation timed out"
@@ -624,1445 +24,30 @@
     {
      "n": "Australian Cyber Security Centre",
      "err": "https://www.cyber.gov.au/rss/advisories: The read operation timed out"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'C'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'l'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'u'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "CERT/CC vulnerability notes",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'C'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'l'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'f'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'w'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'v'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "MS-ISAC / CIS advisories",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 'A'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 'k'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 'b'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 'h'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "The Record (Recorded Future News)",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 'A'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 'k'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 'b'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 'h'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "BleepingComputer",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "SecurityWeek",
-     "err": "unknown url type: 'A'"
-    },
-    {
-     "n": "SecurityWeek",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "SecurityWeek",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "SecurityWeek",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "SecurityWeek",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "SecurityWeek",
-     "err": "unknown url type: 'k'"
-    },
-    {
-     "n": "SecurityWeek",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "SecurityWeek",
-     "err": "unknown url type: ','"
-    },
-    {
-     "n": "SecurityWeek",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "SecurityWeek",
-     "err": "unknown url type: 'f'"
-    },
-    {
-     "n": "SecurityWeek",
-     "err": "unknown url type: 'l'"
-    },
-    {
-     "n": "SecurityWeek",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "SecurityWeek",
-     "err": "unknown url type: 'w'"
-    },
-    {
-     "n": "SecurityWeek",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Dark Reading",
-     "err": "unknown url type: 'A'"
-    },
-    {
-     "n": "Dark Reading",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "Dark Reading",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "Dark Reading",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Dark Reading",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "Dark Reading",
-     "err": "unknown url type: 'k'"
-    },
-    {
-     "n": "Dark Reading",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Dark Reading",
-     "err": "unknown url type: ','"
-    },
-    {
-     "n": "Dark Reading",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "Dark Reading",
-     "err": "unknown url type: 'f'"
-    },
-    {
-     "n": "Dark Reading",
-     "err": "unknown url type: 'l'"
-    },
-    {
-     "n": "Dark Reading",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Dark Reading",
-     "err": "unknown url type: 'w'"
-    },
-    {
-     "n": "Dark Reading",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 'P'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 'l'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 'y'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 'k'"
-    },
-    {
-     "n": "CyberScoop",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Krebs on Security",
-     "err": "unknown url type: 'I'"
-    },
-    {
-     "n": "Krebs on Security",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "Krebs on Security",
-     "err": "unknown url type: 'v'"
-    },
-    {
-     "n": "Krebs on Security",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Krebs on Security",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Krebs on Security",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "Krebs on Security",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "Krebs on Security",
-     "err": "unknown url type: 'g'"
-    },
-    {
-     "n": "Krebs on Security",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Krebs on Security",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "Krebs on Security",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "Krebs on Security",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "Krebs on Security",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "Krebs on Security",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "The Hacker News",
-     "err": "unknown url type: 'A'"
-    },
-    {
-     "n": "The Hacker News",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "The Hacker News",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "The Hacker News",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "The Hacker News",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "The Hacker News",
-     "err": "unknown url type: 'k'"
-    },
-    {
-     "n": "The Hacker News",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "The Hacker News",
-     "err": "unknown url type: ','"
-    },
-    {
-     "n": "The Hacker News",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "The Hacker News",
-     "err": "unknown url type: 'f'"
-    },
-    {
-     "n": "The Hacker News",
-     "err": "unknown url type: 'l'"
-    },
-    {
-     "n": "The Hacker News",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "The Hacker News",
-     "err": "unknown url type: 'w'"
-    },
-    {
-     "n": "The Hacker News",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Help Net Security",
-     "err": "unknown url type: 'A'"
-    },
-    {
-     "n": "Help Net Security",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "Help Net Security",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "Help Net Security",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Help Net Security",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "Help Net Security",
-     "err": "unknown url type: 'k'"
-    },
-    {
-     "n": "Help Net Security",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Help Net Security",
-     "err": "unknown url type: ','"
-    },
-    {
-     "n": "Help Net Security",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "Help Net Security",
-     "err": "unknown url type: 'f'"
-    },
-    {
-     "n": "Help Net Security",
-     "err": "unknown url type: 'l'"
-    },
-    {
-     "n": "Help Net Security",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Help Net Security",
-     "err": "unknown url type: 'w'"
-    },
-    {
-     "n": "Help Net Security",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 'A'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 'k'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: ','"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 'b'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 'h'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Infosecurity Magazine",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'D'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'l'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'y'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'h'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'l'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: ','"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'g'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "SANS Internet Storm Center",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'C'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'm'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'p'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'g'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'p'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'v'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Cisco Talos",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'C'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'm'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'p'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'g'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'p'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'v'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Unit 42",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 'S'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 'c'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: ','"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 'z'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 'e'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: '-'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 'd'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 'y'"
-    },
-    {
-     "n": "Google Threat Intelligence",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'I'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'u'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 's'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'i'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'n'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: ''"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'w'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'a'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'l'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'k'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: '-'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 't'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'h'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'r'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'o'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'u'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'g'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 'h'"
-    },
-    {
-     "n": "The DFIR Report",
-     "err": "unknown url type: 's'"
     }
    ],
    "total": 31
   }
  },
  "new": [
-  "cisco-expressway-series-1120",
-  "broadcom-vmware-vcenter-1120",
-  "sap-netweaver-1120",
-  "vanderbilt-university-research-electronic-data-1118",
-  "apache-axis-1118",
-  "berriai-litellm-1118",
-  "synology-diskstation-manager-dsm-1118",
-  "unrealircd-unrealircd-1113",
-  "gpustack-gpustack-1109",
-  "sonicwall-sonicos-sslvpn-1106",
-  "apple-multiple-products-1104",
-  "wordpress-wordpress-core-1103",
-  "arista-velocloud-orchestrator-1023",
-  "collabora-collabora-online-built-in-1023",
-  "siemens-software-center-1020",
-  "eg-secure-solutions-siteguard-server-1020",
-  "fortinet-multiple-products-1016",
-  "atlassian-multiple-products-1015",
-  "ahsay-ahsaycbs-1014",
-  "palo-alto-networks-pan-os-1014",
-  "strapi-strapi-1008",
-  "onlyoffice-docs-1008",
-  "apache-struts-1008",
-  "isc-bind-1008",
-  "proftpd-proftpd-1008",
-  "citrix-netscaler-1004",
-  "zammad-gmbh-zammad-1002",
-  "fortinet-fortimail-1001",
-  "iqstel-inc-iqst-reports-a-1119",
-  "careers360-3-609-421-accounts-1119",
-  "too-lost-724-323-accounts-1120",
-  "mt5-algo-trading-farm-onefunded-1120"
+  "jpmorgan-confirms-customer-data-breach-1120",
+  "amazon-says-chinese-hackers-used-1120",
+  "whatsapp-patches-3-security-flaws-1120",
+  "bell-canada-says-agentic-hacker-1120",
+  "container-store-restores-systems-after-1120",
+  "china-s-armory-castle-lays-1120",
+  "west-virginia-legislature-hit-with-1120",
+  "dialing-for-data-inside-the-1120",
+  "cto-of-ransomwarehelp-indicted-for-1120",
+  "attackers-ai-agents-found-a-1121",
+  "fbi-reportedly-hacked-again-this-1121",
+  "microsoft-entra-connect-health-flaw-1121"
  ],
  "updated": [
-  "roller",
-  "ivanti",
-  "plex"
+  "roller"
  ],
- "kevNew": [
-  "CVE-2026-129448",
-  "CVE-2026-123890",
-  "CVE-2025-42884",
-  "CVE-2026-76466",
-  "CVE-2024-10441",
-  "CVE-2026-40217",
-  "CVE-2026-90817",
-  "CVE-2026-90436",
-  "CVE-2026-114713",
-  "CVE-2026-102895",
-  "CVE-2026-19868",
-  "CVE-2024-27834",
-  "CVE-2026-119977",
-  "CVE-2026-118527",
-  "CVE-2026-114625",
-  "CVE-2026-110447",
-  "CVE-2026-106931",
-  "CVE-2026-96656",
-  "CVE-2026-96655",
-  "CVE-2026-96654",
-  "CVE-2026-96652",
-  "CVE-2026-110936",
-  "CVE-2025-61624",
-  "CVE-2026-21589",
-  "CVE-2026-105134",
-  "CVE-2026-105133",
-  "CVE-2026-0322",
-  "CVE-2026-104935",
-  "CVE-2015-5477",
-  "CVE-2016-3081",
-  "CVE-2023-22894",
-  "CVE-2021-3199",
-  "CVE-2015-3306",
-  "CVE-2026-88779",
-  "CVE-2026-102490",
-  "CVE-2026-102489",
-  "CVE-2026-104286"
- ],
+ "kevNew": [],
  "entries": [
-  {
-   "id": "ivanti",
-   "k": "flaw",
-   "t": "Ivanti Connect Secure chain",
-   "cve": "CVE-2026-104935, CVE-2026-111357, CVE-2026-118527",
-   "sev": "crit",
-   "iso": "2026-10-13",
-   "when": "1 to 30 Oct",
-   "e": "flaw",
-   "tags": [],
-   "sum": "Three flaws chained into root-level code execution on fully patched VPN gateways, without a login. The actor, tracked as UTA0576, left no malware or web shell. It re-exploited the device for every command and edited logs, which let it slip past Ivanti's integrity checker.",
-   "tl": [
-    [
-     "1 Oct",
-     "First exploitation seen by Defused. Volexity dates the chain to at least 3 Oct."
-    ],
-    [
-     "13 Oct",
-     "Ivanti discloses. Two of three flaws patched."
-    ],
-    [
-     "30 Oct",
-     "CISA lists the remaining two and requires forensic triage."
-    ],
-    [
-     "30 Oct",
-     "Added to CISA's exploited list."
-    ]
-   ],
-   "fix": "Partly fixed on 13 Oct, with upgrade guidance for the full chain later. More than 5,500 gateways were exposed online.",
-   "s": [
-    "bcIv",
-    "loginsoft",
-    "senth",
-    "r7947132cac"
-   ],
-   "sec": "X",
-   "added": "2026-10-13",
-   "conf": "confirmed",
-   "reg": "GLOBAL",
-   "updated": "2026-11-21"
-  },
-  {
-   "id": "plex",
-   "k": "flaw",
-   "t": "Plex2Shell",
-   "cve": "CVE-2026-96652 and three more",
-   "sev": "med",
-   "iso": "2026-10-17",
-   "when": "16 to 20 Oct",
-   "e": "flaw",
-   "tags": [],
-   "sum": "Four flaws chained into code execution on Plex Media Server. Not a zero-day: the fix shipped in August. Attacks began one day after details were published and installed crypto miners and proxies.",
-   "tl": [
-    [
-     "August",
-     "Fixed."
-    ],
-    [
-     "17 Oct",
-     "Exploitation begins."
-    ],
-    [
-     "20 Oct",
-     "CISA lists all four."
-    ],
-    [
-     "20 Oct",
-     "Added to CISA's exploited list."
-    ]
-   ],
-   "fix": "Victims were unpatched servers.",
-   "s": [
-    "socradar",
-    "loginsoft",
-    "r7947132cac"
-   ],
-   "sec": "X",
-   "added": "2026-10-17",
-   "conf": "confirmed",
-   "reg": "GLOBAL",
-   "updated": "2026-11-21"
-  },
   {
    "id": "roller",
    "k": "flaw",
@@ -2094,6 +79,10 @@
     [
      "20 Nov",
      "Added to CISA's exploited list."
+    ],
+    [
+     "21 Nov",
+     "New reporting: Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge"
     ]
    ],
    "fix": "Upgrade to 6.1.6 or later (6.1.7 recommended) or block the XML-RPC endpoint. Not yet on CISA's exploited list at the time of writing.",
@@ -2101,965 +90,250 @@
     "owRoller",
     "soRoller",
     "corgea",
-    "r7947132cac"
+    "r7947132cac",
+    "ra3eac34b29"
    ],
    "reg": "GLOBAL",
    "updated": "2026-11-21"
   },
   {
-   "id": "cisco-expressway-series-1120",
-   "k": "flaw",
-   "t": "Cisco Expressway Series: Use of Hard-coded Credentials",
-   "cve": "CVE-2026-76466 · CVSS 9.8",
-   "sev": "crit",
-   "iso": "2026-11-20",
-   "when": "20 Nov",
-   "e": "flaw",
-   "added": "2026-11-21",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "20 Nov",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "23 Nov",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "broadcom-vmware-vcenter-1120",
-   "k": "flaw",
-   "t": "Broadcom VMware vCenter: Authentication Bypass Using an Alternate Path or Channel",
-   "cve": "CVE-2026-123890 · CVSS 9.8",
-   "sev": "crit",
-   "iso": "2026-11-20",
-   "when": "20 Nov",
-   "e": "flaw",
-   "added": "2026-11-21",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and gain unauthorized access to the system.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "20 Nov",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "23 Nov",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "sap-netweaver-1120",
-   "k": "flaw",
-   "t": "SAP NetWeaver: Improper Neutralization of Special Elements in Data Query Logic",
-   "cve": "CVE-2025-42884 · CVSS 6.5",
-   "sev": "med",
-   "iso": "2026-11-20",
-   "when": "20 Nov",
-   "e": "flaw",
-   "added": "2026-11-21",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "20 Nov",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "23 Nov",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "vanderbilt-university-research-electronic-data-1118",
-   "k": "flaw",
-   "t": "Vanderbilt University Research Electronic Data Capture (REDCap): Code Injection",
-   "cve": "CVE-2026-90817 · CVSS 9.8",
-   "sev": "crit",
-   "iso": "2026-11-18",
-   "when": "18 Nov",
-   "e": "flaw",
-   "added": "2026-11-21",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import…",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "18 Nov",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "21 Nov",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "apache-axis-1118",
-   "k": "flaw",
-   "t": "Apache Axis: Unsafe Reflection",
-   "cve": "CVE-2026-90436 · CVSS 9.8",
-   "sev": "crit",
-   "iso": "2026-11-18",
-   "when": "18 Nov",
-   "e": "flaw",
-   "added": "2026-11-21",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised…",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "18 Nov",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "21 Nov",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "berriai-litellm-1118",
-   "k": "flaw",
-   "t": "BerriAI LiteLLM: Unprotected Alternate Channel",
-   "cve": "CVE-2026-40217 · CVSS 8.8",
-   "sev": "high",
-   "iso": "2026-11-18",
-   "when": "18 Nov",
-   "e": "flaw",
-   "added": "2026-11-21",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "18 Nov",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "2 Dec",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "synology-diskstation-manager-dsm-1118",
-   "k": "flaw",
-   "t": "Synology DiskStation Manager (DSM): Improper Encoding or Escaping of Output",
-   "cve": "CVE-2024-10441 · CVSS 9.8",
-   "sev": "crit",
-   "iso": "2026-11-18",
-   "when": "18 Nov",
-   "e": "flaw",
-   "added": "2026-11-21",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "18 Nov",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "21 Nov",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "unrealircd-unrealircd-1113",
-   "k": "flaw",
-   "t": "UnrealIRCd UnrealIRCd: Improper Neutralization of Delimiters",
-   "cve": "CVE-2026-114713 · CVSS 7.7",
-   "sev": "high",
-   "iso": "2026-11-13",
-   "when": "13 Nov",
-   "e": "flaw",
-   "added": "2026-11-13",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "13 Nov",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "16 Nov",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "gpustack-gpustack-1109",
-   "k": "flaw",
-   "t": "GPUStack GPUStack: Improper Authentication",
-   "cve": "CVE-2026-102895 · CVSS 9.8",
-   "sev": "crit",
-   "iso": "2026-11-09",
-   "when": "9 Nov",
-   "e": "flaw",
-   "added": "2026-11-09",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "9 Nov",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "12 Nov",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "sonicwall-sonicos-sslvpn-1106",
-   "k": "flaw",
-   "t": "SonicWall SonicOS SSLVPN: Use of Single-factor Authentication",
-   "cve": "CVE-2026-19868 · CVSS 7.5",
-   "sev": "high",
-   "iso": "2026-11-06",
-   "when": "6 Nov",
-   "e": "flaw",
-   "added": "2026-11-06",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "6 Nov",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "20 Nov",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "apple-multiple-products-1104",
-   "k": "flaw",
-   "t": "Apple Multiple Products: Improper Authentication",
-   "cve": "CVE-2024-27834 · CVSS 5.5",
-   "sev": "med",
-   "iso": "2026-11-04",
-   "when": "4 Nov",
-   "e": "flaw",
-   "added": "2026-11-04",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "4 Nov",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "18 Nov",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "wordpress-wordpress-core-1103",
-   "k": "flaw",
-   "t": "WordPress WordPress Core: Time-of-check Time-of-use (TOCTOU) Race Condition",
-   "cve": "CVE-2026-119977 · CVSS 8.1",
-   "sev": "high",
-   "iso": "2026-11-03",
-   "when": "3 Nov",
-   "e": "flaw",
-   "added": "2026-11-03",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrades.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "3 Nov",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "6 Nov",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "arista-velocloud-orchestrator-1023",
-   "k": "flaw",
-   "t": "Arista VeloCloud Orchestrator: SQL Injection",
-   "cve": "CVE-2026-114625",
-   "sev": "high",
-   "iso": "2026-10-23",
-   "when": "23 Oct",
-   "e": "flaw",
-   "added": "2026-10-23",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "23 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "26 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "collabora-collabora-online-built-in-1023",
-   "k": "flaw",
-   "t": "Collabora Collabora Online – Built-in CODE Server: Online – Built-in CODE Server OS Command Injection",
-   "cve": "CVE-2026-110447",
-   "sev": "high",
-   "iso": "2026-10-23",
-   "when": "23 Oct",
-   "e": "flaw",
-   "added": "2026-10-23",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "23 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "26 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "siemens-software-center-1020",
-   "k": "flaw",
-   "t": "Siemens Software Center: Uncontrolled Search Path Element",
-   "cve": "CVE-2026-110936",
-   "sev": "high",
-   "iso": "2026-10-20",
-   "when": "20 Oct",
-   "e": "flaw",
-   "added": "2026-10-20",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Siemens Software Center contains an uncontrolled search path element vulnerability that could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "20 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "3 Nov",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "eg-secure-solutions-siteguard-server-1020",
-   "k": "flaw",
-   "t": "EG Secure Solutions SiteGuard Server Edition: OS Command Injection",
-   "cve": "CVE-2026-106931",
-   "sev": "high",
-   "iso": "2026-10-20",
-   "when": "20 Oct",
-   "e": "flaw",
-   "added": "2026-10-20",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "EG Secure Solutions SiteGuard Server Edition contains an OS command injection vulnerability which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "20 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "23 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "fortinet-multiple-products-1016",
-   "k": "flaw",
-   "t": "Fortinet Multiple Products: Path Traversal",
-   "cve": "CVE-2025-61624",
-   "sev": "high",
-   "iso": "2026-10-16",
-   "when": "16 Oct",
-   "e": "flaw",
-   "added": "2026-10-16",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "16 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "19 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "atlassian-multiple-products-1015",
-   "k": "flaw",
-   "t": "Atlassian Multiple Products: Files or Directories Accessible to External Parties",
-   "cve": "CVE-2026-21589",
-   "sev": "high",
-   "iso": "2026-10-15",
-   "when": "15 Oct",
-   "e": "flaw",
-   "added": "2026-10-15",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Multiple Atlassian products (Bitbucket Data Center ,Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible and Fisheye) contain a files or directories accessible to external parties vulnerability which could allow an unauthenticated attacker to access specific files within the web application root directory in…",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "15 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "18 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "ahsay-ahsaycbs-1014",
-   "k": "flaw",
-   "t": "Ahsay AhsayCBS: Command Injection",
-   "cve": "CVE-2026-105134 · CVE-2026-105133",
-   "sev": "high",
-   "iso": "2026-10-14",
-   "when": "14 Oct",
-   "e": "flaw",
-   "added": "2026-10-14",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceivers.do endpoint. This vulnerability can be chained with CVE-2026-105133. Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be chained with CVE-2026-105134.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "14 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "17 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "palo-alto-networks-pan-os-1014",
-   "k": "flaw",
-   "t": "Palo Alto Networks PAN-OS: Code Injection",
-   "cve": "CVE-2026-0322",
-   "sev": "high",
-   "iso": "2026-10-14",
-   "when": "14 Oct",
-   "e": "flaw",
-   "added": "2026-10-14",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "14 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "17 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "strapi-strapi-1008",
-   "k": "flaw",
-   "t": "Strapi Strapi: Cleartext Storage of Sensitive Information",
-   "cve": "CVE-2023-22894",
-   "sev": "high",
-   "iso": "2026-10-08",
-   "when": "8 Oct",
-   "e": "flaw",
-   "added": "2026-10-08",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. This vulnerability can be chained with…",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "8 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "11 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "onlyoffice-docs-1008",
-   "k": "flaw",
-   "t": "ONLYOFFICE Docs: Server Path Traversal",
-   "cve": "CVE-2021-3199",
-   "sev": "high",
-   "iso": "2026-10-08",
-   "when": "8 Oct",
-   "e": "flaw",
-   "added": "2026-10-08",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "8 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "11 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "apache-struts-1008",
-   "k": "flaw",
-   "t": "Apache Struts: Command Injection",
-   "cve": "CVE-2016-3081",
-   "sev": "high",
-   "iso": "2026-10-08",
-   "when": "8 Oct",
-   "e": "flaw",
-   "added": "2026-10-08",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "8 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "11 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "isc-bind-1008",
-   "k": "flaw",
-   "t": "ISC BIND: Data Processing Errors",
-   "cve": "CVE-2015-5477",
-   "sev": "high",
-   "iso": "2026-10-08",
-   "when": "8 Oct",
-   "e": "flaw",
-   "added": "2026-10-08",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "8 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "11 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "proftpd-proftpd-1008",
-   "k": "flaw",
-   "t": "ProFTPD ProFTPD: Improper Access Control",
-   "cve": "CVE-2015-3306",
-   "sev": "high",
-   "iso": "2026-10-08",
-   "when": "8 Oct",
-   "e": "flaw",
-   "added": "2026-10-08",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "ProFTPD contains an improper access control vulnerability that could allow remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "8 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "11 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "citrix-netscaler-1004",
-   "k": "flaw",
-   "t": "Citrix NetScaler: Improper Restriction of Operations within the Bounds of a Memory Buffer",
-   "cve": "CVE-2026-88779",
-   "sev": "high",
-   "iso": "2026-10-04",
-   "when": "4 Oct",
-   "e": "flaw",
-   "added": "2026-10-04",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "4 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "7 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "zammad-gmbh-zammad-1002",
-   "k": "flaw",
-   "t": "Zammad GmbH Zammad: Improper Privilege Management",
-   "cve": "CVE-2026-102490 · CVE-2026-102489",
-   "sev": "high",
-   "iso": "2026-10-02",
-   "when": "2 Oct",
-   "e": "flaw",
-   "added": "2026-10-02",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489. Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "2 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "5 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "fortinet-fortimail-1001",
-   "k": "flaw",
-   "t": "Fortinet FortiMail: Path Traversal",
-   "cve": "CVE-2026-104286",
-   "sev": "high",
-   "iso": "2026-10-01",
-   "when": "1 Oct",
-   "e": "flaw",
-   "added": "2026-10-01",
-   "tags": [],
-   "sec": "X",
-   "reg": "GLOBAL",
-   "conf": "confirmed",
-   "sum": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
-   "how": "Exploited in the wild, per CISA.",
-   "tl": [
-    [
-     "1 Oct",
-     "Added to CISA's exploited list."
-    ],
-    [
-     "4 Oct",
-     "CISA deadline for US federal agencies."
-    ]
-   ],
-   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-   "s": [
-    "r7947132cac"
-   ]
-  },
-  {
-   "id": "iqstel-inc-iqst-reports-a-1119",
+   "id": "jpmorgan-confirms-customer-data-breach-1120",
    "k": "inc",
-   "t": "iQSTEL Inc  (IQST) reports a material cybersecurity incident to the SEC",
-   "sev": "high",
-   "iso": "2026-11-19",
-   "added": "2026-11-21",
-   "when": "19 Nov",
-   "where": "US",
-   "e": "undisc",
-   "tags": [],
-   "sec": "X",
-   "reg": "AMER",
-   "conf": "confirmed",
-   "sum": "iQSTEL Inc  (IQST) filed a Form 8-K under Item 1.05, the item US-listed companies use for a cybersecurity incident they judge material.",
-   "how": "Not disclosed.",
-   "tl": [
-    [
-     "19 Nov",
-     "Reported by SEC"
-    ]
-   ],
-   "fix": "Under investigation.",
-   "s": [
-    "rb6df6880b9"
-   ]
-  },
-  {
-   "id": "careers360-3-609-421-accounts-1119",
-   "k": "inc",
-   "t": "Careers360: 3,609,421 accounts in a verified breach",
-   "sev": "crit",
-   "iso": "2026-11-19",
-   "added": "2026-11-21",
-   "when": "19 Nov",
-   "where": "India",
-   "e": "undisc",
-   "tags": [],
-   "sec": "EDU",
-   "reg": "APAC",
-   "conf": "confirmed",
-   "sum": "In November 2026, data allegedly taken from the Indian education and careers platform Careers360 appeared on a public hacking forum . The 22M records included 3.6M unique email addresses alongside names, phone numbers, genders and caste categories, and most also contained students' entrance exam results, including ranks and marks. Data: Academic records, Castes, Email addresses, Genders, Names, Phone numbers.",
-   "how": "Not disclosed.",
-   "tl": [
-    [
-     "19 Nov",
-     "Reported by HIBP"
-    ]
-   ],
-   "fix": "Under investigation.",
-   "s": [
-    "re16e6ae134"
-   ]
-  },
-  {
-   "id": "too-lost-724-323-accounts-1120",
-   "k": "inc",
-   "t": "Too Lost: 724,323 accounts in a verified breach",
+   "t": "JPMorgan Confirms Customer Data Breach Following Third-Party Compromise",
    "sev": "high",
    "iso": "2026-11-20",
    "added": "2026-11-21",
    "when": "20 Nov",
    "where": "Global",
-   "e": "cred",
-   "tags": [],
-   "sec": "GOV",
+   "e": "third",
+   "tags": [
+    "finance",
+    "ransom",
+    "vendor"
+   ],
+   "sec": "FIN",
    "reg": "GLOBAL",
    "conf": "confirmed",
-   "sum": "In November 2026, an unauthorised party claimed to have obtained data from the music distributor for independent artists, Too Lost. The data contained 724k unique email addresses belonging to artists, their collaborators and fans. Some records also contained bcrypt password hashes, while a small subset included partial credit card data (last 4 digits and card type), identity… Data: Dates of birth, Driver's licenses, Email addresses, Government issued IDs, IP addresses, Names.",
-   "how": "Stolen or leaked credentials and keys.",
+   "sum": "Ransomware actor N0n has claimed attacks on JPMorgan, Visa and Mastercard, reportedly leaking customer data on its dark web site",
+   "how": "Through a third party or supplier.",
    "tl": [
     [
      "20 Nov",
-     "Reported by HIBP"
+     "Reported by Infosecurity"
     ]
    ],
    "fix": "Under investigation.",
    "s": [
-    "rdd12a24b01"
+    "r4ebef484f9"
    ]
   },
   {
-   "id": "mt5-algo-trading-farm-onefunded-1120",
+   "id": "amazon-says-chinese-hackers-used-1120",
    "k": "inc",
-   "t": "MT5 algo-trading farm (OneFunded funded account, WINSERVER) listed by the PixelLeaks ransomware group",
+   "t": "Amazon says Chinese hackers used Cairn AI tool to discover apparent zero-day during attack on university",
    "sev": "med",
+   "iso": "2026-11-20",
+   "added": "2026-11-21",
+   "when": "20 Nov",
+   "where": "China",
+   "e": "flaw",
+   "tags": [
+    "ai",
+    "state"
+   ],
+   "sec": "HEALTH",
+   "reg": "APAC",
+   "conf": "reported",
+   "sum": "A China-linked threat actor used the open source AI penetration testing tool Cairn to persistently attack two universities, and in one case, possibly discover a zero-day bug, researchers said.",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "20 Nov",
+     "Reported by The Record"
+    ],
+    [
+     "20 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rcd038ca0a2",
+    "r0abe422151"
+   ]
+  },
+  {
+   "id": "whatsapp-patches-3-security-flaws-1120",
+   "k": "inc",
+   "t": "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
+   "sev": "med",
+   "iso": "2026-11-20",
+   "added": "2026-11-21",
+   "when": "20 Nov",
+   "where": "Global",
+   "e": "flaw",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Meta-owned WhatsApp has addressed security vulnerabilities, including one impacting its Android app that it suspects may have been exploited in connection with scam messages. The vulnerability, tracked as CVE-2026-23871 (CVSS score: 3.5), has been described as a case of incomplete validation of external ad-reply URLs in WhatsApp for Android and WhatsApp Business for Android before 2.26.17.4.",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "20 Nov",
+     "Reported by The Hacker News"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r6cc616c5c6"
+   ]
+  },
+  {
+   "id": "bell-canada-says-agentic-hacker-1120",
+   "k": "inc",
+   "t": "Bell Canada says 'agentic' hacker stole enterprise customer data",
+   "sev": "high",
+   "iso": "2026-11-20",
+   "added": "2026-11-21",
+   "when": "20 Nov",
+   "where": "Canada",
+   "e": "undisc",
+   "tags": [
+    "ai"
+   ],
+   "sec": "TEL",
+   "reg": "AMER",
+   "conf": "confirmed",
+   "sum": "Bell Canada has confirmed that an \"agentic\" threat actor breached its systems on November 17, 2026, and stole enterprise customer data, including information from a system used to order and provision telecommunications circuits. [...]",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "20 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r6c623452a1"
+   ]
+  },
+  {
+   "id": "container-store-restores-systems-after-1120",
+   "k": "inc",
+   "t": "Container Store restores systems after cyberattack",
+   "sev": "med",
+   "iso": "2026-11-20",
+   "added": "2026-11-21",
+   "when": "20 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "RETAIL",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "The firm’s parent company, Neighborhood Intelligence, said in a statement that The Container Store has “restored its website and systems following a cybersecurity incident this past weekend.”",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "20 Nov",
+     "Reported by The Record"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "redfeced150"
+   ]
+  },
+  {
+   "id": "china-s-armory-castle-lays-1120",
+   "k": "inc",
+   "t": "China's 'Armory Castle' Lays Siege to VMware vCenter Zero-Day",
+   "sev": "med",
+   "iso": "2026-11-20",
+   "added": "2026-11-21",
+   "when": "20 Nov",
+   "where": "China",
+   "e": "flaw",
+   "tags": [],
+   "sec": "X",
+   "reg": "APAC",
+   "conf": "reported",
+   "sum": "During the last wave of major VMware vCenter security updates, a China-nexus threat group likely already had its next zero-day up its sleeve.",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "20 Nov",
+     "Reported by Dark Reading"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "ra9aa37cedd"
+   ]
+  },
+  {
+   "id": "west-virginia-legislature-hit-with-1120",
+   "k": "inc",
+   "t": "West Virginia Legislature hit with cyber incident affecting IT systems",
+   "sev": "crit",
+   "iso": "2026-11-20",
+   "added": "2026-11-21",
+   "when": "20 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "GOV",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "A cybersecurity incident that began Thursday was still ongoing Friday in the West Virginia Legislature. A spokesperson said the disruption did not spread to other government entities.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "20 Nov",
+     "Reported by The Record"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rf0b8696c25"
+   ]
+  },
+  {
+   "id": "dialing-for-data-inside-the-1120",
+   "k": "inc",
+   "t": "Dialing for Data: Inside the Com’s High-Profile Heists",
+   "sev": "med",
+   "iso": "2026-11-20",
+   "added": "2026-11-21",
+   "when": "20 Nov",
+   "where": "Global",
+   "e": "social",
+   "tags": [
+    "human",
+    "ransom"
+   ],
+   "sec": "HEALTH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Our analysis of Com affiliate vishing attacks, cloud data theft and extortion campaigns targeting healthcare and finance, with actionable defense guidance.",
+   "how": "Phishing or social engineering.",
+   "tl": [
+    [
+     "20 Nov",
+     "Reported by Unit 42"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rec3643e6e5"
+   ]
+  },
+  {
+   "id": "cto-of-ransomwarehelp-indicted-for-1120",
+   "k": "inc",
+   "t": "CTO of ‘RansomwareHelp’ Indicted for Wire Fraud",
+   "sev": "high",
    "iso": "2026-11-20",
    "added": "2026-11-21",
    "when": "20 Nov",
@@ -3069,20 +343,109 @@
     "finance",
     "ransom"
    ],
-   "sec": "FIN",
-   "reg": "GLOBAL",
-   "conf": "claim",
-   "sum": "The PixelLeaks group listed MT5 algo-trading farm (OneFunded funded account, WINSERVER) (Financial Services, ) on its leak site. Not confirmed by the victim.",
+   "sec": "CRYPTO",
+   "reg": "AMER",
+   "conf": "reported",
+   "sum": "The chief technology officer and co-founder of ransomwarehelp.com, a six year old Florida business that claimed to use \"advanced cryptographic tools\" to restore data locked by ransomware, has been charged with wire fraud after an FBI sting operation found the company was simply paying the attackers for a decryption key and charging victims a markup for work that was never performed.",
    "how": "Not disclosed.",
    "tl": [
     [
      "20 Nov",
-     "Reported by ransomware.live"
+     "Reported by Krebs"
     ]
    ],
    "fix": "Under investigation.",
    "s": [
-    "r479aa059af"
+    "r93138fbb4d"
+   ]
+  },
+  {
+   "id": "attackers-ai-agents-found-a-1121",
+   "k": "inc",
+   "t": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
+   "sev": "med",
+   "iso": "2026-11-21",
+   "added": "2026-11-21",
+   "when": "21 Nov",
+   "where": "China",
+   "e": "flaw",
+   "tags": [
+    "ai",
+    "state"
+   ],
+   "sec": "HEALTH",
+   "reg": "APAC",
+   "conf": "reported",
+   "sum": "Suspected China-linked hackers used autonomous AI agents to find a previously unknown flaw in MONAI Label, an open-source medical imaging server, and gain root access to a university server, Amazon Threat Intelligence said this week. The flaw allows an attacker with no account to write files outside the server's storage folder, and it affects MONAI Label 0.8.5 and earlier in the default setup,",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "21 Nov",
+     "Reported by The Hacker News"
+    ],
+    [
+     "21 Nov",
+     "Reported by SecurityWeek"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r16765aea3b",
+    "r6231e48f3b"
+   ]
+  },
+  {
+   "id": "fbi-reportedly-hacked-again-this-1121",
+   "k": "inc",
+   "t": "FBI reportedly hacked again, this time targeting nationwide police database",
+   "sev": "high",
+   "iso": "2026-11-21",
+   "added": "2026-11-21",
+   "when": "21 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "GOV",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "FBI systems have reportedly been breached for the second time in two months, this time targeting the agency's National Crime Information Center (NCIC), which is used to share information between local, state, and federal law enforcement agencies. [...]",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "21 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "refef5bd50b"
+   ]
+  },
+  {
+   "id": "microsoft-entra-connect-health-flaw-1121",
+   "k": "inc",
+   "t": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
+   "sev": "high",
+   "iso": "2026-11-21",
+   "added": "2026-11-21",
+   "when": "21 Nov",
+   "where": "Global",
+   "e": "flaw",
+   "tags": [],
+   "sec": "HEALTH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Microsoft is warning organizations that it suffered a data breach after attackers exploited a vulnerability in its Entra Connect Health service to gain unauthorized access to administrator email addresses and tenant configuration information. [...]",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "21 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r1e1dbef95d"
    ]
   }
  ]
