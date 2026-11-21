@@ -1,0 +1,1005 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cyber Incident Record — Daily Edition</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+/* The filed dossier, second edition: hard rules, square cells, mono labels, one cobalt accent.
+   Severity tiers were re-validated for colour-blind separation in light and dark. */
+:root{
+  --paper:#e8ebef; --panel:#f6f7f9; --ink:#0e1620; --muted:#4f5a68; --hair:#b9c0ca;
+  --accent:#1a3fa6; --accent-ink:#ffffff; --accent-soft:#dbe3f6;
+  --crit:#b42318; --high:#b98300; --med:#5b6b80; --ok:#1f7a4d;
+  --crit-ink:#ffffff; --high-ink:#0e1620; --med-ink:#ffffff;
+  --invert-bg:#0e1620; --invert-ink:#eef1f5; --invert-muted:#a9b3c0;
+  --bar:#0e1620; --bar-ink:#e8ebef;
+  --display:"Source Serif 4","Iowan Old Style",Georgia,serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --gut:clamp(16px,4vw,48px); --gap:clamp(14px,2vw,24px);
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --paper:#0c1118; --panel:#141b25; --ink:#e7ebf0; --muted:#9aa6b4; --hair:#33404f;
+  --accent:#8ea8ff; --accent-ink:#0c1118; --accent-soft:#1c2740;
+  --crit:#e04f45; --high:#d6a53b; --med:#8fa0b5; --ok:#5cc08d;
+  --crit-ink:#0c1118; --high-ink:#0c1118; --med-ink:#0c1118;
+  --invert-bg:#e7ebf0; --invert-ink:#0c1118; --invert-muted:#445061;
+  --bar:#04070b; --bar-ink:#e7ebf0;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;border-radius:0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+html{scroll-padding-top:calc(56px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:clamp(15px,.35vw + 14px,17px);line-height:1.55;padding-bottom:env(safe-area-inset-bottom,0px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bar)}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1280px;margin:0 auto;padding-left:max(var(--gut),env(safe-area-inset-left,0px));padding-right:max(var(--gut),env(safe-area-inset-right,0px))}
+.mono{font-family:var(--mono);font-size:.74em;letter-spacing:.08em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1;font-weight:700}
+p{margin:0}
+button,input,select{font:inherit;color:inherit}
+code,.code{font-family:var(--mono);font-size:.82em;overflow-wrap:anywhere}
+[hidden]{display:none!important}
+
+/* Status strip */
+.status{background:var(--bar);color:var(--bar-ink);padding-top:env(safe-area-inset-top,0px)}
+.status .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;padding-block:8px;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase}
+.status .pill{border:1px solid currentColor;padding:1px 7px}
+.status .pill.live{background:var(--ok);border-color:var(--ok);color:#fff}
+.status .pill.pre,.status .pill.warn{background:var(--high);border-color:var(--high);color:#0e1620}
+.status .dot{display:inline-block;width:8px;height:8px;background:var(--high);margin-right:6px;vertical-align:0}
+.status .sp{margin-left:auto}
+
+/* Masthead */
+.mast{padding-block:clamp(16px,2.6vw,30px) 0}
+.mast-top{display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;border-bottom:1px solid var(--ink);padding-bottom:10px;color:var(--muted)}
+h1{font-size:clamp(2rem,5vw,4.2rem);letter-spacing:-.02em;margin:clamp(12px,2vw,24px) 0 clamp(10px,1.4vw,16px)}
+h1 small{display:block;font-family:var(--mono);font-size:.22em;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-top:10px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));border-top:2px solid var(--ink);border-left:1px solid var(--ink)}
+.stat{border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:clamp(12px,1.6vw,18px);background:var(--panel);display:flex;flex-direction:column;gap:4px;text-align:left;cursor:pointer;border-top:0;border-left:0;appearance:none}
+.stat:hover{background:color-mix(in srgb,var(--accent) 7%,var(--panel))}
+.stat b{font-family:var(--display);font-size:clamp(1.4rem,2.3vw,2.1rem);line-height:1.05;font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted);font-size:.88em}
+
+/* Tabs */
+.tabbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:var(--bar);margin-top:clamp(18px,2.6vw,32px)}
+.tabbar .wrap{display:flex;gap:0;align-items:stretch}
+.tabs{display:flex;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.tabs::-webkit-scrollbar{display:none}
+.tab,.tbtn{appearance:none;border:0;background:transparent;color:var(--paper);padding:14px 13px;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;white-space:nowrap;border-right:1px solid color-mix(in srgb,var(--bar-ink) 22%,transparent);display:flex;gap:8px;align-items:center;color:var(--bar-ink)}
+.tab:hover,.tbtn:hover{background:color-mix(in srgb,var(--bar-ink) 12%,transparent)}
+.tab[aria-selected="true"]{background:var(--accent);color:var(--accent-ink)}
+.tab .n{font-variant-numeric:tabular-nums;opacity:.75}
+.tbtn{border-right:0;border-left:1px solid color-mix(in srgb,var(--bar-ink) 22%,transparent)}
+.tbtn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2}
+.panel{padding-block:clamp(22px,3.6vw,44px) 0}
+
+.sec-head{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:var(--gap)}
+.sec-head .mono{color:var(--muted)}
+h2{font-size:clamp(1.35rem,2.4vw,2.1rem)}
+.sec-intro{max-width:74ch;color:var(--muted);margin-bottom:var(--gap)}
+.sub{margin-top:clamp(32px,4.5vw,60px)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:var(--gap)}
+
+/* Tags */
+.tag{display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.07em;text-transform:uppercase;padding:2px 6px;border:1px solid var(--ink);background:var(--paper);white-space:nowrap;line-height:1.5}
+.tag.crit{background:var(--crit);border-color:var(--crit);color:var(--crit-ink)}
+.tag.high{background:var(--high);border-color:var(--high);color:var(--high-ink)}
+.tag.med{background:var(--med);border-color:var(--med);color:var(--med-ink)}
+.tag.acc{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.tag.new{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.tag.upd{border-style:dashed}
+.tag.claim{border-style:dotted;color:var(--muted)}
+.tag.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.tag.out{background:transparent;border-color:var(--hair);color:var(--muted)}
+
+/* Act now */
+.alert{border:2px solid var(--crit);background:var(--panel)}
+.alert-head{background:var(--crit);color:var(--crit-ink);padding:10px 16px;display:flex;flex-wrap:wrap;gap:4px 16px;justify-content:space-between;align-items:baseline}
+.alert-head h2{font-size:clamp(1.15rem,1.6vw + .6rem,1.6rem)}
+.alert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,215px),1fr))}
+.alert-cell{padding:16px;display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--hair);border-right:1px solid var(--hair);min-width:0}
+.alert-cell h3{font-size:1.08rem}
+.alert-cell p{font-size:.93em}
+.go{margin-top:auto;align-self:flex-start;background:none;border:1px solid var(--ink);padding:6px 10px;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.go:hover{background:var(--ink);color:var(--paper)}
+.alert-foot{padding:12px 16px;border-top:1px solid var(--hair);display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;font-size:.92em}
+.alert-foot span{min-width:0;overflow-wrap:anywhere}
+.alert-foot b{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase}
+
+/* Compact rows (briefing lists) */
+.clist{border-top:1px solid var(--ink)}
+.crow{display:grid;grid-template-columns:5.2em 1fr auto;gap:12px;align-items:baseline;padding:10px 2px;border-bottom:1px solid var(--hair);cursor:pointer;background:none;border-left:0;border-right:0;border-top:0;width:100%;text-align:left}
+.crow:hover{background:color-mix(in srgb,var(--accent) 6%,transparent)}
+.crow time{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.crow .tt{font-weight:600;line-height:1.3}
+.crow .tt small{display:block;font-weight:400;color:var(--muted);font-size:.88em;margin-top:2px}
+.crow .tg{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.adv{display:grid;grid-template-columns:5.2em 6.5em 1fr;gap:12px;padding:10px 2px;border-bottom:1px solid var(--hair);align-items:baseline;font-size:.94em}
+.adv time,.adv .org{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.adv .org{color:var(--accent);font-weight:600}
+.note{font-size:.9em;color:var(--muted);border-left:3px solid var(--hair);padding-left:12px}
+.box{border:1px solid var(--ink);background:var(--panel);padding:16px;display:flex;flex-direction:column;gap:8px}
+.box.dash{border-style:dashed}
+.box{scroll-margin-top:calc(64px + env(safe-area-inset-top,0px))}
+.box.flash{animation:flash 1.4s ease}
+.box h3{font-size:1.05rem}
+
+/* Toolbar */
+.toolbar{display:flex;flex-direction:column;gap:10px;margin-bottom:var(--gap)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;padding:8px 11px;border:1px solid var(--ink);background:var(--panel);color:var(--ink);cursor:pointer}
+.chip:hover{background:var(--hair)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.tools-row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between}
+.seg{display:inline-flex;border:1px solid var(--ink);flex-wrap:wrap}
+.seg .chip{border:0;border-right:1px solid var(--ink)}
+.seg .chip:last-child{border-right:0}
+.field{display:flex;align-items:center;border:1px solid var(--ink);background:var(--panel)}
+.field label{font-family:var(--mono);font-size:.62rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding:0 8px;white-space:nowrap}
+.field select,.field input{border:0;background:transparent;padding:8px 10px;min-width:0;font-size:.9em}
+.field input{width:min(260px,52vw)}
+.field select{border-left:1px solid var(--hair);cursor:pointer}
+.count{color:var(--muted);font-size:.9em}
+.linkbtn{background:none;border:0;padding:4px 0;color:var(--accent);text-decoration:underline;text-underline-offset:2px;cursor:pointer;font-size:.9em}
+
+/* Collapsible rows */
+.month-h{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:18px 0 8px;display:flex;justify-content:space-between;border-bottom:1px solid var(--ink);margin-bottom:8px}
+.mgroup:first-child .month-h{padding-top:0}
+.list{display:flex;flex-direction:column;gap:8px}
+details.row{scroll-margin-top:calc(64px + env(safe-area-inset-top,0px));background:var(--panel);border:1px solid var(--ink);border-left:8px solid var(--med)}
+details.row.crit{border-left-color:var(--crit)}
+details.row.high{border-left-color:var(--high)}
+details.row > summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start;padding:12px 14px}
+details.row > summary::-webkit-details-marker{display:none}
+details.row > summary:hover{background:color-mix(in srgb,var(--accent) 6%,transparent)}
+.chev{width:30px;height:30px;border:1px solid var(--ink);display:grid;place-items:center;transition:transform .18s ease,background .18s ease;margin-top:2px;flex:none}
+.chev svg{width:12px;height:12px;fill:none;stroke:var(--ink);stroke-width:2.4}
+details[open] > summary .chev{transform:rotate(90deg);background:var(--ink)}
+details[open] > summary .chev svg{stroke:var(--paper)}
+.s-main{display:flex;flex-direction:column;gap:4px;min-width:0}
+.s-meta{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.s-meta .when{margin-left:auto;font-family:var(--mono);font-size:.7rem;color:var(--muted);letter-spacing:.04em}
+.s-main h3{font-size:clamp(1.05rem,.8vw + .85rem,1.28rem)}
+.s-main .one{color:var(--muted);font-size:.93em;max-width:92ch}
+details[open] .one{display:none}
+.row-body{padding:0 14px 16px 58px;display:flex;flex-direction:column;gap:12px}
+.row-body .sum{max-width:74ch}
+dl{margin:0;display:grid;grid-template-columns:minmax(110px,auto) 1fr;border-top:1px solid var(--hair)}
+dt,dd{margin:0;padding:8px 0;border-bottom:1px solid var(--hair)}
+dt{font-family:var(--mono);font-size:.64rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding-right:14px;padding-top:11px}
+dd{min-width:0;overflow-wrap:anywhere}
+.tl{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.tl li{display:grid;grid-template-columns:6.4em 1fr;gap:10px}
+.tl time{font-family:var(--mono);font-size:.76em;color:var(--accent);font-weight:600;padding-top:.15em}
+.src{font-size:.86em}
+.src a{margin-right:12px;display:inline-block;max-width:100%}
+.empty{padding:20px;border:1px dashed var(--hair);color:var(--muted)}
+details.row.flash{animation:flash 1.4s ease}
+@keyframes flash{0%{box-shadow:0 0 0 4px var(--accent)}100%{box-shadow:0 0 0 0 transparent}}
+
+/* KPI tiles */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));border-top:1px solid var(--ink);border-left:1px solid var(--ink);margin-bottom:var(--gap)}
+.kpi{border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:14px 16px;background:var(--panel);display:flex;flex-direction:column;gap:4px}
+.kpi b{font-family:var(--display);font-size:clamp(1.5rem,2.3vw,2.1rem);line-height:1;font-variant-numeric:tabular-nums}
+.kpi span{color:var(--muted);font-size:.86em}
+.kpi em{font-style:normal;font-family:var(--mono);font-size:.68rem;letter-spacing:.04em;color:var(--muted)}
+
+/* Charts */
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,500px),1fr));gap:var(--gap)}
+.chart{background:var(--panel);border:1px solid var(--ink);padding:clamp(14px,2vw,20px);display:flex;flex-direction:column;gap:12px;min-width:0}
+.chart.wide{grid-column:1/-1}
+.chart h3{font-size:1.12rem}
+.chart .cap{color:var(--muted);font-size:.88em;max-width:72ch}
+.chart .take{font-size:.92em;border-top:1px solid var(--hair);padding-top:10px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;color:var(--muted);font-size:.84em;align-items:center}
+.legend i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px}
+
+.cols{display:grid;grid-template-columns:2.2em 1fr;gap:8px}
+.yaxis{position:relative;height:200px;font-family:var(--mono);font-size:.66rem;color:var(--muted)}
+.yaxis span{position:absolute;right:0;transform:translateY(50%)}
+.plot{position:relative;height:200px;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:clamp(3px,1.2vw,14px);align-items:end;border-bottom:1px solid var(--ink)}
+.plot.dense{gap:2px}
+.grid-l{position:absolute;left:0;right:0;border-top:1px solid var(--hair);pointer-events:none}
+.col{position:relative;display:flex;flex-direction:column-reverse;gap:2px;height:100%;justify-content:flex-start;cursor:default}
+.col .seg-b{width:100%;background:var(--med)}
+.col .seg-b.crit{background:var(--crit)}.col .seg-b.high{background:var(--high)}
+.col .seg-b.acc{background:var(--accent)}
+.col .seg-b:last-of-type{border-radius:4px 4px 0 0}
+.plot > .col{width:100%;max-width:140px;justify-self:center}
+.col .tot{font-family:var(--mono);font-size:.7rem;text-align:center;font-variant-numeric:tabular-nums}
+.col.partial .seg-b{background-image:repeating-linear-gradient(135deg,transparent 0 4px,color-mix(in srgb,var(--panel) 45%,transparent) 4px 6px)}
+.col:hover .seg-b,.col:focus .seg-b{filter:brightness(1.12)}
+.xlab{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:clamp(3px,1.2vw,14px);font-family:var(--mono);font-size:.62rem;color:var(--muted);text-align:center;margin-left:calc(2.2em + 8px)}
+.xlab.dense{gap:2px}
+
+.bars{display:grid;gap:7px}
+.bar{display:grid;grid-template-columns:minmax(110px,34%) 1fr minmax(3.4em,auto);gap:10px;align-items:center}
+.bar .n{font-size:.88em;overflow-wrap:anywhere}
+.bar .t{height:16px;background:repeating-linear-gradient(90deg,transparent 0 calc(25% - 1px),var(--hair) calc(25% - 1px) 25%)}
+.bar .f{height:100%;background:var(--accent);border-radius:0 4px 4px 0;min-width:2px}
+.bar .f.h{background:var(--crit)}
+.bar .v{font-family:var(--mono);font-size:.78em;text-align:right;font-variant-numeric:tabular-nums}
+.axis{display:grid;grid-template-columns:minmax(110px,34%) 1fr minmax(3.4em,auto);gap:10px;font-family:var(--mono);font-size:.62rem;color:var(--muted)}
+.axis div{display:flex;justify-content:space-between}
+
+table.t{width:100%;border-collapse:collapse;font-size:.9em}
+.t th,.t td{padding:8px 10px;border-bottom:1px solid var(--hair);text-align:left;vertical-align:top}
+.t thead th{font-family:var(--mono);font-size:.64rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom:1px solid var(--ink)}
+.t td.num,.t th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:.85em;white-space:nowrap}
+.t tr.hot td:first-child{box-shadow:inset 4px 0 0 var(--crit);padding-left:12px}
+.t.dark thead th{background:var(--ink);color:var(--paper);border-bottom:0}
+.t thead th[data-k]{cursor:pointer}
+.t thead th[data-k]::after{content:" ↕";opacity:.6}
+.tablebox{overflow-x:auto;border:1px solid var(--ink);background:var(--panel)}
+.tablebox table{min-width:760px}
+
+/* Calendar month grid */
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+.cal .dow{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:6px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--paper)}
+.day{border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);min-height:64px;padding:4px 5px;background:var(--panel);display:flex;flex-direction:column;gap:4px}
+.day.pad{background:transparent}
+.day.future{background:repeating-linear-gradient(135deg,transparent 0 6px,color-mix(in srgb,var(--hair) 40%,transparent) 6px 7px)}
+.day.today{box-shadow:inset 0 0 0 2px var(--accent)}
+.day .d{font-family:var(--mono);font-size:.62rem;color:var(--muted)}
+.day .pips{display:flex;flex-wrap:wrap;gap:3px}
+.pip{width:8px;height:8px;background:var(--med)}
+.pip.crit{background:var(--crit)}.pip.high{background:var(--high)}
+
+/* Banks extras */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+.pcell{border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:16px;background:var(--panel);display:flex;flex-direction:column;gap:8px;min-width:0}
+.pcell .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.pcell h3{font-size:1.08rem}
+.pcell p{font-size:.92em}
+.facts{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--hair)}
+.facts li{display:grid;grid-template-columns:6.5em 1fr;gap:12px;padding:9px 0;border-bottom:1px solid var(--hair);font-size:.92em}
+.facts b{font-family:var(--display);font-size:1.25rem;line-height:1.1;font-variant-numeric:tabular-nums}
+
+/* Inverted blocks */
+.verdict{background:var(--invert-bg);color:var(--invert-ink);margin-top:clamp(32px,4.5vw,60px);padding:clamp(24px,4vw,48px) clamp(16px,3vw,32px)}
+.verdict a{color:inherit}
+.verdict .sec-head{border-color:var(--invert-ink)}
+.verdict .big{font-family:var(--display);font-size:clamp(1.2rem,1.3vw + 1rem,1.8rem);line-height:1.3;max-width:38ch;text-wrap:balance}
+.verdict ul{margin:16px 0 0;padding-left:1.1em;display:grid;gap:8px;max-width:80ch}
+.controls{counter-reset:c;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));border-top:1px solid var(--invert-ink);border-left:1px solid var(--invert-ink)}
+.controls li{counter-increment:c;border-right:1px solid var(--invert-ink);border-bottom:1px solid var(--invert-ink);padding:16px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px}
+.controls li::before{content:counter(c,decimal-leading-zero);font-family:var(--mono);font-weight:600;grid-row:span 3}
+.controls h3{font-size:1.02rem}
+.controls p{color:var(--invert-muted);font-size:.92em}
+.controls .why{font-family:var(--mono);font-size:.64rem;letter-spacing:.05em;text-transform:uppercase}
+
+/* Sources */
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:var(--gap);margin-bottom:var(--gap)}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr));gap:12px}
+.scard{border:1px solid var(--ink);background:var(--panel);padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0;border-top:4px solid var(--hair)}
+.scard.A{border-top-color:var(--accent)}.scard.B{border-top-color:var(--med)}.scard.C{border-top-color:var(--high)}
+.scard h3{font-size:1.02rem;font-family:var(--body);font-weight:600;line-height:1.3}
+.scard .org{color:var(--muted);font-size:.86em}
+.scard .ep{display:flex;gap:6px;align-items:flex-start;border:1px solid var(--hair);background:var(--paper);padding:6px 8px}
+.scard .ep code{flex:1;font-size:.74rem;line-height:1.45}
+.copy{border:1px solid var(--ink);background:var(--panel);font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;padding:3px 6px;cursor:pointer;flex:none}
+.copy:hover{background:var(--ink);color:var(--paper)}
+.scard dl{grid-template-columns:5.5em 1fr;font-size:.86em}
+.scard dt{font-size:.58rem;padding-top:9px}
+.scard dd{padding:6px 0}
+.scard .sn{font-size:.86em;color:var(--muted)}
+.reflist{columns:3 260px;column-gap:clamp(20px,4vw,48px);padding:0;margin:0;list-style:none;font-size:.86em}
+.reflist li{break-inside:avoid;padding:5px 0;border-bottom:1px solid var(--hair)}
+details.fold{border:1px solid var(--ink);background:var(--panel);margin-top:var(--gap)}
+details.fold > summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;gap:12px;align-items:center;font-family:var(--mono);font-size:.74rem;letter-spacing:.07em;text-transform:uppercase}
+details.fold > summary::-webkit-details-marker{display:none}
+details.fold[open] > summary .chev{transform:rotate(90deg);background:var(--ink)}
+details.fold[open] > summary .chev svg{stroke:var(--paper)}
+.foldbody{padding:0 14px 14px}
+
+
+footer{padding-block:clamp(24px,4vw,48px);color:var(--muted);font-size:.84em;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+#tip{position:fixed;z-index:40;pointer-events:none;background:var(--ink);color:var(--paper);font-size:.8rem;padding:7px 9px;max-width:300px;line-height:1.4;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.toast{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:8px 14px;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;z-index:50}
+
+
+@media (max-width:640px){
+  .row-body{padding-left:14px}
+  dl{grid-template-columns:1fr} dt{padding-bottom:0;border-bottom:0}
+  .scard dl{grid-template-columns:5.5em 1fr}
+  .tl li{grid-template-columns:1fr;gap:0}
+  .bar,.axis{grid-template-columns:1fr auto} .bar .t,.axis div{grid-column:1/-1;order:3}
+  .s-meta .when{margin-left:0;width:100%}
+  .xlab{font-size:.52rem}
+  .crow{grid-template-columns:4.2em 1fr}
+  .crow .tg{grid-column:2;justify-content:flex-start}
+  .adv{grid-template-columns:4.2em 1fr}
+  .adv .t{grid-column:1/-1}
+  .tbtn .lbl{display:none}
+  .status .sp{margin-left:0}
+  .day{min-height:46px}
+  .cal .dow{font-size:.54rem;padding:4px}
+}
+@media print{
+  .status,.tabbar,.toolbar,.go,.linkbtn,#tip,.noprint{display:none!important}
+  body{background:#fff}
+  .chart,.kpi,.stat,details.row,.box{break-inside:avoid}
+  details.row .row-body{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="status" role="status">
+  <div class="wrap" id="statusBar"></div>
+</div>
+
+<header class="mast wrap">
+  <div class="mast-top mono">
+    <span>Incident record · worldwide</span>
+    <span id="periodLbl"></span>
+    <span id="editionLbl"></span>
+  </div>
+  <h1>Cyber Incident Record<small>Daily edition · attacks, exploited flaws and what to patch</small></h1>
+  <div class="alert" aria-labelledby="act-h">
+    <div class="alert-head"><h2 id="act-h">Act now</h2><span class="mono">Most critical right now · exploited, or fix just released</span></div>
+    <div class="alert-grid" id="actGrid"></div>
+    <div class="alert-foot" id="watchFoot"></div>
+  </div>
+</header>
+
+<nav class="tabbar" aria-label="Views">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs">
+      <button class="tab" role="tab" data-tab="briefing" aria-controls="briefing">Briefing</button>
+      <button class="tab" role="tab" data-tab="incidents" aria-controls="incidents">Incidents <span class="n" id="nInc"></span></button>
+      <button class="tab" role="tab" data-tab="vulns" aria-controls="vulns">Exploited flaws <span class="n" id="nKev"></span></button>
+      <button class="tab" role="tab" data-tab="banks" aria-controls="banks">Banks &amp; finance <span class="n" id="nFin"></span></button>
+      <button class="tab" role="tab" data-tab="monthly" aria-controls="monthly">Monthly reports</button>
+      <button class="tab" role="tab" data-tab="sources" aria-controls="sources">Sources <span class="n" id="nSrc"></span></button>
+    </div>
+    <button class="tbtn" type="button" id="themeBtn" title="Switch light or dark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="lbl" id="themeLbl">Dark</span></button>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============ BRIEFING ============ -->
+<section id="briefing" class="panel wrap" role="tabpanel" hidden>
+  <div class="sec-head"><h2>Since the last edition</h2><span class="mono" id="sinceLbl"></span></div>
+  <div class="clist" id="sinceList"></div>
+
+  <div class="sec-head sub"><h2 id="mtdH">This month so far</h2><span class="mono" id="mtdLbl"></span></div>
+  <div class="kpis" id="mtdKpis"></div>
+  <div class="chart">
+    <h3>Entries per day, last 30 days</h3>
+    <div class="legend"><span><i style="background:var(--crit)"></i>Critical</span><span><i style="background:var(--high)"></i>High</span><span><i style="background:var(--med)"></i>Notable</span></div>
+    <div class="cols"><div class="yaxis" id="dYax" style="height:150px"></div><div class="plot dense" id="dPlot" style="height:150px"></div></div>
+    <div class="xlab dense" id="dLab"></div>
+  </div>
+
+  <div class="grid2 sub">
+    <div>
+      <div class="sec-head"><h2>Latest critical and high</h2><button class="linkbtn noprint" type="button" data-goto="incidents">All incidents</button></div>
+      <div class="clist" id="latestList"></div>
+    </div>
+    <div>
+      <div class="sec-head"><h2>Government advisories</h2><span class="mono">CISA · FBI · CERTs</span></div>
+      <div id="advList" style="border-top:1px solid var(--ink)"></div>
+      <div class="box dash" style="margin-top:var(--gap)" id="notAttack"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INCIDENTS ============ -->
+<section id="incidents" class="panel wrap" role="tabpanel" hidden>
+  <div class="toolbar">
+    <div class="tools-row">
+      <div class="field"><label for="q">Search</label><input id="q" type="search" placeholder="Company, CVE, country…" autocomplete="off"></div>
+      <div class="seg" id="sevs" role="group" aria-label="Severity">
+        <button class="chip" type="button" data-s="all">All</button>
+        <button class="chip" type="button" data-s="crit">Critical <span data-n="crit"></span></button>
+        <button class="chip" type="button" data-s="high">High <span data-n="high"></span></button>
+        <button class="chip" type="button" data-s="med">Notable <span data-n="med"></span></button>
+      </div>
+      <div class="seg" id="months" role="group" aria-label="Month"></div>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Thread"></div>
+    <div class="tools-row">
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <div class="field"><label for="fSec">Sector</label><select id="fSec"></select></div>
+        <div class="field"><label for="fReg">Region</label><select id="fReg"></select></div>
+        <div class="field"><label for="fConf">Status</label><select id="fConf"><option value="all">All</option><option value="confirmed">Confirmed by victim or government</option><option value="reported">Reported by researchers or press</option><option value="claim">Criminal claim only</option></select></div>
+      </div>
+      <span class="count" id="count" aria-live="polite"></span>
+      <span><button class="linkbtn" type="button" id="reset">Reset</button> · <button class="linkbtn" type="button" id="openAll">Open all</button> · <button class="linkbtn" type="button" id="closeAll">Close all</button></span>
+    </div>
+  </div>
+  <div id="list"></div>
+</section>
+
+<!-- ============ EXPLOITED FLAWS ============ -->
+<section id="vulns" class="panel wrap" role="tabpanel" hidden>
+  <div class="kpis" id="kevKpis"></div>
+  <div class="sec-head"><h2>Patch now</h2><span class="mono">Critical · fix out · not yet known to be exploited</span></div>
+  <div id="watchList" class="grid2"></div>
+  <div class="chart sub">
+    <h3>Added to CISA's exploited list, per week</h3>
+    <div class="cols"><div class="yaxis" id="kYax" style="height:170px"></div><div class="plot" id="kPlot" style="height:170px"></div></div>
+    <div class="xlab" id="kLab"></div>
+    <p class="take" id="kTake"></p>
+  </div>
+
+  <div class="sec-head sub"><h2>Exploited flaws</h2><span class="mono">CISA KEV · newest first</span></div>
+  <div class="toolbar"><div class="tools-row">
+    <div class="seg" id="kevF" role="group" aria-label="Filter flaws">
+      <button class="chip" type="button" data-f="all">All</button>
+      <button class="chip" type="button" data-f="soon">Due in 7 days</button>
+      <button class="chip" type="button" data-f="past">Past due</button>
+      <button class="chip" type="button" data-f="month">Added this month</button>
+    </div>
+    <span class="count" id="kevCount"></span>
+  </div></div>
+  <div class="tablebox"><table class="t dark" id="kevTbl"><thead><tr><th data-k="a" class="num">Added</th><th data-k="cve">CVE</th><th data-k="v">Vendor and product</th><th>Flaw</th><th data-k="cvss" class="num">CVSS</th><th class="num">EPSS</th><th data-k="d">Fix by</th><th>Linked incident</th></tr></thead><tbody></tbody></table></div>
+  <p class="note" style="margin-top:12px" id="kevNote"></p>
+</section>
+
+<!-- ============ BANKS ============ -->
+<section id="banks" class="panel wrap" role="tabpanel" hidden>
+  <div class="kpis" id="bankKpis"></div>
+  <div class="sec-head"><h2>Finance incidents</h2><span class="mono">Banks, insurers, payments, fintech and crypto</span></div>
+  <div class="toolbar"><div class="tools-row">
+    <div class="seg" id="bsevs" role="group" aria-label="Severity">
+      <button class="chip" type="button" data-s="all">All</button>
+      <button class="chip" type="button" data-s="crit">Critical <span data-n="crit"></span></button>
+      <button class="chip" type="button" data-s="high">High <span data-n="high"></span></button>
+      <button class="chip" type="button" data-s="med">Notable <span data-n="med"></span></button>
+    </div>
+    <span class="count" id="bcount" aria-live="polite"></span>
+  </div></div>
+  <div class="list" id="bankList"></div>
+  <p class="note" style="margin-top:12px">Not attacks: the JPMorgan Chase and wider US bank outages of 16 November were a software bug, per the bank and US officials. Krungthai Bank's email outage from 12 November followed the Microsoft 365 outage.</p>
+
+  <div class="sec-head sub"><h2>How financial firms were hit</h2></div>
+  <div class="pgrid">
+    <div class="pcell"><span class="k">1 · Vendors</span><h3>Through a supplier</h3><p>Arkéa, Visa, Mastercard and JPMorgan's providers, Sawyer Savings Bank, SMBC, HSBC (Optimizely) and AU Small Finance Bank were all reached through a third party.</p></div>
+    <div class="pcell"><span class="k">2 · Speed</span><h3>AI sweeps a sector</h3><p>One campaign breached 16 South Korean lenders. The FBI says ARTEX intrusions reached privileged access in under three hours.</p></div>
+    <div class="pcell"><span class="k">3 · Cash-out</span><h3>Wire, stablecoin, gone</h3><p>Arkéa's money went to exchanges, then stablecoins. About $30m was laundered before the bank disclosed the theft.</p></div>
+    <div class="pcell"><span class="k">4 · Deception</span><h3>Deepfake calls</h3><p>North Korea's FaceStealer scheme used fake video calls, some with deepfakes, to steal more than $400m in crypto.</p></div>
+  </div>
+  <div class="charts sub">
+    <div class="chart"><h3>How financial firms were entered</h3><div class="bars" id="bankEntry"></div><p class="take" id="bankEntryTake"></p></div>
+    <div class="chart"><h3>The sector in numbers</h3>
+      <ul class="facts">
+        <li><b>739</b><span>US financial-services breaches in 2025, most of any sector. <a href="https://www.pulse.bot/cybersecurity/news/banks-remain-most-breached-sector-as-attacks-hit-record-f3722a1b-a1e6-4bfc-9e3c-53b2ca94366f" target="_blank" rel="noopener">ITRC</a></span></li>
+        <li><b>+76%</b><span>ransomware against finance, Q1 2026 vs Q1 2025. <a href="https://www.unite.ai/black-kites-2026-financial-services-report-warns-of-a-growing-cybersecurity-crisis-across-banking-and-investment-firms/" target="_blank" rel="noopener">Black Kite</a></span></li>
+        <li><b>54%</b><span>of finance vendors have a flaw on CISA's exploited list. <a href="https://www.unite.ai/black-kites-2026-financial-services-report-warns-of-a-growing-cybersecurity-crisis-across-banking-and-investment-firms/" target="_blank" rel="noopener">Black Kite</a></span></li>
+        <li><b>36 h</b><span>for US banks to notify their regulator of a qualifying incident.</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="verdict">
+    <div class="sec-head"><h2>What banks should do now</h2></div>
+    <ol class="controls">
+      <li><h3>Lock down provider access</h3><p>Phishing-resistant sign-in, named accounts and a kill switch on every provider link to payment, core or document systems.</p><p class="why">Arkéa, Visa, Infoblox</p></li>
+      <li><h3>Guard the bank's own accounts</h3><p>Velocity limits and two-person release on outbound treasury transfers, especially to exchanges.</p><p class="why">Arkéa</p></li>
+      <li><h3>Pre-arrange crypto freezes</h3><p>Tested contacts at exchanges and stablecoin issuers, used in the first hour.</p><p class="why">Arkéa, Binance</p></li>
+      <li><h3>Audit third-party web scripts</h3><p>Inventory every script on banking pages and enforce a content security policy.</p><p class="why">Optimizely / HSBC</p></li>
+      <li><h3>Verify video and voice</h3><p>No payment or access change on the strength of a call or video alone.</p><p class="why">FaceStealer</p></li>
+      <li><h3>Patch Outlook and Puppet</h3><p>November Office update everywhere, block outbound NTLM, and patch Puppet Server before 1 December.</p><p class="why">CVE-2026-124194, CVE-2026-115731</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MONTHLY ============ -->
+<section id="monthly" class="panel wrap" role="tabpanel" hidden>
+  <div class="toolbar"><div class="tools-row">
+    <div class="seg" id="mPick" role="group" aria-label="Choose a month"></div>
+    <button class="go" type="button" id="printBtn" style="margin:0">Print this report</button>
+  </div></div>
+  <div class="sec-head"><h2 id="mTitle"></h2><span class="mono" id="mRange"></span></div>
+  <div class="kpis" id="mKpis"></div>
+  <div class="verdict" style="margin-top:0;margin-bottom:var(--gap)" id="mRead"></div>
+  <div class="charts">
+    <div class="chart wide">
+      <h3>Entries per week, by severity</h3>
+      <div class="legend"><span><i style="background:var(--crit)"></i>Critical</span><span><i style="background:var(--high)"></i>High</span><span><i style="background:var(--med)"></i>Notable</span><span><i style="background:repeating-linear-gradient(135deg,var(--med) 0 3px,var(--panel) 3px 5px)"></i>Week in progress</span></div>
+      <div class="cols"><div class="yaxis" id="mYax"></div><div class="plot" id="mWeeks"></div></div>
+      <div class="xlab" id="mWlab"></div>
+      <p class="take" id="mWeekTake"></p>
+    </div>
+    <div class="chart wide">
+      <h3>Sectors hit</h3>
+      <p class="cap">Records count confirmed exposures only. Cross-sector means flaws in widely used software.</p>
+      <div style="overflow-x:auto"><table class="t" id="mSect" style="min-width:640px"></table></div>
+    </div>
+    <div class="chart"><h3>How the attackers got in</h3><div class="bars" id="mEntry"></div><div class="legend"><span><i style="background:var(--crit)"></i>A person was deceived</span><span><i style="background:var(--accent)"></i>Other routes</span></div><p class="take" id="mEntryTake"></p></div>
+    <div class="chart"><h3>Where the victims were</h3><div class="bars" id="mReg"></div><p class="take" id="mRegTake"></p></div>
+    <div class="chart"><h3>Main threads</h3><p class="cap">An entry can belong to several threads.</p><div class="bars" id="mThread"></div></div>
+    <div class="chart"><h3>Largest confirmed exposures</h3><p class="cap">People or records, millions. Criminal claims are only in the ledger.</p><div class="bars" id="mBig"></div><div class="legend"><span><i style="background:var(--crit)"></i>Entry by phishing or social engineering</span><span><i style="background:var(--accent)"></i>Other or undisclosed</span></div></div>
+    <div class="chart wide">
+      <h3 id="mCalH">Calendar</h3>
+      <div class="cal" id="mCal"></div>
+    </div>
+    <div class="chart wide">
+      <h3>Month against month</h3>
+      <div style="overflow-x:auto"><table class="t" id="mCmp" style="min-width:560px"></table></div>
+      <p class="take" id="mCmpTake"></p>
+    </div>
+  </div>
+  <details class="fold" id="ledgerFold">
+    <summary><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M4 2l4 4-4 4"/></svg></span><span>Breach ledger for this month · <span id="ledN"></span> rows</span></summary>
+    <div class="tablebox" style="border-width:1px 0 0"><table class="t" id="ledTbl"><thead><tr><th data-k="v">Organisation</th><th data-k="c">Where</th><th data-k="d" class="num">Disclosed</th><th data-k="n" class="num">People or records</th><th>How they got in</th><th>Status and source</th></tr></thead><tbody></tbody></table></div>
+  </details>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section id="sources" class="panel wrap" role="tabpanel" hidden>
+  <div class="sec-head"><h2>Trusted sources</h2><span class="mono">What the nightly job reads</span></div>
+  <p class="sec-intro">Every source below is free and public. Government and standards bodies come first, then established security data services, then a short list of security newsrooms for who-was-hit reporting. Each card shows the exact address the collector calls and what it feeds on this page.</p>
+  <div class="tiers">
+    <div class="box"><span><span class="tag acc">Tier A</span></span><h3>Official or primary</h3><p>Governments, national CERTs, standards bodies, regulator filings, vendors on their own products. Can confirm an incident or an exploited flaw on its own.</p></div>
+    <div class="box"><span><span class="tag med">Tier B</span></span><h3>Established data services</h3><p>Non-profits and major research teams with a track record. Strong context; an incident needs a second source or the victim's word.</p></div>
+    <div class="box"><span><span class="tag high">Tier C</span></span><h3>Reporting and claims</h3><p>Security press and leak-site trackers. Shows as "Reported" or "Claim" until a Tier A source or the victim confirms.</p></div>
+  </div>
+  <div class="toolbar"><div class="tools-row">
+    <div class="seg" id="sCat" role="group" aria-label="Source type"></div>
+    <span class="count" id="sCount"></span>
+  </div></div>
+  <div class="sgrid" id="sGrid"></div>
+  <details class="fold">
+    <summary><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M4 2l4 4-4 4"/></svg></span><span>Articles and reports cited in this edition · <span id="refN"></span></span></summary>
+    <div class="foldbody"><ul class="reflist" id="refList"></ul></div>
+  </details>
+</section>
+
+</main>
+
+<footer class="wrap mono">
+  <span>Cyber Incident Record · public sources only · TLP:CLEAR</span>
+  <span id="footEd"></span>
+</footer>
+
+<div id="tip" hidden></div>
+
+<!-- Optional embedded copy of data/latest.json, used only when the file cannot be fetched. -->
+<script id="data" type="application/json"></script>
+<script>
+(function(){
+"use strict";
+/* ---------- data ----------
+   The page reads data/latest.json, which the nightly job rewrites at 02:00.
+   If that file cannot be fetched (for example when opened straight from disk),
+   it falls back to a copy embedded below, when one is present. */
+function fail(){ document.querySelector("main").innerHTML = `<div class="wrap panel"><p class="empty">The data file data/latest.json could not be loaded. Serve this folder with a local web server (for example: python -m http.server) and reload.</p></div>`; }
+function embedded(){ const el = document.getElementById("data"); const t = el ? el.textContent.trim() : ""; return t.startsWith("{") ? JSON.parse(t) : null; }
+fetch("data/latest.json",{cache:"no-store"}).then(r=>{ if(!r.ok) throw 0; return r.json(); }).catch(()=>embedded()).then(d=>{ if(d) boot(d); else fail(); }).catch(err=>{ console.error(err); fail(); });
+
+function boot(D){
+const M = D.meta, E = D.incidents, R = D.refs;
+const ED = M.edition;
+
+/* ---------- helpers ---------- */
+const $ = id => document.getElementById(id);
+const esc = s => String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const dt = iso => new Date(iso+"T00:00:00Z");
+const fmtD = iso => { const d = dt(iso); return `${d.getUTCDate()} ${MON[d.getUTCMonth()]}`; };
+const ym = iso => iso.slice(0,7);
+const days = (a,b) => Math.round((dt(b)-dt(a))/864e5);
+const addD = (iso,n) => new Date(dt(iso).getTime()+n*864e5).toISOString().slice(0,10);
+const monthLabel = k => `${MONTHS[+k.slice(5)-1]} ${k.slice(0,4)}`;
+const daysIn = k => new Date(Date.UTC(+k.slice(0,4), +k.slice(5), 0)).getUTCDate();
+const sevRank = {crit:0,high:1,med:2};
+const sevLabel = {crit:"Critical",high:"High",med:"Notable"};
+const confLabel = {confirmed:"Confirmed",reported:"Reported",claim:"Claim"};
+const links = keys => (keys||[]).filter(k=>R[k]).map(k=>`<a href="${esc(R[k][1])}" target="_blank" rel="noopener">${esc(R[k][0])}</a>`).join("");
+const firstSentence = s => { const m = String(s).match(/^.*?[.!?](\s|$)/); return m ? m[0].trim() : s; };
+const allTags = x => x.k==="flaw" ? ["flaw",...x.tags] : x.tags;
+const isNew = x => x.added > M.prev;
+const isUpd = x => !isNew(x) && x.updated && x.updated > M.prev;
+const byRecent = (a,b) => b.iso.localeCompare(a.iso) || sevRank[a.sev]-sevRank[b.sev];
+const store = { get(k){ try{return localStorage.getItem(k);}catch(e){return null;} }, set(k,v){ try{localStorage.setItem(k,v);}catch(e){} } };
+const chev = `<span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M4 2l4 4-4 4"/></svg></span>`;
+const tl = rows => `<ul class="tl">${rows.map(r=>`<li><time>${esc(r[0])}</time><span>${esc(r[1])}</span></li>`).join("")}</ul>`;
+const pct = (a,b) => b ? Math.round(a/b*100) : 0;
+const months = [...new Set(E.map(x=>ym(x.iso)))].sort().reverse();
+const curMonth = ym(ED);
+const finOf = x => allTags(x).includes("finance") || x.sec==="FIN";
+const kevBy = {}; D.kev.forEach(k=>{ if(k.link) (kevBy[k.link] = kevBy[k.link]||[]).push(k); });
+function toast(t){ const el = document.createElement("div"); el.className="toast"; el.textContent=t; document.body.appendChild(el); setTimeout(()=>el.remove(),1600); }
+
+/* ---------- theme ---------- */
+const root = document.documentElement;
+function setTheme(t){ root.dataset.theme = t; $("themeLbl").textContent = t==="dark" ? "Light" : "Dark"; store.set("cir-theme",t); }
+setTheme(store.get("cir-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+$("themeBtn").onclick = () => setTheme(root.dataset.theme==="dark" ? "light" : "dark");
+
+/* ---------- status, masthead ---------- */
+const compiled = new Date(M.compiled);
+const fmtStamp = d => d.toLocaleString("en-GB",{day:"numeric",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit",timeZone:M.tz}) + " ET";
+const newN = E.filter(isNew).length, updN = E.filter(isUpd).length;
+$("statusBar").innerHTML = M.mode==="live"
+  ? (()=>{ const h = M.health||{failed:[]}; const f = h.failed||[];
+      return `<span class="pill live">Live</span><span>Updated ${esc(fmtStamp(compiled))}</span><span>Next update ${esc(fmtStamp(new Date(M.nextRun)))}</span>` +
+        (f.length ? `<span class="pill warn" title="${esc(f.map(x=>x.n+": "+x.err).join("\n"))}">${f.length} source${f.length>1?"s":""} failed: ${esc(f.slice(0,3).map(x=>x.n).join(", "))}${f.length>3?"…":""}</span>` : `<span>All ${h.total||""} sources answered</span>`) +
+        `<span class="sp">TLP:CLEAR · public sources only</span>`; })()
+  : `<span class="pill pre">Preview edition</span><span><span class="dot"></span>Compiled by hand ${esc(fmtStamp(compiled))}</span><span>Nightly update not connected yet</span><span>${D.sources.length} sources registered</span><span class="sp">TLP:CLEAR · public sources only</span>`;
+$("periodLbl").textContent = `${fmtD(M.from)} 2026 to ${fmtD(ED)} 2026`;
+$("editionLbl").textContent = `Edition of ${fmtD(ED)} ${ED.slice(0,4)}`;
+$("footEd").textContent = `Edition of ${fmtD(ED)} ${ED.slice(0,4)} · ${E.length} entries · ${D.kev.length} exploited flaws`;
+
+/* ---------- tooltip ---------- */
+const tip = $("tip");
+function tipAt(el,x,y){ tip.textContent = el.dataset.tip; tip.hidden = false; const w = tip.offsetWidth, h = tip.offsetHeight; tip.style.left = Math.max(8,Math.min(innerWidth-w-8,x+12))+"px"; tip.style.top = Math.max(8,y-h-12)+"px"; }
+document.addEventListener("pointermove",e=>{ const el = e.target.closest("[data-tip]"); if(el) tipAt(el,e.clientX,e.clientY); else tip.hidden = true; });
+document.addEventListener("focusin",e=>{ const el = e.target.closest("[data-tip]"); if(el){ const r = el.getBoundingClientRect(); tipAt(el,r.left,r.top); } });
+document.addEventListener("focusout",()=>{ tip.hidden = true; });
+
+/* ---------- chart helpers ---------- */
+function columns(yEl, pEl, lEl, bins, opts){
+  opts = opts||{};
+  const keys = opts.keys || ["med","high","crit"];
+  const tots = bins.map(b=>keys.reduce((a,k)=>a+(b[k]||0),0));
+  const step = opts.step || (Math.max(...tots) > 12 ? 5 : 2);
+  const max = Math.max(step, Math.ceil(Math.max(...tots)/step)*step);
+  const ticks = []; for(let v=0; v<=max; v+=step) ticks.push(v);
+  $(yEl).innerHTML = ticks.map(v=>`<span style="bottom:${v/max*100}%">${v}</span>`).join("");
+  $(pEl).innerHTML = ticks.slice(1).map(v=>`<div class="grid-l" style="bottom:${v/max*100}%"></div>`).join("") +
+    bins.map((b,i)=>{ const t = tots[i];
+      const seg = k => b[k] ? `<div class="seg-b ${k}" style="height:calc(${b[k]/max*100}% - 2px)"></div>` : "";
+      return `<div class="col${b.partial?" partial":""}" tabindex="0" data-tip="${esc(b.tip || (b.label+": "+t))}">${keys.map(seg).join("")}${opts.noTot||!t?"":`<span class="tot">${t}</span>`}</div>`; }).join("");
+  $(lEl).innerHTML = bins.map(b=>`<span>${esc(b.short!=null?b.short:b.label)}</span>`).join("");
+  return tots;
+}
+function hbars(el, rows, max, fmt, axisVals){
+  const ax = axisVals ? `<div class="axis"><span></span><div>${axisVals.map(v=>`<span>${v}</span>`).join("")}</div><span></span></div>` : "";
+  $(el).innerHTML = rows.length ? ax + rows.map(r=>`<div class="bar" tabindex="0" data-tip="${esc(r.tip||"")}"><span class="n">${esc(r.label)}</span><div class="t"><div class="f${r.hot?" h":""}" style="width:${(r.v/max*100).toFixed(1)}%"></div></div><span class="v">${fmt(r.v)}</span></div>`).join("") : `<p class="empty">Nothing to show for this month.</p>`;
+}
+const nice = n => { const m = Math.max(4, Math.ceil(n/4)*4); return [0,m/4,m/2,3*m/4,m]; };
+const sevBins = list => { const b = {crit:0,high:0,med:0}; list.forEach(x=>b[x.sev]++); return b; };
+
+/* ---------- row renderer ---------- */
+function badges(x){
+  return (isNew(x)?`<span class="tag new">New</span>`:"") + (isUpd(x)?`<span class="tag upd">Updated</span>`:"") + (x.conf!=="confirmed"?`<span class="tag claim">${confLabel[x.conf]}</span>`:"");
+}
+function rowHTML(x, pre){
+  const kind = x.k==="flaw" ? `<span class="tag">Exploited flaw</span>` : `<span class="tag">${esc(x.where)}</span>`;
+  const kev = (kevBy[x.id]||[]).map(k=>k.cve).join(", ");
+  return `<details class="row ${x.sev}" id="${pre}-${esc(x.id)}" data-id="${esc(x.id)}">
+  <summary>${chev}<div class="s-main">
+    <div class="s-meta"><span class="tag ${x.sev}">${sevLabel[x.sev]}</span>${kind}${badges(x)}<span class="when">${esc(x.when)}</span></div>
+    <h3>${esc(x.t)}</h3><p class="one">${esc(firstSentence(x.sum))}</p></div></summary>
+  <div class="row-body">
+    <p class="sum">${esc(x.sum)}</p>
+    <dl>${x.cve?`<dt>Flaw</dt><dd>${esc(x.cve)}</dd>`:""}${kev?`<dt>CISA KEV</dt><dd>${esc(kev)}</dd>`:""}
+      <dt>Entry</dt><dd>${esc(x.how || D.entry[x.e])}</dd>
+      <dt>Timeline</dt><dd>${tl(x.tl)}</dd>
+      <dt>Status</dt><dd>${esc(x.fix)}</dd>
+      <dt>Filed under</dt><dd>${esc(D.sectors[x.sec]||"")} · ${esc(D.regions[x.reg]||"")} · ${confLabel[x.conf]}</dd>
+      <dt>Sources</dt><dd class="src">${links(x.s)}</dd></dl>
+  </div></details>`;
+}
+function crowHTML(x, sub){
+  return `<button class="crow" type="button" data-open="${esc(x.id)}"><time>${fmtD(x.iso)}</time><span class="tt">${esc(x.t)}<small>${esc(sub||firstSentence(x.sum))}</small></span><span class="tg"><span class="tag ${x.sev}">${sevLabel[x.sev]}</span>${badges(x)}</span></button>`;
+}
+
+/* ---------- tabs ---------- */
+const TABS = ["briefing","incidents","vulns","banks","monthly","sources"];
+function show(name, push, scroll){
+  if(!TABS.includes(name)) name = "briefing";
+  document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.tab===name)));
+  TABS.forEach(t=>{ $(t).hidden = t!==name; });
+  if(push && location.hash !== "#"+name){ try{ history.replaceState(null,"","#"+name); }catch(e){} }
+  if(scroll){ const top = document.querySelector(".tabbar").offsetTop; if(scrollY > top) scrollTo({top}); }
+  const t = document.querySelector(`.tab[data-tab="${name}"]`); if(t && t.scrollIntoView) t.scrollIntoView({block:"nearest",inline:"nearest"});
+}
+$("tabs").addEventListener("click",e=>{ const b = e.target.closest(".tab"); if(b) show(b.dataset.tab,true,true); });
+document.addEventListener("click",e=>{
+  const g = e.target.closest("[data-goto]"); if(g){ show(g.dataset.goto,true,true); return; }
+  const o = e.target.closest("[data-open]"); if(o){ openEntry(o.dataset.open); return; }
+  const w = e.target.closest("[data-watch]"); if(w){ e.preventDefault(); show("vulns",true,false); const el = $("w-"+w.dataset.watch); if(el){ el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); el.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"}); } }
+});
+
+/* ---------- briefing ---------- */
+(function(){
+  const byId = id => E.find(x=>x.id===id);
+  const wById = id => D.watch.find(w=>w.id===id);
+  $("actGrid").innerHTML = M.actNow.map(id=>{
+    const w = wById(id);
+    if(w) return `<div class="alert-cell"><span style="display:flex;gap:4px;flex-wrap:wrap"><span class="tag ${w.sev}">${sevLabel[w.sev]}</span>${w.fixed?`<span class="tag high">Fix out ${fmtD(w.fixed)}</span>`:`<span class="tag crit">No fix yet</span>`}<span class="tag out">Not yet exploited</span>${w.d>M.prev?`<span class="tag new">New</span>`:""}</span>
+      <h3>${esc(w.t)}</h3><p>${esc(firstSentence(w.sum))}</p><p class="mono" style="color:var(--muted)">${esc(w.cves?w.cves[0][0]+" +"+(w.cves.length-1)+" more":w.cve.split(" · ")[0])}</p>
+      <button class="go" type="button" data-watch="${esc(w.id)}">Open details</button></div>`;
+    const x = byId(id); if(!x) return "";
+    const ks = kevBy[id]||[]; const due = ks.map(k=>k.d).filter(Boolean).sort()[0];
+    let dueTag = `<span class="tag out">Not on CISA list yet</span>`;
+    if(due){ const n = days(ED,due); dueTag = n<0 ? `<span class="tag crit">Past due ${fmtD(due)}</span>` : `<span class="tag ${n<=7?"high":"out"}">Fix by ${fmtD(due)}</span>`; }
+    return `<div class="alert-cell"><span style="display:flex;gap:4px;flex-wrap:wrap"><span class="tag ${x.sev}">${sevLabel[x.sev]}</span>${dueTag}${badges(x)}</span>
+      <h3>${esc(x.t)}</h3><p>${esc(firstSentence(x.sum))}</p><p class="mono" style="color:var(--muted)">${esc((x.cve||"").split(" · ")[0])}</p>
+      <button class="go" type="button" data-open="${esc(x.id)}">Open entry</button></div>`;
+  }).join("");
+  const rest = D.watch.filter(w=>!M.actNow.includes(w.id));
+  $("watchFoot").innerHTML = rest.length ? `<b>Also patch soon, not yet exploited</b>` + rest.map(w=>`<span><a href="#vulns" data-watch="${esc(w.id)}">${esc(w.t)}</a> <span class="mono" style="color:var(--muted)">${esc(w.cve.split(" · ")[0])}</span></span>`).join("") : "";
+  $("watchFoot").hidden = !rest.length;
+
+  const since = E.filter(x=>isNew(x)||isUpd(x)).sort((a,b)=> (isNew(b)-isNew(a)) || byRecent(a,b));
+  $("sinceLbl").textContent = `${fmtD(M.prev)} to ${fmtD(ED)} · ${newN} new · ${updN} updated`;
+  $("sinceList").innerHTML = since.map(x=>crowHTML(x)).join("") || `<p class="empty">Nothing new since the last edition.</p>`;
+
+  // month to date
+  const mt = E.filter(x=>ym(x.iso)===curMonth), prevKey = months[1];
+  const pm = prevKey ? E.filter(x=>ym(x.iso)===prevKey) : [];
+  const dIn = +ED.slice(8), pDays = prevKey ? daysIn(prevKey) : 1;
+  const rate = (n,d) => (n/d*7).toFixed(1);
+  const recs = D.ledger.filter(r=>ym(r.d)===curMonth && r.n>0 && !r.msg && !r.claim).reduce((a,r)=>a+r.n,0);
+  const kevM = D.kev.filter(k=>ym(k.a)===curMonth).length, kevP = prevKey ? D.kev.filter(k=>ym(k.a)===prevKey).length : 0;
+  $("mtdH").textContent = `${MONTHS[+curMonth.slice(5)-1]} so far`;
+  $("mtdLbl").textContent = `1 to ${dIn} ${MON[+curMonth.slice(5)-1]} · compared per week with ${prevKey?monthLabel(prevKey):""}`;
+  const cmp = (n,p) => prevKey ? `<em>${rate(n,dIn)} a week vs ${rate(p,pDays)}</em>` : "";
+  $("mtdKpis").innerHTML = [
+    [mt.length, "incidents and exploited flaws", cmp(mt.length, pm.length)],
+    [mt.filter(x=>x.sev==="crit").length, "rated critical", cmp(mt.filter(x=>x.sev==="crit").length, pm.filter(x=>x.sev==="crit").length)],
+    [kevM, "flaws added to CISA's exploited list", cmp(kevM,kevP)],
+    [mt.filter(finOf).length, "hit banks, payments or crypto", cmp(mt.filter(finOf).length, pm.filter(finOf).length)],
+    [recs.toFixed(1)+"m", "people or records confirmed exposed", ""]
+  ].map(([b,s,c])=>`<div class="kpi"><b>${b}</b><span>${s}</span>${c}</div>`).join("");
+
+  // last 30 days
+  const bins = [];
+  for(let i=29;i>=0;i--){ const d = addD(ED,-i); const l = E.filter(x=>x.iso===d); const b = sevBins(l);
+    b.label = fmtD(d); b.short = (i%5===0) ? fmtD(d) : ""; b.tip = `${fmtD(d)}: ${l.length?l.map(x=>x.t).join("; "):"no entry"}`; bins.push(b); }
+  columns("dYax","dPlot","dLab",bins,{step:2,noTot:true});
+
+  $("latestList").innerHTML = E.filter(x=>x.sev!=="med").sort(byRecent).slice(0,9).map(x=>crowHTML(x, x.k==="flaw" ? (x.cve||"") : `${x.where} · ${D.entry[x.e]}`)).join("");
+  $("advList").innerHTML = D.advisories.map(a=>`<div class="adv"><time>${fmtD(a.d)}</time><span class="org">${esc(a.org)}</span><span class="t">${R[a.s]?`<a href="${esc(R[a.s][1])}" target="_blank" rel="noopener">${esc(a.t)}</a>`:esc(a.t)}</span></div>`).join("");
+  const na = D.notAttacks;
+  $("notAttack").hidden = !na;
+  if(na) $("notAttack").innerHTML = `<span><span class="tag out">Not an attack</span></span><h3>${esc(na.t)}</h3><p style="font-size:.93em">${esc(na.sum)}</p><p class="src">${links(na.s)}</p>`;
+})();
+
+/* ---------- incidents ---------- */
+const F = {q:"", tag:"all", sev:"all", mon:"all", sec:"all", reg:"all", conf:"all"};
+(function(){
+  $("nInc").textContent = E.length;
+  const list = $("list");
+  list.innerHTML = months.map(m=>`<div class="mgroup" data-mg="${m}"><div class="month-h"><span>${monthLabel(m)}${m===curMonth?" · to date":""}</span><span class="mc"></span></div><div class="list">${E.filter(x=>ym(x.iso)===m).sort(byRecent).map(x=>rowHTML(x,"r")).join("")}</div></div>`).join("") + `<p class="empty" id="empty" hidden>No entries match these filters. <button class="linkbtn" type="button" id="reset2">Reset filters</button></p>`;
+  const rows = [...list.querySelectorAll("details.row")];
+  const idx = {}; E.forEach(x=>{ idx[x.id] = [x.t,x.sum,x.where,x.cve,x.how,x.fix,(kevBy[x.id]||[]).map(k=>k.cve).join(" "),D.sectors[x.sec],x.tl.map(r=>r.join(" ")).join(" ")].join(" ").toLowerCase(); });
+  const ex = id => E.find(x=>x.id===id);
+  $("months").innerHTML = `<button class="chip" type="button" data-m="all">All months</button>` + months.map(m=>`<button class="chip" type="button" data-m="${m}">${MONTHS[+m.slice(5)-1]}</button>`).join("");
+  $("chips").innerHTML = Object.keys(D.tags).map(k=>`<button class="chip" type="button" data-k="${k}">${esc(D.tags[k])}</button>`).join("");
+  document.querySelectorAll("#sevs [data-n]").forEach(s=>s.textContent = "· "+E.filter(x=>x.sev===s.dataset.n).length);
+  const secs = Object.keys(D.sectors).filter(k=>E.some(x=>x.sec===k));
+  $("fSec").innerHTML = `<option value="all">All</option>` + secs.map(k=>`<option value="${k}">${esc(D.sectors[k])} (${E.filter(x=>x.sec===k).length})</option>`).join("");
+  $("fReg").innerHTML = `<option value="all">All</option>` + Object.keys(D.regions).map(k=>`<option value="${k}">${esc(D.regions[k])} (${E.filter(x=>x.reg===k).length})</option>`).join("");
+  function apply(){
+    const words = F.q.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    let shown = 0;
+    rows.forEach(r=>{ const x = ex(r.dataset.id);
+      const on = (F.tag==="all" || allTags(x).includes(F.tag)) && (F.sev==="all" || x.sev===F.sev) && (F.mon==="all" || ym(x.iso)===F.mon)
+        && (F.sec==="all" || x.sec===F.sec) && (F.reg==="all" || x.reg===F.reg) && (F.conf==="all" || x.conf===F.conf) && words.every(w=>idx[x.id].includes(w));
+      r.hidden = !on; if(on) shown++; });
+    list.querySelectorAll(".mgroup").forEach(g=>{ const n = g.querySelectorAll("details.row:not([hidden])").length; g.hidden = n===0; g.querySelector(".mc").textContent = `${n} ${n===1?"entry":"entries"}`; });
+    $("empty").hidden = shown>0;
+    document.querySelectorAll("#chips .chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.k===F.tag)));
+    document.querySelectorAll("#months .chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.m===F.mon)));
+    document.querySelectorAll("#sevs .chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.s===F.sev)));
+    $("fSec").value = F.sec; $("fReg").value = F.reg; $("fConf").value = F.conf; if($("q").value!==F.q) $("q").value = F.q;
+    $("count").textContent = `Showing ${shown} of ${E.length}`;
+    store.set("cir-f", JSON.stringify(F));
+  }
+  window.applyFilters = apply;
+  $("chips").addEventListener("click",e=>{ const b = e.target.closest(".chip"); if(b){ F.tag = b.dataset.k; apply(); } });
+  $("months").addEventListener("click",e=>{ const b = e.target.closest(".chip"); if(b){ F.mon = b.dataset.m; apply(); } });
+  $("sevs").addEventListener("click",e=>{ const b = e.target.closest(".chip"); if(b){ F.sev = b.dataset.s; apply(); } });
+  $("fSec").onchange = e=>{ F.sec = e.target.value; apply(); };
+  $("fReg").onchange = e=>{ F.reg = e.target.value; apply(); };
+  $("fConf").onchange = e=>{ F.conf = e.target.value; apply(); };
+  let qt; $("q").addEventListener("input",e=>{ clearTimeout(qt); qt = setTimeout(()=>{ F.q = e.target.value; apply(); },120); });
+  const reset = ()=>{ Object.assign(F,{q:"",tag:"all",sev:"all",mon:"all",sec:"all",reg:"all",conf:"all"}); apply(); };
+  $("reset").onclick = reset; $("reset2").onclick = reset;
+  $("openAll").onclick = ()=> rows.forEach(d=>{ if(!d.hidden) d.open = true; });
+  $("closeAll").onclick = ()=> rows.forEach(d=>d.open = false);
+  try{ const s = JSON.parse(store.get("cir-f")||"null"); if(s && typeof s==="object"){ ["q","tag","sev","mon","sec","reg","conf"].forEach(k=>{ if(typeof s[k]==="string") F[k]=s[k]; }); if(F.mon!=="all" && !months.includes(F.mon)) F.mon="all"; if(!D.tags[F.tag]) F.tag="all"; } }catch(e){}
+  apply();
+})();
+function openEntry(id){
+  Object.assign(F,{q:"",tag:"all",sev:"all",mon:"all",sec:"all",reg:"all",conf:"all"}); window.applyFilters();
+  show("incidents",true,false);
+  const r = $("r-"+id); if(!r) return;
+  r.open = true; r.classList.remove("flash"); void r.offsetWidth; r.classList.add("flash");
+  r.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
+}
+
+/* ---------- exploited flaws ---------- */
+(function(){
+  const K = D.kev; $("nKev").textContent = K.length;
+  const status = k => { if(!k.d) return {c:"none", tag:`<span class="tag out">Not stated</span>`}; const n = days(ED,k.d);
+    if(n<0) return {c:"past", tag:`<span class="tag ${n>=-14?"crit":"out"}">${n>=-14?"Past due":"Was due"} ${fmtD(k.d)}</span>`};
+    return {c: n<=7?"soon":"later", tag:`<span class="tag ${n<=7?"high":"acc"}">${fmtD(k.d)} · ${n} d</span>`}; };
+  const soon = K.filter(k=>status(k).c==="soon"), past = K.filter(k=>k.d && days(ED,k.d)<0 && days(ED,k.d)>=-14);
+  $("kevKpis").innerHTML = [
+    [K.length, `exploited flaws since ${fmtD(M.from)}`],
+    [K.filter(k=>ym(k.a)===curMonth).length, `added in ${MONTHS[+curMonth.slice(5)-1]}`],
+    [soon.length, "federal fix-by date in the next 7 days"],
+    [past.length, "fix-by date passed in the last 14 days"],
+    [K.filter(k=>k.link).length, "tied to an incident in this record"]
+  ].map(([b,s])=>`<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join("");
+  // weekly bins from 1 Oct (Thursday) in 7-day blocks
+  const bins = []; let s = M.from;
+  while(s <= ED){ const e = addD(s,6); const l = K.filter(k=>k.a>=s && k.a<=e); bins.push({acc:l.length, label:`${fmtD(s)}–${fmtD(e<ED?e:ED)}`, short:fmtD(s), partial:e>ED, tip:`Week of ${fmtD(s)}: ${l.length} added${l.length?" ("+l.map(k=>k.v+" "+k.p).join("; ")+")":""}`}); s = addD(s,7); }
+  const tots = columns("kYax","kPlot","kLab",bins,{keys:["acc"],step:2});
+  const pk = tots.indexOf(Math.max(...tots));
+  $("kTake").textContent = `Busiest week: ${bins[pk].label} with ${tots[pk]}. Hatched bar: week in progress.`;
+  $("watchList").innerHTML = D.watch.map(w=>`<div class="box" id="w-${esc(w.id)}"><span style="display:flex;gap:4px;flex-wrap:wrap"><span class="tag ${w.sev}">${sevLabel[w.sev]}</span>${w.fixed?`<span class="tag high">Fix out ${fmtD(w.fixed)}</span>`:`<span class="tag crit">No fix yet</span>`}<span class="tag out">${esc(w.cve)}</span></span><h3>${esc(w.t)}</h3><p style="font-size:.92em">${esc(w.sum)}</p>
+    ${w.cves?`<div style="overflow-x:auto"><table class="t" style="font-size:.82em;min-width:480px"><thead><tr><th>CVE</th><th>Flaw</th><th>Exposed when</th><th>Affected</th></tr></thead><tbody>${w.cves.map(c=>`<tr><td><code style="white-space:nowrap">${esc(c[0])}</code></td><td>${esc(c[1])}</td><td>${esc(c[2])}</td><td class="num">${esc(c[3])}</td></tr>`).join("")}</tbody></table></div>`:""}
+    <p style="font-size:.92em"><b>Do:</b> ${esc(w.act)}</p><p class="src">${links(w.s)}</p></div>`).join("");
+  let f = "all", sk = "a", dir = -1;
+  function draw(){
+    let rows = K.filter(k=> f==="all" || (f==="soon" && status(k).c==="soon") || (f==="past" && k.d && days(ED,k.d)<0) || (f==="month" && ym(k.a)===curMonth));
+    rows.sort((a,b)=>{ const va = a[sk]==null?"":a[sk], vb = b[sk]==null?"":b[sk]; return (va<vb?-1:va>vb?1:0)*dir || b.a.localeCompare(a.a); });
+    document.querySelector("#kevTbl tbody").innerHTML = rows.map(k=>{ const st = status(k), x = k.link ? E.find(e=>e.id===k.link) : null;
+      return `<tr class="${st.c==="soon"||(k.d&&days(ED,k.d)<0&&days(ED,k.d)>=-14)?"hot":""}"><td class="num">${fmtD(k.a)}</td><td><code>${esc(k.cve)}</code></td><td><b>${esc(k.v)}</b> ${esc(k.p)}</td><td>${esc(k.n)}${k.rw?` <span class="tag crit">Ransomware use</span>`:""}${k.src==="EUVD"?` <span class="tag acc">EU only</span>`:""}</td><td class="num">${k.cvss!=null?(+k.cvss).toFixed(1):"–"}</td><td class="num" data-tip="${k.epss!=null?"Chance of exploitation in the next 30 days (FIRST EPSS)":"Filled nightly from FIRST EPSS"}">${k.epss!=null?(k.epss*100).toFixed(k.epss<0.1?1:0)+"%":"–"}</td><td>${st.tag}</td><td>${x?`<button class="linkbtn" type="button" data-open="${esc(x.id)}">${esc(x.t)}</button>`:`<span style="color:var(--muted)">–</span>`}</td></tr>`; }).join("") || `<tr><td colspan="8" class="empty">None.</td></tr>`;
+    document.querySelectorAll("#kevF .chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.f===f)));
+    $("kevCount").textContent = `Showing ${rows.length} of ${K.length}`;
+  }
+  $("kevF").addEventListener("click",e=>{ const b = e.target.closest(".chip"); if(b){ f = b.dataset.f; draw(); } });
+  document.querySelectorAll("#kevTbl th[data-k]").forEach(th=>{ th.tabIndex = 0; const go = ()=>{ const k = th.dataset.k; dir = k===sk ? -dir : (k==="a"||k==="cvss" ? -1 : 1); sk = k; draw(); }; th.onclick = go; th.onkeydown = e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); go(); } }; });
+  draw();
+  $("kevNote").innerHTML = M.mode==="live"
+    ? `Fix-by dates are CISA's deadlines for US federal agencies, a good yardstick for everyone. Full CISA catalog since ${fmtD(M.from)}, refreshed nightly, plus flaws ENISA lists as exploited in the EU that CISA has not added yet. EPSS from FIRST, CVSS from NIST.`
+    : `Fix-by dates are CISA's deadlines for US federal agencies, a good yardstick for everyone. This preview lists the entries named in CISA's bulletins and in this record since ${fmtD(M.from)}; the nightly job loads the full catalog and fills in EPSS. Sources: <span class="src">${links(D.kevRefs)}</span>`;
+})();
+
+/* ---------- banks ---------- */
+(function(){
+  const fin = E.filter(finOf).sort(byRecent);
+  $("nFin").textContent = fin.length;
+  $("bankList").innerHTML = fin.map(x=>rowHTML(x,"b")).join("");
+  document.querySelectorAll("#bsevs [data-n]").forEach(s=>s.textContent = "· "+fin.filter(x=>x.sev===s.dataset.n).length);
+  let bs = store.get("cir-bsev") || "all"; if(!["all","crit","high","med"].includes(bs)) bs = "all";
+  function ap(){ let n = 0; document.querySelectorAll("#bankList details.row").forEach(r=>{ const x = E.find(e=>e.id===r.dataset.id); const on = bs==="all"||x.sev===bs; r.hidden = !on; if(on) n++; });
+    document.querySelectorAll("#bsevs .chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.s===bs))); $("bcount").textContent = `Showing ${n} of ${fin.length}`; store.set("cir-bsev",bs); }
+  $("bsevs").addEventListener("click",e=>{ const b = e.target.closest(".chip"); if(b){ bs = b.dataset.s; ap(); } });
+  ap();
+  const fm = fin.filter(x=>ym(x.iso)===curMonth);
+  $("bankKpis").innerHTML = [
+    [fin.length, `finance incidents since ${fmtD(M.from)}`],
+    [fm.length, `in ${MONTHS[+curMonth.slice(5)-1]} so far`],
+    [fin.filter(x=>x.sev==="crit").length, "rated critical"],
+    ["€118m", "stolen from Crédit Mutuel Arkéa"],
+    ["32", "financial firms hit by the Optimizely script"]
+  ].map(([b,s])=>`<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join("");
+  const banks = fin.filter(x=>x.sec==="FIN"), cnt = {}; Object.keys(D.entry).forEach(k=>cnt[k]=0); banks.forEach(x=>cnt[x.e]++);
+  const rows = Object.keys(D.entry).filter(k=>cnt[k]).map(k=>({label:D.entry[k], v:cnt[k], hot:k==="social", tip:`${D.entry[k]}: ${banks.filter(x=>x.e===k).map(x=>x.t).join("; ")}`})).sort((a,b)=>b.v-a.v);
+  const ax = nice(rows[0].v); hbars("bankEntry", rows, ax[4], v=>v, ax);
+  $("bankEntryTake").textContent = `Where the route is known, a third party is most common: ${cnt.third} of ${banks.length-cnt.undisc}. ${cnt.undisc} of ${banks.length} bank incidents have no published route.`;
+})();
+
+/* ---------- monthly reports ---------- */
+(function(){
+  let cur = store.get("cir-month"); if(!months.includes(cur)) cur = curMonth;
+  $("mPick").innerHTML = months.map(m=>`<button class="chip" type="button" data-m="${m}">${monthLabel(m)}${m===curMonth?" · to date":""}</button>`).join("");
+  $("mPick").addEventListener("click",e=>{ const b = e.target.closest(".chip"); if(b){ cur = b.dataset.m; store.set("cir-month",cur); render(); } });
+  if(window.self !== window.top) $("printBtn").hidden = true;
+  $("printBtn").onclick = ()=>{ try{ window.print(); }catch(e){} };
+  const metric = [
+    ["All entries", x=>true], ["Critical", x=>x.sev==="crit"], ["Banks and finance", finOf], ["Exploited flaws", x=>x.k==="flaw"],
+    ["Vendors and supply chain", x=>x.tags.includes("vendor")], ["Human entry point", x=>allTags(x).includes("human")], ["AI on the attacker side", x=>x.tags.includes("ai")], ["Ransomware and sabotage", x=>x.tags.includes("ransom")]
+  ];
+  let lsk = "n", ldir = -1, led = [];
+  function drawLed(){ const rows = [...led].sort((a,b)=>(a[lsk]<b[lsk]?-1:a[lsk]>b[lsk]?1:0)*ldir);
+    document.querySelector("#ledTbl tbody").innerHTML = rows.map(r=>`<tr><td><b>${esc(r.v)}</b>${r.claim?` <span class="tag claim">Claim</span>`:""}</td><td>${esc(r.c)}</td><td class="num">${fmtD(r.d)}</td><td class="num">${esc(r.nl)}</td><td>${esc(r.how)}</td><td>${esc(r.st)} <span class="src">${links(r.s)}</span></td></tr>`).join(""); }
+  document.querySelectorAll("#ledTbl th[data-k]").forEach(th=>{ th.tabIndex = 0; const go = ()=>{ const k = th.dataset.k; ldir = k===lsk ? -ldir : (k==="n"?-1:1); lsk = k; drawLed(); }; th.onclick = go; th.onkeydown = e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); go(); } }; });
+
+  function render(){
+    document.querySelectorAll("#mPick .chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.m===cur)));
+    const L = E.filter(x=>ym(x.iso)===cur), N = L.length, last = cur===curMonth ? +ED.slice(8) : daysIn(cur);
+    const mo = MON[+cur.slice(5)-1];
+    $("mTitle").textContent = monthLabel(cur) + (cur===curMonth ? " · month to date" : "");
+    $("mRange").textContent = `1 to ${last} ${mo} · ${N} entries`;
+    const byE = {}; Object.keys(D.entry).forEach(k=>byE[k]=0); L.forEach(x=>byE[x.e]++);
+    const known = N - byE.undisc;
+    const recs = D.ledger.filter(r=>ym(r.d)===cur && r.n>0 && !r.msg && !r.claim).reduce((a,r)=>a+r.n,0);
+    $("mKpis").innerHTML = [
+      [N, "incidents and exploited flaws"], [L.filter(x=>x.sev==="crit").length, "rated critical"],
+      [D.kev.filter(k=>ym(k.a)===cur).length, "added to CISA's exploited list"], [L.filter(finOf).length, "in banks and finance"],
+      [pct(byE.social+byE.cred+byE.third, known)+"%", "of known entries: a deceived person, stolen key or supplier"], [recs.toFixed(1)+"m", "people or records confirmed exposed"]
+    ].concat(D.claimStats && D.claimStats[cur] ? [[D.claimStats[cur].n, "ransomware leak-site claims (top group: "+Object.entries(D.claimStats[cur].groups).sort((a,b)=>b[1]-a[1])[0][0]+")"]] : []).map(([b,s])=>`<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join("");
+    const note = D.monthNotes[cur];
+    $("mRead").innerHTML = note ? `<div class="sec-head"><h2>The analyst's read</h2><span class="mono" style="color:var(--invert-muted)">${note.auto?"Written automatically · ":""}${cur===curMonth?"Provisional":"Final"}</span></div><p class="big">${esc(note.head)}</p><ul>${note.pts.map(p=>`<li>${esc(p)}</li>`).join("")}</ul>` : "";
+    $("mRead").hidden = !note;
+    // weeks
+    const bins = []; for(let s=1; s<=daysIn(cur); s+=7){ const e = Math.min(s+6, daysIn(cur)); if(cur===curMonth && s>last) break;
+      const l = L.filter(x=>{ const d = +x.iso.slice(8); return d>=s && d<=e; }); const b = sevBins(l);
+      b.label = `${s}–${e} ${mo}`; b.partial = cur===curMonth && e>last; b.tip = `${b.label}: ${l.length} (${b.crit} critical, ${b.high} high, ${b.med} notable)`; bins.push(b); }
+    const tots = columns("mYax","mWeeks","mWlab",bins,{});
+    const full = tots.filter((t,i)=>!bins[i].partial); const pk = tots.indexOf(Math.max(...(full.length?full:tots)));
+    $("mWeekTake").textContent = `Busiest week: ${bins[pk].label} (${tots[pk]}).` + (bins.some(b=>b.partial) ? ` The current week has ${tots[tots.length-1]} so far.` : "");
+    // sectors
+    const money = {}; D.money.forEach(m=>money[m.sec]=(money[m.sec]||0)+m.v);
+    const srows = Object.keys(D.sectors).map(k=>{ const ev = L.filter(x=>x.sec===k);
+      const rec = D.ledger.filter(r=>r.sec===k && ym(r.d)===cur && r.n>0 && !r.msg && !r.claim).reduce((a,r)=>a+r.n,0);
+      const top = [...ev].sort((a,b)=>sevRank[a.sev]-sevRank[b.sev])[0];
+      return {k, n:ev.length, c:ev.filter(x=>x.sev==="crit").length, rec, top: top?top.t:""}; }).filter(r=>r.n).sort((a,b)=>b.n-a.n || b.c-a.c);
+    $("mSect").innerHTML = `<thead><tr><th>Sector</th><th class="num">Entries</th><th class="num">Critical</th><th class="num">Records (m)</th><th>Most serious case</th></tr></thead><tbody>` +
+      srows.map(r=>`<tr class="${r.k==="FIN"?"hot":""}"><td>${esc(D.sectors[r.k])}</td><td class="num">${r.n}</td><td class="num">${r.c}</td><td class="num">${r.rec?r.rec.toFixed(2):"–"}</td><td>${esc(r.top)}</td></tr>`).join("") + `</tbody>`;
+    // entry
+    const er = Object.keys(D.entry).map(k=>({label:D.entry[k], v:byE[k], hot:k==="social", tip:`${D.entry[k]}: ${byE[k]} of ${N}. ${L.filter(x=>x.e===k).slice(0,4).map(x=>x.t).join("; ")}`})).filter(r=>r.v).sort((a,b)=>b.v-a.v);
+    let ax = nice(er.length?er[0].v:4); hbars("mEntry", er, ax[4], v=>v, ax);
+    $("mEntryTake").textContent = `Software flaws: ${byE.flaw}. Deceived people: ${byE.social}. Stolen credentials or keys: ${byE.cred}. Through a supplier: ${byE.third}. Not disclosed: ${byE.undisc}.`;
+    // regions
+    const rr = Object.keys(D.regions).map(k=>({label:D.regions[k], v:L.filter(x=>x.reg===k).length, tip:`${D.regions[k]}: ${L.filter(x=>x.reg===k).slice(0,5).map(x=>x.t).join("; ")}`})).filter(r=>r.v).sort((a,b)=>b.v-a.v);
+    ax = nice(rr.length?rr[0].v:4); hbars("mReg", rr, ax[4], v=>v, ax);
+    const named = rr.filter(r=>r.label!==D.regions.GLOBAL);
+    $("mRegTake").textContent = named.length ? `Most entries with a named location: ${named[0].label} (${named[0].v}). Global covers flaws in widely used software and multi-country campaigns.` : "";
+    // threads
+    const tr = Object.keys(D.tags).filter(k=>k!=="all").map(k=>({label:D.tags[k], v:L.filter(x=>allTags(x).includes(k)).length})).filter(r=>r.v).sort((a,b)=>b.v-a.v);
+    ax = nice(tr.length?tr[0].v:4); hbars("mThread", tr.map(r=>Object.assign(r,{tip:`${r.label}: ${r.v} of ${N}`})), ax[4], v=>v, ax);
+    // largest
+    led = D.ledger.filter(r=>ym(r.d)===cur); $("ledN").textContent = led.length; drawLed();
+    const big = led.filter(r=>r.n>0 && !r.msg && !r.claim).sort((a,b)=>b.n-a.n).slice(0,10);
+    const bm = big.length ? Math.ceil(big[0].n/10)*10 : 10;
+    hbars("mBig", big.map(r=>({label:r.v, v:r.n, hot:r.h, tip:`${r.v}: ${r.nl}. ${r.how}`})), bm, v=> v>=1 ? v.toFixed(1)+"m" : Math.round(v*1000)+"k", [0,bm/4,bm/2,3*bm/4,bm].map(v=>v+"m"));
+    // calendar
+    $("mCalH").textContent = `${monthLabel(cur)}, day by day`;
+    const first = new Date(Date.UTC(+cur.slice(0,4), +cur.slice(5)-1, 1)).getUTCDay(), lead = (first+6)%7;
+    let h = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(d=>`<div class="dow">${d}</div>`).join("");
+    for(let i=0;i<lead;i++) h += `<div class="day pad"></div>`;
+    for(let d=1; d<=daysIn(cur); d++){ const iso = `${cur}-${String(d).padStart(2,"0")}`, ev = L.filter(x=>x.iso===iso).sort((a,b)=>sevRank[a.sev]-sevRank[b.sev]);
+      const fut = iso > ED;
+      h += `<div class="day${fut?" future":""}${iso===ED?" today":""}" tabindex="0" data-tip="${esc(d+" "+mo+": "+(fut?"not yet":ev.length?ev.map(e=>e.t).join("; "):"no entry"))}"><span class="d">${d}</span><span class="pips">${ev.map(e=>`<span class="pip ${e.sev}"></span>`).join("")}</span></div>`; }
+    $("mCal").innerHTML = h;
+    // compare
+    const cols = [...months].reverse();
+    const dd = m => m===curMonth ? +ED.slice(8) : daysIn(m);
+    $("mCmp").innerHTML = `<thead><tr><th>Measure</th>${cols.map(m=>`<th class="num">${MON[+m.slice(5)-1]}${m===curMonth?" (to "+ED.slice(8)+")":""}</th><th class="num">per week</th>`).join("")}</tr></thead><tbody>` +
+      metric.map(([l,f])=>`<tr><td>${l}</td>${cols.map(m=>{ const n = E.filter(x=>ym(x.iso)===m && f(x)).length; return `<td class="num">${n}</td><td class="num"><b>${(n/dd(m)*7).toFixed(1)}</b></td>`; }).join("")}</tr>`).join("") +
+      `<tr><td>Added to CISA's exploited list</td>${cols.map(m=>{ const n = D.kev.filter(k=>ym(k.a)===m).length; return `<td class="num">${n}</td><td class="num"><b>${(n/dd(m)*7).toFixed(1)}</b></td>`; }).join("")}</tr></tbody>`;
+    if(cols.length>1){ const a = cols[cols.length-2], b = cols[cols.length-1]; const r = m => (E.filter(x=>ym(x.iso)===m).length/dd(m)*7).toFixed(1);
+      $("mCmpTake").textContent = `Pace: ${r(b)} entries a week in ${MONTHS[+b.slice(5)-1]} against ${r(a)} in ${MONTHS[+a.slice(5)-1]}. Per-week rates make a part month comparable with a full one.`; }
+  }
+  render();
+})();
+
+/* ---------- sources ---------- */
+(function(){
+  const S = D.sources; $("nSrc").textContent = S.length;
+  const CAT = {all:"All", vuln:"Vulnerabilities", gov:"Government and CERTs", filings:"Filings and breach records", threat:"Threat activity", news:"News", research:"Research"};
+  let c = "all";
+  $("sCat").innerHTML = Object.keys(CAT).map(k=>`<button class="chip" type="button" data-c="${k}">${CAT[k]} ${k==="all"?"":"· "+S.filter(s=>s.cat===k).length}</button>`).join("");
+  const tierTag = t => `<span class="tag ${t==="A"?"acc":t==="B"?"med":"high"}">Tier ${t}</span>`;
+  const ep = u => `<div class="ep"><code>${esc(u)}</code><button class="copy" type="button" data-copy="${esc(u)}">Copy</button></div>`;
+  function draw(){
+    const rows = S.filter(s=>c==="all"||s.cat===c);
+    $("sGrid").innerHTML = rows.map(s=>`<article class="scard ${s.tier}"><span style="display:flex;gap:4px;flex-wrap:wrap">${tierTag(s.tier)}<span class="tag out">${esc(CAT[s.cat])}</span>${s.collect===true?`<span class="tag ok">Read nightly</span>`:s.collect===false?`<span class="tag out">Reference</span>`:""}</span>
+      <h3>${esc(s.n)}</h3><span class="org">${esc(s.o)}</span>${ep(s.url)}${s.alt?ep(s.alt):""}
+      <dl><dt>Format</dt><dd>${esc(s.f)}</dd><dt>Access</dt><dd>${esc(s.auth)}</dd><dt>Updates</dt><dd>${esc(s.cad)}</dd><dt>Feeds</dt><dd>${esc(s.feeds)}</dd></dl>
+      ${s.note?`<p class="sn">${esc(s.note)}</p>`:""}</article>`).join("");
+    document.querySelectorAll("#sCat .chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.c===c)));
+    $("sCount").textContent = `${rows.length} sources · ${rows.filter(s=>s.tier==="A").length} official`;
+  }
+  $("sCat").addEventListener("click",e=>{ const b = e.target.closest(".chip"); if(b){ c = b.dataset.c; draw(); } });
+  document.addEventListener("click",e=>{ const b = e.target.closest("[data-copy]"); if(!b) return; const t = b.dataset.copy;
+    const done = ()=>toast("Address copied"); try{ navigator.clipboard.writeText(t).then(done,()=>fallback()); }catch(err){ fallback(); }
+    function fallback(){ const ta = document.createElement("textarea"); ta.value = t; document.body.appendChild(ta); ta.select(); try{ document.execCommand("copy"); done(); }catch(e){} ta.remove(); } });
+  draw();
+  const refs = Object.values(R).sort((a,b)=>a[0].localeCompare(b[0]));
+  $("refN").textContent = refs.length;
+  $("refList").innerHTML = refs.map(s=>`<li><a href="${esc(s[1])}" target="_blank" rel="noopener">${esc(s[0])}</a></li>`).join("");
+})();
+
+
+/* ---------- route ---------- */
+window.addEventListener("hashchange",()=>show(location.hash.slice(1)));
+show(location.hash.slice(1) || "briefing");
+}
+})();
+</script>
+</body>
+</html>

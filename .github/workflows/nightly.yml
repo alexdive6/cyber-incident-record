@@ -1,0 +1,63 @@
+name: Nightly update
+
+on:
+  schedule:
+    - cron: "0 7 * * *"        # 07:00 UTC = 02:00 in New York (03:00 in summer)
+  workflow_dispatch:            # the "Run workflow" button
+  push:
+    branches: [main]
+    paths: ["site/index.html", "collector/**", ".github/workflows/**"]
+
+permissions:
+  contents: write               # save tonight's data back to the repository
+  pages: write                  # publish the site
+  id-token: write
+
+concurrency:
+  group: nightly
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Collect tonight's data
+        if: github.event_name != 'push'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+          CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+        run: python collector/run.py
+
+      - name: Save the data in the repository
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "nightly-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data
+          git commit -m "Nightly data $(date -u +%F)" || echo "Nothing new tonight"
+          git push
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Check that the sources answered
+        if: github.event_name != 'push'
+        run: python collector/check_health.py
