@@ -1,12 +1,12 @@
 {
 "schema": 1,
 "meta": {
-"edition": "2026-11-21",
-"prev": "2026-11-19",
-"compiled": "2026-11-21T17:06-05:00",
+"edition": "2026-11-22",
+"prev": "2026-11-21",
+"compiled": "2026-11-22T10:01-05:00",
 "tz": "America/New_York",
 "mode": "live",
-"nextRun": "2026-11-22T02:00-05:00",
+"nextRun": "2026-11-23T02:00-05:00",
 "from": "2026-10-01",
 "actNow": [
 "cisco-expressway-series-1120",
@@ -4272,6 +4272,147 @@
 "s": [
 "r1e1dbef95d"
 ]
+},
+{
+"id": "pacifico-com-ar-listed-by-1121",
+"k": "inc",
+"t": "pacifico.com.ar listed by the safepay ransomware group",
+"sev": "med",
+"iso": "2026-11-21",
+"added": "2026-11-22",
+"when": "21 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [
+"finance",
+"ransom"
+],
+"sec": "FIN",
+"reg": "GLOBAL",
+"conf": "claim",
+"sum": "The safepay group listed pacifico.com.ar (Financial Services, AR) on its leak site. Not confirmed by the victim.",
+"how": "Not disclosed.",
+"tl": [
+[
+"21 Nov",
+"Reported by ransomware.live"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"rcf3876882f"
+]
+},
+{
+"id": "rackspace-spot-breach-let-hackers-1121",
+"k": "inc",
+"t": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
+"sev": "high",
+"iso": "2026-11-21",
+"added": "2026-11-22",
+"when": "21 Nov",
+"where": "Global",
+"e": "cred",
+"tags": [],
+"sec": "TECH",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "Rackspace warned customers that hackers breached its Rackspace Spot cloud platform using compromised credentials, allowing them to deploy unauthorized workloads and access Kubernetes secrets in customer clusters. [...]",
+"how": "Stolen or leaked credentials and keys.",
+"tl": [
+[
+"21 Nov",
+"Reported by BleepingComputer"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r9f2af01a2a"
+]
+},
+{
+"id": "fbi-investigating-apparent-hack-of-1121",
+"k": "inc",
+"t": "FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, AP Source Says",
+"sev": "med",
+"iso": "2026-11-21",
+"added": "2026-11-22",
+"when": "21 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [],
+"sec": "X",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "The FBI is investigating an apparent hack of a national law enforcement database that it maintains.",
+"how": "Not disclosed.",
+"tl": [
+[
+"21 Nov",
+"Reported by SecurityWeek"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"raeb7ef21f8"
+]
+},
+{
+"id": "openrouter-drops-3-providers-after-1122",
+"k": "inc",
+"t": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
+"sev": "high",
+"iso": "2026-11-22",
+"added": "2026-11-22",
+"when": "22 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [],
+"sec": "TECH",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "Attackers stole data from inside three AI inference providers for months, and none of the three knew until researchers told them, the industrial cybersecurity company Dragos said this week. Some of the stolen requests were flagged as Zero Data Retention, the setting that is supposed to mean a prompt is never stored. OpenRouter, a gateway that routes customers' AI requests to a pool of",
+"how": "Not disclosed.",
+"tl": [
+[
+"22 Nov",
+"Reported by The Hacker News"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r78074d39df"
+]
+},
+{
+"id": "uca-general-insurance-services-inc-1122",
+"k": "inc",
+"t": "UCA General Insurance Services, Inc listed by the EndZone ransomware group",
+"sev": "med",
+"iso": "2026-11-22",
+"added": "2026-11-22",
+"when": "22 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [
+"finance",
+"ransom"
+],
+"sec": "FIN",
+"reg": "GLOBAL",
+"conf": "claim",
+"sum": "The EndZone group listed UCA General Insurance Services, Inc (Financial Services, PH) on its leak site. Not confirmed by the victim.",
+"how": "Not disclosed.",
+"tl": [
+[
+"22 Nov",
+"Reported by ransomware.live"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r45054d7c94"
+]
 }
 ],
 "ledger": [
@@ -4907,7 +5048,7 @@
 "desc": "Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and gain unauthorized access to the system.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "broadcom-vmware-vcenter-1120",
-"epss": 0.0299,
+"epss": 0.0353,
 "cvss": 9.8
 },
 {
@@ -4935,7 +5076,7 @@
 "desc": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import…",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "vanderbilt-university-research-electronic-data-1118",
-"epss": 0.334,
+"epss": 0.3433,
 "cvss": 9.8
 },
 {
@@ -5047,7 +5188,7 @@
 "rw": false,
 "desc": "Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.0189,
+"epss": 0.068,
 "cvss": 8.8
 },
 {
@@ -5131,7 +5272,7 @@
 "rw": false,
 "desc": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.8768,
+"epss": 0.9554,
 "cvss": 8.1
 },
 {
@@ -5468,7 +5609,7 @@
 "rw": false,
 "desc": "BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.5564
+"epss": 0.579
 },
 {
 "cve": "CVE-2025-61624",
@@ -5510,7 +5651,7 @@
 "rw": false,
 "desc": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.0623
+"epss": 0.0571
 },
 {
 "cve": "CVE-2026-105134",
@@ -5607,7 +5748,8 @@
 "desc": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "onlyoffice-docs-1008",
-"epss": 0.8814
+"epss": 0.8814,
+"cvss": 9.8
 },
 {
 "cve": "CVE-2016-3081",
@@ -5648,7 +5790,8 @@
 "desc": "ProFTPD contains an improper access control vulnerability that could allow remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "proftpd-proftpd-1008",
-"epss": 0.995
+"epss": 0.995,
+"cvss": 10.0
 },
 {
 "cve": "CVE-2026-88779",
@@ -5661,7 +5804,8 @@
 "desc": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "citrix-netscaler-1004",
-"epss": 0.1139
+"epss": 0.1139,
+"cvss": 8.7
 },
 {
 "cve": "CVE-2026-102490",
@@ -5674,7 +5818,8 @@
 "desc": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "zammad-gmbh-zammad-1002",
-"epss": 0.1094
+"epss": 0.1094,
+"cvss": 9.4
 },
 {
 "cve": "CVE-2026-102489",
@@ -5687,7 +5832,8 @@
 "desc": "Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "zammad-gmbh-zammad-1002",
-"epss": 0.4991
+"epss": 0.4991,
+"cvss": 9.4
 },
 {
 "cve": "CVE-2026-104286",
@@ -5700,7 +5846,8 @@
 "desc": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "fortinet-fortimail-1001",
-"epss": 0.0457
+"epss": 0.0457,
+"cvss": 9.8
 }
 ],
 "kevRefs": [
@@ -6863,11 +7010,31 @@
 "r1e1dbef95d": [
 "BleepingComputer: Microsoft Entra Connect Health flaw exploited to steal tenant data",
 "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/"
+],
+"rcf3876882f": [
+"ransomware.live: pacifico.com.ar listed by the safepay ransomware group",
+"https://www.ransomware.live/id/cGFjaWZpY28uY29tLmFyQHNhZmVwYXk="
+],
+"r9f2af01a2a": [
+"BleepingComputer: Rackspace Spot breach let hackers access customer Kubernetes secrets",
+"https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/"
+],
+"raeb7ef21f8": [
+"SecurityWeek: FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, AP Source Says",
+"https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says/"
+],
+"r78074d39df": [
+"The Hacker News: OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Fir",
+"https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html"
+],
+"r45054d7c94": [
+"ransomware.live: UCA General Insurance Services, Inc listed by the EndZone ransomware group",
+"https://www.ransomware.live/id/VUNBIEdlbmVyYWwgSW5zdXJhbmNlIFNlcnZpY2VzLCBJbmNARW5kWm9uZQ=="
 ]
 },
 "claimStats": {
 "2026-11": {
-"n": 51,
+"n": 66,
 "groups": {
 "incransom": 3,
 "SoulGroup": 1,
@@ -6877,10 +7044,10 @@
 "osiris": 1,
 "Eclipse": 1,
 "PixelLeaks": 5,
-"medusalocker": 1,
+"medusalocker": 2,
 "everest": 10,
 "Dark Project": 1,
-"rhysida": 3,
+"rhysida": 4,
 "SilentRansomGroup": 3,
 "everstake": 1,
 "blackout": 1,
@@ -6890,7 +7057,11 @@
 "aurora": 3,
 "akira": 1,
 "Deadlock": 1,
-"pear": 1
+"pear": 1,
+"EndZone": 1,
+"HYFLOCK": 2,
+"qilin": 1,
+"safepay": 9
 },
 "seen": [
 "incransom|Regions Behavioral Hospital",
@@ -6943,7 +7114,22 @@
 "Deadlock|MedMira Inc",
 "incransom|eni.it",
 "pear|Law Office of Ronald D. Weiss, P.C",
-"aurora|William Cook Holdings Limited"
+"aurora|William Cook Holdings Limited",
+"rhysida|Law Offices of Cynthia A. de Petris",
+"EndZone|UCA General Insurance Services, Inc",
+"HYFLOCK|A Ransomware Attack on a Company Ranked Among the Top 30 in the Fortune 500",
+"HYFLOCK|Data Breach at O&M University in the Dominican Republic",
+"qilin|Invicta Watch Group",
+"medusalocker|F5A",
+"safepay|tiic.com.ph",
+"safepay|threeroyal.com",
+"safepay|factotal.com",
+"safepay|offshore-ocs.com",
+"safepay|relax.es",
+"safepay|pacifico.com.ar",
+"safepay|qrc-solutions.com",
+"safepay|santak.com.sg",
+"safepay|themedical.co.il"
 ]
 }
 }
