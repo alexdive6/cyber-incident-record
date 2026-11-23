@@ -167,6 +167,109 @@ GENERIC_NAMES = set("""Microsoft Google Apple Amazon Cisco Linux Windows Chrome 
 Europe China Russia Iran North Korea South New Critical Hackers Ransomware Researchers Security Cyber Data Zero""".split())
 
 
+# ---- What was hit: the company, and the software that was exploited ----
+# Ordered most specific first; the first few matches are kept.
+SOFTWARE = [
+    ("Cisco ASA / FTD", r"\bcisco (asa|adaptive security|firepower|ftd|secure firewall)\b"),
+    ("Cisco IOS XE", r"\bios ?xe\b"),
+    ("Cisco ISE", r"\bcisco ise\b|identity services engine"),
+    ("Fortinet FortiGate / FortiOS", r"\bforti(gate|os)\b"),
+    ("Fortinet FortiWeb", r"\bfortiweb\b"),
+    ("Fortinet FortiManager", r"\bfortimanager\b"),
+    ("Ivanti Connect Secure", r"\bivanti connect secure\b|\bpulse secure\b"),
+    ("Ivanti EPMM", r"\bivanti (epmm|endpoint manager mobile)\b"),
+    ("Palo Alto PAN-OS / GlobalProtect", r"\bpan-?os\b|\bglobalprotect\b"),
+    ("Citrix NetScaler", r"\bnetscaler\b|\bcitrix (adc|gateway)\b"),
+    ("SonicWall", r"\bsonicwall\b"),
+    ("Check Point", r"\bcheck point\b"),
+    ("VMware ESXi", r"\besxi?\b"),
+    ("VMware vCenter", r"\bvcenter\b"),
+    ("Microsoft Exchange Server", r"\bexchange server\b|\boutlook web access\b|\bowa\b"),
+    ("Microsoft SharePoint", r"\bsharepoint\b"),
+    ("Microsoft 365 / Entra ID", r"\b(microsoft|office) 365\b|\bentra id\b|\bazure ad\b"),
+    ("Microsoft Outlook", r"\boutlook\b"),
+    ("Windows", r"\bwindows\b"),
+    ("Google Chrome", r"\bchrome\b|\bchromium\b"),
+    ("Apple iOS / macOS", r"\b(ios|ipados|macos|webkit)\b"),
+    ("Android", r"\bandroid\b"),
+    ("Linux kernel", r"\blinux kernel\b"),
+    ("ConnectWise ScreenConnect", r"\bscreenconnect\b"),
+    ("SimpleHelp", r"\bsimplehelp\b"),
+    ("N-able N-central", r"\bn-central\b"),
+    ("Kaseya VSA", r"\bkaseya\b"),
+    ("SAP NetWeaver", r"\bnetweaver\b"),
+    ("Oracle E-Business Suite", r"\boracle e-?business suite\b|\boracle ebs\b"),
+    ("Oracle WebLogic", r"\bweblogic\b"),
+    ("Salesforce", r"\bsalesforce\b"),
+    ("Snowflake", r"\bsnowflake\b"),
+    ("Okta", r"\bokta\b"),
+    ("MOVEit Transfer", r"\bmoveit\b"),
+    ("GoAnywhere MFT", r"\bgoanywhere\b"),
+    ("Cleo file transfer", r"\bcleo (harmony|vltrader|lexicom)\b"),
+    ("Atlassian Confluence", r"\bconfluence\b"),
+    ("Atlassian Jira", r"\bjira\b"),
+    ("GitLab", r"\bgitlab\b"),
+    ("GitHub Actions", r"\bgithub actions\b|\bgithub workflows?\b"),
+    ("npm package", r"\bnpm\b"),
+    ("PyPI package", r"\bpypi\b"),
+    ("WordPress plugin", r"\bwordpress plugin\b"),
+    ("WordPress", r"\bwordpress\b"),
+    ("Apache Tomcat", r"\btomcat\b"),
+    ("Apache Struts", r"\bstruts\b"),
+    ("Log4j", r"\blog4j\b|\blog4shell\b"),
+    ("PHP", r"\bphp\b"),
+    ("Jenkins", r"\bjenkins\b"),
+    ("Veeam Backup", r"\bveeam\b"),
+    ("Zimbra", r"\bzimbra\b"),
+    ("Roundcube", r"\broundcube\b"),
+    ("Barracuda ESG", r"\bbarracuda\b"),
+    ("Zyxel", r"\bzyxel\b"),
+    ("D-Link", r"\bd-link\b"),
+    ("TP-Link", r"\btp-link\b"),
+    ("Juniper", r"\bjuniper\b|\bjunos\b"),
+    ("F5 BIG-IP", r"\bbig-?ip\b"),
+    ("BeyondTrust", r"\bbeyondtrust\b"),
+    ("SolarWinds", r"\bsolarwinds\b"),
+    ("Synology", r"\bsynology\b"),
+    ("QNAP", r"\bqnap\b"),
+    ("Commvault", r"\bcommvault\b"),
+    ("CrushFTP", r"\bcrushftp\b"),
+    ("Zoho ManageEngine", r"\bmanageengine\b"),
+]
+
+COMPANY_VERB = re.compile(
+    r"^([A-Z][\w.&'’-]*(?:\s+[A-Z0-9&][\w.&'’-]*){0,4})\s+"
+    r"(?:confirms|discloses|says|reports|warns|notifies|suffers|hit by|struck by|hacked|breached|investigat\w+|"
+    r"probes|admits|data breach|cyberattack|cyber attack|ransomware attack|security incident|outage)\b")
+
+
+def software(text):
+    """The software or product named as exploited or abused, or ''."""
+    hits = []
+    for label, rx in SOFTWARE:
+        if re.search(rx, text, re.I) and not any(label in h or h in label for h in hits):
+            hits.append(label)
+        if len(hits) == 3:
+            break
+    return ", ".join(hits)
+
+
+_NAME = r"([A-Z][\w.&'’-]*(?:\s+[A-Z0-9&][\w.&'’-]*){0,3})"
+COMPANY_OBJ = re.compile(r"\b(?:breach(?:es|ed)?|hack(?:s|ed)?|hits?|attacks?|targets?|extorts?)\s+" + _NAME +
+                         r"|\b(?:stole|steal|steals|stolen|drained?|exfiltrated)\b.*?\b(?:from|at)\s+" + _NAME)
+
+
+def company(title):
+    """Best guess at the victim from a headline ('Acme confirms data breach', 'Hackers steal $5m from Acme'); '' if unsure."""
+    title = title.strip()
+    m = COMPANY_VERB.match(title)
+    m2 = None if m else COMPANY_OBJ.search(title)
+    name = (m.group(1) if m else (m2.group(1) or m2.group(2)) if m2 else "").strip()
+    if not name or name in GENERIC_NAMES or name.split()[0] in GENERIC_NAMES:
+        return ""
+    return name
+
+
 def names(title):
     """Capitalised words that likely name the victim (used for merging)."""
     return {w for w in re.findall(r"\b[A-Z][A-Za-z0-9&\-]{2,}\b", title) if w not in GENERIC_NAMES}

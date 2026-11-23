@@ -108,7 +108,8 @@
 "sec": "X",
 "added": "2026-11-10",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "Microsoft Office"
 },
 {
 "id": "owa-ta488",
@@ -146,7 +147,8 @@
 "sec": "X",
 "added": "2026-10-08",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "Microsoft Exchange Server (Outlook Web Access)"
 },
 {
 "id": "ivanti",
@@ -188,7 +190,8 @@
 "added": "2026-10-13",
 "conf": "confirmed",
 "reg": "GLOBAL",
-"updated": "2026-11-21"
+"updated": "2026-11-21",
+"sw": "Ivanti Connect Secure"
 },
 {
 "id": "beyondtrust",
@@ -224,7 +227,8 @@
 "sec": "X",
 "added": "2026-10-15",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "BeyondTrust Remote Support"
 },
 {
 "id": "winshell",
@@ -258,7 +262,8 @@
 "sec": "X",
 "added": "2026-10-13",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "Microsoft Windows"
 },
 {
 "id": "ciscoseg",
@@ -291,7 +296,8 @@
 "sec": "X",
 "added": "2026-10-14",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "Cisco Secure Email Gateway"
 },
 {
 "id": "php2shell",
@@ -329,7 +335,8 @@
 "sec": "X",
 "added": "2026-10-21",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "PHP Group PHP"
 },
 {
 "id": "gitlab",
@@ -366,7 +373,8 @@
 "sec": "X",
 "added": "2026-10-21",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "GitLab Community Edition and Enterprise Edition"
 },
 {
 "id": "ciscoasa",
@@ -398,7 +406,8 @@
 "sec": "X",
 "added": "2026-10-28",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software"
 },
 {
 "id": "node2shell",
@@ -431,7 +440,8 @@
 "sec": "X",
 "added": "2026-10-27",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "Google Brotli"
 },
 {
 "id": "plex",
@@ -472,7 +482,8 @@
 "added": "2026-10-17",
 "conf": "confirmed",
 "reg": "GLOBAL",
-"updated": "2026-11-21"
+"updated": "2026-11-21",
+"sw": "Plex Media Server"
 },
 {
 "id": "chrome",
@@ -503,7 +514,8 @@
 "sec": "X",
 "added": "2026-11-09",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "Google Chromium"
 },
 {
 "id": "esx",
@@ -529,7 +541,8 @@
 "sec": "X",
 "added": "2026-10-28",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "Linux Kernel, Broadcom VMware ESX"
 },
 {
 "id": "nitori",
@@ -564,7 +577,8 @@
 "sec": "RETAIL",
 "added": "2026-11-09",
 "conf": "confirmed",
-"reg": "APAC"
+"reg": "APAC",
+"co": "Nitori"
 },
 {
 "id": "wfx",
@@ -593,7 +607,9 @@
 "sec": "TECH",
 "added": "2026-11-10",
 "conf": "reported",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "1,835+ GitHub repositories",
+"sw": "GitHub Actions (CI/CD workflows)"
 },
 {
 "id": "fireworks",
@@ -642,7 +658,9 @@
 "added": "2026-11-09",
 "conf": "confirmed",
 "updated": "2026-11-19",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "Fireworks AI, Notion",
+"sw": "Fireworks AI development system (via cloud provider)"
 },
 {
 "id": "sckit",
@@ -672,7 +690,9 @@
 "sec": "TECH",
 "added": "2026-11-11",
 "conf": "reported",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "48 organisations",
+"sw": "ConnectWise ScreenConnect (RMM+ extension)"
 },
 {
 "id": "vanderbilt",
@@ -701,7 +721,9 @@
 "sec": "EDU",
 "added": "2026-11-09",
 "conf": "confirmed",
-"reg": "AMER"
+"reg": "AMER",
+"co": "Vanderbilt University",
+"sw": "Windows Active Directory (domain controller)"
 },
 {
 "id": "texashhs",
@@ -730,7 +752,8 @@
 "sec": "GOV",
 "added": "2026-11-09",
 "conf": "claim",
-"reg": "AMER"
+"reg": "AMER",
+"co": "Texas Health and Human Services Commission"
 },
 {
 "id": "sega",
@@ -760,7 +783,9 @@
 "sec": "RETAIL",
 "added": "2026-11-09",
 "conf": "confirmed",
-"reg": "APAC"
+"reg": "APAC",
+"co": "SEGA (via ARARA)",
+"sw": "ARARA email delivery platform"
 },
 {
 "id": "turla",
@@ -790,7 +815,9 @@
 "sec": "GOV",
 "added": "2026-11-10",
 "conf": "reported",
-"reg": "EMEA"
+"reg": "EMEA",
+"co": "Government organisations in Kazakhstan and Romania",
+"sw": "Microsoft Exchange Server"
 },
 {
 "id": "csc",
@@ -827,7 +854,9 @@
 "sec": "TEL",
 "added": "2026-11-11",
 "conf": "reported",
-"reg": "EMEA"
+"reg": "EMEA",
+"co": "CSC Telecom",
+"sw": "Exposed SMS database (no login)"
 },
 {
 "id": "alerts",
@@ -856,7 +885,9 @@
 "sec": "GOV",
 "added": "2026-11-02",
 "conf": "confirmed",
-"reg": "EMEA"
+"reg": "EMEA",
+"co": "Ukrainian and Russian government alert services",
+"sw": "Emergency alert mobile apps"
 },
 {
 "id": "marathon",
@@ -889,7 +920,8 @@
 "sec": "HEALTH",
 "added": "2026-11-06",
 "conf": "confirmed",
-"reg": "AMER"
+"reg": "AMER",
+"co": "Marathon Health"
 },
 {
 "id": "digicert",
@@ -922,7 +954,9 @@
 "sec": "TECH",
 "added": "2026-11-05",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "DigiCert",
+"sw": "Exposed migration server"
 },
 {
 "id": "docomo",
@@ -954,7 +988,9 @@
 "sec": "TEL",
 "added": "2026-11-04",
 "conf": "confirmed",
-"reg": "APAC"
+"reg": "APAC",
+"co": "NTT Docomo",
+"sw": "My docomo portal and online shop"
 },
 {
 "id": "maersk",
@@ -988,7 +1024,9 @@
 "sec": "LOG",
 "added": "2026-11-12",
 "conf": "confirmed",
-"reg": "EMEA"
+"reg": "EMEA",
+"co": "Maersk (LF Logistics)",
+"sw": "Legacy LF Logistics platform"
 },
 {
 "id": "beejs",
@@ -1017,7 +1055,9 @@
 "sec": "TECH",
 "added": "2026-11-09",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "Ethersphere (Swarm)",
+"sw": "bee-js npm package, Swarm Desktop"
 },
 {
 "id": "barracuda",
@@ -1050,7 +1090,8 @@
 "sec": "X",
 "added": "2026-11-10",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "Barracuda Networks Barracuda Email Security Gateway (ESG), Barracuda Networks Multiple Products"
 },
 {
 "id": "checkpoint",
@@ -1077,7 +1118,8 @@
 "sec": "X",
 "added": "2026-11-13",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "Check Point Multiple Products"
 },
 {
 "id": "ciscobw",
@@ -1104,7 +1146,8 @@
 "sec": "X",
 "added": "2026-11-10",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "Cisco BroadWorks"
 },
 {
 "id": "nable",
@@ -1138,7 +1181,8 @@
 "sec": "TECH",
 "added": "2026-11-09",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "N-able N-central"
 },
 {
 "id": "laposte",
@@ -1169,7 +1213,9 @@
 "sec": "LOG",
 "added": "2026-11-14",
 "conf": "confirmed",
-"reg": "EMEA"
+"reg": "EMEA",
+"co": "La Poste (Maileva)",
+"sw": "Maileva mail service"
 },
 {
 "id": "expedia",
@@ -1202,7 +1248,9 @@
 "sec": "RETAIL",
 "added": "2026-11-12",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "Expedia",
+"sw": "Qubole data platform"
 },
 {
 "id": "tsmc",
@@ -1231,7 +1279,9 @@
 "sec": "TECH",
 "added": "2026-11-15",
 "conf": "confirmed",
-"reg": "APAC"
+"reg": "APAC",
+"co": "TSMC",
+"sw": "Third-party cloud provider"
 },
 {
 "id": "coles",
@@ -1258,7 +1308,8 @@
 "sec": "RETAIL",
 "added": "2026-11-16",
 "conf": "confirmed",
-"reg": "APAC"
+"reg": "APAC",
+"co": "Coles Group"
 },
 {
 "id": "wyndham",
@@ -1285,7 +1336,9 @@
 "sec": "RETAIL",
 "added": "2026-11-09",
 "conf": "reported",
-"reg": "AMER"
+"reg": "AMER",
+"co": "Wyndham Hotels & Resorts",
+"sw": "Wyndham mobile app (hardcoded credential)"
 },
 {
 "id": "sogo",
@@ -1312,7 +1365,9 @@
 "sec": "RETAIL",
 "added": "2026-11-05",
 "conf": "confirmed",
-"reg": "APAC"
+"reg": "APAC",
+"co": "SOGO",
+"sw": "Membership system"
 },
 {
 "id": "facestealer",
@@ -1344,7 +1399,9 @@
 "sec": "CRYPTO",
 "added": "2026-11-12",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "Crypto holders and firms",
+"sw": "Video-call apps (deepfake lures), malware"
 },
 {
 "id": "optimizely",
@@ -1380,7 +1437,9 @@
 "added": "2026-11-17",
 "conf": "confirmed",
 "updated": "2026-11-19",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "178 organisations incl. HSBC, Equifax, ABN AMRO",
+"sw": "Optimizely web experimentation platform"
 },
 {
 "id": "visa",
@@ -1423,7 +1482,9 @@
 "added": "2026-11-17",
 "conf": "confirmed",
 "updated": "2026-11-19",
-"reg": "APAC"
+"reg": "APAC",
+"co": "Visa, Mastercard, JPMorgan Chase",
+"sw": "Third-party service provider (Asia-Pacific)"
 },
 {
 "id": "aioi",
@@ -1456,7 +1517,9 @@
 "sec": "FIN",
 "added": "2026-11-06",
 "conf": "confirmed",
-"reg": "APAC"
+"reg": "APAC",
+"co": "Aioi Nissay Dowa Insurance",
+"sw": "Customer portal"
 },
 {
 "id": "smbcbank",
@@ -1486,7 +1549,9 @@
 "sec": "FIN",
 "added": "2026-11-05",
 "conf": "confirmed",
-"reg": "APAC"
+"reg": "APAC",
+"co": "SMBC (via ARARA)",
+"sw": "ARARA email delivery platform"
 },
 {
 "id": "gnosis",
@@ -1515,7 +1580,9 @@
 "sec": "CRYPTO",
 "added": "2026-11-06",
 "conf": "reported",
-"reg": "EMEA"
+"reg": "EMEA",
+"co": "Gnosis Pay",
+"sw": "Card processing backend"
 },
 {
 "id": "arkea",
@@ -1563,7 +1630,9 @@
 "sec": "FIN",
 "added": "2026-11-04",
 "conf": "confirmed",
-"reg": "EMEA"
+"reg": "EMEA",
+"co": "Crédit Mutuel Arkéa",
+"sw": "Service provider's payment platform"
 },
 {
 "id": "krbanks",
@@ -1602,7 +1671,9 @@
 "sec": "FIN",
 "added": "2026-10-05",
 "conf": "confirmed",
-"reg": "APAC"
+"reg": "APAC",
+"co": "Shinhan, KB Kookmin, Hana, BNK Busan and 12 others",
+"sw": "Internet-facing systems"
 },
 {
 "id": "abrigo",
@@ -1642,7 +1713,9 @@
 "sec": "FIN",
 "added": "2026-10-30",
 "conf": "confirmed",
-"reg": "AMER"
+"reg": "AMER",
+"co": "Abrigo",
+"sw": "Abrigo Sageworks lending platform"
 },
 {
 "id": "storm",
@@ -1676,7 +1749,9 @@
 "sec": "FIN",
 "added": "2026-11-11",
 "conf": "confirmed",
-"reg": "AMER"
+"reg": "AMER",
+"co": "Sawyer Savings Bank, Insight Credit Union and four US banks",
+"sw": "Outsourced IT provider"
 },
 {
 "id": "eubank",
@@ -1710,7 +1785,9 @@
 "sec": "FIN",
 "added": "2026-10-13",
 "conf": "reported",
-"reg": "EMEA"
+"reg": "EMEA",
+"co": "Unnamed European bank",
+"sw": "Vendor-managed remote access gateway, WSUS"
 },
 {
 "id": "sbi",
@@ -1740,7 +1817,8 @@
 "sec": "FIN",
 "added": "2026-10-21",
 "conf": "confirmed",
-"reg": "APAC"
+"reg": "APAC",
+"co": "State Bank of India"
 },
 {
 "id": "aubank",
@@ -1769,7 +1847,9 @@
 "sec": "FIN",
 "added": "2026-10-29",
 "conf": "claim",
-"reg": "APAC"
+"reg": "APAC",
+"co": "AU Small Finance Bank",
+"sw": "Third-party SaaS platform"
 },
 {
 "id": "smbccf",
@@ -1798,7 +1878,9 @@
 "sec": "FIN",
 "added": "2026-11-05",
 "conf": "confirmed",
-"reg": "APAC"
+"reg": "APAC",
+"co": "SMBC Consumer Finance",
+"sw": "Card-loan guarantee system"
 },
 {
 "id": "rakyat",
@@ -1831,7 +1913,9 @@
 "sec": "FIN",
 "added": "2026-11-06",
 "conf": "reported",
-"reg": "APAC"
+"reg": "APAC",
+"co": "Bank Rakyat",
+"sw": "iRakyat online banking website"
 },
 {
 "id": "idwave",
@@ -1864,7 +1948,8 @@
 "sec": "FIN",
 "added": "2026-11-09",
 "conf": "reported",
-"reg": "APAC"
+"reg": "APAC",
+"co": "Indonesian banks incl. CIMB Niaga"
 },
 {
 "id": "binance",
@@ -1919,7 +2004,9 @@
 "sec": "CRYPTO",
 "added": "2026-10-29",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "Binance",
+"sw": "Homebrew package (tampered), wallet signing service"
 },
 {
 "id": "connectwise",
@@ -1960,7 +2047,9 @@
 "sec": "TECH",
 "added": "2026-10-16",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "ConnectWise and hundreds of customers",
+"sw": "ConnectWise Cloud Backup, Microsoft 365 (app consent)"
 },
 {
 "id": "fortibleed",
@@ -1998,7 +2087,9 @@
 "sec": "X",
 "added": "2026-10-06",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "86,644 organisations' devices",
+"sw": "Fortinet FortiGate firewalls and VPN"
 },
 {
 "id": "fridges",
@@ -2038,7 +2129,9 @@
 "sec": "RETAIL",
 "added": "2026-10-12",
 "conf": "confirmed",
-"reg": "EMEA"
+"reg": "EMEA",
+"co": "~700 French supermarkets, a French blood bank",
+"sw": "Internet-exposed refrigeration controllers"
 },
 {
 "id": "devplat",
@@ -2078,7 +2171,9 @@
 "sec": "TECH",
 "added": "2026-10-22",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "Zeabur, Railway, Northflank, Trigger.dev",
+"sw": "Developer cloud platforms (stored secrets)"
 },
 {
 "id": "litellm",
@@ -2112,7 +2207,9 @@
 "sec": "TECH",
 "added": "2026-10-21",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "BerriAI (LiteLLM users)",
+"sw": "LiteLLM Python package (PyPI), GitHub"
 },
 {
 "id": "cairn",
@@ -2147,7 +2244,9 @@
 "sec": "X",
 "added": "2026-10-19",
 "conf": "reported",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "100+ companies incl. Deere, SharkNinja, Cummins",
+"sw": "Public websites (Cairn AI agent)"
 },
 {
 "id": "korea",
@@ -2182,7 +2281,9 @@
 "sec": "X",
 "added": "2026-10-15",
 "conf": "confirmed",
-"reg": "APAC"
+"reg": "APAC",
+"co": "90+ South Korean organisations",
+"sw": "Exposed web systems (ARTEX AI framework)"
 },
 {
 "id": "idcf",
@@ -2217,7 +2318,9 @@
 "sec": "TECH",
 "added": "2026-10-07",
 "conf": "confirmed",
-"reg": "APAC"
+"reg": "APAC",
+"co": "IDCF Cloud (SoftBank group), 495 customers",
+"sw": "Cloud portal open-source component, virtualisation layer"
 },
 {
 "id": "dexcom",
@@ -2247,7 +2350,8 @@
 "sec": "HEALTH",
 "added": "2026-10-10",
 "conf": "confirmed",
-"reg": "AMER"
+"reg": "AMER",
+"co": "Dexcom"
 },
 {
 "id": "asos",
@@ -2281,7 +2385,9 @@
 "sec": "RETAIL",
 "added": "2026-10-06",
 "conf": "confirmed",
-"reg": "EMEA"
+"reg": "EMEA",
+"co": "ASOS",
+"sw": "Third-party customer platforms, ASOS app notifications"
 },
 {
 "id": "irhythm",
@@ -2315,7 +2421,9 @@
 "sec": "HEALTH",
 "added": "2026-10-03",
 "conf": "confirmed",
-"reg": "AMER"
+"reg": "AMER",
+"co": "iRhythm Technologies",
+"sw": "Third-party-hosted business apps"
 },
 {
 "id": "arizona",
@@ -2349,7 +2457,8 @@
 "sec": "GOV",
 "added": "2026-10-06",
 "conf": "confirmed",
-"reg": "AMER"
+"reg": "AMER",
+"co": "Arizona court system"
 },
 {
 "id": "chainalysis",
@@ -2381,7 +2490,8 @@
 "sec": "CRYPTO",
 "added": "2026-10-30",
 "conf": "confirmed",
-"reg": "AMER"
+"reg": "AMER",
+"co": "Chainalysis"
 },
 {
 "id": "polymarket",
@@ -2411,7 +2521,9 @@
 "sec": "CRYPTO",
 "added": "2026-10-29",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "Polymarket",
+"sw": "Third-party monitoring script (DNS hijack)"
 },
 {
 "id": "gheist",
@@ -2440,7 +2552,9 @@
 "sec": "TECH",
 "added": "2026-10-28",
 "conf": "reported",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "850 GitHub accounts",
+"sw": "GitHub Actions, GitHub tokens"
 },
 {
 "id": "emudhra",
@@ -2473,7 +2587,9 @@
 "sec": "TECH",
 "added": "2026-10-17",
 "conf": "confirmed",
-"reg": "APAC"
+"reg": "APAC",
+"co": "eMudhra",
+"sw": "Intermediate CA key generation"
 },
 {
 "id": "safepay",
@@ -2511,7 +2627,8 @@
 "sec": "X",
 "added": "2026-10-22",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "600+ organisations incl. Osaka Metropolitan University, UNM Health Sciences"
 },
 {
 "id": "ahold",
@@ -2541,7 +2658,9 @@
 "sec": "RETAIL",
 "added": "2026-10-12",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "Ahold Delhaize",
+"sw": "Websites and apps"
 },
 {
 "id": "cctld",
@@ -2570,7 +2689,9 @@
 "sec": "TECH",
 "added": "2026-10-07",
 "conf": "reported",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": ".gh, .sl and .as domain registries",
+"sw": "Registry DNS management systems"
 },
 {
 "id": "updraft",
@@ -2599,7 +2720,9 @@
 "sec": "TECH",
 "added": "2026-10-20",
 "conf": "confirmed",
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "~400,000 WordPress sites",
+"sw": "UpdraftCentral (WordPress plugin)"
 },
 {
 "id": "candiru",
@@ -2628,7 +2751,9 @@
 "sec": "TEL",
 "added": "2026-10-16",
 "conf": "reported",
-"reg": "EMEA"
+"reg": "EMEA",
+"co": "Al Jazeera",
+"sw": "Mobile ad content (zero-click spyware)"
 },
 {
 "id": "equinor",
@@ -2661,7 +2786,8 @@
 "ibtEq",
 "gnEq"
 ],
-"reg": "EMEA"
+"reg": "EMEA",
+"co": "Equinor"
 },
 {
 "id": "infoblox",
@@ -2696,7 +2822,9 @@
 "tcIb",
 "cdIb"
 ],
-"reg": "AMER"
+"reg": "AMER",
+"co": "Infoblox",
+"sw": "Microsoft SharePoint (via migration vendor)"
 },
 {
 "id": "osaki",
@@ -2733,7 +2861,8 @@
 "s": [
 "sbOt"
 ],
-"reg": "APAC"
+"reg": "APAC",
+"co": "Osaki Electric"
 },
 {
 "id": "nvidia",
@@ -2767,7 +2896,8 @@
 "s": [
 "bcNv"
 ],
-"reg": "AMER"
+"reg": "AMER",
+"co": "NVIDIA (claim)"
 },
 {
 "id": "quantum",
@@ -2796,7 +2926,9 @@
 "s": [
 "saEq"
 ],
-"reg": "EMEA"
+"reg": "EMEA",
+"co": "Quantum Systems",
+"sw": "Software update channel"
 },
 {
 "id": "greiz",
@@ -2825,7 +2957,8 @@
 "s": [
 "saEq"
 ],
-"reg": "EMEA"
+"reg": "EMEA",
+"co": "Greiz-Ronneburg district hospital"
 },
 {
 "id": "paytaca",
@@ -2854,7 +2987,9 @@
 "s": [
 "sitg"
 ],
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"co": "Paytaca",
+"sw": "Paytaca wallet backend"
 },
 {
 "id": "roller",
@@ -2902,7 +3037,8 @@
 "ra3eac34b29"
 ],
 "reg": "GLOBAL",
-"updated": "2026-11-21"
+"updated": "2026-11-21",
+"sw": "Apache Roller"
 },
 {
 "id": "puppet",
@@ -2940,7 +3076,8 @@
 "patchRound",
 "dsrPuppet"
 ],
-"reg": "GLOBAL"
+"reg": "GLOBAL",
+"sw": "Perforce Puppet Enterprise"
 },
 {
 "id": "cisco-expressway-series-1120",
@@ -2971,7 +3108,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Cisco Expressway Series"
 },
 {
 "id": "broadcom-vmware-vcenter-1120",
@@ -3002,7 +3140,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Broadcom VMware vCenter"
 },
 {
 "id": "sap-netweaver-1120",
@@ -3033,7 +3172,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "SAP NetWeaver"
 },
 {
 "id": "vanderbilt-university-research-electronic-data-1118",
@@ -3064,7 +3204,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Vanderbilt University Research Electronic Data Capture (REDCap)"
 },
 {
 "id": "apache-axis-1118",
@@ -3095,7 +3236,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Apache Axis"
 },
 {
 "id": "berriai-litellm-1118",
@@ -3126,7 +3268,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "BerriAI LiteLLM"
 },
 {
 "id": "synology-diskstation-manager-dsm-1118",
@@ -3157,7 +3300,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Synology DiskStation Manager (DSM)"
 },
 {
 "id": "unrealircd-unrealircd-1113",
@@ -3188,7 +3332,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "UnrealIRCd UnrealIRCd"
 },
 {
 "id": "gpustack-gpustack-1109",
@@ -3219,7 +3364,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "GPUStack GPUStack"
 },
 {
 "id": "sonicwall-sonicos-sslvpn-1106",
@@ -3250,7 +3396,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "SonicWall SonicOS SSLVPN"
 },
 {
 "id": "apple-multiple-products-1104",
@@ -3281,7 +3428,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Apple Multiple Products"
 },
 {
 "id": "wordpress-wordpress-core-1103",
@@ -3312,7 +3460,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "WordPress WordPress Core"
 },
 {
 "id": "arista-velocloud-orchestrator-1023",
@@ -3343,7 +3492,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Arista VeloCloud Orchestrator"
 },
 {
 "id": "collabora-collabora-online-built-in-1023",
@@ -3374,7 +3524,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Collabora Collabora Online – Built-in CODE Server"
 },
 {
 "id": "siemens-software-center-1020",
@@ -3405,7 +3556,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Siemens Software Center"
 },
 {
 "id": "eg-secure-solutions-siteguard-server-1020",
@@ -3436,7 +3588,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "EG Secure Solutions SiteGuard Server Edition"
 },
 {
 "id": "fortinet-multiple-products-1016",
@@ -3467,7 +3620,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Fortinet Multiple Products"
 },
 {
 "id": "atlassian-multiple-products-1015",
@@ -3498,7 +3652,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Atlassian Multiple Products"
 },
 {
 "id": "ahsay-ahsaycbs-1014",
@@ -3529,7 +3684,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Ahsay AhsayCBS"
 },
 {
 "id": "palo-alto-networks-pan-os-1014",
@@ -3560,7 +3716,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Palo Alto Networks PAN-OS"
 },
 {
 "id": "strapi-strapi-1008",
@@ -3591,7 +3748,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Strapi Strapi"
 },
 {
 "id": "onlyoffice-docs-1008",
@@ -3622,7 +3780,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "ONLYOFFICE Docs"
 },
 {
 "id": "apache-struts-1008",
@@ -3653,7 +3812,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Apache Struts"
 },
 {
 "id": "isc-bind-1008",
@@ -3684,7 +3844,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "ISC BIND"
 },
 {
 "id": "proftpd-proftpd-1008",
@@ -3715,7 +3876,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "ProFTPD ProFTPD"
 },
 {
 "id": "citrix-netscaler-1004",
@@ -3746,7 +3908,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Citrix NetScaler"
 },
 {
 "id": "zammad-gmbh-zammad-1002",
@@ -3777,7 +3940,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Zammad GmbH Zammad"
 },
 {
 "id": "fortinet-fortimail-1001",
@@ -3808,7 +3972,8 @@
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
 "r7947132cac"
-]
+],
+"sw": "Fortinet FortiMail"
 },
 {
 "id": "iqstel-inc-iqst-reports-a-1119",
@@ -3835,7 +4000,8 @@
 "fix": "Under investigation.",
 "s": [
 "rb6df6880b9"
-]
+],
+"co": "iQSTEL Inc"
 },
 {
 "id": "careers360-3-609-421-accounts-1119",
@@ -3862,7 +4028,8 @@
 "fix": "Under investigation.",
 "s": [
 "re16e6ae134"
-]
+],
+"co": "Careers360"
 },
 {
 "id": "too-lost-724-323-accounts-1120",
@@ -3889,7 +4056,8 @@
 "fix": "Under investigation.",
 "s": [
 "rdd12a24b01"
-]
+],
+"co": "Too Lost"
 },
 {
 "id": "mt5-algo-trading-farm-onefunded-1120",
@@ -3919,7 +4087,9 @@
 "fix": "Under investigation.",
 "s": [
 "r479aa059af"
-]
+],
+"co": "MT5 algo-trading farm (OneFunded)",
+"sw": "Windows server"
 },
 {
 "id": "jpmorgan-confirms-customer-data-breach-1120",
@@ -3950,7 +4120,9 @@
 "fix": "Under investigation.",
 "s": [
 "r4ebef484f9"
-]
+],
+"co": "JPMorgan Chase, Visa, Mastercard",
+"sw": "Third-party service provider"
 },
 {
 "id": "amazon-says-chinese-hackers-used-1120",
@@ -3985,7 +4157,9 @@
 "s": [
 "rcd038ca0a2",
 "r0abe422151"
-]
+],
+"co": "Two universities",
+"sw": "Cairn AI pentesting tool (zero-day found)"
 },
 {
 "id": "whatsapp-patches-3-security-flaws-1120",
@@ -4012,7 +4186,8 @@
 "fix": "Under investigation.",
 "s": [
 "r6cc616c5c6"
-]
+],
+"sw": "WhatsApp for Android, WhatsApp Business for Android"
 },
 {
 "id": "bell-canada-says-agentic-hacker-1120",
@@ -4041,7 +4216,9 @@
 "fix": "Under investigation.",
 "s": [
 "r6c623452a1"
-]
+],
+"co": "Bell Canada",
+"sw": "Circuit ordering and provisioning system"
 },
 {
 "id": "container-store-restores-systems-after-1120",
@@ -4068,7 +4245,9 @@
 "fix": "Under investigation.",
 "s": [
 "redfeced150"
-]
+],
+"co": "The Container Store",
+"sw": "Website and IT systems"
 },
 {
 "id": "china-s-armory-castle-lays-1120",
@@ -4095,7 +4274,8 @@
 "fix": "Under investigation.",
 "s": [
 "ra9aa37cedd"
-]
+],
+"sw": "VMware vCenter"
 },
 {
 "id": "west-virginia-legislature-hit-with-1120",
@@ -4122,7 +4302,9 @@
 "fix": "Under investigation.",
 "s": [
 "rf0b8696c25"
-]
+],
+"co": "West Virginia Legislature",
+"sw": "IT systems"
 },
 {
 "id": "dialing-for-data-inside-the-1120",
@@ -4152,7 +4334,9 @@
 "fix": "Under investigation.",
 "s": [
 "rec3643e6e5"
-]
+],
+"co": "Healthcare and finance organisations",
+"sw": "Cloud data platforms (via vishing)"
 },
 {
 "id": "cto-of-ransomwarehelp-indicted-for-1120",
@@ -4182,7 +4366,8 @@
 "fix": "Under investigation.",
 "s": [
 "r93138fbb4d"
-]
+],
+"co": "RansomwareHelp victims"
 },
 {
 "id": "attackers-ai-agents-found-a-1121",
@@ -4217,7 +4402,9 @@
 "s": [
 "r16765aea3b",
 "r6231e48f3b"
-]
+],
+"co": "A university",
+"sw": "MONAI Label (medical imaging server)"
 },
 {
 "id": "fbi-reportedly-hacked-again-this-1121",
@@ -4244,7 +4431,9 @@
 "fix": "Under investigation.",
 "s": [
 "refef5bd50b"
-]
+],
+"co": "FBI",
+"sw": "National Crime Information Center (NCIC)"
 },
 {
 "id": "microsoft-entra-connect-health-flaw-1121",
@@ -4271,7 +4460,9 @@
 "fix": "Under investigation.",
 "s": [
 "r1e1dbef95d"
-]
+],
+"co": "Microsoft",
+"sw": "Microsoft Entra Connect Health"
 },
 {
 "id": "pacifico-com-ar-listed-by-1121",
@@ -4301,7 +4492,8 @@
 "fix": "Under investigation.",
 "s": [
 "rcf3876882f"
-]
+],
+"co": "pacifico.com.ar"
 },
 {
 "id": "rackspace-spot-breach-let-hackers-1121",
@@ -4328,7 +4520,9 @@
 "fix": "Under investigation.",
 "s": [
 "r9f2af01a2a"
-]
+],
+"co": "Rackspace",
+"sw": "Rackspace Spot (Kubernetes), stolen credentials"
 },
 {
 "id": "fbi-investigating-apparent-hack-of-1121",
@@ -4355,7 +4549,9 @@
 "fix": "Under investigation.",
 "s": [
 "raeb7ef21f8"
-]
+],
+"co": "FBI",
+"sw": "National Crime Information Center (NCIC)"
 },
 {
 "id": "openrouter-drops-3-providers-after-1122",
@@ -4382,7 +4578,9 @@
 "fix": "Under investigation.",
 "s": [
 "r78074d39df"
-]
+],
+"co": "Three AI inference providers (OpenRouter)",
+"sw": "AI inference hosting platforms"
 },
 {
 "id": "uca-general-insurance-services-inc-1122",
@@ -4412,7 +4610,8 @@
 "fix": "Under investigation.",
 "s": [
 "r45054d7c94"
-]
+],
+"co": "UCA General Insurance Services"
 }
 ],
 "ledger": [
@@ -5371,7 +5570,7 @@
 "desc": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-118527.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "epss": 0.008,
-"cvss": 7.0
+"cvss": 7
 },
 {
 "cve": "CVE-2026-97229",
@@ -5469,7 +5668,7 @@
 "rw": false,
 "desc": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 1.0
+"epss": 1
 },
 {
 "cve": "CVE-2026-109618",
@@ -5483,7 +5682,7 @@
 "rw": false,
 "desc": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 1.0
+"epss": 1
 },
 {
 "cve": "CVE-2026-114625",
@@ -5665,7 +5864,7 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "ahsay-ahsaycbs-1014",
 "epss": 0.8176,
-"cvss": 10.0
+"cvss": 10
 },
 {
 "cve": "CVE-2026-105133",
@@ -5791,7 +5990,7 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "proftpd-proftpd-1008",
 "epss": 0.995,
-"cvss": 10.0
+"cvss": 10
 },
 {
 "cve": "CVE-2026-88779",

@@ -190,7 +190,7 @@ class Run:
             eu_only = all(k.get("src") == "EUVD" for k in ks)
             text = " ".join(k.get("desc", "") + " " + k["n"] for k in ks)
             sec_text = f"{v} {p} {text}"
-            x = {"id": slug(f"{v} {p}", a), "k": "flaw", "t": f"{v} {p}: {ks[0]['n']}".strip(),
+            x = {"id": slug(f"{v} {p}", a), "k": "flaw", "t": f"{v} {p}: {ks[0]['n']}".strip(), "sw": f"{v} {p}".strip(),
                  "cve": " · ".join(k["cve"] for k in ks) + (f" · CVSS {cvss:.1f}" if cvss else ""),
                  "sev": rules.severity_flaw(cvss), "iso": a, "when": fmt(a), "e": "flaw",
                  # backfilled flaws (first run, or a feed that was down) keep their own date so they don't flood "New"
@@ -390,6 +390,14 @@ class Run:
                  "fix": "Under investigation.", "s": refs, "_text": text[:3000]}
             if any(i.get("floor") == "high" for i in its) and d["sev"] == "med":
                 d["sev"] = "high"
+            victims = list(dict.fromkeys(i["victim"] for i in its if i.get("victim")))
+            co = ", ".join(victims)[:120] or (None if exploited_flaw else rules.company(its[0]["title"]))
+            kev_sw = list(dict.fromkeys(f"{k['v']} {k['p']}".strip() for k in self.D["kev"] if k["cve"] in c["cves"]))
+            sw = ", ".join(kev_sw) or rules.software(text)
+            if co:
+                d["co"] = co
+            if sw:
+                d["sw"] = sw
             if exploited_flaw:
                 d["cve"] = " · ".join(sorted(c["cves"]))[:120]
                 d["sev"] = "crit" if re.search(r"\bcritical|9\.\d|10\.0\b", text, re.I) else "high"
@@ -422,7 +430,7 @@ class Run:
         todo = drafts + [w for w in self.D.get("watch", []) if w.get("_text")]
         if not todo:
             return drafts
-        payload = [{"id": d["id"], "kind": "watch" if "act" in d else d["k"], "stories": d["_text"], "draft": {k: d.get(k) for k in ("t", "sev", "sec", "where", "e", "conf")}} for d in todo]
+        payload = [{"id": d["id"], "kind": "watch" if "act" in d else d["k"], "stories": d["_text"], "draft": {k: d.get(k) for k in ("t", "sev", "sec", "where", "e", "conf", "co", "sw")}} for d in todo]
         system = ("You edit a cyber incident dashboard for a bank's office. Use only facts in the stories. Write in plain, short "
                   "sentences, in your own words; never copy sentences from the stories. Reply with JSON only.")
         prompt = ("For each item return an object with: id; keep (false if it is not a real attack, breach, exploited flaw or "
@@ -432,7 +440,10 @@ class Run:
                   "bank, hospital or utility, 10m+ records, or critical exploited flaw; high = confirmed breach or any finance "
                   "intrusion; med = claims and small cases); sec (FIN|CRYPTO|RETAIL|HEALTH|GOV|EDU|TECH|TEL|LOG|IND|X); where "
                   "(country, or Global); reg (AMER|EMEA|APAC|GLOBAL); e (social|flaw|cred|third|other|undisc); tags (subset of "
-                  "finance,flaw,mail,human,ai,vendor,ransom,state); conf (confirmed|reported|claim).\n\nItems:\n" + json.dumps(payload)[:60000])
+                  "finance,flaw,mail,human,ai,vendor,ransom,state); conf (confirmed|reported|claim); co (the company or "
+                  "organisation that was hacked, short, or empty if none is named); sw (the exact software, product or "
+                  "service that was exploited or abused, with vendor, e.g. 'Cisco ASA', 'PHP', 'ConnectWise ScreenConnect', "
+                  "or empty if not disclosed).\n\nItems:\n" + json.dumps(payload)[:60000])
         try:
             txt = fetch.anthropic(prompt, system, MODEL, max_tokens=8000)
             m = re.search(r"\[.*\]", txt or "", re.S)
@@ -453,9 +464,9 @@ class Run:
                 if "act" in d:
                     self.D["watch"].remove(d)
                 continue
-            for f in ("t", "sum", "how", "fix", "where"):
+            for f in ("t", "sum", "how", "fix", "where", "co", "sw"):
                 if isinstance(o.get(f), str) and o[f].strip():
-                    d[f] = o[f].strip()
+                    d[f] = o[f].strip()[:160] if f in ("co", "sw") else o[f].strip()
             for f, allowed in enums.items():
                 if o.get(f) in allowed:
                     d[f] = o[f]
