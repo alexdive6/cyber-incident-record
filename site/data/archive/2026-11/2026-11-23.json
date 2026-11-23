@@ -1,0 +1,714 @@
+{
+ "meta": {
+  "edition": "2026-11-23",
+  "prev": "2026-11-22",
+  "compiled": "2026-11-23T13:56-05:00",
+  "tz": "America/New_York",
+  "mode": "live",
+  "nextRun": "2026-11-24T02:00-05:00",
+  "from": "2026-10-01",
+  "actNow": [
+   "cisco-expressway-series-1120",
+   "broadcom-vmware-vcenter-1120",
+   "vanderbilt-university-research-electronic-data-1118",
+   "n-able-discloses-critical-mail-1123",
+   "apache-axis-1118"
+  ],
+  "health": {
+   "ok": 29,
+   "failed": [
+    {
+     "n": "Australian Cyber Security Centre",
+     "err": "https://www.cyber.gov.au/rss/alerts: The read operation timed out"
+    },
+    {
+     "n": "Australian Cyber Security Centre",
+     "err": "https://www.cyber.gov.au/rss/advisories: The read operation timed out"
+    }
+   ],
+   "total": 31
+  }
+ },
+ "new": [
+  "cleverbridge-warns-hackers-stole-credit-1122",
+  "hackers-exploit-gl-inet-cloud-1122",
+  "bromcom-355-051-accounts-in-1123",
+  "yes-but-securely-a-cancer-1123",
+  "ai-assisted-cyber-attacks-trigger-1123",
+  "open-source-ai-pentesting-framework-1123",
+  "badbox-3-0-ad-fraud-1123",
+  "gl-inet-routers-kvms-compromised-1123",
+  "us-lawmakers-propose-cisa-board-1123",
+  "norway-says-hackers-exploited-microsoft-1123",
+  "azure-flaw-exploited-to-target-1123",
+  "globetopper-loses-2-5-million-1123",
+  "webworm-suspected-of-modifying-softether-1123",
+  "behind-the-alias-how-one-1123",
+  "fbi-reportedly-facing-second-data-1123",
+  "spanish-laliga-confirms-hackers-stole-1123",
+  "hackers-breach-austrian-foreign-ministry-1123"
+ ],
+ "updated": [
+  "cisco-expressway-series-1120",
+  "microsoft-entra-connect-health-flaw-1121",
+  "openrouter-drops-3-providers-after-1122",
+  "attackers-ai-agents-found-a-1121"
+ ],
+ "kevNew": [],
+ "entries": [
+  {
+   "id": "cisco-expressway-series-1120",
+   "k": "flaw",
+   "t": "Cisco Expressway Series: Use of Hard-coded Credentials",
+   "cve": "CVE-2026-76466 · CVSS 9.8",
+   "sev": "crit",
+   "iso": "2026-11-20",
+   "when": "20 Nov",
+   "e": "flaw",
+   "added": "2026-11-21",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service.",
+   "how": "Exploited in the wild, per CISA.",
+   "tl": [
+    [
+     "20 Nov",
+     "Added to CISA's exploited list."
+    ],
+    [
+     "23 Nov",
+     "CISA deadline for US federal agencies."
+    ],
+    [
+     "23 Nov",
+     "New reporting: CISA flags critical Cisco RCE flaw as actively exploited in attacks"
+    ],
+    [
+     "23 Nov",
+     "New reporting: SAP NetWeaver, Cisco Expressway Flaws Exploited in Attacks"
+    ]
+   ],
+   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+   "s": [
+    "r7947132cac",
+    "r5d81d80910",
+    "r31afdc96e8",
+    "r505be55111",
+    "rd77f865b12",
+    "rbc11c30f89"
+   ],
+   "sw": "Cisco Expressway Series",
+   "updated": "2026-11-23"
+  },
+  {
+   "id": "attackers-ai-agents-found-a-1121",
+   "k": "inc",
+   "t": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
+   "sev": "med",
+   "iso": "2026-11-21",
+   "added": "2026-11-21",
+   "when": "21 Nov",
+   "where": "China",
+   "e": "flaw",
+   "tags": [
+    "ai",
+    "state"
+   ],
+   "sec": "HEALTH",
+   "reg": "APAC",
+   "conf": "reported",
+   "sum": "Suspected China-linked hackers used autonomous AI agents to find a previously unknown flaw in MONAI Label, an open-source medical imaging server, and gain root access to a university server, Amazon Threat Intelligence said this week. The flaw allows an attacker with no account to write files outside the server's storage folder, and it affects MONAI Label 0.8.5 and earlier in the default setup,",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "21 Nov",
+     "Reported by The Hacker News"
+    ],
+    [
+     "21 Nov",
+     "Reported by SecurityWeek"
+    ],
+    [
+     "23 Nov",
+     "New reporting: AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r16765aea3b",
+    "r6231e48f3b",
+    "rf1ad342921"
+   ],
+   "co": "A university",
+   "sw": "MONAI Label (medical imaging server)",
+   "updated": "2026-11-23"
+  },
+  {
+   "id": "microsoft-entra-connect-health-flaw-1121",
+   "k": "inc",
+   "t": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
+   "sev": "high",
+   "iso": "2026-11-21",
+   "added": "2026-11-21",
+   "when": "21 Nov",
+   "where": "Global",
+   "e": "flaw",
+   "tags": [],
+   "sec": "HEALTH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Microsoft is warning organizations that it suffered a data breach after attackers exploited a vulnerability in its Entra Connect Health service to gain unauthorized access to administrator email addresses and tenant configuration information. [...]",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "21 Nov",
+     "Reported by BleepingComputer"
+    ],
+    [
+     "23 Nov",
+     "New reporting: Attackers exploited Microsoft Entra Connect Health flaw to access tenant data"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r1e1dbef95d",
+    "r1e1c6072e5"
+   ],
+   "co": "Microsoft",
+   "sw": "Microsoft Entra Connect Health",
+   "updated": "2026-11-23"
+  },
+  {
+   "id": "openrouter-drops-3-providers-after-1122",
+   "k": "inc",
+   "t": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
+   "sev": "high",
+   "iso": "2026-11-22",
+   "added": "2026-11-22",
+   "when": "22 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "TECH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Attackers stole data from inside three AI inference providers for months, and none of the three knew until researchers told them, the industrial cybersecurity company Dragos said this week. Some of the stolen requests were flagged as Zero Data Retention, the setting that is supposed to mean a prompt is never stored. OpenRouter, a gateway that routes customers' AI requests to a pool of",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "22 Nov",
+     "Reported by The Hacker News"
+    ],
+    [
+     "23 Nov",
+     "New reporting: AI Inference Providers Failed to Detect Hacking and Prompt Theft, Says Dragos"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r78074d39df",
+    "r17e792aba6"
+   ],
+   "co": "Three AI inference providers (OpenRouter)",
+   "sw": "AI inference hosting platforms",
+   "updated": "2026-11-23"
+  },
+  {
+   "id": "cleverbridge-warns-hackers-stole-credit-1122",
+   "k": "inc",
+   "t": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
+   "sev": "high",
+   "iso": "2026-11-22",
+   "added": "2026-11-23",
+   "when": "22 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [
+    "finance"
+   ],
+   "sec": "FIN",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Hackers breached e-commerce platform Cleverbridge and made off with payment card data stored on it, the company has confirmed. Cleverbridge handles purchases, payments and subscriptions for other businesses, and its website lists Red Hat, Sony, SUSE, Veeam, Tenable and Jamf among its clients. The company has not said which of them, if any, had customers affected by the breach. “On 4 November 2026, Cleverbridge…",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "22 Nov",
+     "Reported by BleepingComputer"
+    ],
+    [
+     "23 Nov",
+     "Reported by Infosecurity"
+    ],
+    [
+     "23 Nov",
+     "Reported by Help Net Security"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r855a50efe0",
+    "re561a4b358",
+    "r6fbe0c1fb6"
+   ],
+   "co": "Cleverbridge",
+   "sw": "Veeam Backup"
+  },
+  {
+   "id": "hackers-exploit-gl-inet-cloud-1122",
+   "k": "inc",
+   "t": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
+   "sev": "med",
+   "iso": "2026-11-22",
+   "added": "2026-11-23",
+   "when": "22 Nov",
+   "where": "Global",
+   "e": "flaw",
+   "tags": [],
+   "sec": "RETAIL",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Hackers exploited a vulnerability in GL.iNet's GoodCloud remote management service to install malware on some customer routers and KVM devices, the maker of travel routers and remote-access KVM hardware said in a security notice updated today. The company identified and fixed the flaw on Friday and blocked the access the attacker used, so devices can no longer be infected through this route.",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "22 Nov",
+     "Reported by BleepingComputer"
+    ],
+    [
+     "23 Nov",
+     "Reported by The Hacker News"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "re84afceb00",
+    "r791422e9c3"
+   ]
+  },
+  {
+   "id": "bromcom-355-051-accounts-in-1123",
+   "k": "inc",
+   "t": "Bromcom: 355,051 accounts in a verified breach",
+   "sev": "high",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "UK",
+   "e": "cred",
+   "tags": [],
+   "sec": "EDU",
+   "reg": "EMEA",
+   "conf": "confirmed",
+   "sum": "In September 2026, UK education software provider Bromcom suffered a data breach involving a legacy single sign-on (SSO) registration system . The incident exposed 355k unique email addresses belonging to staff and pupils at UK schools, alongside SSO registration reference numbers. Bromcom confirmed that no passwords or authentication tokens were exposed, and that the incident… Data: Email addresses.",
+   "how": "Stolen or leaked credentials and keys.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by HIBP"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "ra5fabf1bfd"
+   ],
+   "co": "Bromcom"
+  },
+  {
+   "id": "yes-but-securely-a-cancer-1123",
+   "k": "inc",
+   "t": "Yes, but securely: A cancer institute’s answer to shadow IT in research",
+   "sev": "med",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "HEALTH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "In this interview with Help Net Security, Rocco Saviano, Director of Digital Transformation, Istituto Nazionale Tumori (INT), talks about keeping a cancer hospital running while protecting it from cyberattacks. He explains what happens when a nurse can’t open a chemotherapy plan, how INT works with smaller partner hospitals in the Rare Cancer Network, and why banning shadow IT in research rarely helps. He also names…",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by Help Net Security"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rf38047c316"
+   ]
+  },
+  {
+   "id": "ai-assisted-cyber-attacks-trigger-1123",
+   "k": "inc",
+   "t": "AI-Assisted Cyber Attacks Trigger Unauthorized Payments at Indian Banks and Fintech Firms",
+   "sev": "high",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "India",
+   "e": "undisc",
+   "tags": [
+    "finance"
+   ],
+   "sec": "FIN",
+   "reg": "APAC",
+   "conf": "reported",
+   "sum": "The Indian Computer Emergency Response Team (CERT-In) has warned that threat actors are carrying out artificial intelligence (AI)-assisted cyber attacks targeting information and communication technology (ICT) assets in the country. This unsanctioned activity has resulted in unauthorized financial transactions at banking and financial services entities, as well as technology service providers",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by The Hacker News"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r80927b607c"
+   ]
+  },
+  {
+   "id": "open-source-ai-pentesting-framework-1123",
+   "k": "inc",
+   "t": "Open-source AI pentesting framework Cairn keeps turning up in real-world attacks",
+   "sev": "med",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "China",
+   "e": "flaw",
+   "tags": [
+    "ai"
+   ],
+   "sec": "HEALTH",
+   "reg": "APAC",
+   "conf": "reported",
+   "sum": "Autonomous AI agents run by a Chinese-nexus threat actor spent nearly a full day failing to break into university servers, then found and exploited a zero-day in an open-source medical imaging AI application and gained a foothold. The agents ran on Cairn, an open-source AI penetration testing framework, with little human direction, Amazon Threat Intelligence says. The operator simply gave them a list of target IP…",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by Help Net Security"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rade3122cc9"
+   ]
+  },
+  {
+   "id": "badbox-3-0-ad-fraud-1123",
+   "k": "inc",
+   "t": "BadBox 3.0 Ad Fraud Operation Generating 40 Billion Daily Bid Requests Disrupted",
+   "sev": "med",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "RETAIL",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Backdoors on low-cost consumer devices served modules for ad fraud and for turning devices into residential proxies.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by SecurityWeek"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rc412b57f8a"
+   ]
+  },
+  {
+   "id": "gl-inet-routers-kvms-compromised-1123",
+   "k": "inc",
+   "t": "GL.iNet Routers, KVMs Compromised via Remote Management Service Flaw",
+   "sev": "med",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "China",
+   "e": "third",
+   "tags": [
+    "vendor"
+   ],
+   "sec": "RETAIL",
+   "reg": "APAC",
+   "conf": "reported",
+   "sum": "Attackers compromised GoodCloud, GL.iNet’s cloud remote management service, and used it to install malware on routers and KVM (keyboard, video and mouse) devices connected to it. The Chinese company, best known for its small travel routers, is still investigating, and it’s not yet known how many devices have been affected. The incident has also sparked additional research by RemoteToHome Consulting (RTH), a GL.iNet…",
+   "how": "Through a third party or supplier.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by SecurityWeek"
+    ],
+    [
+     "23 Nov",
+     "Reported by Help Net Security"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r851d3d22fd",
+    "r309b2650e8"
+   ]
+  },
+  {
+   "id": "us-lawmakers-propose-cisa-board-1123",
+   "k": "inc",
+   "t": "US Lawmakers Propose CISA Board to Review Major Cyber Incidents",
+   "sev": "med",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "US",
+   "e": "undisc",
+   "tags": [],
+   "sec": "GOV",
+   "reg": "AMER",
+   "conf": "reported",
+   "sum": "Two Congressmen have proposed to establish a cyber incident review board within the US Cybersecurity and Infrastructure Security Agency",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by Infosecurity"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rd8056211c4"
+   ]
+  },
+  {
+   "id": "norway-says-hackers-exploited-microsoft-1123",
+   "k": "inc",
+   "t": "Norway says hackers exploited Microsoft security flaw to attack energy firms Equinor, Skagerak Energi",
+   "sev": "med",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "Norway",
+   "e": "cred",
+   "tags": [],
+   "sec": "IND",
+   "reg": "EMEA",
+   "conf": "confirmed",
+   "sum": "Norwegian energy companies Equinor and Skagerak Energi were affected by a Microsoft cloud security vulnerability that hackers have exploited to target sensitive credentials, Norway's cybersecurity authorities said.",
+   "how": "Stolen or leaked credentials and keys.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by The Record"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rbcc6ff74f5"
+   ],
+   "co": "Norway"
+  },
+  {
+   "id": "azure-flaw-exploited-to-target-1123",
+   "k": "inc",
+   "t": "Azure Flaw Exploited to Target Secrets at Norwegian Energy Firms",
+   "sev": "med",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "Norway",
+   "e": "cred",
+   "tags": [],
+   "sec": "IND",
+   "reg": "EMEA",
+   "conf": "reported",
+   "sum": "Microsoft closed an Azure API Management flaw exploited to target secrets at Norwegian energy companies, with other sectors also affected.",
+   "how": "Stolen or leaked credentials and keys.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by SecurityWeek"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "re101d52cda"
+   ]
+  },
+  {
+   "id": "globetopper-loses-2-5-million-1123",
+   "k": "inc",
+   "t": "GlobeTopper loses $2.5 million after hackers steal $70k in gift cards",
+   "sev": "med",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "A cyberattack disrupted operations at B2B top-up solutions provider GlobeTopper, causing an estimated $2.5 million in lost revenue, while the attacker redeemed digital gift cards worth $70,000. [...]",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r0af9a75101"
+   ]
+  },
+  {
+   "id": "webworm-suspected-of-modifying-softether-1123",
+   "k": "inc",
+   "t": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
+   "sev": "med",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "China",
+   "e": "undisc",
+   "tags": [],
+   "sec": "TECH",
+   "reg": "APAC",
+   "conf": "reported",
+   "sum": "The China-aligned threat actor known as Webworm is suspected to be using a custom version of the open-source SoftEther VPN Bridge tool in an attempt to remove recognizable detection fingerprints, while disguising it as network-monitoring software to establish covert remote access to compromised networks. The modified variant \"implements various tricks to hide itself from security tools,\"",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by The Hacker News"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r1ab128c432"
+   ]
+  },
+  {
+   "id": "behind-the-alias-how-one-1123",
+   "k": "inc",
+   "t": "Behind the Alias: How One Researcher Unmasked a Decade of Ransomware Actors",
+   "sev": "high",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [
+    "ransom"
+   ],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Ransomware isn't slowing down. A new framework gives security teams the edge to trace attackers back to their source.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by Dark Reading"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r5e9db5537b"
+   ]
+  },
+  {
+   "id": "fbi-reportedly-facing-second-data-1123",
+   "k": "inc",
+   "t": "FBI reportedly facing second data breach involving National Crime Information Center",
+   "sev": "high",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "AMER",
+   "conf": "reported",
+   "sum": "The FBI is reportedly investigating a data breach involving the National Crime Information Center, a database used by U.S. law enforcement agencies that contains information on criminals, fugitives and missing people.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by The Record"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r4ca5a6cc42"
+   ]
+  },
+  {
+   "id": "spanish-laliga-confirms-hackers-stole-1123",
+   "k": "inc",
+   "t": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
+   "sev": "high",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "Spain",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "EMEA",
+   "conf": "confirmed",
+   "sum": "LaLiga, Spain's top men's football league, disclosed a data breach that exposed personal information belonging to users of its services and those of some affiliated clubs. [...]",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rf714b48247"
+   ],
+   "co": "Spanish LaLiga"
+  },
+  {
+   "id": "hackers-breach-austrian-foreign-ministry-1123",
+   "k": "inc",
+   "t": "Hackers breach Austrian Foreign Ministry website, access diplomats' contact details",
+   "sev": "high",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "Austria",
+   "e": "undisc",
+   "tags": [],
+   "sec": "GOV",
+   "reg": "EMEA",
+   "conf": "reported",
+   "sum": "Austria's Foreign Ministry said late last week that hackers breached one of its websites and accessed the names and official contact information of employees at its Vienna headquarters and at Austria’s diplomatic missions abroad.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by The Record"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r5e4209ae37"
+   ],
+   "co": "Austrian Foreign Ministry"
+  }
+ ]
+}
