@@ -1,0 +1,1130 @@
+{
+ "meta": {
+  "edition": "2026-11-24",
+  "prev": "2026-11-23",
+  "compiled": "2026-11-24T13:36-05:00",
+  "tz": "America/New_York",
+  "mode": "live",
+  "nextRun": "2026-11-25T02:00-05:00",
+  "from": "2026-10-01",
+  "actNow": [
+   "idunno-anticsrf-1124",
+   "n-able-mailassure-1123",
+   "project-monai-monai-label-1123",
+   "n-able-discloses-critical-mail-1123",
+   "cisco-expressway-series-1120"
+  ],
+  "health": {
+   "ok": 30,
+   "failed": [
+    {
+     "n": "Australian Cyber Security Centre",
+     "err": "https://www.cyber.gov.au/rss/alerts: The read operation timed out"
+    },
+    {
+     "n": "Australian Cyber Security Centre",
+     "err": "https://www.cyber.gov.au/rss/advisories: The read operation timed out"
+    }
+   ],
+   "total": 31
+  }
+ },
+ "new": [
+  "optimizely-web-experimentation-1124",
+  "drupal-core-1124",
+  "idunno-anticsrf-1124",
+  "n-able-mailassure-1123",
+  "project-monai-monai-label-1123",
+  "n-able-patches-critical-flaw-1123",
+  "south-korea-s-power-giant-1123",
+  "google-cloud-ciso-talks-agentic-1124",
+  "peninsula-energy-halts-trading-after-1124",
+  "openai-and-cisco-release-open-1124",
+  "elastic-puts-ai-agents-to-1124",
+  "shinyhunters-linked-crew-resurfaces-on-1124",
+  "mcdonald-s-japan-discloses-breach-1124",
+  "okta-links-shinyhunters-associated-vishing-1124",
+  "new-shirudo-tool-uses-ai-1124",
+  "gta-6-hacker-sentenced-to-1124",
+  "uk-cyber-agency-seeing-marked-1124",
+  "check-point-security-management-servers-1124",
+  "european-commission-uncovers-data-breach-1124",
+  "cisa-warns-of-exploited-n-1124",
+  "carnegie-endowment-for-international-peace-1124",
+  "new-inception-extortion-brand-tied-1124",
+  "shinyhunters-claims-to-return-after-1124",
+  "iran-aligned-volant-manticore-uses-1124",
+  "uk-cyber-agency-threat-companies-1124",
+  "patel-mum-on-fbi-crime-1124",
+  "lawmakers-warn-id-verification-companies-1124",
+  "radware-discloses-breach-exposing-customer-1124"
+ ],
+ "updated": [
+  "azure-flaw-exploited-to-target-1123",
+  "globetopper-loses-2-5-million-1123",
+  "spanish-laliga-confirms-hackers-stole-1123",
+  "openrouter-drops-3-providers-after-1122",
+  "pacifico-com-ar-listed-by-1121",
+  "china-s-armory-castle-lays-1120"
+ ],
+ "kevNew": [
+  "CVE-2026-132224",
+  "CVE-2026-131914",
+  "CVE-2026-132165",
+  "CVE-2026-133968",
+  "CVE-2026-134624"
+ ],
+ "entries": [
+  {
+   "id": "china-s-armory-castle-lays-1120",
+   "k": "inc",
+   "t": "China's 'Armory Castle' Lays Siege to VMware vCenter Zero-Day",
+   "sev": "med",
+   "iso": "2026-11-20",
+   "added": "2026-11-21",
+   "when": "20 Nov",
+   "where": "China",
+   "e": "flaw",
+   "tags": [],
+   "sec": "X",
+   "reg": "APAC",
+   "conf": "reported",
+   "sum": "During the last wave of major VMware vCenter security updates, a China-nexus threat group likely already had its next zero-day up its sleeve.",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "20 Nov",
+     "Reported by Dark Reading"
+    ],
+    [
+     "24 Nov",
+     "New reporting: VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "ra9aa37cedd",
+    "rdb22ce6bdf"
+   ],
+   "sw": "VMware vCenter",
+   "updated": "2026-11-24"
+  },
+  {
+   "id": "pacifico-com-ar-listed-by-1121",
+   "k": "inc",
+   "t": "pacifico.com.ar listed by the safepay ransomware group",
+   "sev": "med",
+   "iso": "2026-11-21",
+   "added": "2026-11-22",
+   "when": "21 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [
+    "finance",
+    "ransom"
+   ],
+   "sec": "FIN",
+   "reg": "GLOBAL",
+   "conf": "claim",
+   "sum": "The safepay group listed pacifico.com.ar (Financial Services, AR) on its leak site. Not confirmed by the victim.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "21 Nov",
+     "Reported by ransomware.live"
+    ],
+    [
+     "24 Nov",
+     "New reporting: fiwealth.com listed by the incransom ransomware group"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rcf3876882f",
+    "rf06b5c91ed"
+   ],
+   "co": "pacifico.com.ar",
+   "updated": "2026-11-24"
+  },
+  {
+   "id": "openrouter-drops-3-providers-after-1122",
+   "k": "inc",
+   "t": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
+   "sev": "high",
+   "iso": "2026-11-22",
+   "added": "2026-11-22",
+   "when": "22 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "TECH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Attackers stole data from inside three AI inference providers for months, and none of the three knew until researchers told them, the industrial cybersecurity company Dragos said this week. Some of the stolen requests were flagged as Zero Data Retention, the setting that is supposed to mean a prompt is never stored. OpenRouter, a gateway that routes customers' AI requests to a pool of",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "22 Nov",
+     "Reported by The Hacker News"
+    ],
+    [
+     "23 Nov",
+     "New reporting: AI Inference Providers Failed to Detect Hacking and Prompt Theft, Says Dragos"
+    ],
+    [
+     "24 Nov",
+     "New reporting: OpenRouter drops AI providers over leaked prompts and secrets"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r78074d39df",
+    "r17e792aba6",
+    "rad3d2932dd"
+   ],
+   "co": "Three AI inference providers (OpenRouter)",
+   "sw": "AI inference hosting platforms",
+   "updated": "2026-11-24"
+  },
+  {
+   "id": "azure-flaw-exploited-to-target-1123",
+   "k": "inc",
+   "t": "Azure Flaw Exploited to Target Secrets at Norwegian Energy Firms",
+   "sev": "med",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "Norway",
+   "e": "cred",
+   "tags": [],
+   "sec": "IND",
+   "reg": "EMEA",
+   "conf": "confirmed",
+   "sum": "Microsoft closed an Azure API Management flaw exploited to target secrets at Norwegian energy companies, with other sectors also affected.",
+   "how": "Stolen or leaked credentials and keys.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by SecurityWeek"
+    ],
+    [
+     "24 Nov",
+     "New reporting: Azure Flaw Exploited to Target Secrets at Norwegian Energy Firms"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "re101d52cda",
+    "r53716c4432",
+    "rbd2130a747"
+   ],
+   "updated": "2026-11-24"
+  },
+  {
+   "id": "globetopper-loses-2-5-million-1123",
+   "k": "inc",
+   "t": "GlobeTopper loses $2.5 million after hackers steal $70k in gift cards",
+   "sev": "med",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "A cyberattack disrupted operations at B2B top-up solutions provider GlobeTopper, causing an estimated $2.5 million in lost revenue, while the attacker redeemed digital gift cards worth $70,000. [...]",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by BleepingComputer"
+    ],
+    [
+     "24 Nov",
+     "New reporting: GlobeTopper loses $2.5 million after hackers steal $70k in gift cards"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r0af9a75101",
+    "r8f5a536245"
+   ],
+   "updated": "2026-11-24"
+  },
+  {
+   "id": "spanish-laliga-confirms-hackers-stole-1123",
+   "k": "inc",
+   "t": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
+   "sev": "high",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "Spain",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "EMEA",
+   "conf": "confirmed",
+   "sum": "LaLiga, Spain's top men's football league, disclosed a data breach that exposed personal information belonging to users of its services and those of some affiliated clubs. [...]",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by BleepingComputer"
+    ],
+    [
+     "24 Nov",
+     "New reporting: Spanish LaLiga confirms hackers stole soccer fans’ personal data"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rf714b48247",
+    "r0dfc97470a"
+   ],
+   "co": "Spanish LaLiga",
+   "updated": "2026-11-24"
+  },
+  {
+   "id": "optimizely-web-experimentation-1124",
+   "k": "flaw",
+   "t": "Optimizely Web Experimentation: External Control of Critical State Data",
+   "sw": "Optimizely Web Experimentation",
+   "cve": "CVE-2026-132224 · CVSS 7.1",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "when": "24 Nov",
+   "e": "flaw",
+   "added": "2026-11-24",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer…",
+   "how": "Exploited in the wild, per CISA.",
+   "tl": [
+    [
+     "24 Nov",
+     "Added to CISA's exploited list."
+    ],
+    [
+     "27 Nov",
+     "CISA deadline for US federal agencies."
+    ]
+   ],
+   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+   "s": [
+    "r7947132cac"
+   ]
+  },
+  {
+   "id": "drupal-core-1124",
+   "k": "flaw",
+   "t": "Drupal Core: Remote Code Execution",
+   "sw": "Drupal Core",
+   "cve": "CVE-2026-132165",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "when": "24 Nov",
+   "e": "flaw",
+   "added": "2026-11-24",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site.",
+   "how": "Exploited in the wild, per CISA.",
+   "tl": [
+    [
+     "24 Nov",
+     "Added to CISA's exploited list."
+    ],
+    [
+     "27 Nov",
+     "CISA deadline for US federal agencies."
+    ]
+   ],
+   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+   "s": [
+    "r7947132cac"
+   ]
+  },
+  {
+   "id": "idunno-anticsrf-1124",
+   "k": "flaw",
+   "t": "Idunno AntiCsrf: Deserialization of Untrusted Data",
+   "sw": "Idunno AntiCsrf",
+   "cve": "CVE-2026-131914 · CVSS 9.3",
+   "sev": "crit",
+   "iso": "2026-11-24",
+   "when": "24 Nov",
+   "e": "flaw",
+   "added": "2026-11-24",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+   "how": "Exploited in the wild, per CISA.",
+   "tl": [
+    [
+     "24 Nov",
+     "Added to CISA's exploited list."
+    ],
+    [
+     "27 Nov",
+     "CISA deadline for US federal agencies."
+    ]
+   ],
+   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+   "s": [
+    "r7947132cac"
+   ]
+  },
+  {
+   "id": "n-able-mailassure-1123",
+   "k": "flaw",
+   "t": "N-able MailAssure: (SpamExperts) Server-Side Request Forgery (SSRF)",
+   "sw": "N-able MailAssure",
+   "cve": "CVE-2026-134624 · CVSS 9.3",
+   "sev": "crit",
+   "iso": "2026-11-23",
+   "when": "23 Nov",
+   "e": "flaw",
+   "added": "2026-11-24",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
+   "how": "Exploited in the wild, per CISA.",
+   "tl": [
+    [
+     "23 Nov",
+     "Added to CISA's exploited list."
+    ],
+    [
+     "26 Nov",
+     "CISA deadline for US federal agencies."
+    ],
+    [
+     "24 Nov",
+     "New reporting: Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day"
+    ]
+   ],
+   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+   "s": [
+    "r7947132cac",
+    "r14a00d8221"
+   ],
+   "updated": "2026-11-24"
+  },
+  {
+   "id": "project-monai-monai-label-1123",
+   "k": "flaw",
+   "t": "Project MONAI MONAI Label: Path Traversal",
+   "sw": "Project MONAI MONAI Label",
+   "cve": "CVE-2026-133968 · CVSS 9.8",
+   "sev": "crit",
+   "iso": "2026-11-23",
+   "when": "23 Nov",
+   "e": "flaw",
+   "added": "2026-11-24",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Project MONAI MONAI Label contains a path traversal vulnerability that allows an unauthenticated remote attacker to write arbitrary files outside the intended datastore directory, potentially resulting in remote code execution.",
+   "how": "Exploited in the wild, per CISA.",
+   "tl": [
+    [
+     "23 Nov",
+     "Added to CISA's exploited list."
+    ],
+    [
+     "26 Nov",
+     "CISA deadline for US federal agencies."
+    ]
+   ],
+   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+   "s": [
+    "r7947132cac"
+   ]
+  },
+  {
+   "id": "n-able-patches-critical-flaw-1123",
+   "k": "inc",
+   "t": "N-able Patches Critical Flaw Discovered After Mail Assure Cyberattack",
+   "sev": "med",
+   "iso": "2026-11-23",
+   "added": "2026-11-24",
+   "when": "23 Nov",
+   "where": "Global",
+   "e": "flaw",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "The company has restored access to the affected services and continues to monitor the affected environments.",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by SecurityWeek"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "red11d95a72"
+   ]
+  },
+  {
+   "id": "south-korea-s-power-giant-1123",
+   "k": "inc",
+   "t": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
+   "sev": "high",
+   "iso": "2026-11-23",
+   "added": "2026-11-24",
+   "when": "23 Nov",
+   "where": "South Korea",
+   "e": "third",
+   "tags": [
+    "vendor"
+   ],
+   "sec": "IND",
+   "reg": "APAC",
+   "conf": "confirmed",
+   "sum": "A threat actor breached the internal network of Korea Electric Power Corporation (KEPCO) and accessed two systems containing customer, employee, and contractor data. [...]",
+   "how": "Through a third party or supplier.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by BleepingComputer"
+    ],
+    [
+     "24 Nov",
+     "Reported by SecurityWeek"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rf1397973b7",
+    "rf3a43b3954"
+   ]
+  },
+  {
+   "id": "google-cloud-ciso-talks-agentic-1124",
+   "k": "inc",
+   "t": "Google Cloud CISO talks agentic AI security and the future of the SOC",
+   "sev": "med",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [
+    "ai",
+    "state"
+   ],
+   "sec": "TECH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "In this interview with Help Net Security, Chris Betz, CISO of Google Cloud, answers five questions about security as AI agents spread. He says the old belief that human-led workflows would stay the norm has aged badly, since attackers use automation to move through networks in minutes. Betz explains how agents could change the junior analyst role, why espionage groups can be hard to spot, which controls companies…",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by Help Net Security"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rd305226424"
+   ]
+  },
+  {
+   "id": "peninsula-energy-halts-trading-after-1124",
+   "k": "inc",
+   "t": "Peninsula Energy Halts Trading After Cyber Incident Hits US Uranium Mine",
+   "sev": "crit",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "US",
+   "e": "undisc",
+   "tags": [],
+   "sec": "IND",
+   "reg": "AMER",
+   "conf": "reported",
+   "sum": "The company told the ASX that a cybersecurity incident at its Wyoming uranium project would temporarily affect operations.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by SecurityWeek"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r20534b25c7"
+   ]
+  },
+  {
+   "id": "openai-and-cisco-release-open-1124",
+   "k": "inc",
+   "t": "OpenAI and Cisco Release Open-Source Tool to Shield Unpatched Linux Systems",
+   "sev": "med",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "flaw",
+   "tags": [],
+   "sec": "TECH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "OpenAI and Cisco’s Shirudo helps Linux users block exploitation of known vulnerabilities on live systems, buying time for patching without requiring a restart",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by Infosecurity"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r91d4c3b285"
+   ]
+  },
+  {
+   "id": "elastic-puts-ai-agents-to-1124",
+   "k": "inc",
+   "t": "Elastic puts AI agents to work on the SOC alert backlog",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [
+    "ai",
+    "ransom"
+   ],
+   "sec": "TECH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Elastic announced Elastic Security 9.6, which introduces AlertZero, a set of AI agents that triage alerts, hunt threats and tune detection rules in the background. The release also adds ransomware protection for Linux, expanded entity resolution and an expanded set of 143 detection rules covering AI agents and large language model platforms. AlertZero takes on the alert queue AlertZero organizes its agents, called…",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by Help Net Security"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rc717d04d5f"
+   ]
+  },
+  {
+   "id": "shinyhunters-linked-crew-resurfaces-on-1124",
+   "k": "inc",
+   "t": "ShinyHunters-linked crew resurfaces on new leak site",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "social",
+   "tags": [
+    "finance",
+    "human",
+    "ransom"
+   ],
+   "sec": "FIN",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "The ShinyHunters leak site went dark in September, but a crew that supplied it with victims seems to have found a new home under the “Inception” name, Okta’s threat intelligence team has discovered. Okta tracks the crew as O-UNC-053, a cluster that has been running social engineering and credential-harvesting campaigns since March 2026. Its targets include companies in technology, healthcare, biotech, financial…",
+   "how": "Phishing or social engineering.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by Help Net Security"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r887479947b"
+   ],
+   "sw": "Okta"
+  },
+  {
+   "id": "mcdonald-s-japan-discloses-breach-1124",
+   "k": "inc",
+   "t": "McDonald’s Japan discloses breach exposing customer purchase and location data",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Japan",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "APAC",
+   "conf": "confirmed",
+   "sum": "McDonald's Japan, the fast-food giant's Japanese subsidiary, has disclosed a data breach after attackers accessed a database containing sensitive information for users of the company's official smartphone app. [...]",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by The Record"
+    ],
+    [
+     "24 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r17faeada10",
+    "r230a967c24"
+   ],
+   "co": "McDonald’s Japan"
+  },
+  {
+   "id": "okta-links-shinyhunters-associated-vishing-1124",
+   "k": "inc",
+   "t": "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
+   "sev": "med",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "social",
+   "tags": [
+    "human",
+    "ransom"
+   ],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "A threat cluster previously assessed to be affiliated with the ShinyHunters extortion crew may have rebranded and continued operations under a new name called INCEPTION, according to Okta's Threat Intelligence team. The cluster, dubbed O-UNC-053, is characterized by the use of voice phishing (aka vishing) attacks to trick targets into entering credentials in phishing pages and approving",
+   "how": "Phishing or social engineering.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by The Hacker News"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r0c4445d4cc"
+   ],
+   "sw": "Okta"
+  },
+  {
+   "id": "new-shirudo-tool-uses-ai-1124",
+   "k": "inc",
+   "t": "New Shirudo tool uses AI to shield unpatched Linux systems from exploits",
+   "sev": "med",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "flaw",
+   "tags": [],
+   "sec": "TECH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "OpenAI and Cisco launched an open-source Linux security tool named Shirudo that deploys temporary runtime protections to block vulnerability exploitation while administrators prepare and roll out patches, without restarting services. [...]",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "re94ac3e9d5"
+   ]
+  },
+  {
+   "id": "gta-6-hacker-sentenced-to-1124",
+   "k": "inc",
+   "t": "GTA 6 hacker sentenced to seven years and released the same day",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "GOV",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "The Lapsus$ member who leaked footage of Grand Theft Auto VI (GTA 6) was sentenced to seven years in prison on Monday and released from custody on licence the same day, City of London Police announced. Arion Kurtaj, 21, formerly of Oxfordshire, pleaded guilty to six charges, including fraud and computer misuse offences, at Woolwich Crown Court on 16 November. The court set a nine-year term and then took off two…",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by Help Net Security"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r78138acb2d"
+   ]
+  },
+  {
+   "id": "uk-cyber-agency-seeing-marked-1124",
+   "k": "inc",
+   "t": "UK cyber agency seeing ‘marked rise’ in AI-driven attacks",
+   "sev": "med",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "UK",
+   "e": "undisc",
+   "tags": [],
+   "sec": "GOV",
+   "reg": "EMEA",
+   "conf": "reported",
+   "sum": "Britain’s National Cyber Security Centre said it has observed “a marked rise” since September in cyberattacks assisted by artificial intelligence and warned the technology was increasing attackers’ speed, scale and persistence.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by The Record"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rf11098c507"
+   ]
+  },
+  {
+   "id": "check-point-security-management-servers-1124",
+   "k": "inc",
+   "t": "Check Point Security Management Servers Hacked in AI-Assisted Campaign",
+   "sev": "med",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "flaw",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Threat actors have exploited multiple vulnerabilities to compromise two dozen Check Point Security management servers in an ongoing campaign targeting 22 organizations. [...]",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by SecurityWeek"
+    ],
+    [
+     "24 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r22bf6552c3",
+    "r5ba708d91b"
+   ],
+   "sw": "Check Point"
+  },
+  {
+   "id": "european-commission-uncovers-data-breach-1124",
+   "k": "inc",
+   "t": "European Commission Uncovers Data Breach in Cyberattack Investigation",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "EMEA",
+   "conf": "confirmed",
+   "sum": "The European Commission, the European Union's main executive body, has confirmed that attackers breached its EU Academy online learning hub and stole the personal data of an undisclosed number of users. [...]",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by SecurityWeek"
+    ],
+    [
+     "24 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rd2294fb10f",
+    "rcad292c7e4"
+   ]
+  },
+  {
+   "id": "cisa-warns-of-exploited-n-1124",
+   "k": "inc",
+   "t": "CISA warns of exploited N-able bug as company restores email platform",
+   "sev": "med",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "flaw",
+   "tags": [
+    "mail"
+   ],
+   "sec": "GOV",
+   "reg": "AMER",
+   "conf": "reported",
+   "sum": "The U.S. cyber agency is giving government departments until Thanksgiving to patch a vulnerability impacting a critical email security platform that blocks spam, malware and other threats.",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by The Record"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r8476cf3721"
+   ]
+  },
+  {
+   "id": "carnegie-endowment-for-international-peace-1124",
+   "k": "inc",
+   "t": "Carnegie Endowment for International Peace says third-party breach leaked donation info",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "third",
+   "tags": [
+    "vendor"
+   ],
+   "sec": "TECH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Some donors to the Carnegie Endowment for International Peace had their information leaked due to a cyberattack on a third-party vendor named Soapbox Engage.",
+   "how": "Through a third party or supplier.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by The Record"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r076062d7e0"
+   ]
+  },
+  {
+   "id": "new-inception-extortion-brand-tied-1124",
+   "k": "inc",
+   "t": "New Inception Extortion Brand Tied to SSO Vishing Campaign",
+   "sev": "med",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "social",
+   "tags": [
+    "human",
+    "ransom"
+   ],
+   "sec": "RETAIL",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Okta and ReversingLabs linked Inception to an SSO vishing campaign targeting employee credentials",
+   "how": "Phishing or social engineering.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by Infosecurity"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "re259976f8e"
+   ],
+   "sw": "Okta"
+  },
+  {
+   "id": "shinyhunters-claims-to-return-after-1124",
+   "k": "inc",
+   "t": "ShinyHunters claims to return after FBI arrests, uses old PGP keys as proof",
+   "sev": "med",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [
+    "ransom"
+   ],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "The ShinyHunters extortion gang claims to have returned in posts on a new data leak site after a series of arrests over the past two months targeting alleged members. [...]",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r63399c7470"
+   ]
+  },
+  {
+   "id": "iran-aligned-volant-manticore-uses-1124",
+   "k": "inc",
+   "t": "Iran-Aligned Volant Manticore Uses IPFS-Based KuboShell Backdoor in Espionage Campaigns",
+   "sev": "med",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Iran",
+   "e": "undisc",
+   "tags": [
+    "state"
+   ],
+   "sec": "TEL",
+   "reg": "EMEA",
+   "conf": "reported",
+   "sum": "A previously undocumented Iran-aligned cyber espionage group called Volant Manticore has targeted telecommunications companies, airlines, and critical infrastructure in Cyprus. Central to the group's operations is a backdoor called KuboShell that uses the InterPlanetary File System (IPFS) for command-and-control (C2) and deploys Homa, a post-compromise framework that's a reimplementation of",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by The Hacker News"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r6b48789d11"
+   ]
+  },
+  {
+   "id": "uk-cyber-agency-threat-companies-1124",
+   "k": "inc",
+   "t": "UK cyber agency, threat companies tracking rise in AI-assisted hacks",
+   "sev": "med",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "UK",
+   "e": "undisc",
+   "tags": [],
+   "sec": "GOV",
+   "reg": "EMEA",
+   "conf": "reported",
+   "sum": "The National Cyber Security Centre said it is observing a “marked” increase in such attacks across sectors, as threat actors increasingly delegate to machines.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by CyberScoop"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r93821c2ae5"
+   ]
+  },
+  {
+   "id": "patel-mum-on-fbi-crime-1124",
+   "k": "inc",
+   "t": "Patel mum on FBI crime info database hack, citing ongoing investigation",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "The breach of the National Crime Information Center was the second in recent months for the bureau.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by CyberScoop"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rc4d2681948"
+   ]
+  },
+  {
+   "id": "lawmakers-warn-id-verification-companies-1124",
+   "k": "inc",
+   "t": "Lawmakers warn ID verification companies to bolster security after September hack",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "A bicameral, bipartisan letter from lawmakers said identity verification companies still have significant security work to do in the wake of a data breach at IDscan in September.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by The Record"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r2db8a6398b"
+   ]
+  },
+  {
+   "id": "radware-discloses-breach-exposing-customer-1124",
+   "k": "inc",
+   "t": "Radware discloses breach exposing customer cloud access keys",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "other",
+   "tags": [],
+   "sec": "TECH",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Cybersecurity company Radware says attackers gained access to some of its customers' account details and cloud access keys through an unsecured internal Cloud WAF (Web Application Firewall) management API that was left exposed online. [...]",
+   "how": "Exposed or misconfigured system.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "radb18ca6ae"
+   ],
+   "co": "Radware"
+  }
+ ]
+}
