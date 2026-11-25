@@ -334,15 +334,6 @@ details.fold[open] > summary .chev svg{stroke:var(--paper)}
 .qopt.right{background:var(--ok);border-color:var(--ok);color:#fff}
 .qopt.wrong{background:var(--crit);border-color:var(--crit);color:var(--crit-ink)}
 .qwhy{font-size:.92em;border-left:3px solid var(--accent);padding-left:12px}
-/* Board summary (print only) */
-#board{display:none}
-#board h1{font-size:2rem;margin:0 0 4px}
-#board .bgrid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #000;border-left:1px solid #000;margin:12px 0}
-#board .bgrid div{border-right:1px solid #000;border-bottom:1px solid #000;padding:8px}
-#board .bgrid b{display:block;font-size:1.5rem;font-family:var(--display)}
-#board h2{font-size:1.1rem;margin:14px 0 6px;border-bottom:2px solid #000;padding-bottom:4px}
-#board ol,#board ul{margin:0;padding-left:1.2em;font-size:.9em;display:grid;gap:3px}
-#board table{font-size:.8em}
 
 footer{padding-block:clamp(24px,4vw,48px);color:var(--muted);font-size:.84em;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 #tip{position:fixed;z-index:40;pointer-events:none;background:var(--ink);color:var(--paper);font-size:.8rem;padding:7px 9px;max-width:300px;line-height:1.4;box-shadow:0 2px 10px rgba(0,0,0,.25)}
@@ -371,8 +362,6 @@ footer{padding-block:clamp(24px,4vw,48px);color:var(--muted);font-size:.84em;dis
   body{background:#fff}
   .chart,.kpi,.stat,details.row,.box{break-inside:avoid}
   details.row .row-body{display:none}
-  body.boardmode > *:not(#board){display:none!important}
-  body.boardmode #board{display:block!important;color:#000;font-size:11pt}
 }
 </style>
 </head>
@@ -409,7 +398,6 @@ footer{padding-block:clamp(24px,4vw,48px);color:var(--muted);font-size:.84em;dis
       <button class="tab" role="tab" data-tab="quiz" aria-controls="quiz">Daily quiz</button>
       <button class="tab" role="tab" data-tab="sources" aria-controls="sources">Sources <span class="n" id="nSrc"></span></button>
     </div>
-    <button class="tbtn noprint" type="button" id="boardBtn" title="Print a one-page summary for the board"><svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v7H6z"/></svg><span class="lbl">Board summary</span></button>
     <button class="tbtn" type="button" id="themeBtn" title="Switch light or dark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="lbl" id="themeLbl">Dark</span></button>
   </div>
 </nav>
@@ -723,9 +711,6 @@ footer{padding-block:clamp(24px,4vw,48px);color:var(--muted);font-size:.84em;dis
 </section>
 
 </main>
-
-<!-- One-page board summary: built on demand and shown only when printing -->
-<section id="board" class="wrap"></section>
 
 <footer class="wrap mono">
   <span>Cyber Incident Record · public sources only · TLP:CLEAR</span>
@@ -1172,7 +1157,7 @@ function openEntry(id){
 })();
 
 
-/* ========== shared by our patching, analytics, briefing boxes, quiz and board ========== */
+/* ========== shared by our patching, analytics, briefing boxes and quiz ========== */
 const P = D.patch || {}, PI = P.items || [];
 const epssTxt = v => v==null ? "–" : (v*100).toFixed(v<0.1?1:0)+"%";
 const prioCls = {Critical:"crit",High:"high",Medium:"med",Low:"out"};
@@ -1390,24 +1375,6 @@ function qzScore(Q){ const a = qzLoad(Q.d); return Q.qs.filter((q,i)=>a[i]===q.a
     const d = b.dataset.qd, a = qzLoad(d); a[+b.dataset.qi] = +b.dataset.qo; qzSave(d,a); render(); });
   render();
 })();
-
-/* ---------- board summary (print) ---------- */
-$("boardBtn").addEventListener("click",()=>{
-  const t = threat(), mt = E.filter(x=>ym(x.iso)===curMonth);
-  const act = (M.actNow||[]).map(id=>E.find(x=>x.id===id) || (D.watch||[]).find(w=>w.id===id)).filter(Boolean).slice(0,5);
-  const inc = mt.filter(x=>x.k==="inc"), routes = Object.keys(D.entry).map(r=>[r, inc.filter(x=>x.e===r).length]).filter(r=>r[1]).sort((a,b)=>b[1]-a[1]).slice(0,3);
-  const plats = P.platforms || [];
-  $("board").innerHTML = `<h1>Cyber risk summary</h1><p>${esc(fmtD(ED))} ${ED.slice(0,4)} · Cyber Incident Record · threat level <b>${t.lvl} (${LEVELS[t.lvl]})</b></p>
-    <div class="bgrid"><div><b>${mt.length}</b>incidents and exploited flaws this month</div><div><b>${mt.filter(x=>x.sev==="crit").length}</b>rated critical</div><div><b>${D.kev.filter(k=>ym(k.a)===curMonth).length}</b>added to CISA's exploited list</div><div><b>${P.configured?PI.filter(pExp).length:"–"}</b>exploited flaws in our estate</div></div>
-    <h2>Top risks right now</h2><ol>${act.map(x=>`<li><b>${esc(x.t)}</b>: ${esc(firstSentence(x.sum))}</li>`).join("")}</ol>
-    ${P.configured?`<h2>Our patching</h2><table class="t"><thead><tr><th>Platform</th><th class="num">CVEs</th><th class="num">Critical</th><th class="num">High</th><th class="num">Exploited</th></tr></thead><tbody>${plats.map(p=>{ const l = PI.filter(i=>i.plat===p); return `<tr><td>${esc(p)}</td><td class="num">${l.length}</td><td class="num">${l.filter(i=>i.prio==="Critical").length}</td><td class="num">${l.filter(i=>i.prio==="High").length}</td><td class="num">${l.filter(pExp).length}</td></tr>`; }).join("")}</tbody></table>`:""}
-    <h2>How attackers got in this month</h2><ul>${routes.map(([r,n])=>`<li>${esc(D.entry[r])}: ${n} of ${inc.length} incidents</li>`).join("") || "<li>No incidents yet this month.</li>"}</ul>
-    <h2>Asks</h2><ul>${PI.filter(pExp).slice(0,4).map(i=>`<li>Patch ${esc(i.cve)} on ${esc(i.plat)}${i.due?` (CISA deadline ${fmtD(i.due)})`:""}.</li>`).join("")}<li>Keep phishing-resistant MFA and supplier access reviews on the plan: they map to the leading entry routes above.</li></ul>`;
-  document.body.classList.add("boardmode");
-  const off = ()=>{ document.body.classList.remove("boardmode"); removeEventListener("afterprint", off); };
-  addEventListener("afterprint", off);
-  print();
-});
 
 /* ---------- route ---------- */
 window.addEventListener("hashchange",()=>show(location.hash.slice(1)));
