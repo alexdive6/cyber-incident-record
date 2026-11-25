@@ -1,0 +1,924 @@
+{
+ "meta": {
+  "edition": "2026-11-25",
+  "prev": "2026-11-24",
+  "compiled": "2026-11-25T12:46-05:00",
+  "tz": "America/New_York",
+  "mode": "live",
+  "nextRun": "2026-11-26T02:00-05:00",
+  "from": "2026-10-01",
+  "actNow": [
+   "hewlett-packard-enterprise-hpe-juniper-1125",
+   "idunno-anticsrf-1124",
+   "n-able-mailassure-1123",
+   "project-monai-monai-label-1123",
+   "cisco-expressway-series-1120"
+  ],
+  "health": {
+   "ok": 30,
+   "failed": [
+    {
+     "n": "Australian Cyber Security Centre",
+     "err": "https://www.cyber.gov.au/rss/alerts: The read operation timed out"
+    },
+    {
+     "n": "Australian Cyber Security Centre",
+     "err": "https://www.cyber.gov.au/rss/advisories: The read operation timed out"
+    }
+   ],
+   "total": 31
+  }
+ },
+ "new": [
+  "crocoblock-1125",
+  "hewlett-packard-enterprise-hpe-juniper-1125",
+  "turnitin-discloses-cyberattack-affecting-customer-1124",
+  "colorado-says-cyberattack-took-down-1124",
+  "rackspace-shuts-down-spot-cloud-1124",
+  "unclassified-intel-system-hit-by-1124",
+  "wordpress-blocks-six-backdoored-wp-1125",
+  "credential-harvesting-goes-from-fringe-1125",
+  "com-affiliated-hackers-hijack-cloud-1125",
+  "palo-alto-networks-patches-fragnesia-1125",
+  "hackers-exploited-cvss-10-0-1125",
+  "hackers-now-exploit-critical-drupal-1125",
+  "treasury-s-fincen-takes-systems-1125",
+  "plagiarism-checker-turnitin-investigating-cyberattack-1125",
+  "ransomware-attacks-surge-23-in-1125",
+  "bots-exploited-leaked-aws-key-1125",
+  "us-treasury-investigates-cyber-incident-1125",
+  "credential-remediation-is-slow-when-1125",
+  "suspected-ransomware-attack-disrupts-cancer-1125",
+  "latin-america-sees-cyberattacks-on-1125",
+  "shinyhunters-claims-comeback-new-inception-1125",
+  "infratrust-warns-of-exploited-supply-1125",
+  "the-ai-threat-horizon-why-1125",
+  "florida-ransomware-recovery-ceo-indicted-1125"
+ ],
+ "updated": [
+  "iqstel-inc-iqst-reports-a-1119",
+  "check-point-security-management-servers-1124",
+  "webworm-suspected-of-modifying-softether-1123",
+  "optimizely-web-experimentation-1124"
+ ],
+ "kevNew": [
+  "CVE-2026-103406",
+  "CVE-2026-3496"
+ ],
+ "entries": [
+  {
+   "id": "iqstel-inc-iqst-reports-a-1119",
+   "k": "inc",
+   "t": "iQSTEL Inc  (IQST) reports a material cybersecurity incident to the SEC",
+   "sev": "high",
+   "iso": "2026-11-19",
+   "added": "2026-11-21",
+   "when": "19 Nov",
+   "where": "US",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "AMER",
+   "conf": "confirmed",
+   "sum": "iQSTEL Inc  (IQST) filed a Form 8-K under Item 1.05, the item US-listed companies use for a cybersecurity incident they judge material.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "19 Nov",
+     "Reported by SEC"
+    ],
+    [
+     "25 Nov",
+     "New reporting: KAVILCO INC/WA/ reports a material cybersecurity incident to the SEC"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rb6df6880b9",
+    "r1f63dfa342"
+   ],
+   "co": "iQSTEL Inc",
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "webworm-suspected-of-modifying-softether-1123",
+   "k": "inc",
+   "t": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
+   "sev": "med",
+   "iso": "2026-11-23",
+   "added": "2026-11-23",
+   "when": "23 Nov",
+   "where": "China",
+   "e": "undisc",
+   "tags": [],
+   "sec": "TECH",
+   "reg": "APAC",
+   "conf": "reported",
+   "sum": "The China-aligned threat actor known as Webworm is suspected to be using a custom version of the open-source SoftEther VPN Bridge tool in an attempt to remove recognizable detection fingerprints, while disguising it as network-monitoring software to establish covert remote access to compromised networks. The modified variant \"implements various tricks to hide itself from security tools,\"",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "23 Nov",
+     "Reported by The Hacker News"
+    ],
+    [
+     "25 Nov",
+     "New reporting: Webworm APT Slithers Into Networks With Customized SoftEther VPN"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r1ab128c432",
+    "r7f8f5938b0"
+   ],
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "optimizely-web-experimentation-1124",
+   "k": "flaw",
+   "t": "Optimizely Web Experimentation: External Control of Critical State Data",
+   "sw": "Optimizely Web Experimentation",
+   "cve": "CVE-2026-132224 · CVSS 7.1",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "when": "24 Nov",
+   "e": "flaw",
+   "added": "2026-11-24",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer…",
+   "how": "Exploited in the wild, per CISA.",
+   "tl": [
+    [
+     "24 Nov",
+     "Added to CISA's exploited list."
+    ],
+    [
+     "27 Nov",
+     "CISA deadline for US federal agencies."
+    ],
+    [
+     "25 Nov",
+     "New reporting: Exploited: Abandoned Idunno.AntiCsrf library opens legacy ASP.NET apps to RCE (CVE-2026-131914)"
+    ]
+   ],
+   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+   "s": [
+    "r7947132cac",
+    "r961cd313ea",
+    "r45c257ac25",
+    "rd52cc031d7",
+    "rd69aa4764b"
+   ],
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "check-point-security-management-servers-1124",
+   "k": "inc",
+   "t": "Check Point Security Management Servers Hacked in AI-Assisted Campaign",
+   "sev": "med",
+   "iso": "2026-11-24",
+   "added": "2026-11-24",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "flaw",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Threat actors have exploited multiple vulnerabilities to compromise two dozen Check Point Security management servers in an ongoing campaign targeting 22 organizations. [...]",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by SecurityWeek"
+    ],
+    [
+     "24 Nov",
+     "Reported by BleepingComputer"
+    ],
+    [
+     "25 Nov",
+     "New reporting: Hackers compromise Check Point Servers in 22 organizations"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r22bf6552c3",
+    "r5ba708d91b",
+    "rbe8229fa86"
+   ],
+   "sw": "Check Point",
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "crocoblock-1125",
+   "k": "flaw",
+   "t": "Crocoblock : Exploited flaw (ENISA)",
+   "sw": "Crocoblock",
+   "cve": "CVE-2026-3496 · CVSS 7.5",
+   "sev": "high",
+   "iso": "2026-11-25",
+   "when": "25 Nov",
+   "e": "flaw",
+   "added": "2026-11-25",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "The JetBooking plugin for WordPress is vulnerable to SQL Injection via the 'check_in_date' parameter in all versions up to, and including, 4.0.3. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that…",
+   "how": "Exploited in the wild, per ENISA.",
+   "tl": [
+    [
+     "25 Nov",
+     "Added to ENISA's exploited list."
+    ],
+    [
+     "25 Nov",
+     "New reporting: Drupal Flaw Found by Anthropic Scanner Exploited in Attacks"
+    ]
+   ],
+   "fix": "Apply the vendor's fix.",
+   "s": [
+    "r7081d6eb4d",
+    "rf44f10d640"
+   ],
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "hewlett-packard-enterprise-hpe-juniper-1125",
+   "k": "flaw",
+   "t": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router: OS Command Injection",
+   "sw": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router",
+   "cve": "CVE-2026-103406 · CVSS 9.8",
+   "sev": "crit",
+   "iso": "2026-11-25",
+   "when": "25 Nov",
+   "e": "flaw",
+   "added": "2026-11-25",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID.",
+   "how": "Exploited in the wild, per CISA.",
+   "tl": [
+    [
+     "25 Nov",
+     "Added to CISA's exploited list."
+    ],
+    [
+     "28 Nov",
+     "CISA deadline for US federal agencies."
+    ]
+   ],
+   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+   "s": [
+    "r7947132cac"
+   ]
+  },
+  {
+   "id": "turnitin-discloses-cyberattack-affecting-customer-1124",
+   "k": "inc",
+   "t": "Turnitin discloses cyberattack affecting customer-facing systems",
+   "sev": "med",
+   "iso": "2026-11-24",
+   "added": "2026-11-25",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Turnitin disclosed via a statement from its CEO, Chris Caren, that it recently detected unauthorized activity involving certain customer-facing systems. [...]",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r5f76ac4f7c"
+   ],
+   "co": "Turnitin"
+  },
+  {
+   "id": "colorado-says-cyberattack-took-down-1124",
+   "k": "inc",
+   "t": "Colorado says cyberattack took down myColorado app, warns 150,000 had data stolen",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "added": "2026-11-25",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "GOV",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Cybercriminals likely stole data from 150,000 users of myColorado, which residents typically use for digital identification, document storage and accessing state government services.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by The Record"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r2f99e3ac26"
+   ],
+   "co": "Colorado"
+  },
+  {
+   "id": "rackspace-shuts-down-spot-cloud-1124",
+   "k": "inc",
+   "t": "Rackspace shuts down Spot cloud platform after security breach",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "added": "2026-11-25",
+   "when": "24 Nov",
+   "where": "Global",
+   "e": "cred",
+   "tags": [],
+   "sec": "TECH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Rackspace is shutting down its Rackspace Spot cloud platform after a security breach allowed hackers to access customer Kubernetes clusters and secrets, giving customers until December 8 to migrate their services and download their data. [...]",
+   "how": "Stolen or leaked credentials and keys.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r6c270107d3"
+   ]
+  },
+  {
+   "id": "unclassified-intel-system-hit-by-1124",
+   "k": "inc",
+   "t": "Unclassified intel system hit by hackers, affecting CIA, ODNI",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "added": "2026-11-25",
+   "when": "24 Nov",
+   "where": "US",
+   "e": "undisc",
+   "tags": [],
+   "sec": "GOV",
+   "reg": "AMER",
+   "conf": "confirmed",
+   "sum": "Unknown attackers have reportedly breached an open-source intelligence analysis system at the US Central Intelligence Agency (CIA) [...]",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "24 Nov",
+     "Reported by CyberScoop"
+    ],
+    [
+     "24 Nov",
+     "Reported by SecurityWeek"
+    ],
+    [
+     "25 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rf52a74730b",
+    "rae79bb5847",
+    "r3bc6f96dec"
+   ]
+  },
+  {
+   "id": "wordpress-blocks-six-backdoored-wp-1125",
+   "k": "inc",
+   "t": "WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live",
+   "sev": "med",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "TECH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "WordPress has removed six WordPress plugins developed by WP Connect after they were backdoored on November 22, 2026, to enable arbitrary code execution on sites that have them installed, following a suspected compromise of the developer's account. The WordPress plugins team has proactively detected and blocked the threat before it could be officially released. Visiting each plugin listing now",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by The Hacker News"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rd52512d72b"
+   ],
+   "sw": "WordPress"
+  },
+  {
+   "id": "credential-harvesting-goes-from-fringe-1125",
+   "k": "inc",
+   "t": "Credential harvesting goes from fringe activity to major exploitation trend",
+   "sev": "med",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Global",
+   "e": "cred",
+   "tags": [],
+   "sec": "TECH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Requests to steal credentials made up 13% of all vulnerability exploitation recorded between January and November 2026. Their monthly share climbed from about 1% in January to between 25% and 35% in September and October, data from VulnCheck’s canary network shows. The company tracked 694 exploited CVEs during those eleven months. Attackers used 127 of them (18%) at least once to go after database passwords, cloud…",
+   "how": "Stolen or leaked credentials and keys.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by Help Net Security"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "racb83eb85e"
+   ]
+  },
+  {
+   "id": "com-affiliated-hackers-hijack-cloud-1125",
+   "k": "inc",
+   "t": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
+   "sev": "high",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Australia",
+   "e": "social",
+   "tags": [
+    "finance",
+    "human",
+    "ransom"
+   ],
+   "sec": "FIN",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Palo Alto Networks Unit 42 has disclosed that it's tracking and has responded to \"numerous waves of vishing attacks\" orchestrated by Com-affiliated threat actors since August 2026 that have led to data theft and extortion attempts. The attacks have targeted financial services, healthcare, and legal services located in the U.S., the U.K., and Australia. Other targets include construction,",
+   "how": "Phishing or social engineering.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by The Hacker News"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r7a5ea8907d"
+   ]
+  },
+  {
+   "id": "palo-alto-networks-patches-fragnesia-1125",
+   "k": "inc",
+   "t": "Palo Alto Networks Patches Fragnesia Flaw Used to Root Firewalls",
+   "sev": "med",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "China",
+   "e": "flaw",
+   "tags": [
+    "state"
+   ],
+   "sec": "X",
+   "reg": "APAC",
+   "conf": "reported",
+   "sum": "A China-linked hacking group chained PHP2Shell with Fragnesia in AI-assisted attacks that hit 25 servers.",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by SecurityWeek"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r6a20b92f56"
+   ]
+  },
+  {
+   "id": "hackers-exploited-cvss-10-0-1125",
+   "k": "inc",
+   "t": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
+   "sev": "med",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Global",
+   "e": "flaw",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "An attacker ran operating system commands on Monday on six production servers of Hex.pm, the package registry that Elixir and Erlang developers fetch their dependencies from. The flaw used in the attack had been in the registry's code since February 2016, and the team that maintains the service had every server on a patched build within about 15 minutes of the first malicious request. Checks",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by The Hacker News"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r916629091c"
+   ]
+  },
+  {
+   "id": "hackers-now-exploit-critical-drupal-1125",
+   "k": "inc",
+   "t": "Hackers now exploit critical Drupal RCE flaw to hijack sites",
+   "sev": "med",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Global",
+   "e": "flaw",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "The Drupal security team has confirmed that a critical vulnerability that lets attackers hijack unpatched sites has been actively exploited since at least Thursday. [...]",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r7bb089ac45"
+   ]
+  },
+  {
+   "id": "treasury-s-fincen-takes-systems-1125",
+   "k": "inc",
+   "t": "Treasury's FinCEN takes systems offline after cybersecurity incident",
+   "sev": "crit",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "US",
+   "e": "undisc",
+   "tags": [
+    "finance"
+   ],
+   "sec": "FIN",
+   "reg": "AMER",
+   "conf": "confirmed",
+   "sum": "The U.S. Treasury Department's Financial Crimes Enforcement Network (FinCEN) has been hit by a cybersecurity incident that resulted in \"unauthorized access to a limited subset of its systems,\" the bureau said on Tuesday. As a precaution, it has taken some systems offline. The bureau collects suspicious activity reports and other Bank Secrecy Act (BSA) filings from banks and other financial",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by The Record"
+    ],
+    [
+     "25 Nov",
+     "Reported by The Hacker News"
+    ],
+    [
+     "25 Nov",
+     "Reported by CyberScoop"
+    ],
+    [
+     "25 Nov",
+     "Reported by SecurityWeek"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r44ee8f3c74",
+    "r851806c24f",
+    "r8ce0cc7942",
+    "rbb4d635f16"
+   ]
+  },
+  {
+   "id": "plagiarism-checker-turnitin-investigating-cyberattack-1125",
+   "k": "inc",
+   "t": "Plagiarism Checker Turnitin Investigating Cyberattack",
+   "sev": "med",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "The edtech company says the systems are fully operational and safe to use while it investigates the incident.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by SecurityWeek"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r7d08c2d9b4"
+   ]
+  },
+  {
+   "id": "ransomware-attacks-surge-23-in-1125",
+   "k": "inc",
+   "t": "Ransomware Attacks Surge 23% in October Following Record Quarter",
+   "sev": "high",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [
+    "ransom"
+   ],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "The continued rise in ransomware attacks may reflect a new cyber environment, NCC Group researchers have warned",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by Infosecurity"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r791c47d893"
+   ]
+  },
+  {
+   "id": "bots-exploited-leaked-aws-key-1125",
+   "k": "inc",
+   "t": "Bots exploited leaked AWS key from Docker image in under 8 seconds",
+   "sev": "high",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Global",
+   "e": "flaw",
+   "tags": [],
+   "sec": "EDU",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "A cloud access key left inside a newly published Docker image can be found and used by bots in less than eight seconds, Billy Tsouvalas and Nick Nikiforakis of Stony Brook University discovered after planting 300 decoy images on public container registries. Docker images are packaged copies of software, bundled with everything needed to run it, and developers publish them to public registries such as Docker Hub…",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by Help Net Security"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r0462a00938"
+   ]
+  },
+  {
+   "id": "us-treasury-investigates-cyber-incident-1125",
+   "k": "inc",
+   "t": "US Treasury Investigates Cyber Incident Amid Reported Federal Agency Breaches",
+   "sev": "crit",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "US",
+   "e": "undisc",
+   "tags": [],
+   "sec": "GOV",
+   "reg": "AMER",
+   "conf": "reported",
+   "sum": "The Treasury’s Crimes Enforcement Network is investigating a cyber incident and took some services offline",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by Infosecurity"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r2b3b00025b"
+   ]
+  },
+  {
+   "id": "credential-remediation-is-slow-when-1125",
+   "k": "inc",
+   "t": "Credential Remediation Is Slow When You Don’t Know What Will Break",
+   "sev": "high",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Global",
+   "e": "cred",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "TL;DR More than 64% still valid after four years: GitGuardian’s State of Secrets Sprawl 2026 found that most valid secrets discovered in 2022 still worked in January 2026, because teams stall on what a revoke will break. Validity-only triage misses 46% of critical secrets: Prioritize by impact instead, weighing what a credential can access and whether it leaked publicly, and update the",
+   "how": "Stolen or leaked credentials and keys.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by The Hacker News"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r6a8ceb0f7d"
+   ]
+  },
+  {
+   "id": "suspected-ransomware-attack-disrupts-cancer-1125",
+   "k": "inc",
+   "t": "Suspected ransomware attack disrupts cancer treatments, surgeries at Guadeloupe hospital",
+   "sev": "crit",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "France",
+   "e": "undisc",
+   "tags": [
+    "ransom"
+   ],
+   "sec": "HEALTH",
+   "reg": "EMEA",
+   "conf": "reported",
+   "sum": "France’s national cybersecurity agency is investigating a suspected ransomware attack that impaired the computer systems of the University Hospital of Guadeloupe, forcing doctors to postpone surgeries, suspend some cancer treatments and revert to pen and paper.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by The Record"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rfa1f50764b"
+   ],
+   "co": "Suspected"
+  },
+  {
+   "id": "latin-america-sees-cyberattacks-on-1125",
+   "k": "inc",
+   "t": "Latin America Sees Cyberattacks on Ports, Pipelines & Manufacturing",
+   "sev": "med",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Brazil",
+   "e": "undisc",
+   "tags": [],
+   "sec": "LOG",
+   "reg": "AMER",
+   "conf": "reported",
+   "sum": "From the Port of Santos in Brazil to a pipeline in Argentina, cyberattacks are increasingly affecting industrial systems throughout the region.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by Dark Reading"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r7c0a300934"
+   ]
+  },
+  {
+   "id": "shinyhunters-claims-comeback-new-inception-1125",
+   "k": "inc",
+   "t": "ShinyHunters Claims Comeback, New Inception Group Rejects Alleged Ties",
+   "sev": "med",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "An account tied to ShinyHunters announced the group’s return, as Okta spots possible links between Inception and ShinyHunters hackers.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by SecurityWeek"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "re13089d7b5"
+   ],
+   "sw": "Okta"
+  },
+  {
+   "id": "infratrust-warns-of-exploited-supply-1125",
+   "k": "inc",
+   "t": "InfraTrust warns of exploited supply chain flaws in network appliances",
+   "sev": "med",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Global",
+   "e": "third",
+   "tags": [
+    "vendor"
+   ],
+   "sec": "TECH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Eclypsium's November InfraTrust report warns that most infrastructure security advisories addressing exploited vulnerabilities over the past month involve flaws in third-party software bundled into products rather than code developed by the vendors themselves. [...]",
+   "how": "Through a third party or supplier.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r5d8223f882"
+   ],
+   "co": "InfraTrust"
+  },
+  {
+   "id": "the-ai-threat-horizon-why-1125",
+   "k": "inc",
+   "t": "The AI Threat Horizon: Why Speed, Edge AI and Baselines Are Our Best Defense",
+   "sev": "med",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "IND",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Unit 42 examines the evolution of AI-driven cyberattacks and outlines proactive defense strategies for security teams.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by Unit 42"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rcf58cd9a4a"
+   ]
+  },
+  {
+   "id": "florida-ransomware-recovery-ceo-indicted-1125",
+   "k": "inc",
+   "t": "Florida ransomware recovery CEO indicted for allegedly paying hacker ransoms",
+   "sev": "high",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [
+    "ransom"
+   ],
+   "sec": "GOV",
+   "reg": "AMER",
+   "conf": "reported",
+   "sum": "The CEO of a ransomware recovery firm was indicted by a federal grand jury over allegations he lied about his services and paid out ransoms to cybercriminals.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by The Record"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r4fcf01c313"
+   ]
+  }
+ ]
+}

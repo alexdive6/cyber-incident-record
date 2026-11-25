@@ -1,18 +1,18 @@
 {
 "schema": 1,
 "meta": {
-"edition": "2026-11-24",
-"prev": "2026-11-23",
-"compiled": "2026-11-24T13:36-05:00",
+"edition": "2026-11-25",
+"prev": "2026-11-24",
+"compiled": "2026-11-25T12:46-05:00",
 "tz": "America/New_York",
 "mode": "live",
-"nextRun": "2026-11-25T02:00-05:00",
+"nextRun": "2026-11-26T02:00-05:00",
 "from": "2026-10-01",
 "actNow": [
+"hewlett-packard-enterprise-hpe-juniper-1125",
 "idunno-anticsrf-1124",
 "n-able-mailassure-1123",
 "project-monai-monai-label-1123",
-"n-able-discloses-critical-mail-1123",
 "cisco-expressway-series-1120"
 ],
 "health": {
@@ -4009,13 +4009,19 @@
 [
 "19 Nov",
 "Reported by SEC"
+],
+[
+"25 Nov",
+"New reporting: KAVILCO INC/WA/ reports a material cybersecurity incident to the SEC"
 ]
 ],
 "fix": "Under investigation.",
 "s": [
-"rb6df6880b9"
+"rb6df6880b9",
+"r1f63dfa342"
 ],
-"co": "iQSTEL Inc"
+"co": "iQSTEL Inc",
+"updated": "2026-11-25"
 },
 {
 "id": "careers360-3-609-421-accounts-1119",
@@ -5051,12 +5057,18 @@
 [
 "23 Nov",
 "Reported by The Hacker News"
+],
+[
+"25 Nov",
+"New reporting: Webworm APT Slithers Into Networks With Customized SoftEther VPN"
 ]
 ],
 "fix": "Under investigation.",
 "s": [
-"r1ab128c432"
-]
+"r1ab128c432",
+"r7f8f5938b0"
+],
+"updated": "2026-11-25"
 },
 {
 "id": "behind-the-alias-how-one-1123",
@@ -5201,12 +5213,21 @@
 [
 "27 Nov",
 "CISA deadline for US federal agencies."
+],
+[
+"25 Nov",
+"New reporting: Exploited: Abandoned Idunno.AntiCsrf library opens legacy ASP.NET apps to RCE (CVE-2026-131914)"
 ]
 ],
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
-"r7947132cac"
-]
+"r7947132cac",
+"r961cd313ea",
+"r45c257ac25",
+"rd52cc031d7",
+"rd69aa4764b"
+],
+"updated": "2026-11-25"
 },
 {
 "id": "drupal-core-1124",
@@ -5718,14 +5739,20 @@
 [
 "24 Nov",
 "Reported by BleepingComputer"
+],
+[
+"25 Nov",
+"New reporting: Hackers compromise Check Point Servers in 22 organizations"
 ]
 ],
 "fix": "Under investigation.",
 "s": [
 "r22bf6552c3",
-"r5ba708d91b"
+"r5ba708d91b",
+"rbe8229fa86"
 ],
-"sw": "Check Point"
+"sw": "Check Point",
+"updated": "2026-11-25"
 },
 {
 "id": "european-commission-uncovers-data-breach-1124",
@@ -6014,6 +6041,713 @@
 "radb18ca6ae"
 ],
 "co": "Radware"
+},
+{
+"id": "crocoblock-1125",
+"k": "flaw",
+"t": "Crocoblock : Exploited flaw (ENISA)",
+"sw": "Crocoblock",
+"cve": "CVE-2026-3496 · CVSS 7.5",
+"sev": "high",
+"iso": "2026-11-25",
+"when": "25 Nov",
+"e": "flaw",
+"added": "2026-11-25",
+"tags": [],
+"sec": "X",
+"reg": "GLOBAL",
+"conf": "confirmed",
+"sum": "The JetBooking plugin for WordPress is vulnerable to SQL Injection via the 'check_in_date' parameter in all versions up to, and including, 4.0.3. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that…",
+"how": "Exploited in the wild, per ENISA.",
+"tl": [
+[
+"25 Nov",
+"Added to ENISA's exploited list."
+],
+[
+"25 Nov",
+"New reporting: Drupal Flaw Found by Anthropic Scanner Exploited in Attacks"
+]
+],
+"fix": "Apply the vendor's fix.",
+"s": [
+"r7081d6eb4d",
+"rf44f10d640"
+],
+"updated": "2026-11-25"
+},
+{
+"id": "hewlett-packard-enterprise-hpe-juniper-1125",
+"k": "flaw",
+"t": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router: OS Command Injection",
+"sw": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router",
+"cve": "CVE-2026-103406 · CVSS 9.8",
+"sev": "crit",
+"iso": "2026-11-25",
+"when": "25 Nov",
+"e": "flaw",
+"added": "2026-11-25",
+"tags": [],
+"sec": "X",
+"reg": "GLOBAL",
+"conf": "confirmed",
+"sum": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID.",
+"how": "Exploited in the wild, per CISA.",
+"tl": [
+[
+"25 Nov",
+"Added to CISA's exploited list."
+],
+[
+"28 Nov",
+"CISA deadline for US federal agencies."
+]
+],
+"fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+"s": [
+"r7947132cac"
+]
+},
+{
+"id": "turnitin-discloses-cyberattack-affecting-customer-1124",
+"k": "inc",
+"t": "Turnitin discloses cyberattack affecting customer-facing systems",
+"sev": "med",
+"iso": "2026-11-24",
+"added": "2026-11-25",
+"when": "24 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [],
+"sec": "X",
+"reg": "GLOBAL",
+"conf": "confirmed",
+"sum": "Turnitin disclosed via a statement from its CEO, Chris Caren, that it recently detected unauthorized activity involving certain customer-facing systems. [...]",
+"how": "Not disclosed.",
+"tl": [
+[
+"24 Nov",
+"Reported by BleepingComputer"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r5f76ac4f7c"
+],
+"co": "Turnitin"
+},
+{
+"id": "colorado-says-cyberattack-took-down-1124",
+"k": "inc",
+"t": "Colorado says cyberattack took down myColorado app, warns 150,000 had data stolen",
+"sev": "high",
+"iso": "2026-11-24",
+"added": "2026-11-25",
+"when": "24 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [],
+"sec": "GOV",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "Cybercriminals likely stole data from 150,000 users of myColorado, which residents typically use for digital identification, document storage and accessing state government services.",
+"how": "Not disclosed.",
+"tl": [
+[
+"24 Nov",
+"Reported by The Record"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r2f99e3ac26"
+],
+"co": "Colorado"
+},
+{
+"id": "rackspace-shuts-down-spot-cloud-1124",
+"k": "inc",
+"t": "Rackspace shuts down Spot cloud platform after security breach",
+"sev": "high",
+"iso": "2026-11-24",
+"added": "2026-11-25",
+"when": "24 Nov",
+"where": "Global",
+"e": "cred",
+"tags": [],
+"sec": "TECH",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "Rackspace is shutting down its Rackspace Spot cloud platform after a security breach allowed hackers to access customer Kubernetes clusters and secrets, giving customers until December 8 to migrate their services and download their data. [...]",
+"how": "Stolen or leaked credentials and keys.",
+"tl": [
+[
+"24 Nov",
+"Reported by BleepingComputer"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r6c270107d3"
+]
+},
+{
+"id": "unclassified-intel-system-hit-by-1124",
+"k": "inc",
+"t": "Unclassified intel system hit by hackers, affecting CIA, ODNI",
+"sev": "high",
+"iso": "2026-11-24",
+"added": "2026-11-25",
+"when": "24 Nov",
+"where": "US",
+"e": "undisc",
+"tags": [],
+"sec": "GOV",
+"reg": "AMER",
+"conf": "confirmed",
+"sum": "Unknown attackers have reportedly breached an open-source intelligence analysis system at the US Central Intelligence Agency (CIA) [...]",
+"how": "Not disclosed.",
+"tl": [
+[
+"24 Nov",
+"Reported by CyberScoop"
+],
+[
+"24 Nov",
+"Reported by SecurityWeek"
+],
+[
+"25 Nov",
+"Reported by BleepingComputer"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"rf52a74730b",
+"rae79bb5847",
+"r3bc6f96dec"
+]
+},
+{
+"id": "wordpress-blocks-six-backdoored-wp-1125",
+"k": "inc",
+"t": "WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live",
+"sev": "med",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [],
+"sec": "TECH",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "WordPress has removed six WordPress plugins developed by WP Connect after they were backdoored on November 22, 2026, to enable arbitrary code execution on sites that have them installed, following a suspected compromise of the developer's account. The WordPress plugins team has proactively detected and blocked the threat before it could be officially released. Visiting each plugin listing now",
+"how": "Not disclosed.",
+"tl": [
+[
+"25 Nov",
+"Reported by The Hacker News"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"rd52512d72b"
+],
+"sw": "WordPress"
+},
+{
+"id": "credential-harvesting-goes-from-fringe-1125",
+"k": "inc",
+"t": "Credential harvesting goes from fringe activity to major exploitation trend",
+"sev": "med",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "Global",
+"e": "cred",
+"tags": [],
+"sec": "TECH",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "Requests to steal credentials made up 13% of all vulnerability exploitation recorded between January and November 2026. Their monthly share climbed from about 1% in January to between 25% and 35% in September and October, data from VulnCheck’s canary network shows. The company tracked 694 exploited CVEs during those eleven months. Attackers used 127 of them (18%) at least once to go after database passwords, cloud…",
+"how": "Stolen or leaked credentials and keys.",
+"tl": [
+[
+"25 Nov",
+"Reported by Help Net Security"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"racb83eb85e"
+]
+},
+{
+"id": "com-affiliated-hackers-hijack-cloud-1125",
+"k": "inc",
+"t": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
+"sev": "high",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "Australia",
+"e": "social",
+"tags": [
+"finance",
+"human",
+"ransom"
+],
+"sec": "FIN",
+"reg": "GLOBAL",
+"conf": "confirmed",
+"sum": "Palo Alto Networks Unit 42 has disclosed that it's tracking and has responded to \"numerous waves of vishing attacks\" orchestrated by Com-affiliated threat actors since August 2026 that have led to data theft and extortion attempts. The attacks have targeted financial services, healthcare, and legal services located in the U.S., the U.K., and Australia. Other targets include construction,",
+"how": "Phishing or social engineering.",
+"tl": [
+[
+"25 Nov",
+"Reported by The Hacker News"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r7a5ea8907d"
+]
+},
+{
+"id": "palo-alto-networks-patches-fragnesia-1125",
+"k": "inc",
+"t": "Palo Alto Networks Patches Fragnesia Flaw Used to Root Firewalls",
+"sev": "med",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "China",
+"e": "flaw",
+"tags": [
+"state"
+],
+"sec": "X",
+"reg": "APAC",
+"conf": "reported",
+"sum": "A China-linked hacking group chained PHP2Shell with Fragnesia in AI-assisted attacks that hit 25 servers.",
+"how": "Software flaw exploited.",
+"tl": [
+[
+"25 Nov",
+"Reported by SecurityWeek"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r6a20b92f56"
+]
+},
+{
+"id": "hackers-exploited-cvss-10-0-1125",
+"k": "inc",
+"t": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
+"sev": "med",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "Global",
+"e": "flaw",
+"tags": [],
+"sec": "X",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "An attacker ran operating system commands on Monday on six production servers of Hex.pm, the package registry that Elixir and Erlang developers fetch their dependencies from. The flaw used in the attack had been in the registry's code since February 2016, and the team that maintains the service had every server on a patched build within about 15 minutes of the first malicious request. Checks",
+"how": "Software flaw exploited.",
+"tl": [
+[
+"25 Nov",
+"Reported by The Hacker News"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r916629091c"
+]
+},
+{
+"id": "hackers-now-exploit-critical-drupal-1125",
+"k": "inc",
+"t": "Hackers now exploit critical Drupal RCE flaw to hijack sites",
+"sev": "med",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "Global",
+"e": "flaw",
+"tags": [],
+"sec": "X",
+"reg": "GLOBAL",
+"conf": "confirmed",
+"sum": "The Drupal security team has confirmed that a critical vulnerability that lets attackers hijack unpatched sites has been actively exploited since at least Thursday. [...]",
+"how": "Software flaw exploited.",
+"tl": [
+[
+"25 Nov",
+"Reported by BleepingComputer"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r7bb089ac45"
+]
+},
+{
+"id": "treasury-s-fincen-takes-systems-1125",
+"k": "inc",
+"t": "Treasury's FinCEN takes systems offline after cybersecurity incident",
+"sev": "crit",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "US",
+"e": "undisc",
+"tags": [
+"finance"
+],
+"sec": "FIN",
+"reg": "AMER",
+"conf": "confirmed",
+"sum": "The U.S. Treasury Department's Financial Crimes Enforcement Network (FinCEN) has been hit by a cybersecurity incident that resulted in \"unauthorized access to a limited subset of its systems,\" the bureau said on Tuesday. As a precaution, it has taken some systems offline. The bureau collects suspicious activity reports and other Bank Secrecy Act (BSA) filings from banks and other financial",
+"how": "Not disclosed.",
+"tl": [
+[
+"25 Nov",
+"Reported by The Record"
+],
+[
+"25 Nov",
+"Reported by The Hacker News"
+],
+[
+"25 Nov",
+"Reported by CyberScoop"
+],
+[
+"25 Nov",
+"Reported by SecurityWeek"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r44ee8f3c74",
+"r851806c24f",
+"r8ce0cc7942",
+"rbb4d635f16"
+]
+},
+{
+"id": "plagiarism-checker-turnitin-investigating-cyberattack-1125",
+"k": "inc",
+"t": "Plagiarism Checker Turnitin Investigating Cyberattack",
+"sev": "med",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [],
+"sec": "X",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "The edtech company says the systems are fully operational and safe to use while it investigates the incident.",
+"how": "Not disclosed.",
+"tl": [
+[
+"25 Nov",
+"Reported by SecurityWeek"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r7d08c2d9b4"
+]
+},
+{
+"id": "ransomware-attacks-surge-23-in-1125",
+"k": "inc",
+"t": "Ransomware Attacks Surge 23% in October Following Record Quarter",
+"sev": "high",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [
+"ransom"
+],
+"sec": "X",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "The continued rise in ransomware attacks may reflect a new cyber environment, NCC Group researchers have warned",
+"how": "Not disclosed.",
+"tl": [
+[
+"25 Nov",
+"Reported by Infosecurity"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r791c47d893"
+]
+},
+{
+"id": "bots-exploited-leaked-aws-key-1125",
+"k": "inc",
+"t": "Bots exploited leaked AWS key from Docker image in under 8 seconds",
+"sev": "high",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "Global",
+"e": "flaw",
+"tags": [],
+"sec": "EDU",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "A cloud access key left inside a newly published Docker image can be found and used by bots in less than eight seconds, Billy Tsouvalas and Nick Nikiforakis of Stony Brook University discovered after planting 300 decoy images on public container registries. Docker images are packaged copies of software, bundled with everything needed to run it, and developers publish them to public registries such as Docker Hub…",
+"how": "Software flaw exploited.",
+"tl": [
+[
+"25 Nov",
+"Reported by Help Net Security"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r0462a00938"
+]
+},
+{
+"id": "us-treasury-investigates-cyber-incident-1125",
+"k": "inc",
+"t": "US Treasury Investigates Cyber Incident Amid Reported Federal Agency Breaches",
+"sev": "crit",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "US",
+"e": "undisc",
+"tags": [],
+"sec": "GOV",
+"reg": "AMER",
+"conf": "reported",
+"sum": "The Treasury’s Crimes Enforcement Network is investigating a cyber incident and took some services offline",
+"how": "Not disclosed.",
+"tl": [
+[
+"25 Nov",
+"Reported by Infosecurity"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r2b3b00025b"
+]
+},
+{
+"id": "credential-remediation-is-slow-when-1125",
+"k": "inc",
+"t": "Credential Remediation Is Slow When You Don’t Know What Will Break",
+"sev": "high",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "Global",
+"e": "cred",
+"tags": [],
+"sec": "X",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "TL;DR More than 64% still valid after four years: GitGuardian’s State of Secrets Sprawl 2026 found that most valid secrets discovered in 2022 still worked in January 2026, because teams stall on what a revoke will break. Validity-only triage misses 46% of critical secrets: Prioritize by impact instead, weighing what a credential can access and whether it leaked publicly, and update the",
+"how": "Stolen or leaked credentials and keys.",
+"tl": [
+[
+"25 Nov",
+"Reported by The Hacker News"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r6a8ceb0f7d"
+]
+},
+{
+"id": "suspected-ransomware-attack-disrupts-cancer-1125",
+"k": "inc",
+"t": "Suspected ransomware attack disrupts cancer treatments, surgeries at Guadeloupe hospital",
+"sev": "crit",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "France",
+"e": "undisc",
+"tags": [
+"ransom"
+],
+"sec": "HEALTH",
+"reg": "EMEA",
+"conf": "reported",
+"sum": "France’s national cybersecurity agency is investigating a suspected ransomware attack that impaired the computer systems of the University Hospital of Guadeloupe, forcing doctors to postpone surgeries, suspend some cancer treatments and revert to pen and paper.",
+"how": "Not disclosed.",
+"tl": [
+[
+"25 Nov",
+"Reported by The Record"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"rfa1f50764b"
+],
+"co": "Suspected"
+},
+{
+"id": "latin-america-sees-cyberattacks-on-1125",
+"k": "inc",
+"t": "Latin America Sees Cyberattacks on Ports, Pipelines & Manufacturing",
+"sev": "med",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "Brazil",
+"e": "undisc",
+"tags": [],
+"sec": "LOG",
+"reg": "AMER",
+"conf": "reported",
+"sum": "From the Port of Santos in Brazil to a pipeline in Argentina, cyberattacks are increasingly affecting industrial systems throughout the region.",
+"how": "Not disclosed.",
+"tl": [
+[
+"25 Nov",
+"Reported by Dark Reading"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r7c0a300934"
+]
+},
+{
+"id": "shinyhunters-claims-comeback-new-inception-1125",
+"k": "inc",
+"t": "ShinyHunters Claims Comeback, New Inception Group Rejects Alleged Ties",
+"sev": "med",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [],
+"sec": "X",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "An account tied to ShinyHunters announced the group’s return, as Okta spots possible links between Inception and ShinyHunters hackers.",
+"how": "Not disclosed.",
+"tl": [
+[
+"25 Nov",
+"Reported by SecurityWeek"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"re13089d7b5"
+],
+"sw": "Okta"
+},
+{
+"id": "infratrust-warns-of-exploited-supply-1125",
+"k": "inc",
+"t": "InfraTrust warns of exploited supply chain flaws in network appliances",
+"sev": "med",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "Global",
+"e": "third",
+"tags": [
+"vendor"
+],
+"sec": "TECH",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "Eclypsium's November InfraTrust report warns that most infrastructure security advisories addressing exploited vulnerabilities over the past month involve flaws in third-party software bundled into products rather than code developed by the vendors themselves. [...]",
+"how": "Through a third party or supplier.",
+"tl": [
+[
+"25 Nov",
+"Reported by BleepingComputer"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r5d8223f882"
+],
+"co": "InfraTrust"
+},
+{
+"id": "the-ai-threat-horizon-why-1125",
+"k": "inc",
+"t": "The AI Threat Horizon: Why Speed, Edge AI and Baselines Are Our Best Defense",
+"sev": "med",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [],
+"sec": "IND",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "Unit 42 examines the evolution of AI-driven cyberattacks and outlines proactive defense strategies for security teams.",
+"how": "Not disclosed.",
+"tl": [
+[
+"25 Nov",
+"Reported by Unit 42"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"rcf58cd9a4a"
+]
+},
+{
+"id": "florida-ransomware-recovery-ceo-indicted-1125",
+"k": "inc",
+"t": "Florida ransomware recovery CEO indicted for allegedly paying hacker ransoms",
+"sev": "high",
+"iso": "2026-11-25",
+"added": "2026-11-25",
+"when": "25 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [
+"ransom"
+],
+"sec": "GOV",
+"reg": "AMER",
+"conf": "reported",
+"sum": "The CEO of a ransomware recovery firm was indicted by a federal grand jury over allegations he lied about his services and paid out ransoms to cybercriminals.",
+"how": "Not disclosed.",
+"tl": [
+[
+"25 Nov",
+"Reported by The Record"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r4fcf01c313"
+]
 }
 ],
 "ledger": [
@@ -6611,6 +7345,33 @@
 ],
 "kev": [
 {
+"cve": "CVE-2026-3496",
+"v": "Crocoblock",
+"p": "",
+"n": "Exploited flaw (ENISA)",
+"desc": "The JetBooking plugin for WordPress is vulnerable to SQL Injection via the 'check_in_date' parameter in all versions up to, and including, 4.0.3. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that…",
+"a": "2026-11-25",
+"d": "",
+"src": "EUVD",
+"link": "crocoblock-1125",
+"cvss": 7.5,
+"epss": 0.0054
+},
+{
+"cve": "CVE-2026-103406",
+"v": "Hewlett Packard Enterprise (HPE)",
+"p": "Juniper Session Smart Conductor and Session Smart Router",
+"n": "OS Command Injection",
+"a": "2026-11-25",
+"d": "2026-11-28",
+"rw": false,
+"desc": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID.",
+"act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+"link": "hewlett-packard-enterprise-hpe-juniper-1125",
+"epss": 0.0086,
+"cvss": 9.8
+},
+{
 "cve": "CVE-2026-132224",
 "v": "Optimizely",
 "p": "Web Experimentation",
@@ -6621,7 +7382,7 @@
 "desc": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer…",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "optimizely-web-experimentation-1124",
-"epss": 0.0041,
+"epss": 0.0078,
 "cvss": 7.1
 },
 {
@@ -6647,7 +7408,7 @@
 "desc": "Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "idunno-anticsrf-1124",
-"epss": 0.0061,
+"epss": 0.0429,
 "cvss": 9.3
 },
 {
@@ -6661,7 +7422,7 @@
 "desc": "N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "n-able-mailassure-1123",
-"epss": 0.0062,
+"epss": 0.0179,
 "cvss": 9.3
 },
 {
@@ -6675,7 +7436,7 @@
 "desc": "Project MONAI MONAI Label contains a path traversal vulnerability that allows an unauthenticated remote attacker to write arbitrary files outside the intended datastore directory, potentially resulting in remote code execution.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "project-monai-monai-label-1123",
-"epss": 0.498,
+"epss": 0.2716,
 "cvss": 9.8
 },
 {
@@ -6689,7 +7450,7 @@
 "desc": "Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "cisco-expressway-series-1120",
-"epss": 0.0219,
+"epss": 0.0112,
 "cvss": 9.8
 },
 {
@@ -6703,7 +7464,7 @@
 "desc": "Apache Roller contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint, which accepts and deserializes vendor extension types before authentication. This CVE covers the same underlying vulnerability as CVE-2026-82384 but applies to a broader range of affected versions.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "roller",
-"epss": 0.4007,
+"epss": 0.2416,
 "cvss": 9.8
 },
 {
@@ -6717,7 +7478,7 @@
 "desc": "Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and gain unauthorized access to the system.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "broadcom-vmware-vcenter-1120",
-"epss": 0.0353,
+"epss": 0.0501,
 "cvss": 9.8
 },
 {
@@ -6731,7 +7492,7 @@
 "desc": "SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "sap-netweaver-1120",
-"epss": 0.009,
+"epss": 0.011,
 "cvss": 6.5
 },
 {
@@ -6745,7 +7506,7 @@
 "desc": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import…",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "vanderbilt-university-research-electronic-data-1118",
-"epss": 0.3433,
+"epss": 0.1888,
 "cvss": 9.8
 },
 {
@@ -6759,7 +7520,7 @@
 "desc": "Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised…",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "apache-axis-1118",
-"epss": 0.0587,
+"epss": 0.027,
 "cvss": 9.8
 },
 {
@@ -6773,7 +7534,7 @@
 "desc": "BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "berriai-litellm-1118",
-"epss": 0.828,
+"epss": 0.2021,
 "cvss": 8.8
 },
 {
@@ -6787,7 +7548,7 @@
 "desc": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "synology-diskstation-manager-dsm-1118",
-"epss": 0.0313,
+"epss": 0.0276,
 "cvss": 9.8
 },
 {
@@ -6802,7 +7563,7 @@
 "rw": false,
 "desc": "Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet’s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted rich-data type through a PUT request. If the certificate authority automatically signs requests without…",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.1284
+"epss": 0.1258
 },
 {
 "cve": "CVE-2026-123039",
@@ -6815,7 +7576,7 @@
 "rw": false,
 "desc": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket without authenticating connecting processes. An authenticated local user can send a command…",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.0327,
+"epss": 0.0023,
 "cvss": 7.8
 },
 {
@@ -6844,7 +7605,7 @@
 "rw": false,
 "desc": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.0168
+"epss": 0.013
 },
 {
 "cve": "CVE-2026-125350",
@@ -6872,7 +7633,7 @@
 "rw": false,
 "desc": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.2489
+"epss": 0.0104
 },
 {
 "cve": "CVE-2026-116606",
@@ -6886,7 +7647,7 @@
 "rw": false,
 "desc": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration. This vulnerability can be chained with CVE-2026-111560.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.7452
+"epss": 0.138
 },
 {
 "cve": "CVE-2026-111793",
@@ -6899,7 +7660,7 @@
 "rw": false,
 "desc": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experience.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.0117,
+"epss": 0.0098,
 "cvss": 4.3
 },
 {
@@ -6914,7 +7675,7 @@
 "rw": false,
 "desc": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability could allow an authenticated administrator to inject OS commands that execute with root privileges when the crafted…",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.6377
+"epss": 0.108
 },
 {
 "cve": "CVE-2026-123218",
@@ -6927,7 +7688,7 @@
 "rw": false,
 "desc": "IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.0101,
+"epss": 0.0078,
 "cvss": 9.8
 },
 {
@@ -6941,7 +7702,7 @@
 "rw": false,
 "desc": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.9554,
+"epss": 0.1421,
 "cvss": 8.1
 },
 {
@@ -6955,7 +7716,7 @@
 "rw": false,
 "desc": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.4411,
+"epss": 0.4369,
 "cvss": 9.8
 },
 {
@@ -6969,7 +7730,7 @@
 "desc": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "gpustack-gpustack-1109",
-"epss": 0.1879,
+"epss": 0.0855,
 "cvss": 9.8
 },
 {
@@ -6983,7 +7744,7 @@
 "desc": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "sonicwall-sonicos-sslvpn-1106",
-"epss": 0.0804,
+"epss": 0.0054,
 "cvss": 7.5
 },
 {
@@ -6997,7 +7758,7 @@
 "desc": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "apple-multiple-products-1104",
-"epss": 0.0156,
+"epss": 0.0079,
 "cvss": 5.5
 },
 {
@@ -7011,7 +7772,7 @@
 "desc": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrades.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "wordpress-wordpress-core-1103",
-"epss": 0.0805,
+"epss": 0.0215,
 "cvss": 8.1
 },
 {
@@ -7025,7 +7786,7 @@
 "desc": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-111357.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "ivanti",
-"epss": 0.0099,
+"epss": 0.0083,
 "cvss": 4.3
 },
 {
@@ -7039,7 +7800,7 @@
 "rw": false,
 "desc": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-118527.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.008,
+"epss": 0.0056,
 "cvss": 7
 },
 {
@@ -7054,7 +7815,7 @@
 "rw": false,
 "desc": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.7431
+"epss": 0.1184
 },
 {
 "cve": "CVE-2026-76418",
@@ -7068,7 +7829,7 @@
 "rw": false,
 "desc": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.0855
+"epss": 0.0099
 },
 {
 "cve": "CVE-2026-46300",
@@ -7081,7 +7842,7 @@
 "rw": false,
 "desc": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing ESP input processing to decrypt shared fragments in place. This vulnerability can be chained with CVE-2026-109618 and CVE-2026-109619 to implant PHP webshells…",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.172,
+"epss": 0.0296,
 "cvss": 7.8
 },
 {
@@ -7096,7 +7857,7 @@
 "rw": false,
 "desc": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.009
+"epss": 0.0047
 },
 {
 "cve": "CVE-2026-48356",
@@ -7109,7 +7870,7 @@
 "rw": false,
 "desc": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.8162,
+"epss": 0.0785,
 "cvss": 9.3
 },
 {
@@ -7124,7 +7885,7 @@
 "rw": false,
 "desc": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.9999
+"epss": 0.3298
 },
 {
 "cve": "CVE-2026-109619",
@@ -7138,7 +7899,7 @@
 "rw": false,
 "desc": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 1.0
+"epss": 0.2075
 },
 {
 "cve": "CVE-2026-109618",
@@ -7152,7 +7913,7 @@
 "rw": false,
 "desc": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 1.0
+"epss": 0.4508
 },
 {
 "cve": "CVE-2026-114625",
@@ -7165,7 +7926,7 @@
 "desc": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "arista-velocloud-orchestrator-1023",
-"epss": 0.0767,
+"epss": 0.0094,
 "cvss": 9.4
 },
 {
@@ -7179,7 +7940,7 @@
 "desc": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "collabora-collabora-online-built-in-1023",
-"epss": 0.7615,
+"epss": 0.3287,
 "cvss": 9.2
 },
 {
@@ -7193,7 +7954,7 @@
 "desc": "Plex Media Server contains an external control of file name or path vulnerability which can allow an admin user to write arbitrary files that may be executed on load. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96655.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "plex",
-"epss": 0.1977,
+"epss": 0.1489,
 "cvss": 8.6
 },
 {
@@ -7207,7 +7968,7 @@
 "desc": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability that could allow an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96656.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "plex",
-"epss": 0.1072,
+"epss": 0.0545,
 "cvss": 5.3
 },
 {
@@ -7221,7 +7982,7 @@
 "desc": "Plex Media Server contains an improper neutralization of encoded URI schemes in a web page vulnerability that could allow an attacker to call other plugins' functions and supply their own parameters. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96655, and CVE-2026-96656.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "plex",
-"epss": 0.1269,
+"epss": 0.0573,
 "cvss": 6.9
 },
 {
@@ -7235,7 +7996,7 @@
 "desc": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability which could allow an attacker using any X-Plex-Token value to include a full URL in the 'protocol' parameter and force the Plex server to POST to the attacker's chosen destination. This vulnerability can be chained with CVE-2026-96654, CVE-2026-96655, and CVE-2026-96656.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "plex",
-"epss": 0.149,
+"epss": 0.0545,
 "cvss": 5.3
 },
 {
@@ -7249,7 +8010,7 @@
 "desc": "Siemens Software Center contains an uncontrolled search path element vulnerability that could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "siemens-software-center-1020",
-"epss": 0.0097,
+"epss": 0.0035,
 "cvss": 8.4
 },
 {
@@ -7263,7 +8024,7 @@
 "desc": "EG Secure Solutions SiteGuard Server Edition contains an OS command injection vulnerability which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "eg-secure-solutions-siteguard-server-1020",
-"epss": 0.0253,
+"epss": 0.0161,
 "cvss": 8.5
 },
 {
@@ -7278,7 +8039,7 @@
 "rw": false,
 "desc": "BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.579
+"epss": 0.0315
 },
 {
 "cve": "CVE-2025-61624",
@@ -7291,7 +8052,7 @@
 "desc": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "fortinet-multiple-products-1016",
-"epss": 0.014,
+"epss": 0.0083,
 "cvss": 6.5
 },
 {
@@ -7305,7 +8066,7 @@
 "desc": "Multiple Atlassian products (Bitbucket Data Center ,Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible and Fisheye) contain a files or directories accessible to external parties vulnerability which could allow an unauthenticated attacker to access specific files within the web application root directory in…",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "atlassian-multiple-products-1015",
-"epss": 0.9095,
+"epss": 0.0428,
 "cvss": 9.3
 },
 {
@@ -7320,7 +8081,7 @@
 "rw": false,
 "desc": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.0571
+"epss": 0.0272
 },
 {
 "cve": "CVE-2026-105134",
@@ -7333,7 +8094,7 @@
 "desc": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceivers.do endpoint. This vulnerability can be chained with CVE-2026-105133.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "ahsay-ahsaycbs-1014",
-"epss": 0.8176,
+"epss": 0.5497,
 "cvss": 10
 },
 {
@@ -7347,7 +8108,7 @@
 "desc": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be chained with CVE-2026-105134.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "ahsay-ahsaycbs-1014",
-"epss": 0.8448,
+"epss": 0.0916,
 "cvss": 6.9
 },
 {
@@ -7361,7 +8122,7 @@
 "desc": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "palo-alto-networks-pan-os-1014",
-"epss": 0.0215,
+"epss": 0.0197,
 "cvss": 8.6
 },
 {
@@ -7376,7 +8137,7 @@
 "rw": false,
 "desc": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.0981
+"epss": 0.0098
 },
 {
 "cve": "CVE-2026-104935",
@@ -7389,7 +8150,7 @@
 "desc": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "ivanti",
-"epss": 0.931,
+"epss": 0.245,
 "cvss": 8.6
 },
 {
@@ -7403,7 +8164,7 @@
 "desc": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. This vulnerability can be chained with…",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "strapi-strapi-1008",
-"epss": 0.0411,
+"epss": 0.0385,
 "cvss": 4.9
 },
 {
@@ -7417,7 +8178,7 @@
 "desc": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "onlyoffice-docs-1008",
-"epss": 0.8814,
+"epss": 0.886,
 "cvss": 9.8
 },
 {
@@ -7473,7 +8234,7 @@
 "desc": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "citrix-netscaler-1004",
-"epss": 0.1139,
+"epss": 0.012,
 "cvss": 8.7
 },
 {
@@ -7487,7 +8248,7 @@
 "desc": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "zammad-gmbh-zammad-1002",
-"epss": 0.1094,
+"epss": 0.0651,
 "cvss": 9.4
 },
 {
@@ -7501,7 +8262,7 @@
 "desc": "Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "zammad-gmbh-zammad-1002",
-"epss": 0.4991,
+"epss": 0.1452,
 "cvss": 9.4
 },
 {
@@ -7515,7 +8276,7 @@
 "desc": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "fortinet-fortimail-1001",
-"epss": 0.0457,
+"epss": 0.0147,
 "cvss": 9.8
 }
 ],
@@ -7595,6 +8356,55 @@
 }
 ],
 "advisories": [
+{
+"d": "2026-11-25",
+"org": "BSI",
+"t": "[NEU] [kritisch] BusyBox: Mehrere Schwachstellen ermöglichen Offenlegung von Informationen",
+"s": "rcb15839883",
+"url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4789"
+},
+{
+"d": "2026-11-25",
+"org": "BSI",
+"t": "[UPDATE] [kritisch] VMware vCenter, Tools, und SDDC Manager: Mehrere Schwachstellen",
+"s": "r776b3a9dee",
+"url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4717"
+},
+{
+"d": "2026-11-25",
+"org": "BSI",
+"t": "[UPDATE] [kritisch] Juniper Session Smart Router: Mehrere Schwachstellen",
+"s": "r387f50ec6a",
+"url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4234"
+},
+{
+"d": "2026-11-25",
+"org": "Canada CCCS",
+"t": "Juniper Networks security advisory (AV26-1101) – Update 1",
+"s": "rade8cd2e35",
+"url": "https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-1101"
+},
+{
+"d": "2026-11-25",
+"org": "Canada CCCS",
+"t": "GeoServer security advisory (AV26-1207)",
+"s": "rc6de0aeb8f",
+"url": "https://cyber.gc.ca/en/alerts-advisories/geoserver-security-advisory-av26-1207"
+},
+{
+"d": "2026-11-25",
+"org": "Canada CCCS",
+"t": "SolarWinds security advisory (AV26-1206)",
+"s": "rb9ceb0be30",
+"url": "https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-1206"
+},
+{
+"d": "2026-11-25",
+"org": "Canada CCCS",
+"t": "Adobe security advisory (AV26-1205)",
+"s": "rcecc47ce72",
+"url": "https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-1205"
+},
 {
 "d": "2026-11-24",
 "org": "CISA",
@@ -7678,6 +8488,34 @@
 "t": "SUSE Linux security advisory (AV26-1198)",
 "s": "rf328a95c84",
 "url": "https://cyber.gc.ca/en/alerts-advisories/suse-linux-security-advisory-av26-1198"
+},
+{
+"d": "2026-11-24",
+"org": "CISA",
+"t": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+"s": "ra0ae3cb09c",
+"url": "https://www.cisa.gov/news-events/alerts/2026/11/24/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+},
+{
+"d": "2026-11-24",
+"org": "Canada CCCS",
+"t": "Erlang security advisory (AV26-1204)",
+"s": "r51cbc8e7f7",
+"url": "https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-1204"
+},
+{
+"d": "2026-11-24",
+"org": "Canada CCCS",
+"t": "Drupal security advisory (AV26-1186) – Update 1",
+"s": "r0bb8cd3662",
+"url": "https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1186"
+},
+{
+"d": "2026-11-24",
+"org": "Canada CCCS",
+"t": "VMware security advisory (AV26-1203)",
+"s": "r24dda76958",
+"url": "https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-1203"
 },
 {
 "d": "2026-11-23",
@@ -7797,67 +8635,6 @@
 "t": "Cisco security advisory (AV26-1073) – Update 1",
 "s": "r84075b2874",
 "url": "https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1073"
-},
-{
-"d": "2026-11-20",
-"org": "Canada CCCS",
-"t": "SAP security advisory – November 2025 monthly rollup (AV25-738) – Update 1",
-"s": "rdcf5161444",
-"url": "https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2025-monthly-rollup-av25-738"
-},
-{
-"d": "2026-11-18",
-"org": "F5 / nginx",
-"t": "nginx 1.30.7 and 1.31.9 fix five critical flaws (nginx2root, CVE-2026-123007 and four more)",
-"s": "qualysNg"
-},
-{
-"d": "2026-11-17",
-"org": "CISA",
-"t": "Critical Java vulnerability requires immediate patching (CVE-2026-114938)",
-"s": "cisaJ4s"
-},
-{
-"d": "2026-11-17",
-"org": "CISA",
-"t": "Adds Puppet Enterprise CVE-2026-115731 to the exploited list, due 1 Dec",
-"s": "patchRound"
-},
-{
-"d": "2026-11-13",
-"org": "FBI / IC3",
-"t": "FLASH-20261113-001: threat overview of the ARTEX autonomous pentest framework",
-"s": "bcArtex"
-},
-{
-"d": "2026-11-13",
-"org": "CISA",
-"t": "Adds Check Point Gaia CVE-2026-123039 to the exploited list",
-"s": "senth2"
-},
-{
-"d": "2026-11-10",
-"org": "CISA",
-"t": "Adds six exploited flaws: Outlook, Chromium, two Barracuda, BroadWorks, Openwave",
-"s": "kev6"
-},
-{
-"d": "2026-11-09",
-"org": "CISA",
-"t": "Adds FreeSWITCH, OpenSSH, IBM Aspera Faspex and one more to the exploited list",
-"s": "kev4"
-},
-{
-"d": "2026-11-09",
-"org": "CERT-FR",
-"t": "Report on the supermarket refrigeration sabotage campaign",
-"s": "twis"
-},
-{
-"d": "2026-10-22",
-"org": "CISA / FBI",
-"t": "SafePay ransomware advisory: at least 600 organisations",
-"s": "cma"
 }
 ],
 "notAttacks": {
@@ -8734,10 +9511,6 @@
 "GetPageSpeed, nginx2root versions",
 "https://www.getpagespeed.com/nginx2root"
 ],
-"bcArtex": [
-"BleepingComputer, FBI on ARTEX",
-"https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/"
-],
 "kev6": [
 "CISA bulletin, six KEV additions",
 "https://content.govdelivery.com/accounts/USDHSCISA/bulletins/4325e4d"
@@ -8797,10 +9570,6 @@
 "r84075b2874": [
 "Canada CCCS: Cisco security advisory (AV26-1073) – Update 1",
 "https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1073"
-],
-"rdcf5161444": [
-"Canada CCCS: SAP security advisory – November 2025 monthly rollup (AV25-738) – Update 1",
-"https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2025-monthly-rollup-av25-738"
 ],
 "r4ebef484f9": [
 "Infosecurity: JPMorgan Confirms Customer Data Breach Following Third-Party Compromise",
@@ -9241,45 +10010,236 @@
 "radb18ca6ae": [
 "BleepingComputer: Radware discloses breach exposing customer cloud access keys",
 "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/"
+],
+"r7081d6eb4d": [
+"ENISA EUVD",
+"https://euvd.enisa.europa.eu/"
+],
+"ra0ae3cb09c": [
+"CISA: CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+"https://www.cisa.gov/news-events/alerts/2026/11/24/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+],
+"rcb15839883": [
+"BSI: [NEU] [kritisch] BusyBox: Mehrere Schwachstellen ermöglichen Offenlegung von Informationen",
+"https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4789"
+],
+"r776b3a9dee": [
+"BSI: [UPDATE] [kritisch] VMware vCenter, Tools, und SDDC Manager: Mehrere Schwachstellen",
+"https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4717"
+],
+"r387f50ec6a": [
+"BSI: [UPDATE] [kritisch] Juniper Session Smart Router: Mehrere Schwachstellen",
+"https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4234"
+],
+"rade8cd2e35": [
+"Canada CCCS: Juniper Networks security advisory (AV26-1101) – Update 1",
+"https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-1101"
+],
+"rc6de0aeb8f": [
+"Canada CCCS: GeoServer security advisory (AV26-1207)",
+"https://cyber.gc.ca/en/alerts-advisories/geoserver-security-advisory-av26-1207"
+],
+"rb9ceb0be30": [
+"Canada CCCS: SolarWinds security advisory (AV26-1206)",
+"https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-1206"
+],
+"rcecc47ce72": [
+"Canada CCCS: Adobe security advisory (AV26-1205)",
+"https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-1205"
+],
+"r51cbc8e7f7": [
+"Canada CCCS: Erlang security advisory (AV26-1204)",
+"https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-1204"
+],
+"r0bb8cd3662": [
+"Canada CCCS: Drupal security advisory (AV26-1186) – Update 1",
+"https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1186"
+],
+"r24dda76958": [
+"Canada CCCS: VMware security advisory (AV26-1203)",
+"https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-1203"
+],
+"r1f63dfa342": [
+"SEC: KAVILCO INC/WA/ reports a material cybersecurity incident to the SEC",
+"https://www.sec.gov/Archives/edgar/data/859765/000085976526000011/0000859765-26-000011-index.html"
+],
+"rbe8229fa86": [
+"The Hacker News: Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
+"https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html"
+],
+"r5f76ac4f7c": [
+"BleepingComputer: Turnitin discloses cyberattack affecting customer-facing systems",
+"https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/"
+],
+"r2f99e3ac26": [
+"The Record: Colorado says cyberattack took down myColorado app, warns 150,000 had data stolen",
+"https://therecord.media/mycolorado-app-down-data-breach"
+],
+"r6c270107d3": [
+"BleepingComputer: Rackspace shuts down Spot cloud platform after security breach",
+"https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/"
+],
+"r7f8f5938b0": [
+"Dark Reading: Webworm APT Slithers Into Networks With Customized SoftEther VPN",
+"https://www.darkreading.com/perimeter/webworm-slithers-customized-softether-vpn"
+],
+"rf52a74730b": [
+"CyberScoop: Unclassified intel system hit by hackers, affecting CIA, ODNI",
+"https://cyberscoop.com/cia-odni-osint-data-breach/"
+],
+"rae79bb5847": [
+"SecurityWeek: An Unclassified CIA System Was Breached in a Cyberattack, AP Source Says",
+"https://www.securityweek.com/an-unclassified-cia-system-was-breached-in-a-cyberattack-ap-source-says/"
+],
+"r3bc6f96dec": [
+"BleepingComputer: Hackers reportedly breached CIA intelligence analysis system",
+"https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/"
+],
+"rd52512d72b": [
+"The Hacker News: WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live",
+"https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html"
+],
+"racb83eb85e": [
+"Help Net Security: Credential harvesting goes from fringe activity to major exploitation trend",
+"https://www.helpnetsecurity.com/2026/11/25/vulncheck-credential-harvesting-exploitat-records/"
+],
+"r7a5ea8907d": [
+"The Hacker News: Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
+"https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html"
+],
+"r961cd313ea": [
+"Help Net Security: Exploited: Abandoned Idunno.AntiCsrf library opens legacy ASP.NET apps to RCE (CVE-2026-131",
+"https://www.helpnetsecurity.com/2026/11/25/idunno-anticsrf-rce-cve-2026-131914-exploited/"
+],
+"r45c257ac25": [
+"SecurityWeek: Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library",
+"https://www.securityweek.com/hackers-exploit-unpatched-flaw-in-defunct-idunno-anticsrf-library/"
+],
+"rd52cc031d7": [
+"The Hacker News: Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
+"https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html"
+],
+"rd69aa4764b": [
+"Help Net Security: Critical Drupal installer flaw under active attack (CVE-2026-132165)",
+"https://www.helpnetsecurity.com/2026/11/25/drupal-installer-rce-cve-2026-132165-exploited/"
+],
+"rf44f10d640": [
+"SecurityWeek: Drupal Flaw Found by Anthropic Scanner Exploited in Attacks",
+"https://www.securityweek.com/drupal-flaw-found-by-anthropic-scanner-exploited-in-attacks/"
+],
+"r6a20b92f56": [
+"SecurityWeek: Palo Alto Networks Patches Fragnesia Flaw Used to Root Firewalls",
+"https://www.securityweek.com/palo-alto-networks-patches-fragnesia-flaw-used-to-root-firewalls/"
+],
+"r916629091c": [
+"The Hacker News: Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
+"https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html"
+],
+"r7bb089ac45": [
+"BleepingComputer: Hackers now exploit critical Drupal RCE flaw to hijack sites",
+"https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/"
+],
+"r44ee8f3c74": [
+"The Record: Treasury's FinCEN takes systems offline after cybersecurity incident",
+"https://therecord.media/treasury-fincen-takes-systems-offline-after-cyber-incident"
+],
+"r851806c24f": [
+"The Hacker News: U.S. Treasury's Financial Crimes Agency Takes Some Systems Offline After Cyber Intrusion",
+"https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html"
+],
+"r8ce0cc7942": [
+"CyberScoop: FinCEN investigates cybersecurity incident, takes systems offline",
+"https://cyberscoop.com/fincen-investigates-cybersecurity-incident-systems-offline/"
+],
+"rbb4d635f16": [
+"SecurityWeek: US Treasury’s FinCEN Disconnects Systems Following Cyber Incident",
+"https://www.securityweek.com/us-treasurys-fincen-disconnects-systems-following-cyber-incident/"
+],
+"r7d08c2d9b4": [
+"SecurityWeek: Plagiarism Checker Turnitin Investigating Cyberattack",
+"https://www.securityweek.com/plagiarism-checker-turnitin-investigating-cyberattack/"
+],
+"r791c47d893": [
+"Infosecurity: Ransomware Attacks Surge 23% in October Following Record Quarter",
+"https://www.infosecurity-magazine.com/news/ransomware-surge-october-record/"
+],
+"r0462a00938": [
+"Help Net Security: Bots exploited leaked AWS key from Docker image in under 8 seconds",
+"https://www.helpnetsecurity.com/2026/11/25/docker-aws-key-exposure-bots/"
+],
+"r2b3b00025b": [
+"Infosecurity: US Treasury Investigates Cyber Incident Amid Reported Federal Agency Breaches",
+"https://www.infosecurity-magazine.com/news/us-treasury-cyber-incident/"
+],
+"r6a8ceb0f7d": [
+"The Hacker News: Credential Remediation Is Slow When You Don’t Know What Will Break",
+"https://thehackernews.com/2026/11/credential-remediation-is-slow-when-you.html"
+],
+"rfa1f50764b": [
+"The Record: Suspected ransomware attack disrupts cancer treatments, surgeries at Guadeloupe hospital",
+"https://therecord.media/guadeloupe-ransomware-hospital-cyber"
+],
+"r7c0a300934": [
+"Dark Reading: Latin America Sees Cyberattacks on Ports, Pipelines & Manufacturing",
+"https://www.darkreading.com/cyberattacks-data-breaches/latin-america-cyberattacks-ports-pipelines-manufacturing"
+],
+"re13089d7b5": [
+"SecurityWeek: ShinyHunters Claims Comeback, New Inception Group Rejects Alleged Ties",
+"https://www.securityweek.com/shinyhunters-claims-comeback-new-inception-group-rejects-alleged-ties/"
+],
+"r5d8223f882": [
+"BleepingComputer: InfraTrust warns of exploited supply chain flaws in network appliances",
+"https://www.bleepingcomputer.com/news/security/infratrust-warns-of-exploited-supply-chain-flaws-in-network-appliances/"
+],
+"rcf58cd9a4a": [
+"Unit 42: The AI Threat Horizon: Why Speed, Edge AI and Baselines Are Our Best Defense",
+"https://unit42.paloaltonetworks.com/ai-threat-horizon/"
+],
+"r4fcf01c313": [
+"The Record: Florida ransomware recovery CEO indicted for allegedly paying hacker ransoms",
+"https://therecord.media/ransomware-doj-indictment-recovery"
 ]
 },
 "claimStats": {
 "2026-11": {
-"n": 146,
+"n": 197,
 "groups": {
-"incransom": 5,
+"incransom": 6,
 "SoulGroup": 2,
 "lockbit5": 2,
 "Barracuda": 2,
 "Inception": 2,
 "osiris": 2,
-"Eclipse": 2,
-"PixelLeaks": 10,
-"medusalocker": 6,
+"Eclipse": 3,
+"PixelLeaks": 11,
+"medusalocker": 8,
 "everest": 10,
 "Dark Project": 2,
-"rhysida": 6,
-"SilentRansomGroup": 3,
+"rhysida": 7,
+"SilentRansomGroup": 12,
 "everstake": 2,
 "blackout": 2,
-"spacebears": 8,
+"spacebears": 12,
 "Whitearmor": 3,
 "Handsome Boy Hacking Club": 3,
-"aurora": 6,
+"aurora": 9,
 "akira": 1,
 "Deadlock": 1,
 "pear": 1,
 "EndZone": 1,
 "HYFLOCK": 3,
-"qilin": 5,
+"qilin": 8,
 "safepay": 19,
 "Aoqin": 3,
-"N0n": 27,
-"Falcon": 1,
+"N0n": 35,
+"Falcon": 3,
 "Panzer": 1,
 "direwolf": 1,
 "Scarlettgroup": 2,
-"anubis": 2
+"anubis": 2,
+"play": 5,
+"secp0": 1,
+"thegentlemen": 10
 },
 "seen": [
 "incransom|Regions Behavioral Hospital",
@@ -9427,7 +10387,58 @@
 "qilin|Toyota Chihuahua",
 "aurora|Quetico LLC",
 "aurora|Kopron S.p.A.",
-"aurora|Saurer Intelligent Technology Co."
+"aurora|Saurer Intelligent Technology Co.",
+"N0n|Company #276",
+"N0n|Company #275",
+"N0n|Company #274",
+"N0n|Company #273",
+"N0n|Company #272",
+"N0n|Company #271",
+"N0n|Company #270",
+"N0n|Company #269",
+"spacebears|Alsanet",
+"spacebears|BIURO RACHUNKOWE RACHEXPERT SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+"spacebears|Camsons Pty Ltd",
+"spacebears|ADN Energía S. de R.L. de C.V. (also referred to as ADN Energía or ADN Energia)",
+"qilin|Jacksonville University",
+"qilin|Bethany Lutheran College",
+"aurora|Fuji Food Products, Inc.",
+"SilentRansomGroup|Kegler, Brown, Hill & Ritter",
+"SilentRansomGroup|Nonigman LLP",
+"medusalocker|O",
+"medusalocker|Islasnatura",
+"PixelLeaks|Copperstone Clothing Company (Indian garment manufacturer/exporter, SQL Server ERP estate)",
+"rhysida|Smile Designs LLC",
+"Falcon|CSG Systems International",
+"Falcon|Aimbridge Hospitality",
+"SilentRansomGroup|Greenbaum, Rowe, Smith, & Davis",
+"SilentRansomGroup|H... R...",
+"SilentRansomGroup|H...",
+"SilentRansomGroup|K... B...",
+"SilentRansomGroup|Archer & Greiner",
+"play|UltraBac Software",
+"play|IRL Group",
+"play|Valvo Electrical Supply Ltd",
+"play|Rolf Maier & Co AG",
+"play|Stanley Parts and Equipment",
+"SilentRansomGroup|A... G...",
+"incransom|WHI Holdings / Works Human Intelligence",
+"SilentRansomGroup|G... R... S... D...",
+"secp0|Lambert Somec",
+"qilin|Xactus",
+"aurora|Innovation Industries, Inc.",
+"aurora|Liftstar GmbH",
+"Eclipse|Rilievi Group",
+"thegentlemen|HT Global Circuits",
+"thegentlemen|University Goce Delcev At Stip",
+"thegentlemen|Mechanix Wear",
+"thegentlemen|Nuova PSC",
+"thegentlemen|New Teeth Now",
+"thegentlemen|Cimmino",
+"thegentlemen|Arendal",
+"thegentlemen|TC Industries",
+"thegentlemen|Berkeley orinda Oral Surgery",
+"thegentlemen|Steinecke"
 ]
 }
 }
