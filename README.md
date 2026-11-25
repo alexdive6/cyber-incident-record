@@ -57,6 +57,16 @@ On the same screen, open the **Secrets** tab and click **New repository secret**
 
 Without the Anthropic key the dashboard still works. It uses keyword rules instead, so the titles are the newsroom headlines and the ratings are rougher.
 
+### 6b. Our patching (private inventory)
+The **Our patching** tab lists every vendor fix for the platforms you run, with CVSS, EPSS, a priority and a CISA exploited check. The list of platforms and exact versions is private:
+
+1. Copy `collector/inventory.example.json` to `collector/inventory.local.json` (git ignores it) and describe your platforms. Each one has a `source`: `msrc` (Windows), `redhat` (RHEL), `aix` (AIX/VIOS), `cisco` (Cisco advisories) or `nvd` (any product NIST describes, filtered by a version regex in `match`).
+2. Add a repository secret named `PATCH_INVENTORY` and paste the whole file as its value.
+
+Only each platform's display `name`, its `source` type and its `news` pattern are published. Versions, product filters and regexes stay in the secret. To change the inventory, edit the secret. Without it, the tab says it is not set up.
+
+The **Daily quiz** needs no setup. With `ANTHROPIC_API_KEY`, Claude writes one of the three questions each night.
+
 ### 7. Run it for the first time
 1. Open the **Actions** tab. If GitHub asks, click **I understand my workflows, go ahead and enable them**.
 2. Click **Nightly update**, then **Run workflow**, then **Run workflow** again.

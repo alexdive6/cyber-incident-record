@@ -35,6 +35,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+          PATCH_INVENTORY: ${{ secrets.PATCH_INVENTORY }}   # private: platforms and versions we run
           CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
           CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
         run: python collector/run.py

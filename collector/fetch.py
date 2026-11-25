@@ -151,20 +151,32 @@ def epss(cves):
     return res
 
 
-def nvd_cvss(cve):
-    """Best available CVSS base score for one CVE from NVD (v4, then v3.1, then v3.0)."""
+def nvd_cve(cve):
+    """{score, ver, pub} for one CVE from NVD: best CVSS base score (v4, then v3.1, then v3.0) and publish date."""
     key = os.environ.get("NVD_API_KEY")
     headers = {"apiKey": key} if key else {}
     d = get_json("https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=" + cve, "nvd-" + cve, headers=headers, tries=2)
     vulns = d.get("vulnerabilities") or []
     if not vulns:
-        return None
-    m = vulns[0]["cve"].get("metrics", {})
-    for k in ("cvssMetricV40", "cvssMetricV31", "cvssMetricV30"):
+        return {"score": None, "ver": "", "pub": ""}
+    c = vulns[0]["cve"]
+    m = c.get("metrics", {})
+    out = {"score": None, "ver": "", "pub": c.get("published", "")[:10]}
+    for k, ver in (("cvssMetricV40", "4.0"), ("cvssMetricV31", "3.1"), ("cvssMetricV30", "3.0")):
         if m.get(k):
             prim = [x for x in m[k] if x.get("type") == "Primary"] or m[k]
-            return float(prim[0]["cvssData"]["baseScore"])
-    return None
+            out.update(score=float(prim[0]["cvssData"]["baseScore"]), ver=ver)
+            break
+    return out
+
+
+def nvd_cvss(cve):
+    return nvd_cve(cve)["score"]
+
+
+def nvd_score(cve):
+    r = nvd_cve(cve)
+    return r["score"], r["ver"]
 
 
 def ransomware_recent(url):

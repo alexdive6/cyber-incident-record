@@ -19,6 +19,8 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, os.path.dirname(__file__))
 import fetch  # noqa: E402
+import patch  # noqa: E402
+import quiz  # noqa: E402
 import rules  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -145,16 +147,23 @@ class Run:
         scores = self.track(ep_src, lambda: fetch.epss(recent)) or {}
         for k in self.D["kev"]:
             if k["cve"] in scores:
+                # keep yesterday's value so the page can show overnight movers
+                if k.get("epss_d") != self.ts:
+                    k["epss_prev"] = k.get("epss")
+                    k["epss_d"] = self.ts
                 k["epss"] = round(scores[k["cve"]][0], 4)
-        # CVSS from NVD where missing (rate-limited, so a handful per night)
+        # CVSS and publish date from NVD where missing (rate-limited, so a handful per night)
         nvd_src = next((s for s in CFG["sources"] if s.get("kind") == "nvd"), {"n": "NVD"})
-        missing = [k for k in sorted(self.D["kev"], key=lambda k: k["a"], reverse=True) if k.get("cvss") is None and k["cve"].startswith("CVE-")][:20]
+        missing = [k for k in sorted(self.D["kev"], key=lambda k: k["a"], reverse=True)
+                   if (k.get("cvss") is None or not k.get("pub")) and k["cve"].startswith("CVE-")][:20]
         pause = 0.8 if os.environ.get("NVD_API_KEY") else 6.5
         got, errs = 0, []
         for k in missing:
             try:
-                score = fetch.nvd_cvss(k["cve"])
+                r = fetch.nvd_cve(k["cve"])
                 got += 1
+                score = r["score"]
+                k["pub"] = r["pub"] or "?"
                 if score is not None:
                     k["cvss"] = score
             except Exception as e:
@@ -594,8 +603,17 @@ class Run:
         for d in drafts:
             self.D["incidents"].append(d)
             self.new_ids.append(d["id"])
+        try:
+            patch.run(self)
+        except Exception as e:  # our patching page never stops the run
+            self.failed.append({"n": "Our patching", "err": str(e)[:160]})
+            log("  FAILED Our patching -", e)
         self.month_note()
         self.act_now()
+        try:
+            quiz.run(self)
+        except Exception as e:  # the quiz never stops the run
+            self.failed.append({"n": "Daily quiz", "err": str(e)[:160]})
         self.housekeeping()
         self.overrides()
         self.write()

@@ -305,6 +305,45 @@ details.fold[open] > summary .chev svg{stroke:var(--paper)}
 .foldbody{padding:0 14px 14px}
 
 
+/* Briefing: threat level, our stack, overnight, quiz */
+.trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:var(--gap)}
+.trio .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.trio ul{margin:0;padding-left:1.1em;font-size:.9em;display:grid;gap:4px}
+.gauge{display:grid;grid-template-columns:repeat(5,1fr);gap:3px}
+.gauge i{height:12px;background:var(--hair)}
+.gauge i.on{background:var(--med)}.gauge.l3 i.on,.gauge.l4 i.on{background:var(--high)}.gauge.l5 i.on{background:var(--crit)}.gauge.l1 i.on{background:var(--ok)}
+.tlv{font-family:var(--display);font-size:1.7rem;line-height:1}
+.up{color:var(--crit);font-family:var(--mono);font-size:.8em}.down{color:var(--ok);font-family:var(--mono);font-size:.8em}
+/* Stacked rows (analytics, platform mix) */
+.mix{display:flex;height:14px;background:var(--hair);min-width:120px}
+.mix i{display:block;height:100%}
+.stackrows{display:grid;gap:8px}
+.srow{display:grid;grid-template-columns:5.5em 1fr 2.6em;gap:10px;align-items:center;font-size:.86em}
+.srow .mix{height:18px}
+.srow span:last-child{font-family:var(--mono);font-size:.8em;text-align:right;color:var(--muted)}
+.c1{background:var(--crit)}.c2{background:var(--high)}.c3{background:var(--accent)}.c4{background:var(--med)}.c5{background:var(--ok)}.c6{background:var(--hair)}
+.t tr.click{cursor:pointer}.t tr.click:hover td{background:color-mix(in srgb,var(--accent) 6%,transparent)}
+/* Quiz */
+.qz{display:grid;gap:var(--gap)}
+.qcard{border:1px solid var(--ink);background:var(--panel);padding:16px;display:grid;gap:10px}
+.qcard h3{font-size:1.08rem;line-height:1.35}
+.qopts{display:grid;gap:6px}
+.qopt{appearance:none;text-align:left;padding:10px 12px;border:1px solid var(--ink);background:var(--paper);color:var(--ink);cursor:pointer;font:inherit;font-size:.94em}
+.qopt:hover:not([disabled]){background:var(--hair)}
+.qopt[disabled]{cursor:default}
+.qopt.right{background:var(--ok);border-color:var(--ok);color:#fff}
+.qopt.wrong{background:var(--crit);border-color:var(--crit);color:var(--crit-ink)}
+.qwhy{font-size:.92em;border-left:3px solid var(--accent);padding-left:12px}
+/* Board summary (print only) */
+#board{display:none}
+#board h1{font-size:2rem;margin:0 0 4px}
+#board .bgrid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #000;border-left:1px solid #000;margin:12px 0}
+#board .bgrid div{border-right:1px solid #000;border-bottom:1px solid #000;padding:8px}
+#board .bgrid b{display:block;font-size:1.5rem;font-family:var(--display)}
+#board h2{font-size:1.1rem;margin:14px 0 6px;border-bottom:2px solid #000;padding-bottom:4px}
+#board ol,#board ul{margin:0;padding-left:1.2em;font-size:.9em;display:grid;gap:3px}
+#board table{font-size:.8em}
+
 footer{padding-block:clamp(24px,4vw,48px);color:var(--muted);font-size:.84em;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 #tip{position:fixed;z-index:40;pointer-events:none;background:var(--ink);color:var(--paper);font-size:.8rem;padding:7px 9px;max-width:300px;line-height:1.4;box-shadow:0 2px 10px rgba(0,0,0,.25)}
 .toast{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:8px 14px;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;z-index:50}
@@ -332,6 +371,8 @@ footer{padding-block:clamp(24px,4vw,48px);color:var(--muted);font-size:.84em;dis
   body{background:#fff}
   .chart,.kpi,.stat,details.row,.box{break-inside:avoid}
   details.row .row-body{display:none}
+  body.boardmode > *:not(#board){display:none!important}
+  body.boardmode #board{display:block!important;color:#000;font-size:11pt}
 }
 </style>
 </head>
@@ -361,10 +402,14 @@ footer{padding-block:clamp(24px,4vw,48px);color:var(--muted);font-size:.84em;dis
       <button class="tab" role="tab" data-tab="briefing" aria-controls="briefing">Briefing</button>
       <button class="tab" role="tab" data-tab="incidents" aria-controls="incidents">Incidents <span class="n" id="nInc"></span></button>
       <button class="tab" role="tab" data-tab="vulns" aria-controls="vulns">Exploited flaws <span class="n" id="nKev"></span></button>
+      <button class="tab" role="tab" data-tab="patch" aria-controls="patch">Our patching <span class="n" id="nPatch"></span></button>
       <button class="tab" role="tab" data-tab="banks" aria-controls="banks">Banks &amp; finance <span class="n" id="nFin"></span></button>
+      <button class="tab" role="tab" data-tab="analytics" aria-controls="analytics">Analytics</button>
       <button class="tab" role="tab" data-tab="monthly" aria-controls="monthly">Monthly reports</button>
+      <button class="tab" role="tab" data-tab="quiz" aria-controls="quiz">Daily quiz</button>
       <button class="tab" role="tab" data-tab="sources" aria-controls="sources">Sources <span class="n" id="nSrc"></span></button>
     </div>
+    <button class="tbtn noprint" type="button" id="boardBtn" title="Print a one-page summary for the board"><svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v7H6z"/></svg><span class="lbl">Board summary</span></button>
     <button class="tbtn" type="button" id="themeBtn" title="Switch light or dark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="lbl" id="themeLbl">Dark</span></button>
   </div>
 </nav>
@@ -373,7 +418,13 @@ footer{padding-block:clamp(24px,4vw,48px);color:var(--muted);font-size:.84em;dis
 
 <!-- ============ BRIEFING ============ -->
 <section id="briefing" class="panel wrap" role="tabpanel" hidden>
-  <div class="sec-head"><h2>Since the last edition</h2><span class="mono" id="sinceLbl"></span></div>
+  <div class="trio">
+    <div class="box" id="tlBox"></div>
+    <div class="box" id="stackBox"></div>
+    <div class="box" id="nightBox"></div>
+    <div class="box dash" id="quizTeaser"></div>
+  </div>
+  <div class="sec-head sub"><h2>Since the last edition</h2><span class="mono" id="sinceLbl"></span></div>
   <div class="clist" id="sinceList"></div>
 
   <div class="sec-head sub"><h2 id="mtdH">This month so far</h2><span class="mono" id="mtdLbl"></span></div>
@@ -449,6 +500,117 @@ footer{padding-block:clamp(24px,4vw,48px);color:var(--muted);font-size:.84em;dis
   </div></div>
   <div class="tablebox"><table class="t dark" id="kevTbl"><thead><tr><th data-k="a" class="num">Added</th><th data-k="cve">CVE</th><th data-k="v">Vendor and product</th><th>Flaw</th><th data-k="cvss" class="num">CVSS</th><th class="num">EPSS</th><th data-k="d">Fix by</th><th>Linked incident</th></tr></thead><tbody></tbody></table></div>
   <p class="note" style="margin-top:12px" id="kevNote"></p>
+</section>
+
+<!-- ============ OUR PATCHING ============ -->
+<section id="patch" class="panel wrap" role="tabpanel" hidden>
+  <div id="pOff" class="empty" hidden>Our patching is not set up yet. Add the private inventory as the GitHub secret <code>PATCH_INVENTORY</code> (format in <code>collector/inventory.example.json</code>); the nightly job then fills this page.</div>
+  <div id="pOn">
+    <div class="kpis" id="pKpis"></div>
+    <div class="alert" id="pExp" hidden>
+      <div class="alert-head"><h2>Exploited and in our estate</h2><span class="mono">Patch these first · CISA KEV or vendor says exploited</span></div>
+      <div class="alert-grid" id="pExpGrid"></div>
+    </div>
+    <div class="sec-head sub"><h2>By platform</h2><span class="mono" id="pWin"></span></div>
+    <div class="tablebox"><table class="t dark" id="pPlat"><thead><tr><th>Platform</th><th class="num">CVEs</th><th class="num">Critical</th><th class="num">High</th><th class="num">Medium</th><th class="num">Low</th><th class="num">Exploited</th><th class="num">Top EPSS</th><th style="min-width:180px">Priority mix</th></tr></thead><tbody></tbody></table></div>
+    <div class="chart sub">
+      <h3>Open Critical and High priority items, by night</h3>
+      <div class="legend"><span><i style="background:var(--crit)"></i>Critical</span><span><i style="background:var(--high)"></i>High</span></div>
+      <div class="cols"><div class="yaxis" id="pYax" style="height:140px"></div><div class="plot" id="pPlot" style="height:140px"></div></div>
+      <div class="xlab" id="pLab"></div>
+      <p class="take" id="pTake"></p>
+    </div>
+    <div class="sec-head sub"><h2>Every CVE that applies to us</h2><span class="mono">Highest priority first</span></div>
+    <div class="toolbar"><div class="tools-row">
+      <div class="seg" id="pPri" role="group" aria-label="Priority">
+        <button class="chip" type="button" data-p="all">All</button>
+        <button class="chip" type="button" data-p="Critical">Critical</button>
+        <button class="chip" type="button" data-p="High">High</button>
+        <button class="chip" type="button" data-p="Medium">Medium</button>
+        <button class="chip" type="button" data-p="Low">Low</button>
+        <button class="chip" type="button" data-p="exp">Exploited</button>
+        <button class="chip" type="button" data-p="new">New</button>
+      </div>
+      <div class="field"><label for="pPlatSel">Platform</label><select id="pPlatSel"></select></div>
+      <div class="field"><label for="pQ">Search</label><input id="pQ" type="search" placeholder="CVE, package, advisory…" autocomplete="off"></div>
+      <span class="count" id="pCount"></span>
+    </div></div>
+    <div class="tablebox"><table class="t" id="pTbl"><thead><tr><th data-k="prio">Priority</th><th data-k="cve">CVE</th><th data-k="plat">Platform</th><th>What</th><th data-k="cvss" class="num">CVSS</th><th data-k="epss" class="num">EPSS</th><th data-k="pub" class="num">Released</th><th>Applies</th><th>Fix</th></tr></thead><tbody></tbody></table></div>
+    <details class="fold" id="pCheckFold">
+      <summary><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M4 2l4 4-4 4"/></svg></span><span>To check by hand · <span id="pCheckN"></span> advisories without a CVE list</span></summary>
+      <div class="foldbody"><div id="pCheck" style="border-top:1px solid var(--ink)"></div></div>
+    </details>
+    <div class="grid2 sub">
+      <div class="box"><h3>How priority is set</h3>
+        <p style="font-size:.92em">CVSS (vendor score; 4.0 when published, otherwise 3.1) gives the severity: Critical 9+, High 7+, Medium 4+. EPSS gives the likelihood of exploitation in the next 30 days: High 50%+, Medium 10%+. A flaw on CISA's exploited list, or one the vendor marks as exploited, is always Critical.</p>
+        <table class="t" style="font-size:.84em"><thead><tr><th>Severity \ EPSS</th><th>High</th><th>Medium</th><th>Low</th></tr></thead><tbody>
+          <tr><td>Critical</td><td><span class="tag crit">Critical</span></td><td><span class="tag high">High</span></td><td><span class="tag med">Medium</span></td></tr>
+          <tr><td>High</td><td><span class="tag high">High</span></td><td><span class="tag med">Medium</span></td><td><span class="tag med">Medium</span></td></tr>
+          <tr><td>Medium</td><td><span class="tag med">Medium</span></td><td><span class="tag med">Medium</span></td><td><span class="tag out">Low</span></td></tr>
+        </tbody></table></div>
+      <div class="box"><h3>Where this comes from</h3>
+        <p style="font-size:.92em" id="pSrcNote"></p>
+        <p class="note">Exact versions stay in a private inventory and are never published. "Applies: yes" means the vendor's text names our version or product; "check" means someone must confirm it on the advisory.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANALYTICS ============ -->
+<section id="analytics" class="panel wrap" role="tabpanel" hidden>
+  <div class="sec-head"><h2>Vendor risk</h2><span class="mono">CISA exploited list · last 90 days</span></div>
+  <div class="tablebox"><table class="t dark" id="aVend"><thead><tr><th data-k="v">Vendor</th><th data-k="n" class="num">Exploited flaws</th><th data-k="cv" class="num">Avg CVSS</th><th data-k="ep" class="num">Top EPSS</th><th data-k="rw" class="num">Ransomware use</th><th data-k="pd" class="num">Past fix-by</th><th>Products</th></tr></thead><tbody></tbody></table></div>
+  <p class="take" id="aVendTake"></p>
+
+  <div class="grid2 sub">
+    <div class="chart">
+      <h3>How attackers got in, by month</h3>
+      <div class="legend" id="aEntryLeg"></div>
+      <div id="aEntry" class="stackrows"></div>
+      <p class="take" id="aEntryTake"></p>
+    </div>
+    <div class="chart">
+      <h3>Time to exploit</h3>
+      <p class="sec-intro" style="margin:0 0 10px;font-size:.88em">Days from a flaw's publication to CISA adding it to the exploited list.</p>
+      <div class="bars" id="aTte"></div>
+      <p class="take" id="aTteTake"></p>
+    </div>
+  </div>
+
+  <div class="sec-head sub"><h2>Supplier blast radius</h2><span class="mono">One supplier, several victims</span></div>
+  <div class="tablebox"><table class="t" id="aSup"><thead><tr><th>Supplier or platform</th><th class="num">Entries</th><th>Organisations hit</th><th>Latest</th></tr></thead><tbody></tbody></table></div>
+  <p class="take" id="aSupTake"></p>
+
+  <div class="grid2 sub">
+    <div class="chart">
+      <h3>Ransomware pulse</h3>
+      <div class="kpis" id="aRwK" style="margin-bottom:12px"></div>
+      <div class="bars" id="aRw"></div>
+      <p class="take" id="aRwTake"></p>
+    </div>
+    <div class="chart">
+      <h3>Regulatory clocks</h3>
+      <table class="t" style="font-size:.86em"><thead><tr><th>Rule</th><th>First notice</th><th>Then</th></tr></thead><tbody>
+        <tr><td><b>DORA</b> (EU finance)</td><td>4 h after classifying as major, 24 h after detection at most</td><td>Intermediate 72 h after the first notice, final 1 month later</td></tr>
+        <tr><td><b>NIS2</b> (EU)</td><td>Early warning in 24 h</td><td>Notification 72 h, final report 1 month</td></tr>
+        <tr><td><b>GDPR</b></td><td>Authority within 72 h of awareness</td><td>People affected without undue delay if high risk</td></tr>
+        <tr><td><b>SEC 8-K 1.05</b> (US listed)</td><td>4 business days after deciding it is material</td><td>Amend when new facts emerge</td></tr>
+      </tbody></table>
+      <h3 style="margin-top:16px">Filed with a regulator in this record</h3>
+      <div class="clist" id="aReg"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section id="quiz" class="panel wrap" role="tabpanel" hidden>
+  <div class="sec-head"><h2>Daily quiz</h2><span class="mono" id="qzLbl"></span></div>
+  <div class="kpis" id="qzK"></div>
+  <div id="qzToday" class="qz"></div>
+  <details class="fold" id="qzArchFold">
+    <summary><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M4 2l4 4-4 4"/></svg></span><span>Past quizzes · <span id="qzArchN"></span></span></summary>
+    <div class="foldbody" id="qzArch"></div>
+  </details>
+  <p class="note" style="margin-top:12px">New questions every night: one from this record, one from CISA's exploited list and one on security concepts. Your answers and streak stay in this browser.</p>
 </section>
 
 <!-- ============ BANKS ============ -->
@@ -561,6 +723,9 @@ footer{padding-block:clamp(24px,4vw,48px);color:var(--muted);font-size:.84em;dis
 </section>
 
 </main>
+
+<!-- One-page board summary: built on demand and shown only when printing -->
+<section id="board" class="wrap"></section>
 
 <footer class="wrap mono">
   <span>Cyber Incident Record · public sources only · TLP:CLEAR</span>
@@ -702,7 +867,7 @@ function crowHTML(x, sub){
 }
 
 /* ---------- tabs ---------- */
-const TABS = ["briefing","incidents","vulns","banks","monthly","sources"];
+const TABS = ["briefing","incidents","vulns","patch","banks","analytics","monthly","quiz","sources"];
 function show(name, push, scroll){
   if(!TABS.includes(name)) name = "briefing";
   document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.tab===name)));
@@ -1006,6 +1171,243 @@ function openEntry(id){
   $("refList").innerHTML = refs.map(s=>`<li><a href="${esc(s[1])}" target="_blank" rel="noopener">${esc(s[0])}</a></li>`).join("");
 })();
 
+
+/* ========== shared by our patching, analytics, briefing boxes, quiz and board ========== */
+const P = D.patch || {}, PI = P.items || [];
+const epssTxt = v => v==null ? "–" : (v*100).toFixed(v<0.1?1:0)+"%";
+const prioCls = {Critical:"crit",High:"high",Medium:"med",Low:"out"};
+const pExp = i => i.kev || i.vexp;
+const pFirstNight = Object.keys(P.history||{}).length <= 1;   // on the first run everything is "new"
+const pNew = i => !pFirstNight && M.prev && i.first > M.prev;
+const within = (iso, n) => iso && iso <= ED && days(iso, ED) <= n;
+const stackRx = Object.entries(P.news||{}).map(([n,rx])=>{ try{ return [n,new RegExp(rx,"i")]; }catch(e){ return null; } }).filter(Boolean);
+const stackHit = s => { s = String(s||""); const h = stackRx.find(([,rx])=>rx.test(s)); return h ? h[0] : ""; };
+const LEVELS = ["","Low","Guarded","Elevated","High","Severe"];
+function threat(){
+  // this week against a typical week (average of the previous 8), so the level tracks change, not volume
+  const c7 = E.filter(x=>x.sev==="crit" && within(x.iso,7)).length;
+  const k7 = D.kev.filter(k=>within(k.a,7)).length;
+  const cBase = E.filter(x=>x.sev==="crit" && within(x.iso,63) && !within(x.iso,7)).length/8 || 1;
+  const kBase = D.kev.filter(k=>within(k.a,63) && !within(k.a,7)).length/8 || 1;
+  const rel = (n,b) => n/b > 2 ? 3 : n/b > 1.25 ? 2 : n/b >= .75 ? 1 : 0;
+  const pe = PI.filter(pExp).length, pc = PI.filter(i=>i.prio==="Critical").length;
+  const pts = rel(c7,cBase) + Math.min(2, rel(k7,kBase)) + (pe ? 2 : pc ? 1 : 0);
+  const lvl = Math.max(1, Math.min(5, 1 + Math.round(pts*4/7)));
+  const vs = (n,b) => `${n} vs ${b.toFixed(b<10?1:0)} in a typical week`;
+  const why = [`Critical entries, last 7 days: ${vs(c7,cBase)}`, `Added to CISA's exploited list: ${vs(k7,kBase)}`];
+  if(P.configured) why.push(pe ? `${pe} exploited ${pe===1?"flaw":"flaws"} in our own estate` : "No exploited flaw in our estate", `${pc} Critical-priority patch ${pc===1?"item":"items"} for us`);
+  return {lvl, why};
+}
+const gauge = l => `<div class="gauge l${l}">${[1,2,3,4,5].map(i=>`<i class="${i<=l?"on":""}"></i>`).join("")}</div>`;
+
+/* ---------- our patching ---------- */
+(function(){
+  $("nPatch").textContent = PI.length || "";
+  if(!P.configured){ $("pOff").hidden = false; $("pOn").hidden = true; return; }
+  const plats = P.platforms || [], chk = P.check || [];
+  const exp = PI.filter(pExp);
+  $("pKpis").innerHTML = [
+    [PI.length, `CVEs across ${plats.length} platforms`],
+    [PI.filter(i=>i.prio==="Critical").length, "Critical priority"],
+    [PI.filter(i=>i.prio==="High").length, "High priority"],
+    [exp.length, "exploited in the wild"],
+    [PI.filter(i=>i.epss>=0.5).length, "EPSS 50% or more"],
+    [chk.length, "advisories to check by hand"]
+  ].map(([b,s])=>`<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join("");
+  $("pExp").hidden = !exp.length;
+  $("pExpGrid").innerHTML = exp.slice(0,8).map(i=>`<div class="alert-cell"><span style="display:flex;gap:4px;flex-wrap:wrap"><span class="tag crit">${i.kev?"CISA KEV":"Vendor: exploited"}</span><span class="tag">${esc(i.plat)}</span>${i.rw?`<span class="tag crit">Ransomware use</span>`:""}</span>
+    <h3>${cveLinks(i.cve)}</h3><p>${esc(i.t)}</p><p class="mono" style="color:var(--muted)">CVSS ${i.cvss!=null?(+i.cvss).toFixed(1):"–"} · EPSS ${epssTxt(i.epss)}${i.due?` · CISA fix-by ${fmtD(i.due)}`:""}</p>
+    ${i.link?`<a class="go" href="${esc(i.link)}" target="_blank" rel="noopener">Vendor fix${i.adv?": "+esc(i.adv):""}</a>`:""}${i.inc?`<button class="go" type="button" data-open="${esc(i.inc)}">Related incident</button>`:""}</div>`).join("");
+  if(P.window) $("pWin").textContent = `Released ${fmtD(P.window[0])} – ${fmtD(P.window[1])} · checked ${fmtD(P.updated)}`;
+  const order = ["Critical","High","Medium","Low"], cls = ["c1","c2","c4","c5"];
+  $("pPlat").querySelector("tbody").innerHTML = plats.map(p=>{
+    const l = PI.filter(i=>i.plat===p), n = l.length, c = o=>l.filter(i=>i.prio===o).length, ex = l.filter(pExp).length;
+    const ck = chk.filter(x=>x.plat===p).length;
+    return `<tr class="click" data-plat="${esc(p)}" tabindex="0"><td><b>${esc(p)}</b>${ck?` <span class="tag out">${ck} to check</span>`:""}</td><td class="num">${n}</td>${order.map(o=>`<td class="num">${c(o)||"·"}</td>`).join("")}<td class="num">${ex?`<span class="tag crit">${ex}</span>`:"·"}</td><td class="num">${n?epssTxt(Math.max(...l.map(i=>i.epss||0))):"–"}</td><td><div class="mix">${n?order.map((o,j)=>`<i class="${cls[j]}" style="width:${c(o)/n*100}%" data-tip="${o}: ${c(o)}"></i>`).join(""):""}</div></td></tr>`; }).join("");
+  // trend
+  const H = P.history || {}, hd = Object.keys(H).sort().slice(-30);
+  const bins = hd.map((d,i)=>({crit:H[d].Critical||0, high:H[d].High||0, label:fmtD(d), short:(hd.length<=10||i%5===0)?fmtD(d):"", tip:`${fmtD(d)}: ${H[d].Critical||0} Critical, ${H[d].High||0} High, ${H[d].kev||0} exploited`}));
+  if(bins.length){ columns("pYax","pPlot","pLab",bins,{keys:["high","crit"]});
+    const a = H[hd[0]], b = H[hd[hd.length-1]], tot = h=>(h.Critical||0)+(h.High||0);
+    $("pTake").textContent = hd.length<2 ? "The trend starts tonight; one bar is added per nightly run." : `${tot(b)} Critical or High items now, ${tot(b)>tot(a)?"up":tot(b)<tot(a)?"down":"unchanged"} from ${tot(a)} on ${fmtD(hd[0])}.`; }
+  // table
+  const prank = {Critical:0,High:1,Medium:2,Low:3};
+  let pp = "all", pl = "all", pq = "", sk = "prio", dir = 1;
+  $("pPlatSel").innerHTML = `<option value="all">All (${PI.length})</option>` + plats.map(p=>`<option value="${esc(p)}">${esc(p)} (${PI.filter(i=>i.plat===p).length})</option>`).join("");
+  function draw(){
+    const words = pq.toLowerCase().split(/\s+/).filter(Boolean);
+    const rows = PI.filter(i=>(pl==="all"||i.plat===pl) && (pp==="all" || (pp==="exp"?pExp(i) : pp==="new"?pNew(i) : i.prio===pp))
+      && words.every(w=>[i.cve,i.t,i.d,i.adv,i.plat].join(" ").toLowerCase().includes(w)));
+    const val = i => sk==="prio" ? (prank[i.prio] ?? 4) : i[sk]==null ? null : i[sk];
+    rows.sort((a,b)=>{ const va = val(a), vb = val(b); if(va===vb) return (b.cvss||0)-(a.cvss||0); if(va==null) return 1; if(vb==null) return -1; return (va<vb?-1:1)*dir; });
+    const shown = rows.slice(0,400);
+    $("pTbl").querySelector("tbody").innerHTML = shown.map(i=>{ const mv = i.epss!=null && i.epss_prev!=null ? i.epss-i.epss_prev : 0;
+      return `<tr class="${pExp(i)?"hot":""}"><td><span class="tag ${prioCls[i.prio]||"out"}">${esc(i.prio||"Unscored")}</span>${pNew(i)?` <span class="tag new">New</span>`:""}</td>
+        <td><code style="white-space:nowrap">${cveLinks(i.cve)}</code>${pExp(i)?`<br><span class="tag crit">${i.kev?"Exploited · KEV":"Exploited"}</span>`:""}</td><td>${esc(i.plat)}</td>
+        <td>${esc(i.t)}${i.d?`<br><small style="color:var(--muted)">${esc(i.d)}</small>`:""}${i.inc?` <button class="linkbtn" type="button" data-open="${esc(i.inc)}">Incident</button>`:""}</td>
+        <td class="num">${i.cvss!=null?(+i.cvss).toFixed(1):"–"}${i.ver?`<br><small style="color:var(--muted)">v${esc(i.ver)}</small>`:""}</td>
+        <td class="num">${epssTxt(i.epss)}${Math.abs(mv)>=0.02?`<br><span class="${mv>0?"up":"down"}" data-tip="Change since the previous night">${mv>0?"▲":"▼"} ${Math.abs(mv*100).toFixed(0)} pts</span>`:""}</td>
+        <td class="num">${i.pub?fmtD(i.pub):"–"}</td><td>${i.applies==="yes"?`<span class="tag ok">Yes</span>`:`<span class="tag out">Check</span>`}</td>
+        <td>${i.link?`<a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.adv||"Advisory")}</a>`:"–"}${i.due?`<br><small>CISA by ${fmtD(i.due)}</small>`:""}</td></tr>`; }).join("") || `<tr><td colspan="9" class="empty">Nothing matches.</td></tr>`;
+    $("pCount").textContent = rows.length>shown.length ? `Showing the first ${shown.length} of ${rows.length}` : `Showing ${rows.length} of ${PI.length}`;
+    document.querySelectorAll("#pPri .chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.p===pp)));
+    $("pPlatSel").value = pl;
+  }
+  $("pPri").addEventListener("click",e=>{ const b = e.target.closest(".chip"); if(b){ pp = b.dataset.p; draw(); } });
+  $("pPlatSel").addEventListener("change",e=>{ pl = e.target.value; draw(); });
+  $("pQ").addEventListener("input",e=>{ pq = e.target.value; draw(); });
+  const pick = tr => { pl = tr.dataset.plat; pp = "all"; draw(); $("pTbl").scrollIntoView({block:"start"}); scrollBy(0,-70); };
+  $("pPlat").addEventListener("click",e=>{ const tr = e.target.closest("tr[data-plat]"); if(tr) pick(tr); });
+  $("pPlat").addEventListener("keydown",e=>{ const tr = e.target.closest("tr[data-plat]"); if(tr && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); pick(tr); } });
+  document.querySelectorAll("#pTbl th[data-k]").forEach(th=>{ th.tabIndex = 0; const go = ()=>{ const k = th.dataset.k; dir = k===sk ? -dir : (["cvss","epss","pub"].includes(k) ? -1 : 1); sk = k; draw(); }; th.onclick = go; th.onkeydown = e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); go(); } }; });
+  draw();
+  $("pCheckN").textContent = chk.length;
+  $("pCheck").innerHTML = chk.map(c=>`<div class="adv"><time>${c.d?fmtD(c.d):""}</time><span class="org">${esc(c.plat)}</span><span class="t"><a href="${esc(c.link)}" target="_blank" rel="noopener">${esc(c.title)}</a><br><small style="color:var(--muted)">${esc(c.issue)}</small></span></div>`).join("") || `<p class="empty">Nothing to check.</p>`;
+  const SRC = {msrc:"Microsoft's monthly security update", redhat:"Red Hat's security data API", aix:"IBM's AIX security advisories", cisco:"Cisco's security advisory feed", nvd:"NIST's CVE database, filtered to our version"};
+  $("pSrcNote").innerHTML = plats.map(p=>`<b>${esc(p)}</b>: ${esc(SRC[(P.src||{})[p]]||"vendor feed")}`).join("<br>") + `<br>Then EPSS from FIRST and the exploited check against CISA's catalog, every night.`;
+})();
+
+/* ---------- analytics ---------- */
+(function(){
+  const K = D.kev;
+  // 1. vendor risk
+  const k90 = K.filter(k=>within(k.a,90));
+  const vg = {}; k90.forEach(k=>{ const g = vg[k.v] = vg[k.v] || {v:k.v, n:0, cs:[], ep:0, rw:0, pd:0, ps:new Set()}; g.n++; if(k.cvss!=null) g.cs.push(+k.cvss); g.ep = Math.max(g.ep, k.epss||0); if(k.rw) g.rw++; if(k.d && k.d<ED) g.pd++; g.ps.add(k.p); });
+  const vrows = Object.values(vg).map(g=>Object.assign(g,{cv: g.cs.length ? g.cs.reduce((a,b)=>a+b,0)/g.cs.length : null}));
+  let vk = "n", vdir = -1;
+  function vdraw(){
+    vrows.sort((a,b)=>{ const va = a[vk]==null?-1:a[vk], vb = b[vk]==null?-1:b[vk]; return (va<vb?-1:va>vb?1:0)*vdir || b.n-a.n || a.v.localeCompare(b.v); });
+    $("aVend").querySelector("tbody").innerHTML = vrows.slice(0,25).map(g=>{ const ours = stackHit(g.v+" "+[...g.ps].join(" "));
+      return `<tr class="${g.rw||g.n>=3?"hot":""}"><td><b>${esc(g.v)}</b>${ours?` <span class="tag acc" data-tip="Matches our platform: ${esc(ours)}">Our stack</span>`:""}</td><td class="num">${g.n}</td><td class="num">${g.cv!=null?g.cv.toFixed(1):"–"}</td><td class="num">${epssTxt(g.ep||null)}</td><td class="num">${g.rw||"·"}</td><td class="num">${g.pd||"·"}</td><td style="font-size:.88em">${esc([...g.ps].slice(0,4).join(", "))}${g.ps.size>4?` +${g.ps.size-4}`:""}</td></tr>`; }).join("") || `<tr><td colspan="7" class="empty">No exploited flaws in 90 days.</td></tr>`;
+  }
+  document.querySelectorAll("#aVend th[data-k]").forEach(th=>{ th.tabIndex = 0; const go = ()=>{ const k = th.dataset.k; vdir = k===vk ? -vdir : (k==="v"?1:-1); vk = k; vdraw(); }; th.onclick = go; th.onkeydown = e=>{ if(e.key==="Enter"){ go(); } }; });
+  vdraw();
+  const top = [...vrows].sort((a,b)=>b.n-a.n);
+  $("aVendTake").textContent = top.length ? `${k90.length} exploited flaws from ${top.length} vendors in 90 days. Most: ${top.slice(0,3).map(g=>`${g.v} (${g.n})`).join(", ")}. Rows in red have ransomware use or three or more flaws.` : "";
+
+  // 2. entry routes by month (incidents only; exploited-flaw entries would swamp it)
+  const routes = ["social","third","cred","flaw","other","undisc"], rc = ["c1","c2","c3","c4","c5","c6"];
+  $("aEntryLeg").innerHTML = routes.map((r,i)=>`<span><i class="${rc[i]}"></i>${esc(D.entry[r]||r)}</span>`).join("");
+  const ms = [...new Set(E.map(x=>ym(x.iso)))].sort().slice(-6);
+  const share = {};
+  $("aEntry").innerHTML = ms.map(m=>{ const l = E.filter(x=>x.k==="inc" && ym(x.iso)===m), n = l.length; share[m] = {};
+    routes.forEach(r=>share[m][r] = n ? l.filter(x=>x.e===r).length/n : 0);
+    return `<div class="srow"><span>${MON[+m.slice(5)-1]} ${m.slice(2,4)}</span><div class="mix">${n?routes.map((r,i)=>{ const c = l.filter(x=>x.e===r).length; return c?`<i class="${rc[i]}" style="width:${c/n*100}%" data-tip="${esc(D.entry[r]||r)}: ${c} of ${n}"></i>`:""; }).join(""):""}</div><span>${n}</span></div>`; }).join("");
+  if(ms.length>=2){ const a = share[ms[ms.length-2]], b = share[ms[ms.length-1]];
+    const known = routes.filter(r=>r!=="undisc"); const lead = known.sort((x,y)=>b[y]-b[x])[0];
+    $("aEntryTake").textContent = `${D.entry[lead]} leads this month at ${Math.round(b[lead]*100)}% of incidents (${Math.round(a[lead]*100)}% last month). Each route maps to a control: training and call-back checks, supplier reviews, MFA and secrets hygiene, patching.`; }
+
+  // 3. time to exploit
+  const tt = K.filter(k=>/^\d{4}-\d\d-\d\d$/.test(k.pub||"") && k.a>=k.pub).map(k=>({k, d:days(k.pub,k.a)}));
+  if(tt.length>=5){
+    const B = [["Within a week",0,7],["8 to 30 days",8,30],["1 to 3 months",31,90],["3 to 12 months",91,365],["Over a year",366,1e9]];
+    const rows = B.map(([l,a,b])=>({label:l, v:tt.filter(t=>t.d>=a&&t.d<=b).length, hot:a===0, tip:""}));
+    const mx = Math.max(4,...rows.map(r=>r.v));
+    hbars("aTte", rows, nice(mx)[4], v=>v, nice(mx));
+    const sorted = tt.map(t=>t.d).sort((a,b)=>a-b), med = sorted[Math.floor(sorted.length/2)];
+    const fast = tt.filter(t=>t.d<=7).length;
+    $("aTteTake").textContent = `Median ${med} days over ${tt.length} flaws; ${Math.round(fast/tt.length*100)}% were exploited within a week of publication. Patch windows longer than that are a bet.`;
+  } else {
+    $("aTte").innerHTML = `<p class="empty">Filling in: the nightly job adds NIST publication dates a few at a time (${tt.length} so far).</p>`;
+  }
+
+  // 4. supplier blast radius
+  const sup = {}; E.filter(x=>x.k==="inc" && (x.e==="third" || (x.tags||[]).includes("vendor")) && x.sw).forEach(x=>{ const key = x.sw.toLowerCase(); const g = sup[key] = sup[key] || {sw:x.sw, l:[]}; g.l.push(x); });
+  const sg = Object.values(sup).sort((a,b)=>b.l.length-a.l.length || b.l[0].iso.localeCompare(a.l[0].iso)).slice(0,14);
+  $("aSup").querySelector("tbody").innerHTML = sg.map(g=>{ const l = g.l.sort(byRecent); return `<tr class="${g.l.length>1?"hot":""}"><td><b>${esc(g.sw)}</b></td><td class="num">${l.length}</td><td style="font-size:.9em">${esc(l.map(x=>x.co||x.t).join(" · "))}</td><td><button class="linkbtn" type="button" data-open="${esc(l[0].id)}">${fmtD(l[0].iso)}</button></td></tr>`; }).join("") || `<tr><td colspan="4" class="empty">No supplier incidents yet.</td></tr>`;
+  const multi = sg.filter(g=>g.l.length>1);
+  $("aSupTake").textContent = multi.length ? `${multi.length} ${multi.length===1?"supplier or platform has":"suppliers or platforms have"} several victims in this record. That is the concentration risk DORA's register of ICT providers is meant to show.` : "Each supplier incident so far hit one victim in this record.";
+
+  // 5. ransomware pulse
+  const CS = D.claimStats || {}, cm = curMonth, pmk = Object.keys(CS).filter(k=>k<cm).sort().pop();
+  const cur = CS[cm], prv = pmk ? CS[pmk] : null;
+  if(cur){
+    const g = cur.groups||{}, pg = (prv&&prv.groups)||{};
+    const newG = Object.keys(g).filter(x=>!pg[x]);
+    $("aRwK").innerHTML = [[cur.n, `leak-site claims in ${MONTHS[+cm.slice(5)-1]}`],[Object.keys(g).length, "active groups"],[newG.length, `not seen in ${pmk?MONTHS[+pmk.slice(5)-1]:"the previous month"}`]].map(([b,s])=>`<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join("");
+    const rows = Object.entries(g).sort((a,b)=>b[1]-a[1]).slice(0,10).map(([k,v])=>({label:k, v, hot:!pg[k], tip:`${k}: ${v} this month${pg[k]!=null?`, ${pg[k]} last month`:", new this month"}`}));
+    const mx = Math.max(4,...rows.map(r=>r.v)); hbars("aRw", rows, nice(mx)[4], v=>v, nice(mx));
+    const day = +ED.slice(8), proj = prv ? Math.round(cur.n/day*daysIn(cm)) : null;
+    $("aRwTake").textContent = (prv ? `On pace for about ${proj} claims this month against ${prv.n} last month. ` : "") + (newG.length ? `Red bars are groups new this month: ${newG.slice(0,4).join(", ")}.` : "No new groups this month.");
+  } else { $("aRw").innerHTML = `<p class="empty">Claim counts start with the next nightly run.</p>`; $("aRwK").hidden = true; }
+
+  // 6. regulator filings
+  const reg = E.filter(x=>/\b(SEC|8-K|Form 8|regulator|ICO|CNIL|data protection authority|filing)\b/i.test(x.t+" "+x.sum)).sort(byRecent).slice(0,8);
+  $("aReg").innerHTML = reg.map(x=>crowHTML(x, x.co||"")).join("") || `<p class="empty">None yet.</p>`;
+})();
+
+/* ---------- briefing boxes: threat level, our stack, overnight, quiz ---------- */
+(function(){
+  const t = threat();
+  $("tlBox").innerHTML = `<span class="k">Threat level today</span><div style="display:flex;gap:12px;align-items:baseline"><span class="tlv">${t.lvl}</span><b>${LEVELS[t.lvl]}</b></div>${gauge(t.lvl)}<ul>${t.why.map(w=>`<li>${esc(w)}</li>`).join("")}</ul>`;
+  if(P.configured){
+    const exp = PI.filter(pExp), crit = PI.filter(i=>i.prio==="Critical");
+    const news = E.filter(x=>within(x.iso,14)).map(x=>({x, p:stackHit([x.sw,x.t,x.cve].join(" "))})).filter(h=>h.p).sort((a,b)=>byRecent(a.x,b.x)).slice(0,3);
+    $("stackBox").innerHTML = `<span class="k">Hits our stack</span><b style="font-size:1.05rem">${exp.length ? `${exp.length} exploited ${exp.length===1?"flaw":"flaws"} in our estate` : "No exploited flaw in our estate"}</b>
+      <ul>${exp.slice(0,2).map(i=>`<li>${cveLinks(i.cve)} · ${esc(i.plat)}${i.due?` · CISA by ${fmtD(i.due)}`:""}</li>`).join("")}<li>${crit.length} Critical-priority patch ${crit.length===1?"item":"items"}</li>
+      ${news.map(h=>`<li><button class="linkbtn" type="button" data-open="${esc(h.x.id)}">${esc(h.x.t)}</button> <span class="tag out">${esc(h.p)}</span></li>`).join("")}</ul>
+      <button class="go" type="button" data-goto="patch">Open our patching</button>`;
+  } else {
+    $("stackBox").innerHTML = `<span class="k">Hits our stack</span><p style="font-size:.92em">Add the private inventory to see which flaws and incidents touch the platforms we run.</p><button class="go" type="button" data-goto="patch">How to set it up</button>`;
+  }
+  const newK = D.kev.filter(k=>M.prev && k.a > M.prev);
+  const movers = D.kev.filter(k=>k.epss!=null && k.epss_prev!=null && k.epss-k.epss_prev>=0.05).sort((a,b)=>(b.epss-b.epss_prev)-(a.epss-a.epss_prev)).slice(0,3);
+  const soon = D.kev.filter(k=>k.d && k.d>=ED && days(ED,k.d)<=7);
+  const pn = PI.filter(pNew);
+  $("nightBox").innerHTML = `<span class="k">What changed overnight</span><ul>
+    <li><b>${newK.length}</b> new on CISA's exploited list${newK.length?": "+newK.slice(0,3).map(k=>esc(k.v+" "+k.p)).join(", "):""}</li>
+    ${movers.length ? movers.map(k=>`<li>EPSS jump: ${cveLinks(k.cve)} ${esc(k.v)} <span class="up">${epssTxt(k.epss_prev)} → ${epssTxt(k.epss)}</span></li>`).join("") : `<li>No EPSS jump of 5 points or more</li>`}
+    <li><b>${soon.length}</b> CISA fix-by ${soon.length===1?"date":"dates"} in the next 7 days</li>
+    ${P.configured?`<li><b>${pn.length}</b> new patch ${pn.length===1?"item":"items"} for our platforms${pn.filter(pExp).length?`, <b class="up">${pn.filter(pExp).length} exploited</b>`:""}</li>`:""}</ul>`;
+  const Q = D.quiz; const done = Q ? Object.keys(qzLoad(Q.d)).length : 0;
+  $("quizTeaser").innerHTML = Q ? `<span class="k">Daily quiz · ${fmtD(Q.d)}</span><b style="font-size:1.05rem">${done>=Q.qs.length?`Done: ${qzScore(Q)} of ${Q.qs.length} right`:`${Q.qs.length} questions, about a minute`}</b><p style="font-size:.9em">${esc(Q.qs[0].q)}</p><button class="go" type="button" data-goto="quiz">${done?"See answers":"Take the quiz"}</button>` : `<span class="k">Daily quiz</span><p style="font-size:.9em">The first quiz arrives with the next nightly run.</p>`;
+})();
+
+/* ---------- daily quiz ---------- */
+function qzLoad(d){ try{ return JSON.parse(localStorage.getItem("cir-qz-"+d)||"{}"); }catch(e){ return {}; } }
+function qzSave(d,o){ try{ localStorage.setItem("cir-qz-"+d, JSON.stringify(o)); }catch(e){} }
+function qzScore(Q){ const a = qzLoad(Q.d); return Q.qs.filter((q,i)=>a[i]===q.a).length; }
+(function(){
+  const Q = D.quiz;
+  if(!Q){ $("qzToday").innerHTML = `<p class="empty">The first quiz arrives with the next nightly run.</p>`; $("qzArchFold").hidden = true; return; }
+  $("qzLbl").textContent = `${fmtD(Q.d)} · ${Q.qs.length} questions`;
+  const card = (q,i,d,ans,live) => { const a = ans[i], answered = a!=null, x = q.ref && E.find(e=>e.id===q.ref);
+    return `<div class="qcard"><span><span class="tag acc">${esc(q.cat)}</span> <span class="tag out">${i+1} of ${Q.qs.length}</span></span><h3>${esc(q.q)}</h3>
+      <div class="qopts">${q.o.map((o,j)=>`<button class="qopt${answered&&j===q.a?" right":""}${answered&&j===a&&a!==q.a?" wrong":""}" type="button" ${answered||!live?"disabled":""} data-qd="${esc(d)}" data-qi="${i}" data-qo="${j}">${esc(o)}</button>`).join("")}</div>
+      ${answered||!live?`<p class="qwhy"><b>${!answered?"Answer: "+esc(q.o[q.a])+". ":a===q.a?"Right. ":"Not quite. "}</b>${esc(q.why)}${x?` <button class="linkbtn" type="button" data-open="${esc(x.id)}">Read the entry</button>`:""}</p>`:""}</div>`; };
+  function streak(){ let n = 0, d = Q.d; const all = [Q,...(D.quizArchive||[])];
+    for(const z of all){ if(z.d!==d) break; if(Object.keys(qzLoad(z.d)).length < z.qs.length){ if(z===Q){ d = addD(d,-1); continue; } break; } n++; d = addD(d,-1); } return n; }
+  function render(){
+    const ans = qzLoad(Q.d);
+    $("qzToday").innerHTML = Q.qs.map((q,i)=>card(q,i,Q.d,ans,true)).join("");
+    const arch = (D.quizArchive||[]);
+    let right = 0, tot = 0; [Q,...arch].forEach(z=>{ const a = qzLoad(z.d); z.qs.forEach((q,i)=>{ if(a[i]!=null){ tot++; if(a[i]===q.a) right++; } }); });
+    $("qzK").innerHTML = [[`${qzScore(Q)} / ${Q.qs.length}`, "today"], [streak(), "day streak"], [tot?Math.round(right/tot*100)+"%":"–", `right overall (${tot} answered)`]].map(([b,s])=>`<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join("");
+    $("qzArchN").textContent = arch.length ? `${arch.length} days` : "none yet";
+    $("qzArch").innerHTML = arch.map(z=>{ const a = qzLoad(z.d); return `<h3 style="margin:14px 0 8px">${fmtD(z.d)}</h3><div class="qz">${z.qs.map((q,i)=>card(q,i,z.d,a,true)).join("")}</div>`; }).join("") || `<p class="empty">Past quizzes appear here from tomorrow.</p>`;
+  }
+  document.addEventListener("click",e=>{ const b = e.target.closest(".qopt"); if(!b || b.disabled) return;
+    const d = b.dataset.qd, a = qzLoad(d); a[+b.dataset.qi] = +b.dataset.qo; qzSave(d,a); render(); });
+  render();
+})();
+
+/* ---------- board summary (print) ---------- */
+$("boardBtn").addEventListener("click",()=>{
+  const t = threat(), mt = E.filter(x=>ym(x.iso)===curMonth);
+  const act = (M.actNow||[]).map(id=>E.find(x=>x.id===id) || (D.watch||[]).find(w=>w.id===id)).filter(Boolean).slice(0,5);
+  const inc = mt.filter(x=>x.k==="inc"), routes = Object.keys(D.entry).map(r=>[r, inc.filter(x=>x.e===r).length]).filter(r=>r[1]).sort((a,b)=>b[1]-a[1]).slice(0,3);
+  const plats = P.platforms || [];
+  $("board").innerHTML = `<h1>Cyber risk summary</h1><p>${esc(fmtD(ED))} ${ED.slice(0,4)} · Cyber Incident Record · threat level <b>${t.lvl} (${LEVELS[t.lvl]})</b></p>
+    <div class="bgrid"><div><b>${mt.length}</b>incidents and exploited flaws this month</div><div><b>${mt.filter(x=>x.sev==="crit").length}</b>rated critical</div><div><b>${D.kev.filter(k=>ym(k.a)===curMonth).length}</b>added to CISA's exploited list</div><div><b>${P.configured?PI.filter(pExp).length:"–"}</b>exploited flaws in our estate</div></div>
+    <h2>Top risks right now</h2><ol>${act.map(x=>`<li><b>${esc(x.t)}</b>: ${esc(firstSentence(x.sum))}</li>`).join("")}</ol>
+    ${P.configured?`<h2>Our patching</h2><table class="t"><thead><tr><th>Platform</th><th class="num">CVEs</th><th class="num">Critical</th><th class="num">High</th><th class="num">Exploited</th></tr></thead><tbody>${plats.map(p=>{ const l = PI.filter(i=>i.plat===p); return `<tr><td>${esc(p)}</td><td class="num">${l.length}</td><td class="num">${l.filter(i=>i.prio==="Critical").length}</td><td class="num">${l.filter(i=>i.prio==="High").length}</td><td class="num">${l.filter(pExp).length}</td></tr>`; }).join("")}</tbody></table>`:""}
+    <h2>How attackers got in this month</h2><ul>${routes.map(([r,n])=>`<li>${esc(D.entry[r])}: ${n} of ${inc.length} incidents</li>`).join("") || "<li>No incidents yet this month.</li>"}</ul>
+    <h2>Asks</h2><ul>${PI.filter(pExp).slice(0,4).map(i=>`<li>Patch ${esc(i.cve)} on ${esc(i.plat)}${i.due?` (CISA deadline ${fmtD(i.due)})`:""}.</li>`).join("")}<li>Keep phishing-resistant MFA and supplier access reviews on the plan: they map to the leading entry routes above.</li></ul>`;
+  document.body.classList.add("boardmode");
+  const off = ()=>{ document.body.classList.remove("boardmode"); removeEventListener("afterprint", off); };
+  addEventListener("afterprint", off);
+  print();
+});
 
 /* ---------- route ---------- */
 window.addEventListener("hashchange",()=>show(location.hash.slice(1)));

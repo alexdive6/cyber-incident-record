@@ -1,0 +1,52 @@
+{
+  "_note": "Example only. The real inventory lives in the GitHub secret PATCH_INVENTORY (or collector/inventory.local.json, which git ignores). Only 'name' is ever published.",
+  "platforms": [
+    {
+      "name": "Windows",
+      "source": "msrc",
+      "products": "^Windows Server 2022",
+      "severities": [
+        "Critical"
+      ],
+      "news": "\\bWindows\\b"
+    },
+    {
+      "name": "Linux",
+      "source": "redhat",
+      "products": [
+        "Red Hat Enterprise Linux 9"
+      ],
+      "severities": [
+        "critical"
+      ],
+      "news": "Red Hat|RHEL"
+    },
+    {
+      "name": "AIX",
+      "source": "aix",
+      "match": "7\\.3"
+    },
+    {
+      "name": "Database",
+      "source": "nvd",
+      "keyword": "IBM Db2",
+      "match": "12\\.1",
+      "source_id": "ibm",
+      "advisory_hosts": [
+        "ibm.com/support"
+      ]
+    },
+    {
+      "name": "App server",
+      "source": "nvd",
+      "keyword": "WebSphere Application Server",
+      "match": "9\\.0",
+      "min_cvss": 9
+    },
+    {
+      "name": "Network",
+      "source": "cisco",
+      "match": "NX-OS"
+    }
+  ]
+}

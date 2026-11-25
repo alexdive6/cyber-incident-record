@@ -1,3 +1,4 @@
 tests/fixtures/
 __pycache__/
 *.tmp
+collector/inventory.local.json
