@@ -241,6 +241,15 @@ table.t{width:100%;border-collapse:collapse;font-size:.9em}
 .t tr.hot td:first-child{box-shadow:inset 4px 0 0 var(--crit);padding-left:12px}
 .t.dark thead th{background:var(--ink);color:var(--paper);border-bottom:0}
 .t thead th[data-k]{cursor:pointer}
+.t tr.wk td{background:var(--hair);border-bottom:1px solid var(--ink);padding:0}
+.t tr.wk .wkrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:8px 10px}
+.t tr.wk .wkbtn{display:flex;align-items:center;gap:8px;background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-align:left}
+.t tr.wk .wkbtn b{font-size:1.02em}
+.t tr.wk .wkbtn svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:1.8;transition:transform .15s}
+.t tr.wk.open .wkbtn svg{transform:rotate(90deg)}
+.t tr.wk .wkn{font-family:var(--mono);font-size:.78em;color:var(--muted)}
+.t tr.wk label{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:.85em;cursor:pointer}
+.t tr.wk.done .wkbtn b{color:var(--muted)}
 .t thead th[data-k]::after{content:" ↕";opacity:.6}
 .tablebox{overflow-x:auto;border:1px solid var(--ink);background:var(--panel)}
 .tablebox table{min-width:760px}
@@ -508,8 +517,13 @@ footer{padding-block:clamp(24px,4vw,48px);color:var(--muted);font-size:.84em;dis
       <div class="xlab" id="pLab"></div>
       <p class="take" id="pTake"></p>
     </div>
-    <div class="sec-head sub"><h2>Every CVE that applies to us</h2><span class="mono">Highest priority first</span></div>
+    <div class="sec-head sub"><h2>Every CVE that applies to us</h2><span class="mono" id="pHeadNote">Week by week, newest first</span></div>
     <div class="toolbar"><div class="tools-row">
+      <div class="seg" id="pView" role="group" aria-label="Layout">
+        <button class="chip" type="button" data-v="week">By week</button>
+        <button class="chip" type="button" data-v="list">One list</button>
+      </div>
+      <div class="field"><label for="pWkSel">Week</label><select id="pWkSel"></select></div>
       <div class="seg" id="pPri" role="group" aria-label="Priority">
         <button class="chip" type="button" data-p="all">All</button>
         <button class="chip" type="button" data-p="Critical">Critical</button>
@@ -1217,28 +1231,62 @@ const gauge = l => `<div class="gauge l${l}">${[1,2,3,4,5].map(i=>`<i class="${i
     $("pTake").textContent = hd.length<2 ? "The trend starts tonight; one bar is added per nightly run." : `${tot(b)} Critical or High items now, ${tot(b)>tot(a)?"up":tot(b)<tot(a)?"down":"unchanged"} from ${tot(a)} on ${fmtD(hd[0])}.`; }
   // table
   const prank = {Critical:0,High:1,Medium:2,Low:3};
-  let pp = "all", pl = "all", pq = "", sk = "prio", dir = 1;
+  let pp = "all", pl = "all", pq = "", sk = "prio", dir = 1, pv = "week", pw = "all";
+  // weeks run Monday to Sunday, keyed by the Monday; a CVE sits in the week its fix was released
+  const wkOf = iso => { const d = dt(iso), off = (d.getUTCDay()+6)%7; return new Date(d - off*864e5).toISOString().slice(0,10); };
+  const wkNo = mon => { const d = dt(mon); d.setUTCDate(d.getUTCDate()+3); const y1 = new Date(Date.UTC(d.getUTCFullYear(),0,4)); return 1+Math.round((d-y1)/6048e5 - ((y1.getUTCDay()+6)%7-3)/7); };
+  const wkEnd = mon => new Date(dt(mon).getTime()+6*864e5).toISOString().slice(0,10);
+  const iWk = i => wkOf(i.pub || i.first || P.updated);
+  const thisWk = wkOf(P.updated || new Date().toISOString().slice(0,10)), prevWk = wkOf(new Date(dt(thisWk)-864e5).toISOString().slice(0,10));
+  const wkName = w => w===thisWk ? "This week" : w===prevWk ? "Last week" : `Week ${wkNo(w)}`;
+  const wkRange = w => `${fmtD(w)} – ${fmtD(wkEnd(w))} ${wkEnd(w).slice(0,4)}`;
+  const WKS = [...new Set(PI.map(iWk))].sort().reverse();
+  const RK = "cir-pwk";
+  let reviewed = {}; try { reviewed = JSON.parse(localStorage.getItem(RK)||"{}") || {}; } catch(e){}
+  const saveRev = () => { try { localStorage.setItem(RK, JSON.stringify(reviewed)); } catch(e){} };
+  const open = new Set(WKS.filter(w=>!reviewed[w]));
+  $("pWkSel").innerHTML = `<option value="all">All weeks (${WKS.length})</option>` + WKS.map(w=>`<option value="${w}">${wkName(w)} · ${wkRange(w)} (${PI.filter(i=>iWk(i)===w).length})</option>`).join("");
   $("pPlatSel").innerHTML = `<option value="all">All (${PI.length})</option>` + plats.map(p=>`<option value="${esc(p)}">${esc(p)} (${PI.filter(i=>i.plat===p).length})</option>`).join("");
   function draw(){
     const words = pq.toLowerCase().split(/\s+/).filter(Boolean);
-    const rows = PI.filter(i=>(pl==="all"||i.plat===pl) && (pp==="all" || (pp==="exp"?pExp(i) : pp==="new"?pNew(i) : i.prio===pp))
+    const rows = PI.filter(i=>(pl==="all"||i.plat===pl) && (pw==="all"||iWk(i)===pw) && (pp==="all" || (pp==="exp"?pExp(i) : pp==="new"?pNew(i) : i.prio===pp))
       && words.every(w=>[i.cve,i.t,i.d,i.adv,i.plat].join(" ").toLowerCase().includes(w)));
     const val = i => sk==="prio" ? (prank[i.prio] ?? 4) : i[sk]==null ? null : i[sk];
     rows.sort((a,b)=>{ const va = val(a), vb = val(b); if(va===vb) return (b.cvss||0)-(a.cvss||0); if(va==null) return 1; if(vb==null) return -1; return (va<vb?-1:1)*dir; });
-    const shown = rows.slice(0,400);
-    $("pTbl").querySelector("tbody").innerHTML = shown.map(i=>{ const mv = i.epss!=null && i.epss_prev!=null ? i.epss-i.epss_prev : 0;
+    const shown = pv==="week" ? rows : rows.slice(0,400);
+    let html;
+    if(pv==="week"){
+      const by = {}; shown.forEach(i=>(by[iWk(i)] = by[iWk(i)] || []).push(i));
+      html = WKS.filter(w=>by[w]).map(w=>{ const l = by[w], c = o=>l.filter(i=>i.prio===o).length, ex = l.filter(pExp).length, isOpen = open.has(w);
+        const bits = [`${l.length} CVE${l.length>1?"s":""}`, c("Critical")&&`${c("Critical")} Critical`, c("High")&&`${c("High")} High`, ex&&`${ex} exploited`].filter(Boolean).join(" · ");
+        return `<tr class="wk${isOpen?" open":""}${reviewed[w]?" done":""}" data-wk="${w}"><td colspan="9"><div class="wkrow">
+          <button class="wkbtn" type="button" aria-expanded="${isOpen}"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2l4 4-4 4"/></svg><b>${wkName(w)}</b><span class="wkn">${wkRange(w)}</span></button>
+          <span class="wkn">${bits}</span>${ex?`<span class="tag crit">Exploited</span>`:""}
+          <label><input type="checkbox" data-rev="${w}"${reviewed[w]?" checked":""}> Reviewed</label></div></td></tr>` + (isOpen ? l.map(row).join("") : ""); }).join("");
+    } else html = shown.map(row).join("");
+    $("pTbl").querySelector("tbody").innerHTML = html || `<tr><td colspan="9" class="empty">Nothing matches.</td></tr>`;
+    $("pHeadNote").textContent = pv==="week" ? "Week by week, newest first · by release date" : "One list, highest priority first";
+    $("pCount").textContent = rows.length>shown.length ? `Showing the first ${shown.length} of ${rows.length}` : `Showing ${rows.length} of ${PI.length}`;
+    document.querySelectorAll("#pPri .chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.p===pp)));
+    document.querySelectorAll("#pView .chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.v===pv)));
+    $("pPlatSel").value = pl; $("pWkSel").value = pw;
+  }
+  function row(i){ const mv = i.epss!=null && i.epss_prev!=null ? i.epss-i.epss_prev : 0;
       return `<tr class="${pExp(i)?"hot":""}"><td><span class="tag ${prioCls[i.prio]||"out"}">${esc(i.prio||"Unscored")}</span>${pNew(i)?` <span class="tag new">New</span>`:""}</td>
         <td><code style="white-space:nowrap">${cveLinks(i.cve)}</code>${pExp(i)?`<br><span class="tag crit">${i.kev?"Exploited · KEV":"Exploited"}</span>`:""}</td><td>${esc(i.plat)}</td>
         <td>${esc(i.t)}${i.d?`<br><small style="color:var(--muted)">${esc(i.d)}</small>`:""}${i.inc?` <button class="linkbtn" type="button" data-open="${esc(i.inc)}">Incident</button>`:""}</td>
         <td class="num">${i.cvss!=null?(+i.cvss).toFixed(1):"–"}${i.ver?`<br><small style="color:var(--muted)">v${esc(i.ver)}</small>`:""}</td>
         <td class="num">${epssTxt(i.epss)}${Math.abs(mv)>=0.02?`<br><span class="${mv>0?"up":"down"}" data-tip="Change since the previous night">${mv>0?"▲":"▼"} ${Math.abs(mv*100).toFixed(0)} pts</span>`:""}</td>
         <td class="num">${i.pub?fmtD(i.pub):"–"}</td><td>${i.applies==="yes"?`<span class="tag ok">Yes</span>`:`<span class="tag out">Check</span>`}</td>
-        <td>${i.link?`<a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.adv||"Advisory")}</a>`:"–"}${i.due?`<br><small>CISA by ${fmtD(i.due)}</small>`:""}</td></tr>`; }).join("") || `<tr><td colspan="9" class="empty">Nothing matches.</td></tr>`;
-    $("pCount").textContent = rows.length>shown.length ? `Showing the first ${shown.length} of ${rows.length}` : `Showing ${rows.length} of ${PI.length}`;
-    document.querySelectorAll("#pPri .chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.p===pp)));
-    $("pPlatSel").value = pl;
-  }
+        <td>${i.link?`<a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.adv||"Advisory")}</a>`:"–"}${i.due?`<br><small>CISA by ${fmtD(i.due)}</small>`:""}</td></tr>`; }
   $("pPri").addEventListener("click",e=>{ const b = e.target.closest(".chip"); if(b){ pp = b.dataset.p; draw(); } });
+  $("pView").addEventListener("click",e=>{ const b = e.target.closest(".chip"); if(b){ pv = b.dataset.v; draw(); } });
+  $("pWkSel").addEventListener("change",e=>{ pw = e.target.value; if(pw!=="all"){ pv = "week"; open.add(pw); } draw(); });
+  $("pTbl").querySelector("tbody").addEventListener("change",e=>{ const w = e.target.dataset && e.target.dataset.rev; if(!w) return;
+    if(e.target.checked){ reviewed[w] = new Date().toISOString().slice(0,10); open.delete(w); } else { delete reviewed[w]; open.add(w); }
+    saveRev(); draw(); });
+  $("pTbl").querySelector("tbody").addEventListener("click",e=>{ const b = e.target.closest(".wkbtn"); if(!b) return; const w = b.closest("tr").dataset.wk;
+    open.has(w) ? open.delete(w) : open.add(w); draw(); });
   $("pPlatSel").addEventListener("change",e=>{ pl = e.target.value; draw(); });
   $("pQ").addEventListener("input",e=>{ pq = e.target.value; draw(); });
   const pick = tr => { pl = tr.dataset.plat; pp = "all"; draw(); $("pTbl").scrollIntoView({block:"start"}); scrollBy(0,-70); };
