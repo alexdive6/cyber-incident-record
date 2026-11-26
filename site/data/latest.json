@@ -1,12 +1,12 @@
 {
 "schema": 1,
 "meta": {
-"edition": "2026-11-25",
-"prev": "2026-11-24",
-"compiled": "2026-11-25T16:01-05:00",
+"edition": "2026-11-26",
+"prev": "2026-11-25",
+"compiled": "2026-11-26T12:30-05:00",
 "tz": "America/New_York",
 "mode": "live",
-"nextRun": "2026-11-26T02:00-05:00",
+"nextRun": "2026-11-27T02:00-05:00",
 "from": "2026-10-01",
 "actNow": [
 "hewlett-packard-enterprise-hpe-juniper-1125",
@@ -16,12 +16,8 @@
 "n-able-mailassure-1123"
 ],
 "health": {
-"ok": 33,
+"ok": 30,
 "failed": [
-{
-"n": "BSI CERT-Bund WID",
-"err": "https://wid.cert-bund.de/content/public/securityAdvisory/rss: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate"
-},
 {
 "n": "Australian Cyber Security Centre",
 "err": "https://www.cyber.gov.au/rss/alerts: The read operation timed out"
@@ -29,10 +25,6 @@
 {
 "n": "Australian Cyber Security Centre",
 "err": "https://www.cyber.gov.au/rss/advisories: The read operation timed out"
-},
-{
-"n": "Ransomware.live",
-"err": "https://api.ransomware.live/v2/recentvictims: HTTP Error 404: NOT FOUND"
 }
 ],
 "total": 36
@@ -1398,18 +1390,24 @@
 [
 "12 Nov",
 "DOJ seizes the scheme's cloud infrastructure."
+],
+[
+"26 Nov",
+"New reporting: Chinese, North Korean Hackers Adopt ARTEX AI Offensive Framework"
 ]
 ],
 "fix": "Infrastructure seized. FBI issued guidance for victims.",
 "s": [
-"block"
+"block",
+"r3394969024"
 ],
 "sec": "CRYPTO",
 "added": "2026-11-12",
 "conf": "confirmed",
 "reg": "GLOBAL",
 "co": "Crypto holders and firms",
-"sw": "Video-call apps (deepfake lures), malware"
+"sw": "Video-call apps (deepfake lures), malware",
+"updated": "2026-11-26"
 },
 {
 "id": "optimizely",
@@ -4668,13 +4666,21 @@
 [
 "22 Nov",
 "Reported by ransomware.live"
+],
+[
+"26 Nov",
+"New reporting: Atlantis Financial listed by the N0n ransomware group"
 ]
 ],
 "fix": "Under investigation.",
 "s": [
-"r45054d7c94"
+"r45054d7c94",
+"r93d2d71774",
+"r7235037804",
+"rf32ddf94e6"
 ],
-"co": "UCA General Insurance Services"
+"co": "UCA General Insurance Services",
+"updated": "2026-11-26"
 },
 {
 "id": "cleverbridge-warns-hackers-stole-credit-1122",
@@ -5262,12 +5268,18 @@
 [
 "27 Nov",
 "CISA deadline for US federal agencies."
+],
+[
+"26 Nov",
+"New reporting: Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation"
 ]
 ],
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
-"r7947132cac"
-]
+"r7947132cac",
+"r457c08cf27"
+],
+"updated": "2026-11-26"
 },
 {
 "id": "idunno-anticsrf-1124",
@@ -6075,14 +6087,19 @@
 [
 "25 Nov",
 "New reporting: Drupal Flaw Found by Anthropic Scanner Exploited in Attacks"
+],
+[
+"26 Nov",
+"New reporting: Critical Juniper Session Smart Conductor Flaw Exploited in Attacks"
 ]
 ],
 "fix": "Apply the vendor's fix.",
 "s": [
 "r7081d6eb4d",
-"rf44f10d640"
+"rf44f10d640",
+"rbb9d1e6ae5"
 ],
-"updated": "2026-11-25"
+"updated": "2026-11-26"
 },
 {
 "id": "hewlett-packard-enterprise-hpe-juniper-1125",
@@ -6344,12 +6361,18 @@
 [
 "25 Nov",
 "Reported by SecurityWeek"
+],
+[
+"26 Nov",
+"New reporting: Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks"
 ]
 ],
 "fix": "Under investigation.",
 "s": [
-"r6a20b92f56"
-]
+"r6a20b92f56",
+"r50a53afadc"
+],
+"updated": "2026-11-26"
 },
 {
 "id": "hackers-exploited-cvss-10-0-1125",
@@ -6439,6 +6462,10 @@
 [
 "25 Nov",
 "Reported by SecurityWeek"
+],
+[
+"26 Nov",
+"New reporting: US Treasury Investigates Cyber Incident Amid Reported Federal Agency Breaches"
 ]
 ],
 "fix": "Under investigation.",
@@ -6446,8 +6473,10 @@
 "r44ee8f3c74",
 "r851806c24f",
 "r8ce0cc7942",
-"rbb4d635f16"
-]
+"rbb4d635f16",
+"r2b3b00025b"
+],
+"updated": "2026-11-26"
 },
 {
 "id": "plagiarism-checker-turnitin-investigating-cyberattack-1125",
@@ -6814,12 +6843,23 @@
 [
 "28 Nov",
 "CISA deadline for US federal agencies."
+],
+[
+"26 Nov",
+"New reporting: Hackers Exploit 10 Vulnerabilities Across Mitel, Juniper, Vates, and Danfoss Products"
+],
+[
+"26 Nov",
+"New reporting: Mitel MiCollab Zero-Days Exploited in Suspected AI-Assisted Attacks"
 ]
 ],
 "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "s": [
-"r7947132cac"
-]
+"r7947132cac",
+"r1d57aa7ac0",
+"r84f25e4640"
+],
+"updated": "2026-11-26"
 },
 {
 "id": "danfoss-ak-sm-800a-series-1125",
@@ -6929,13 +6969,320 @@
 [
 "25 Nov",
 "Reported by The Record"
+],
+[
+"26 Nov",
+"New reporting: FIFA says hackers accessed ‘limited set of personal and business information’"
 ]
 ],
 "fix": "Under investigation.",
 "s": [
-"rdbfa2402c8"
+"rdbfa2402c8",
+"r8399c78e0a"
 ],
-"co": "FIFA"
+"co": "FIFA",
+"updated": "2026-11-26"
+},
+{
+"id": "microsoft-china-s-salt-typhoon-1125",
+"k": "inc",
+"t": "Microsoft: China’s Salt Typhoon hackers are using Artex",
+"sev": "high",
+"iso": "2026-11-25",
+"added": "2026-11-26",
+"when": "25 Nov",
+"where": "China",
+"e": "undisc",
+"tags": [
+"ai",
+"state"
+],
+"sec": "TECH",
+"reg": "APAC",
+"conf": "reported",
+"sum": "An AI tool implicated in several high-profile breaches is rapidly being integrated into the hacking suites of groups from China and North Korea, Microsoft said.",
+"how": "Not disclosed.",
+"tl": [
+[
+"25 Nov",
+"Reported by The Record"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r17a805c0d6"
+]
+},
+{
+"id": "1password-customer-data-stolen-after-1125",
+"k": "inc",
+"t": "1Password customer data stolen after employee GitHub account breach",
+"sev": "high",
+"iso": "2026-11-25",
+"added": "2026-11-26",
+"when": "25 Nov",
+"where": "Global",
+"e": "third",
+"tags": [
+"vendor"
+],
+"sec": "TECH",
+"reg": "GLOBAL",
+"conf": "confirmed",
+"sum": "An attacker who got into a 1Password employee’s corporate GitHub account went on to copy account records for some of the company’s users and source code from private repositories, the password manager maker disclosed on Wednesday. “1Password identified a security incident involving some of our backend systems,” the company wrote in a post it plans to keep updated. “On November 19, 2026, 1Password began investigating…",
+"how": "Through a third party or supplier.",
+"tl": [
+[
+"25 Nov",
+"Reported by BleepingComputer"
+],
+[
+"26 Nov",
+"Reported by Help Net Security"
+],
+[
+"26 Nov",
+"Reported by Infosecurity"
+],
+[
+"26 Nov",
+"Reported by The Hacker News"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r70f66acc3d",
+"r69311314e8",
+"ra0100a52ea",
+"r420627cd7e"
+]
+},
+{
+"id": "uk-s-long-awaited-national-1125",
+"k": "inc",
+"t": "UK’s long-awaited National Cyber Action Plan delayed until December",
+"sev": "med",
+"iso": "2026-11-25",
+"added": "2026-11-26",
+"when": "25 Nov",
+"where": "UK",
+"e": "undisc",
+"tags": [],
+"sec": "X",
+"reg": "EMEA",
+"conf": "reported",
+"sum": "Officials, who had planned to publish the document in mid-November, now aim to unveil the strategy for defending the wider economy against state-backed and criminal hackers on December 9.",
+"how": "Not disclosed.",
+"tl": [
+[
+"25 Nov",
+"Reported by The Record"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"rc0ff4a7ff7"
+]
+},
+{
+"id": "cyprus-becomes-espionage-target-for-1126",
+"k": "inc",
+"t": "Cyprus Becomes Espionage Target for Iranian Hackers",
+"sev": "med",
+"iso": "2026-11-26",
+"added": "2026-11-26",
+"when": "26 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [
+"state"
+],
+"sec": "X",
+"reg": "EMEA",
+"conf": "reported",
+"sum": "A previously undocumented Iranian threat group called \"Volant Manticore\" is targeting Cypriot organizations as part of an intelligence-gathering effort for Tehran.",
+"how": "Not disclosed.",
+"tl": [
+[
+"26 Nov",
+"Reported by Dark Reading"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"rdd168b1ec4"
+]
+},
+{
+"id": "1password-breach-exposes-customer-data-1126",
+"k": "inc",
+"t": "1Password Breach Exposes Customer Data, Internal Source Code",
+"sev": "high",
+"iso": "2026-11-26",
+"added": "2026-11-26",
+"when": "26 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [],
+"sec": "TECH",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "A hacker used a compromised employee GitHub account to push malicious code and steal customer records, but vaults were not accessed.",
+"how": "Not disclosed.",
+"tl": [
+[
+"26 Nov",
+"Reported by SecurityWeek"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r84ce059e91"
+]
+},
+{
+"id": "drupal-installer-patch-left-a-1126",
+"k": "inc",
+"t": "Drupal Installer Patch Left a Gap Attackers Are Already Exploiting",
+"sev": "med",
+"iso": "2026-11-26",
+"added": "2026-11-26",
+"when": "26 Nov",
+"where": "Global",
+"e": "flaw",
+"tags": [],
+"sec": "X",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "Drupal warns that its previous installer patch left some websites vulnerable to takeover, with attackers already exploiting the gap.",
+"how": "Software flaw exploited.",
+"tl": [
+[
+"26 Nov",
+"Reported by SecurityWeek"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r37e152d36e"
+]
+},
+{
+"id": "data-recovery-firm-co-founder-1126",
+"k": "inc",
+"t": "Data recovery firm co-founder accused of cashing in on ransomware victims",
+"sev": "high",
+"iso": "2026-11-26",
+"added": "2026-11-26",
+"when": "26 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [
+"ransom"
+],
+"sec": "GOV",
+"reg": "AMER",
+"conf": "reported",
+"sum": "The co-founder of a Florida data recovery firm has been indicted on charges that he secretly paid ransomware gangs while telling victims his company never did. Juan Ricardo Palacio Escobar, a 52-year-old Colombian national, was arrested in Las Vegas on October 22 and has been charged by a federal grand jury in the District of Rhode Island with three counts of wire fraud, each carrying a maximum of 20 years in…",
+"how": "Not disclosed.",
+"tl": [
+[
+"26 Nov",
+"Reported by Help Net Security"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r9fef03c442"
+]
+},
+{
+"id": "us-agency-tracking-money-laundering-1126",
+"k": "inc",
+"t": "US agency tracking money laundering is latest casualty in string of federal breaches",
+"sev": "crit",
+"iso": "2026-11-26",
+"added": "2026-11-26",
+"when": "26 Nov",
+"where": "US",
+"e": "undisc",
+"tags": [
+"finance"
+],
+"sec": "FIN",
+"reg": "AMER",
+"conf": "reported",
+"sum": "An intrusion at the US Treasury’s Financial Crimes Enforcement Network (FinCEN) has forced the agency to take some systems offline and extend reporting deadlines for financial institutions. The bureau serves as the US government’s financial intelligence unit, collecting suspicious activity reports and other Bank Secrecy Act filings from banks and other financial institutions and sharing the intelligence with law…",
+"how": "Not disclosed.",
+"tl": [
+[
+"26 Nov",
+"Reported by Help Net Security"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r98404916e8"
+]
+},
+{
+"id": "north-korea-linked-polinrider-poisons-1126",
+"k": "inc",
+"t": "North Korea-Linked PolinRider Poisons Over 7,600 GitHub Repositories to Spread Malware",
+"sev": "med",
+"iso": "2026-11-26",
+"added": "2026-11-26",
+"when": "26 Nov",
+"where": "Global",
+"e": "undisc",
+"tags": [
+"state"
+],
+"sec": "TECH",
+"reg": "APAC",
+"conf": "reported",
+"sum": "The threat actors behind the PolinRider campaign have been observed planting a Python loader in GitHub repositories, as evidence emerges that the activity may have started as far back as February 2025. \"The loader hides in a small utils package or in conftest.py,\" SafeDep said in a report published this week. \"When Python imports the file, the loader reads the newest transaction that an",
+"how": "Not disclosed.",
+"tl": [
+[
+"26 Nov",
+"Reported by The Hacker News"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"rf5eee8a53f"
+]
+},
+{
+"id": "remus-malware-steals-gmail-messages-1126",
+"k": "inc",
+"t": "Remus malware steals Gmail messages via fake Google Sheets extension",
+"sev": "med",
+"iso": "2026-11-26",
+"added": "2026-11-26",
+"when": "26 Nov",
+"where": "Global",
+"e": "third",
+"tags": [
+"vendor"
+],
+"sec": "X",
+"reg": "GLOBAL",
+"conf": "reported",
+"sum": "The Remus infostealer is stealing Gmail messages through a stealthy malicious Chrome extension, a capability the malware operators marketed as a zero-day exploit in Google's email service. [...]",
+"how": "Through a third party or supplier.",
+"tl": [
+[
+"26 Nov",
+"Reported by BleepingComputer"
+]
+],
+"fix": "Under investigation.",
+"s": [
+"r17ea7e9dd6"
+],
+"sw": "Google Chrome"
 }
 ],
 "ledger": [
@@ -7545,7 +7892,7 @@
 "cvss": 7.5,
 "epss": 0.0054,
 "epss_prev": 0.0054,
-"epss_d": "2026-11-25",
+"epss_d": "2026-11-26",
 "pub": "2026-03-11"
 },
 {
@@ -7559,9 +7906,9 @@
 "desc": "Vates Xen Orchestra contains an improper validation of specified type of input vulnerability that could allow an unauthenticated attacker to bypass authentication and perform actions with administrative privileges via a specially crafted authentication token containing an empty JSON object.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "vates-xen-orchestra-1125",
-"epss_prev": null,
-"epss_d": "2026-11-25",
-"epss": 0.011,
+"epss_prev": 0.011,
+"epss_d": "2026-11-26",
+"epss": 0.3177,
 "pub": "2026-11-23",
 "cvss": 9.8
 },
@@ -7576,9 +7923,9 @@
 "desc": "Mitel MiCollab contains a not failing securely vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to bypass authentication controls and perform unauthorized actions.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "mitel-micollab-1125",
-"epss_prev": null,
-"epss_d": "2026-11-25",
-"epss": 0.0041,
+"epss_prev": 0.0041,
+"epss_d": "2026-11-26",
+"epss": 0.0083,
 "pub": "2026-11-19",
 "cvss": 5.3
 },
@@ -7593,9 +7940,9 @@
 "desc": "Mitel MiCollab contains an improper neutralization of special elements used in an OS command (OS command injection) vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary system commands.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "mitel-micollab-1125",
-"epss_prev": null,
-"epss_d": "2026-11-25",
-"epss": 0.0255,
+"epss_prev": 0.0255,
+"epss_d": "2026-11-26",
+"epss": 0.0563,
 "pub": "2026-11-19",
 "cvss": 9.8
 },
@@ -7610,9 +7957,9 @@
 "desc": "Mitel MiCollab contains a weak authentication vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to access sensitive information using a specific system-generated random identifier or pre-staged content.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "mitel-micollab-1125",
-"epss_prev": null,
-"epss_d": "2026-11-25",
-"epss": 0.004,
+"epss_prev": 0.004,
+"epss_d": "2026-11-26",
+"epss": 0.0098,
 "pub": "2026-11-19",
 "cvss": 5.9
 },
@@ -7627,9 +7974,9 @@
 "desc": "Mitel MiCollab contains an XML injection vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary commands using pre-staged malicious content.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "mitel-micollab-1125",
-"epss_prev": null,
-"epss_d": "2026-11-25",
-"epss": 0.0052,
+"epss_prev": 0.0052,
+"epss_d": "2026-11-26",
+"epss": 0.0133,
 "pub": "2026-11-19",
 "cvss": 9.8
 },
@@ -7644,9 +7991,9 @@
 "desc": "Mitel MiCollab contains an unrestricted upload of file with dangerous type vulnerability in the Audio, Web and Video Conferencing (AWV) component due to insufficient file type validation that could allow an unauthenticated attacker to upload arbitrary files.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "mitel-micollab-1125",
-"epss_prev": null,
-"epss_d": "2026-11-25",
-"epss": 0.0032,
+"epss_prev": 0.0032,
+"epss_d": "2026-11-26",
+"epss": 0.0077,
 "pub": "2026-11-19",
 "cvss": 5.3
 },
@@ -7661,10 +8008,10 @@
 "desc": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "hewlett-packard-enterprise-hpe-juniper-1125",
-"epss": 0.0086,
+"epss": 0.0154,
 "cvss": 9.8,
 "epss_prev": 0.0086,
-"epss_d": "2026-11-25",
+"epss_d": "2026-11-26",
 "pub": "2026-10-28"
 },
 {
@@ -7678,9 +8025,9 @@
 "desc": "Danfoss AK-SM 800A Series contains an improper authentication vulnerability that could allow an attacker to generate a web report exposing sensitive information, including internal IP addresses, usernames, and store names.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "danfoss-ak-sm-800a-series-1125",
-"epss_prev": null,
-"epss_d": "2026-11-25",
-"epss": 0.0051,
+"epss_prev": 0.0051,
+"epss_d": "2026-11-26",
+"epss": 0.0427,
 "pub": "2025-05-08",
 "cvss": 7.5
 },
@@ -7695,9 +8042,9 @@
 "desc": "Danfoss AK-SM 800A Series contains an improper input validation vulnerability that could allow a remote attacker to run arbitrary commands on the affected system.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "danfoss-ak-sm-800a-series-1125",
-"epss_prev": null,
-"epss_d": "2026-11-25",
-"epss": 0.0143,
+"epss_prev": 0.0143,
+"epss_d": "2026-11-26",
+"epss": 0.0249,
 "pub": "2023-08-21",
 "cvss": 8.8
 },
@@ -7712,9 +8059,9 @@
 "desc": "Danfoss AK-SM 800A Series contains a path traversal vulnerability that could allow an attacker to access and read underlying server system files via the XML interface.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "danfoss-ak-sm-800a-series-1125",
-"epss_prev": null,
-"epss_d": "2026-11-25",
-"epss": 0.0108,
+"epss_prev": 0.0108,
+"epss_d": "2026-11-26",
+"epss": 0.0185,
 "pub": "2023-08-21",
 "cvss": 8.8
 },
@@ -7729,10 +8076,10 @@
 "desc": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer…",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "optimizely-web-experimentation-1124",
-"epss": 0.0078,
+"epss": 0.0106,
 "cvss": 7.1,
 "epss_prev": 0.0078,
-"epss_d": "2026-11-25",
+"epss_d": "2026-11-26",
 "pub": "2026-11-18"
 },
 {
@@ -7746,7 +8093,10 @@
 "desc": "Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "drupal-core-1124",
-"pub": "?"
+"pub": "2026-11-26",
+"epss_prev": null,
+"epss_d": "2026-11-26",
+"epss": 0.1105
 },
 {
 "cve": "CVE-2026-131914",
@@ -7762,7 +8112,7 @@
 "epss": 0.0429,
 "cvss": 9.3,
 "epss_prev": 0.0429,
-"epss_d": "2026-11-25",
+"epss_d": "2026-11-26",
 "pub": "2026-11-19"
 },
 {
@@ -7779,7 +8129,7 @@
 "epss": 0.0179,
 "cvss": 9.3,
 "epss_prev": 0.0179,
-"epss_d": "2026-11-25",
+"epss_d": "2026-11-26",
 "pub": "2026-11-22"
 },
 {
@@ -7796,7 +8146,7 @@
 "epss": 0.2716,
 "cvss": 9.8,
 "epss_prev": 0.2716,
-"epss_d": "2026-11-25",
+"epss_d": "2026-11-26",
 "pub": "2026-11-20"
 },
 {
@@ -7813,7 +8163,7 @@
 "epss": 0.0112,
 "cvss": 9.8,
 "epss_prev": 0.0112,
-"epss_d": "2026-11-25",
+"epss_d": "2026-11-26",
 "pub": "2026-10-21"
 },
 {
@@ -7830,7 +8180,7 @@
 "epss": 0.2416,
 "cvss": 9.8,
 "epss_prev": 0.2416,
-"epss_d": "2026-11-25",
+"epss_d": "2026-11-26",
 "pub": "2026-11-17"
 },
 {
@@ -7847,7 +8197,7 @@
 "epss": 0.0501,
 "cvss": 9.8,
 "epss_prev": 0.0501,
-"epss_d": "2026-11-25",
+"epss_d": "2026-11-26",
 "pub": "2026-11-19"
 },
 {
@@ -7864,7 +8214,7 @@
 "epss": 0.011,
 "cvss": 6.5,
 "epss_prev": 0.011,
-"epss_d": "2026-11-25",
+"epss_d": "2026-11-26",
 "pub": "2025-11-11"
 },
 {
@@ -7881,7 +8231,8 @@
 "epss": 0.1888,
 "cvss": 9.8,
 "epss_prev": 0.1888,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-09-20"
 },
 {
 "cve": "CVE-2026-90436",
@@ -7897,7 +8248,8 @@
 "epss": 0.027,
 "cvss": 9.8,
 "epss_prev": 0.027,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-11-06"
 },
 {
 "cve": "CVE-2026-40217",
@@ -7913,7 +8265,8 @@
 "epss": 0.2021,
 "cvss": 8.8,
 "epss_prev": 0.2021,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-04-10"
 },
 {
 "cve": "CVE-2024-10441",
@@ -7929,7 +8282,8 @@
 "epss": 0.0276,
 "cvss": 9.8,
 "epss_prev": 0.0276,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2025-03-19"
 },
 {
 "cve": "CVE-2026-115731",
@@ -7945,7 +8299,8 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "epss": 0.1258,
 "epss_prev": 0.1258,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-11-03"
 },
 {
 "cve": "CVE-2026-123039",
@@ -7961,7 +8316,8 @@
 "epss": 0.0023,
 "cvss": 7.8,
 "epss_prev": 0.0023,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-11-12"
 },
 {
 "cve": "CVE-2026-114713",
@@ -7974,10 +8330,11 @@
 "desc": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "link": "unrealircd-unrealircd-1113",
-"epss": 0.0135,
+"epss": 0.102,
 "cvss": 7.7,
 "epss_prev": 0.0135,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-11-08"
 },
 {
 "cve": "CVE-2026-20320",
@@ -7993,7 +8350,8 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "epss": 0.013,
 "epss_prev": 0.013,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-08-19"
 },
 {
 "cve": "CVE-2026-125350",
@@ -8009,7 +8367,8 @@
 "epss": 0.068,
 "cvss": 8.8,
 "epss_prev": 0.068,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-11-10"
 },
 {
 "cve": "CVE-2026-124194",
@@ -8025,7 +8384,8 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "epss": 0.0104,
 "epss_prev": 0.0104,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-11-10"
 },
 {
 "cve": "CVE-2026-116606",
@@ -8041,7 +8401,8 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "epss": 0.138,
 "epss_prev": 0.138,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-11-02"
 },
 {
 "cve": "CVE-2026-111793",
@@ -8057,7 +8418,8 @@
 "epss": 0.0098,
 "cvss": 4.3,
 "epss_prev": 0.0098,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-10-16"
 },
 {
 "cve": "CVE-2026-111560",
@@ -8073,7 +8435,8 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "epss": 0.108,
 "epss_prev": 0.108,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-11-02"
 },
 {
 "cve": "CVE-2026-123218",
@@ -8089,7 +8452,8 @@
 "epss": 0.0078,
 "cvss": 9.8,
 "epss_prev": 0.0078,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-11-07"
 },
 {
 "cve": "CVE-2026-123158",
@@ -8105,7 +8469,8 @@
 "epss": 0.1421,
 "cvss": 8.1,
 "epss_prev": 0.1421,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-11-05"
 },
 {
 "cve": "CVE-2026-116779",
@@ -8121,7 +8486,8 @@
 "epss": 0.4369,
 "cvss": 9.8,
 "epss_prev": 0.4369,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-11-05"
 },
 {
 "cve": "CVE-2026-102895",
@@ -8137,7 +8503,8 @@
 "epss": 0.0855,
 "cvss": 9.8,
 "epss_prev": 0.0855,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-11-04"
 },
 {
 "cve": "CVE-2026-19868",
@@ -8153,7 +8520,8 @@
 "epss": 0.0054,
 "cvss": 7.5,
 "epss_prev": 0.0054,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2026-11-06"
 },
 {
 "cve": "CVE-2024-27834",
@@ -8169,7 +8537,8 @@
 "epss": 0.0079,
 "cvss": 5.5,
 "epss_prev": 0.0079,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26",
+"pub": "2024-05-14"
 },
 {
 "cve": "CVE-2026-119977",
@@ -8185,7 +8554,7 @@
 "epss": 0.0215,
 "cvss": 8.1,
 "epss_prev": 0.0215,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-118527",
@@ -8201,7 +8570,7 @@
 "epss": 0.0083,
 "cvss": 4.3,
 "epss_prev": 0.0083,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-111357",
@@ -8217,7 +8586,7 @@
 "epss": 0.0056,
 "cvss": 7,
 "epss_prev": 0.0056,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-97229",
@@ -8231,9 +8600,9 @@
 "rw": false,
 "desc": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
-"epss": 0.1184,
+"epss": 0.7431,
 "epss_prev": 0.1184,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-76418",
@@ -8249,7 +8618,7 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "epss": 0.0099,
 "epss_prev": 0.0099,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-46300",
@@ -8265,7 +8634,7 @@
 "epss": 0.0296,
 "cvss": 7.8,
 "epss_prev": 0.0296,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-41709",
@@ -8281,7 +8650,7 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "epss": 0.0047,
 "epss_prev": 0.0047,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-48356",
@@ -8297,7 +8666,7 @@
 "epss": 0.0785,
 "cvss": 9.3,
 "epss_prev": 0.0785,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-111497",
@@ -8313,7 +8682,7 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "epss": 0.3298,
 "epss_prev": 0.3298,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-109619",
@@ -8329,7 +8698,7 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "epss": 0.2075,
 "epss_prev": 0.2075,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-109618",
@@ -8345,7 +8714,7 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "epss": 0.4508,
 "epss_prev": 0.4508,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-114625",
@@ -8361,7 +8730,7 @@
 "epss": 0.0094,
 "cvss": 9.4,
 "epss_prev": 0.0094,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-110447",
@@ -8377,7 +8746,7 @@
 "epss": 0.3287,
 "cvss": 9.2,
 "epss_prev": 0.3287,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-96656",
@@ -8393,7 +8762,7 @@
 "epss": 0.1489,
 "cvss": 8.6,
 "epss_prev": 0.1489,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-96655",
@@ -8409,7 +8778,7 @@
 "epss": 0.0545,
 "cvss": 5.3,
 "epss_prev": 0.0545,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-96654",
@@ -8425,7 +8794,7 @@
 "epss": 0.0573,
 "cvss": 6.9,
 "epss_prev": 0.0573,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-96652",
@@ -8441,7 +8810,7 @@
 "epss": 0.0545,
 "cvss": 5.3,
 "epss_prev": 0.0545,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-110936",
@@ -8457,7 +8826,7 @@
 "epss": 0.0035,
 "cvss": 8.4,
 "epss_prev": 0.0035,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-106931",
@@ -8473,7 +8842,7 @@
 "epss": 0.0161,
 "cvss": 8.5,
 "epss_prev": 0.0161,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-102764",
@@ -8489,7 +8858,7 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "epss": 0.0315,
 "epss_prev": 0.0315,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2025-61624",
@@ -8505,7 +8874,7 @@
 "epss": 0.0083,
 "cvss": 6.5,
 "epss_prev": 0.0083,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-21589",
@@ -8521,7 +8890,7 @@
 "epss": 0.0428,
 "cvss": 9.3,
 "epss_prev": 0.0428,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-76519",
@@ -8537,7 +8906,7 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "epss": 0.0272,
 "epss_prev": 0.0272,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-105134",
@@ -8553,7 +8922,7 @@
 "epss": 0.5497,
 "cvss": 10,
 "epss_prev": 0.5497,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-105133",
@@ -8569,7 +8938,7 @@
 "epss": 0.0916,
 "cvss": 6.9,
 "epss_prev": 0.0916,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-0322",
@@ -8585,7 +8954,7 @@
 "epss": 0.0197,
 "cvss": 8.6,
 "epss_prev": 0.0197,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-96951",
@@ -8601,7 +8970,7 @@
 "act": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
 "epss": 0.0098,
 "epss_prev": 0.0098,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-104935",
@@ -8617,7 +8986,7 @@
 "epss": 0.245,
 "cvss": 8.6,
 "epss_prev": 0.245,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2023-22894",
@@ -8633,7 +9002,7 @@
 "epss": 0.0385,
 "cvss": 4.9,
 "epss_prev": 0.0385,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2021-3199",
@@ -8649,7 +9018,7 @@
 "epss": 0.886,
 "cvss": 9.8,
 "epss_prev": 0.886,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2016-3081",
@@ -8665,7 +9034,7 @@
 "epss": 0.9692,
 "cvss": 8.1,
 "epss_prev": 0.9692,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2015-5477",
@@ -8681,7 +9050,7 @@
 "epss": 0.9958,
 "cvss": 7.5,
 "epss_prev": 0.9958,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2015-3306",
@@ -8697,7 +9066,7 @@
 "epss": 0.995,
 "cvss": 10,
 "epss_prev": 0.995,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-88779",
@@ -8713,7 +9082,7 @@
 "epss": 0.012,
 "cvss": 8.7,
 "epss_prev": 0.012,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-102490",
@@ -8729,7 +9098,7 @@
 "epss": 0.0651,
 "cvss": 9.4,
 "epss_prev": 0.0651,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-102489",
@@ -8745,7 +9114,7 @@
 "epss": 0.1452,
 "cvss": 9.4,
 "epss_prev": 0.1452,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 },
 {
 "cve": "CVE-2026-104286",
@@ -8761,7 +9130,7 @@
 "epss": 0.0147,
 "cvss": 9.8,
 "epss_prev": 0.0147,
-"epss_d": "2026-11-25"
+"epss_d": "2026-11-26"
 }
 ],
 "kevRefs": [
@@ -8841,6 +9210,27 @@
 ],
 "advisories": [
 {
+"d": "2026-11-26",
+"org": "BSI",
+"t": "[UPDATE] [kritisch] Oracle Fusion Middleware: Mehrere Schwachstellen",
+"s": "r2d7fe9d3d1",
+"url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-0162"
+},
+{
+"d": "2026-11-26",
+"org": "BSI",
+"t": "[UPDATE] [kritisch] Mitel MiCollab: Mehrere Schwachstellen",
+"s": "rc81b55b63b",
+"url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4608"
+},
+{
+"d": "2026-11-26",
+"org": "Canada CCCS",
+"t": "PostgreSQL security advisory (AV26-1211)",
+"s": "rd4a6db7b33",
+"url": "https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-1211"
+},
+{
 "d": "2026-11-25",
 "org": "BSI",
 "t": "[NEU] [kritisch] BusyBox: Mehrere Schwachstellen ermöglichen Offenlegung von Informationen",
@@ -8909,6 +9299,20 @@
 "t": "[Control systems] Hitachi security advisory (AV26-1208)",
 "s": "rb9cccd6916",
 "url": "https://cyber.gc.ca/en/alerts-advisories/control-systems-hitachi-security-advisory-av26-1208"
+},
+{
+"d": "2026-11-25",
+"org": "Canada CCCS",
+"t": "Mitel security advisory (AV26-1184) – Update 1",
+"s": "r3300f4affd",
+"url": "https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-1184"
+},
+{
+"d": "2026-11-25",
+"org": "Canada CCCS",
+"t": "GitLab security advisory (AV26-1210)",
+"s": "re333803fc6",
+"url": "https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1210"
 },
 {
 "d": "2026-11-24",
@@ -9084,41 +9488,6 @@
 "t": "Apache security advisory (AV26-1194)",
 "s": "r5963fa2cf8",
 "url": "https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-1194"
-},
-{
-"d": "2026-11-23",
-"org": "Canada CCCS",
-"t": "Synology security advisory (AV26-1193)",
-"s": "r297b323367",
-"url": "https://cyber.gc.ca/en/alerts-advisories/synology-security-advisory-av26-1193"
-},
-{
-"d": "2026-11-23",
-"org": "Canada CCCS",
-"t": "JetBrains security advisory (AV26-1192)",
-"s": "r87d207ebb6",
-"url": "https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1192"
-},
-{
-"d": "2026-11-23",
-"org": "Canada CCCS",
-"t": "N-able security advisory (AV26-1191)",
-"s": "rf5ec5bb7ce",
-"url": "https://cyber.gc.ca/en/alerts-advisories/n-able-security-advisory-av26-1191"
-},
-{
-"d": "2026-11-23",
-"org": "Canada CCCS",
-"t": "Red Hat security advisory (AV26-1190)",
-"s": "r085debbfb5",
-"url": "https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1190"
-},
-{
-"d": "2026-11-23",
-"org": "Canada CCCS",
-"t": "IBM security advisory (AV26-1189)",
-"s": "r837f8ad41d",
-"url": "https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1189"
 }
 ],
 "notAttacks": {
@@ -10219,26 +10588,6 @@
 "Canada CCCS: Apache security advisory (AV26-1194)",
 "https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-1194"
 ],
-"r297b323367": [
-"Canada CCCS: Synology security advisory (AV26-1193)",
-"https://cyber.gc.ca/en/alerts-advisories/synology-security-advisory-av26-1193"
-],
-"r87d207ebb6": [
-"Canada CCCS: JetBrains security advisory (AV26-1192)",
-"https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1192"
-],
-"rf5ec5bb7ce": [
-"Canada CCCS: N-able security advisory (AV26-1191)",
-"https://cyber.gc.ca/en/alerts-advisories/n-able-security-advisory-av26-1191"
-],
-"r085debbfb5": [
-"Canada CCCS: Red Hat security advisory (AV26-1190)",
-"https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1190"
-],
-"r837f8ad41d": [
-"Canada CCCS: IBM security advisory (AV26-1189)",
-"https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1189"
-],
 "r855a50efe0": [
 "BleepingComputer: Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
 "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/"
@@ -10754,48 +11103,164 @@
 "rdbfa2402c8": [
 "The Record: FIFA says hackers accessed ‘limited set of personal and business information’",
 "https://therecord.media/fifa-data-breach-limited"
+],
+"r2d7fe9d3d1": [
+"BSI: [UPDATE] [kritisch] Oracle Fusion Middleware: Mehrere Schwachstellen",
+"https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-0162"
+],
+"rc81b55b63b": [
+"BSI: [UPDATE] [kritisch] Mitel MiCollab: Mehrere Schwachstellen",
+"https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4608"
+],
+"rd4a6db7b33": [
+"Canada CCCS: PostgreSQL security advisory (AV26-1211)",
+"https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-1211"
+],
+"r3300f4affd": [
+"Canada CCCS: Mitel security advisory (AV26-1184) – Update 1",
+"https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-1184"
+],
+"re333803fc6": [
+"Canada CCCS: GitLab security advisory (AV26-1210)",
+"https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1210"
+],
+"r8399c78e0a": [
+"SecurityWeek: FIFA Says It Has Been Victim of a Cyberattack Accessing ‘Personal and Business Information’",
+"https://www.securityweek.com/fifa-says-it-has-been-victim-of-a-cyberattack-accessing-personal-and-business-information/"
+],
+"r17a805c0d6": [
+"The Record: Microsoft: China’s Salt Typhoon hackers are using Artex",
+"https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+],
+"r70f66acc3d": [
+"BleepingComputer: 1Password customer data stolen after employee GitHub account breach",
+"https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/"
+],
+"r69311314e8": [
+"Help Net Security: 1Password breached through hijacked employee GitHub account, customer names and emails stol",
+"https://www.helpnetsecurity.com/2026/11/26/1password-breach-github-customer-records/"
+],
+"ra0100a52ea": [
+"Infosecurity: 1Password Hit by Backend Breach via Hijacked Employee GitHub Account",
+"https://www.infosecurity-magazine.com/news/1password-github-account-backend/"
+],
+"r420627cd7e": [
+"The Hacker News: 1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach",
+"https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html"
+],
+"r50a53afadc": [
+"BleepingComputer: Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks",
+"https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/"
+],
+"r93d2d71774": [
+"ransomware.live: Atlantis Financial listed by the N0n ransomware group",
+"https://www.ransomware.live/id/QXRsYW50aXMgRmluYW5jaWFsQE4wbg=="
+],
+"r7235037804": [
+"ransomware.live: ClearPath Wealth Management listed by the N0n ransomware group",
+"https://www.ransomware.live/id/Q2xlYXJQYXRoIFdlYWx0aCBNYW5hZ2VtZW50QE4wbg=="
+],
+"rf32ddf94e6": [
+"ransomware.live: Signet Pacific Insurance Services listed by the N0n ransomware group",
+"https://www.ransomware.live/id/U2lnbmV0IFBhY2lmaWMgSW5zdXJhbmNlIFNlcnZpY2VzQE4wbg=="
+],
+"rc0ff4a7ff7": [
+"The Record: UK’s long-awaited National Cyber Action Plan delayed until December",
+"https://therecord.media/britain-delays-national-cyber-action-plan-again"
+],
+"r1d57aa7ac0": [
+"The Hacker News: Hackers Exploit 10 Vulnerabilities Across Mitel, Juniper, Vates, and Danfoss Products",
+"https://thehackernews.com/2026/11/hackers-exploit-10-vulnerabilities.html"
+],
+"r457c08cf27": [
+"The Hacker News: Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation",
+"https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html"
+],
+"rdd168b1ec4": [
+"Dark Reading: Cyprus Becomes Espionage Target for Iranian Hackers",
+"https://www.darkreading.com/cyberattacks-data-breaches/cyprus-espionage-target-iranian-hackers"
+],
+"r84ce059e91": [
+"SecurityWeek: 1Password Breach Exposes Customer Data, Internal Source Code",
+"https://www.securityweek.com/1password-breach-exposes-customer-data-internal-source-code/"
+],
+"r37e152d36e": [
+"SecurityWeek: Drupal Installer Patch Left a Gap Attackers Are Already Exploiting",
+"https://www.securityweek.com/drupal-installer-patch-left-a-gap-attackers-are-already-exploiting/"
+],
+"r9fef03c442": [
+"Help Net Security: Data recovery firm co-founder accused of cashing in on ransomware victims",
+"https://www.helpnetsecurity.com/2026/11/26/ransomware-recovery-fraud-florida-firm-co-founder-charged/"
+],
+"r3394969024": [
+"Infosecurity: Chinese, North Korean Hackers Adopt ARTEX AI Offensive Framework",
+"https://www.infosecurity-magazine.com/news/chinese-north-korea-artex/"
+],
+"r98404916e8": [
+"Help Net Security: US agency tracking money laundering is latest casualty in string of federal breaches",
+"https://www.helpnetsecurity.com/2026/11/26/fincen-breach-systems-offline/"
+],
+"r84f25e4640": [
+"SecurityWeek: Mitel MiCollab Zero-Days Exploited in Suspected AI-Assisted Attacks",
+"https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/"
+],
+"rbb9d1e6ae5": [
+"SecurityWeek: Critical Juniper Session Smart Conductor Flaw Exploited in Attacks",
+"https://www.securityweek.com/critical-juniper-session-smart-conductor-flaw-exploited-in-attacks/"
+],
+"rf5eee8a53f": [
+"The Hacker News: North Korea-Linked PolinRider Poisons Over 7,600 GitHub Repositories to Spread Malware",
+"https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html"
+],
+"r17ea7e9dd6": [
+"BleepingComputer: Remus malware steals Gmail messages via fake Google Sheets extension",
+"https://www.bleepingcomputer.com/news/security/remus-malware-steals-gmail-messages-via-fake-google-sheets-extension/"
 ]
 },
 "claimStats": {
 "2026-11": {
-"n": 197,
+"n": 239,
 "groups": {
 "incransom": 6,
 "SoulGroup": 2,
 "lockbit5": 2,
 "Barracuda": 2,
-"Inception": 2,
+"Inception": 3,
 "osiris": 2,
 "Eclipse": 3,
-"PixelLeaks": 11,
-"medusalocker": 8,
-"everest": 10,
-"Dark Project": 2,
-"rhysida": 7,
-"SilentRansomGroup": 12,
+"PixelLeaks": 12,
+"medusalocker": 9,
+"everest": 12,
+"Dark Project": 4,
+"rhysida": 12,
+"SilentRansomGroup": 14,
 "everstake": 2,
 "blackout": 2,
 "spacebears": 12,
 "Whitearmor": 3,
 "Handsome Boy Hacking Club": 3,
-"aurora": 9,
+"aurora": 12,
 "akira": 1,
 "Deadlock": 1,
 "pear": 1,
 "EndZone": 1,
-"HYFLOCK": 3,
+"HYFLOCK": 4,
 "qilin": 8,
 "safepay": 19,
 "Aoqin": 3,
-"N0n": 35,
+"N0n": 48,
 "Falcon": 3,
 "Panzer": 1,
 "direwolf": 1,
-"Scarlettgroup": 2,
-"anubis": 2,
+"Scarlettgroup": 3,
+"anubis": 3,
 "play": 5,
 "secp0": 1,
-"thegentlemen": 10
+"thegentlemen": 10,
+"netrunner": 1,
+"BrainCipher": 1,
+"interlock": 1,
+"SilentVault": 6
 },
 "seen": [
 "incransom|Regions Behavioral Hospital",
@@ -10994,12 +11459,54 @@
 "thegentlemen|Arendal",
 "thegentlemen|TC Industries",
 "thegentlemen|Berkeley orinda Oral Surgery",
-"thegentlemen|Steinecke"
+"thegentlemen|Steinecke",
+"rhysida|Groupe Antilles-Glaces",
+"rhysida|Jackson District Library",
+"netrunner|A**** S***",
+"rhysida|Koch Law Firm",
+"rhysida|Grua, Freeman, Tupper & Young, PLC",
+"HYFLOCK|Indonesia's national passport database",
+"Inception|Restaurant Brands International, Inc.",
+"everest|Koh Young Technology",
+"everest|Nucleon EDR",
+"medusalocker|Tessilopera",
+"PixelLeaks|Reflex Electromechanical & Trade Co. Ltd. (Nablus pumps and elevators engineering house)",
+"N0n|Signet Pacific Insurance Services",
+"N0n|ClearPath Wealth Management",
+"N0n|Atlantis Financial",
+"BrainCipher|pacific-orient.com",
+"Dark Project|Pumptech",
+"interlock|New Plymouth School District",
+"SilentRansomGroup|Norris McLaughlin",
+"rhysida|York Engineering",
+"anubis|HydroCision",
+"SilentRansomGroup|Honigman LLP",
+"N0n|Company #286",
+"N0n|Company #285",
+"N0n|Company #284",
+"Dark Project|Minichi Inc",
+"N0n|Company #283",
+"N0n|Company #282",
+"N0n|Company #281",
+"N0n|Company #280",
+"N0n|Company #279",
+"N0n|Company #278",
+"N0n|Company #277",
+"Scarlettgroup|liverpool.ac.uk",
+"aurora|KSI Auto Parts",
+"aurora|Plumbs Limited",
+"SilentVault|Y***c",
+"SilentVault|B***p",
+"SilentVault|A***.",
+"SilentVault|M***s",
+"SilentVault|2***s",
+"SilentVault|E***s",
+"aurora|Elpro GmbH"
 ]
 }
 },
 "patch": {
-"configured": true,
+"configured": false,
 "updated": "2026-11-25",
 "window": [
 "2026-09-24",
@@ -15124,8 +15631,8 @@
 }
 }
 },
-"quizArchive": [],
-"quiz": {
+"quizArchive": [
+{
 "d": "2026-11-25",
 "qs": [
 {
@@ -15165,6 +15672,50 @@
 ],
 "a": 2,
 "why": "EPSS, from FIRST, estimates the probability that a CVE will be exploited in the wild in the next 30 days. It measures likelihood, not severity."
+}
+]
+}
+],
+"quiz": {
+"d": "2026-11-26",
+"qs": [
+{
+"cat": "From the record",
+"q": "Which software or service was abused in this incident: \"Bell Canada says 'agentic' hacker stole enterprise customer data\"?",
+"o": [
+"Third-party cloud provider",
+"MONAI Label (medical imaging server)",
+"Cairn AI pentesting tool (zero-day found)",
+"Circuit ordering and provisioning system"
+],
+"a": 3,
+"why": "Bell Canada: Bell Canada has confirmed that an \"agentic\" threat actor breached its systems on November 17, 2026, and stole enterprise customer data, including information from a system used to order and provision telecommunications circuits. [...]",
+"ref": "bell-canada-says-agentic-hacker-1120"
+},
+{
+"cat": "Exploited flaws",
+"q": "CISA lists CVE-2026-134624 ((SpamExperts) Server-Side Request Forgery (SSRF)) as exploited. Whose product is affected?",
+"o": [
+"Fortinet",
+"Ahsay",
+"N-able",
+"Optimizely"
+],
+"a": 2,
+"why": "N-able MailAssure, added to CISA's list on 2026-11-23. Fix-by date for US agencies: 2026-11-26.",
+"ref": "n-able-mailassure-1123"
+},
+{
+"cat": "Attacks",
+"q": "What is business email compromise (BEC)?",
+"o": [
+"Malware that encrypts email servers",
+"A denial-of-service attack on mail servers",
+"Spam sent from a hacked marketing tool",
+"Fraud using a real or spoofed business mailbox to redirect payments or data"
+],
+"a": 3,
+"why": "BEC usually needs no malware: a convincing email from a supplier or executive asks for a payment to a new account. Call-back checks on a known number stop most of it."
 }
 ]
 }

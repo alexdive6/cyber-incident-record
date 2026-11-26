@@ -1,0 +1,676 @@
+{
+ "meta": {
+  "edition": "2026-11-26",
+  "prev": "2026-11-25",
+  "compiled": "2026-11-26T12:30-05:00",
+  "tz": "America/New_York",
+  "mode": "live",
+  "nextRun": "2026-11-27T02:00-05:00",
+  "from": "2026-10-01",
+  "actNow": [
+   "hewlett-packard-enterprise-hpe-juniper-1125",
+   "vates-xen-orchestra-1125",
+   "mitel-micollab-1125",
+   "idunno-anticsrf-1124",
+   "n-able-mailassure-1123"
+  ],
+  "health": {
+   "ok": 30,
+   "failed": [
+    {
+     "n": "Australian Cyber Security Centre",
+     "err": "https://www.cyber.gov.au/rss/alerts: The read operation timed out"
+    },
+    {
+     "n": "Australian Cyber Security Centre",
+     "err": "https://www.cyber.gov.au/rss/advisories: The read operation timed out"
+    }
+   ],
+   "total": 36
+  }
+ },
+ "new": [
+  "microsoft-china-s-salt-typhoon-1125",
+  "1password-customer-data-stolen-after-1125",
+  "uk-s-long-awaited-national-1125",
+  "cyprus-becomes-espionage-target-for-1126",
+  "1password-breach-exposes-customer-data-1126",
+  "drupal-installer-patch-left-a-1126",
+  "data-recovery-firm-co-founder-1126",
+  "us-agency-tracking-money-laundering-1126",
+  "north-korea-linked-polinrider-poisons-1126",
+  "remus-malware-steals-gmail-messages-1126"
+ ],
+ "updated": [
+  "treasury-s-fincen-takes-systems-1125",
+  "fifa-says-hackers-accessed-limited-1125",
+  "palo-alto-networks-patches-fragnesia-1125",
+  "uca-general-insurance-services-inc-1122",
+  "mitel-micollab-1125",
+  "drupal-core-1124",
+  "facestealer",
+  "crocoblock-1125"
+ ],
+ "kevNew": [],
+ "entries": [
+  {
+   "id": "facestealer",
+   "k": "inc",
+   "t": "FaceStealer: North Korean deepfake calls",
+   "sev": "high",
+   "iso": "2026-11-12",
+   "when": "18 months to 12 Nov",
+   "where": "Global",
+   "e": "social",
+   "tags": [
+    "finance",
+    "state",
+    "human",
+    "ai"
+   ],
+   "sum": "North Korean hackers hijacked accounts to invite victims to video calls showing recordings or deepfakes of people they knew, then got them to install malware. More than $400m in crypto stolen.",
+   "how": "Fake video call, staged technical problem, malware install.",
+   "tl": [
+    [
+     "12 Nov",
+     "DOJ seizes the scheme's cloud infrastructure."
+    ],
+    [
+     "26 Nov",
+     "New reporting: Chinese, North Korean Hackers Adopt ARTEX AI Offensive Framework"
+    ]
+   ],
+   "fix": "Infrastructure seized. FBI issued guidance for victims.",
+   "s": [
+    "block",
+    "r3394969024"
+   ],
+   "sec": "CRYPTO",
+   "added": "2026-11-12",
+   "conf": "confirmed",
+   "reg": "GLOBAL",
+   "co": "Crypto holders and firms",
+   "sw": "Video-call apps (deepfake lures), malware",
+   "updated": "2026-11-26"
+  },
+  {
+   "id": "uca-general-insurance-services-inc-1122",
+   "k": "inc",
+   "t": "UCA General Insurance Services, Inc listed by the EndZone ransomware group",
+   "sev": "med",
+   "iso": "2026-11-22",
+   "added": "2026-11-22",
+   "when": "22 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [
+    "finance",
+    "ransom"
+   ],
+   "sec": "FIN",
+   "reg": "GLOBAL",
+   "conf": "claim",
+   "sum": "The EndZone group listed UCA General Insurance Services, Inc (Financial Services, PH) on its leak site. Not confirmed by the victim.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "22 Nov",
+     "Reported by ransomware.live"
+    ],
+    [
+     "26 Nov",
+     "New reporting: Atlantis Financial listed by the N0n ransomware group"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r45054d7c94",
+    "r93d2d71774",
+    "r7235037804",
+    "rf32ddf94e6"
+   ],
+   "co": "UCA General Insurance Services",
+   "updated": "2026-11-26"
+  },
+  {
+   "id": "drupal-core-1124",
+   "k": "flaw",
+   "t": "Drupal Core: Remote Code Execution",
+   "sw": "Drupal Core",
+   "cve": "CVE-2026-132165",
+   "sev": "high",
+   "iso": "2026-11-24",
+   "when": "24 Nov",
+   "e": "flaw",
+   "added": "2026-11-24",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site.",
+   "how": "Exploited in the wild, per CISA.",
+   "tl": [
+    [
+     "24 Nov",
+     "Added to CISA's exploited list."
+    ],
+    [
+     "27 Nov",
+     "CISA deadline for US federal agencies."
+    ],
+    [
+     "26 Nov",
+     "New reporting: Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation"
+    ]
+   ],
+   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+   "s": [
+    "r7947132cac",
+    "r457c08cf27"
+   ],
+   "updated": "2026-11-26"
+  },
+  {
+   "id": "crocoblock-1125",
+   "k": "flaw",
+   "t": "Crocoblock : Exploited flaw (ENISA)",
+   "sw": "Crocoblock",
+   "cve": "CVE-2026-3496 · CVSS 7.5",
+   "sev": "high",
+   "iso": "2026-11-25",
+   "when": "25 Nov",
+   "e": "flaw",
+   "added": "2026-11-25",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "The JetBooking plugin for WordPress is vulnerable to SQL Injection via the 'check_in_date' parameter in all versions up to, and including, 4.0.3. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that…",
+   "how": "Exploited in the wild, per ENISA.",
+   "tl": [
+    [
+     "25 Nov",
+     "Added to ENISA's exploited list."
+    ],
+    [
+     "25 Nov",
+     "New reporting: Drupal Flaw Found by Anthropic Scanner Exploited in Attacks"
+    ],
+    [
+     "26 Nov",
+     "New reporting: Critical Juniper Session Smart Conductor Flaw Exploited in Attacks"
+    ]
+   ],
+   "fix": "Apply the vendor's fix.",
+   "s": [
+    "r7081d6eb4d",
+    "rf44f10d640",
+    "rbb9d1e6ae5"
+   ],
+   "updated": "2026-11-26"
+  },
+  {
+   "id": "palo-alto-networks-patches-fragnesia-1125",
+   "k": "inc",
+   "t": "Palo Alto Networks Patches Fragnesia Flaw Used to Root Firewalls",
+   "sev": "med",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "China",
+   "e": "flaw",
+   "tags": [
+    "state"
+   ],
+   "sec": "X",
+   "reg": "APAC",
+   "conf": "reported",
+   "sum": "A China-linked hacking group chained PHP2Shell with Fragnesia in AI-assisted attacks that hit 25 servers.",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by SecurityWeek"
+    ],
+    [
+     "26 Nov",
+     "New reporting: Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r6a20b92f56",
+    "r50a53afadc"
+   ],
+   "updated": "2026-11-26"
+  },
+  {
+   "id": "treasury-s-fincen-takes-systems-1125",
+   "k": "inc",
+   "t": "Treasury's FinCEN takes systems offline after cybersecurity incident",
+   "sev": "crit",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "US",
+   "e": "undisc",
+   "tags": [
+    "finance"
+   ],
+   "sec": "FIN",
+   "reg": "AMER",
+   "conf": "confirmed",
+   "sum": "The U.S. Treasury Department's Financial Crimes Enforcement Network (FinCEN) has been hit by a cybersecurity incident that resulted in \"unauthorized access to a limited subset of its systems,\" the bureau said on Tuesday. As a precaution, it has taken some systems offline. The bureau collects suspicious activity reports and other Bank Secrecy Act (BSA) filings from banks and other financial",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by The Record"
+    ],
+    [
+     "25 Nov",
+     "Reported by The Hacker News"
+    ],
+    [
+     "25 Nov",
+     "Reported by CyberScoop"
+    ],
+    [
+     "25 Nov",
+     "Reported by SecurityWeek"
+    ],
+    [
+     "26 Nov",
+     "New reporting: US Treasury Investigates Cyber Incident Amid Reported Federal Agency Breaches"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r44ee8f3c74",
+    "r851806c24f",
+    "r8ce0cc7942",
+    "rbb4d635f16",
+    "r2b3b00025b"
+   ],
+   "updated": "2026-11-26"
+  },
+  {
+   "id": "mitel-micollab-1125",
+   "k": "flaw",
+   "t": "Mitel MiCollab: Not Failing Securely",
+   "sw": "Mitel MiCollab",
+   "cve": "CVE-2026-133324 · CVE-2026-133323 · CVE-2026-133311 · CVE-2026-133303 · CVE-2026-133275 · CVSS 9.8",
+   "sev": "crit",
+   "iso": "2026-11-25",
+   "when": "25 Nov",
+   "e": "flaw",
+   "added": "2026-11-25",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Mitel MiCollab contains a not failing securely vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to bypass authentication controls and perform unauthorized actions. Mitel MiCollab contains an improper neutralization of special elements used in an OS command (OS command injection) vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary system commands. Mitel MiCollab contains a weak authentication vulnerability in the Audio, Web and Video Conferenci",
+   "how": "Exploited in the wild, per CISA.",
+   "tl": [
+    [
+     "25 Nov",
+     "Added to CISA's exploited list."
+    ],
+    [
+     "28 Nov",
+     "CISA deadline for US federal agencies."
+    ],
+    [
+     "26 Nov",
+     "New reporting: Hackers Exploit 10 Vulnerabilities Across Mitel, Juniper, Vates, and Danfoss Products"
+    ],
+    [
+     "26 Nov",
+     "New reporting: Mitel MiCollab Zero-Days Exploited in Suspected AI-Assisted Attacks"
+    ]
+   ],
+   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+   "s": [
+    "r7947132cac",
+    "r1d57aa7ac0",
+    "r84f25e4640"
+   ],
+   "updated": "2026-11-26"
+  },
+  {
+   "id": "fifa-says-hackers-accessed-limited-1125",
+   "k": "inc",
+   "t": "FIFA says hackers accessed ‘limited set of personal and business information’",
+   "sev": "high",
+   "iso": "2026-11-25",
+   "added": "2026-11-25",
+   "when": "25 Nov",
+   "where": "Switzerland",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "EMEA",
+   "conf": "confirmed",
+   "sum": "The Switzerland-based international governing body for soccer says it's working with relevant authorities and law enforcement to investigate a recent breach.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by The Record"
+    ],
+    [
+     "26 Nov",
+     "New reporting: FIFA says hackers accessed ‘limited set of personal and business information’"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rdbfa2402c8",
+    "r8399c78e0a"
+   ],
+   "co": "FIFA",
+   "updated": "2026-11-26"
+  },
+  {
+   "id": "microsoft-china-s-salt-typhoon-1125",
+   "k": "inc",
+   "t": "Microsoft: China’s Salt Typhoon hackers are using Artex",
+   "sev": "high",
+   "iso": "2026-11-25",
+   "added": "2026-11-26",
+   "when": "25 Nov",
+   "where": "China",
+   "e": "undisc",
+   "tags": [
+    "ai",
+    "state"
+   ],
+   "sec": "TECH",
+   "reg": "APAC",
+   "conf": "reported",
+   "sum": "An AI tool implicated in several high-profile breaches is rapidly being integrated into the hacking suites of groups from China and North Korea, Microsoft said.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by The Record"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r17a805c0d6"
+   ]
+  },
+  {
+   "id": "1password-customer-data-stolen-after-1125",
+   "k": "inc",
+   "t": "1Password customer data stolen after employee GitHub account breach",
+   "sev": "high",
+   "iso": "2026-11-25",
+   "added": "2026-11-26",
+   "when": "25 Nov",
+   "where": "Global",
+   "e": "third",
+   "tags": [
+    "vendor"
+   ],
+   "sec": "TECH",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "An attacker who got into a 1Password employee’s corporate GitHub account went on to copy account records for some of the company’s users and source code from private repositories, the password manager maker disclosed on Wednesday. “1Password identified a security incident involving some of our backend systems,” the company wrote in a post it plans to keep updated. “On November 19, 2026, 1Password began investigating…",
+   "how": "Through a third party or supplier.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by BleepingComputer"
+    ],
+    [
+     "26 Nov",
+     "Reported by Help Net Security"
+    ],
+    [
+     "26 Nov",
+     "Reported by Infosecurity"
+    ],
+    [
+     "26 Nov",
+     "Reported by The Hacker News"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r70f66acc3d",
+    "r69311314e8",
+    "ra0100a52ea",
+    "r420627cd7e"
+   ]
+  },
+  {
+   "id": "uk-s-long-awaited-national-1125",
+   "k": "inc",
+   "t": "UK’s long-awaited National Cyber Action Plan delayed until December",
+   "sev": "med",
+   "iso": "2026-11-25",
+   "added": "2026-11-26",
+   "when": "25 Nov",
+   "where": "UK",
+   "e": "undisc",
+   "tags": [],
+   "sec": "X",
+   "reg": "EMEA",
+   "conf": "reported",
+   "sum": "Officials, who had planned to publish the document in mid-November, now aim to unveil the strategy for defending the wider economy against state-backed and criminal hackers on December 9.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "25 Nov",
+     "Reported by The Record"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rc0ff4a7ff7"
+   ]
+  },
+  {
+   "id": "cyprus-becomes-espionage-target-for-1126",
+   "k": "inc",
+   "t": "Cyprus Becomes Espionage Target for Iranian Hackers",
+   "sev": "med",
+   "iso": "2026-11-26",
+   "added": "2026-11-26",
+   "when": "26 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [
+    "state"
+   ],
+   "sec": "X",
+   "reg": "EMEA",
+   "conf": "reported",
+   "sum": "A previously undocumented Iranian threat group called \"Volant Manticore\" is targeting Cypriot organizations as part of an intelligence-gathering effort for Tehran.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "26 Nov",
+     "Reported by Dark Reading"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rdd168b1ec4"
+   ]
+  },
+  {
+   "id": "1password-breach-exposes-customer-data-1126",
+   "k": "inc",
+   "t": "1Password Breach Exposes Customer Data, Internal Source Code",
+   "sev": "high",
+   "iso": "2026-11-26",
+   "added": "2026-11-26",
+   "when": "26 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "TECH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "A hacker used a compromised employee GitHub account to push malicious code and steal customer records, but vaults were not accessed.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "26 Nov",
+     "Reported by SecurityWeek"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r84ce059e91"
+   ]
+  },
+  {
+   "id": "drupal-installer-patch-left-a-1126",
+   "k": "inc",
+   "t": "Drupal Installer Patch Left a Gap Attackers Are Already Exploiting",
+   "sev": "med",
+   "iso": "2026-11-26",
+   "added": "2026-11-26",
+   "when": "26 Nov",
+   "where": "Global",
+   "e": "flaw",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Drupal warns that its previous installer patch left some websites vulnerable to takeover, with attackers already exploiting the gap.",
+   "how": "Software flaw exploited.",
+   "tl": [
+    [
+     "26 Nov",
+     "Reported by SecurityWeek"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r37e152d36e"
+   ]
+  },
+  {
+   "id": "data-recovery-firm-co-founder-1126",
+   "k": "inc",
+   "t": "Data recovery firm co-founder accused of cashing in on ransomware victims",
+   "sev": "high",
+   "iso": "2026-11-26",
+   "added": "2026-11-26",
+   "when": "26 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [
+    "ransom"
+   ],
+   "sec": "GOV",
+   "reg": "AMER",
+   "conf": "reported",
+   "sum": "The co-founder of a Florida data recovery firm has been indicted on charges that he secretly paid ransomware gangs while telling victims his company never did. Juan Ricardo Palacio Escobar, a 52-year-old Colombian national, was arrested in Las Vegas on October 22 and has been charged by a federal grand jury in the District of Rhode Island with three counts of wire fraud, each carrying a maximum of 20 years in…",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "26 Nov",
+     "Reported by Help Net Security"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r9fef03c442"
+   ]
+  },
+  {
+   "id": "us-agency-tracking-money-laundering-1126",
+   "k": "inc",
+   "t": "US agency tracking money laundering is latest casualty in string of federal breaches",
+   "sev": "crit",
+   "iso": "2026-11-26",
+   "added": "2026-11-26",
+   "when": "26 Nov",
+   "where": "US",
+   "e": "undisc",
+   "tags": [
+    "finance"
+   ],
+   "sec": "FIN",
+   "reg": "AMER",
+   "conf": "reported",
+   "sum": "An intrusion at the US Treasury’s Financial Crimes Enforcement Network (FinCEN) has forced the agency to take some systems offline and extend reporting deadlines for financial institutions. The bureau serves as the US government’s financial intelligence unit, collecting suspicious activity reports and other Bank Secrecy Act filings from banks and other financial institutions and sharing the intelligence with law…",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "26 Nov",
+     "Reported by Help Net Security"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r98404916e8"
+   ]
+  },
+  {
+   "id": "north-korea-linked-polinrider-poisons-1126",
+   "k": "inc",
+   "t": "North Korea-Linked PolinRider Poisons Over 7,600 GitHub Repositories to Spread Malware",
+   "sev": "med",
+   "iso": "2026-11-26",
+   "added": "2026-11-26",
+   "when": "26 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [
+    "state"
+   ],
+   "sec": "TECH",
+   "reg": "APAC",
+   "conf": "reported",
+   "sum": "The threat actors behind the PolinRider campaign have been observed planting a Python loader in GitHub repositories, as evidence emerges that the activity may have started as far back as February 2025. \"The loader hides in a small utils package or in conftest.py,\" SafeDep said in a report published this week. \"When Python imports the file, the loader reads the newest transaction that an",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "26 Nov",
+     "Reported by The Hacker News"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rf5eee8a53f"
+   ]
+  },
+  {
+   "id": "remus-malware-steals-gmail-messages-1126",
+   "k": "inc",
+   "t": "Remus malware steals Gmail messages via fake Google Sheets extension",
+   "sev": "med",
+   "iso": "2026-11-26",
+   "added": "2026-11-26",
+   "when": "26 Nov",
+   "where": "Global",
+   "e": "third",
+   "tags": [
+    "vendor"
+   ],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "The Remus infostealer is stealing Gmail messages through a stealthy malicious Chrome extension, a capability the malware operators marketed as a zero-day exploit in Google's email service. [...]",
+   "how": "Through a third party or supplier.",
+   "tl": [
+    [
+     "26 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r17ea7e9dd6"
+   ],
+   "sw": "Google Chrome"
+  }
+ ]
+}
