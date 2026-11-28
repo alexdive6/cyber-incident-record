@@ -1,0 +1,267 @@
+{
+ "meta": {
+  "edition": "2026-11-28",
+  "prev": "2026-11-27",
+  "compiled": "2026-11-28T10:56-05:00",
+  "tz": "America/New_York",
+  "mode": "live",
+  "nextRun": "2026-11-29T02:00-05:00",
+  "from": "2026-10-01",
+  "actNow": [
+   "drupal-core-1127",
+   "hewlett-packard-enterprise-hpe-juniper-1125",
+   "vates-xen-orchestra-1125",
+   "mitel-micollab-1125",
+   "idunno-anticsrf-1124"
+  ],
+  "health": {
+   "ok": 30,
+   "failed": [
+    {
+     "n": "Australian Cyber Security Centre",
+     "err": "https://www.cyber.gov.au/rss/alerts: The read operation timed out"
+    },
+    {
+     "n": "Australian Cyber Security Centre",
+     "err": "https://www.cyber.gov.au/rss/advisories: The read operation timed out"
+    }
+   ],
+   "total": 36
+  }
+ },
+ "new": [
+  "drupal-core-1127",
+  "osgeo-geoserver-1127",
+  "new-boston-scientific-data-breach-1127",
+  "pcloud-confirms-password-manager-hack-1127",
+  "pcloud-password-manager-hit-by-1128",
+  "q-dir-and-desktopok-windows-1128"
+ ],
+ "updated": [
+  "uca-general-insurance-services-inc-1122"
+ ],
+ "kevNew": [
+  "CVE-2026-120705",
+  "CVE-2026-129243",
+  "CVE-2026-136716"
+ ],
+ "entries": [
+  {
+   "id": "uca-general-insurance-services-inc-1122",
+   "k": "inc",
+   "t": "UCA General Insurance Services, Inc listed by the EndZone ransomware group",
+   "sev": "med",
+   "iso": "2026-11-22",
+   "added": "2026-11-22",
+   "when": "22 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [
+    "finance",
+    "ransom"
+   ],
+   "sec": "FIN",
+   "reg": "GLOBAL",
+   "conf": "claim",
+   "sum": "The EndZone group listed UCA General Insurance Services, Inc (Financial Services, PH) on its leak site. Not confirmed by the victim.",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "22 Nov",
+     "Reported by ransomware.live"
+    ],
+    [
+     "26 Nov",
+     "New reporting: Atlantis Financial listed by the N0n ransomware group"
+    ],
+    [
+     "28 Nov",
+     "New reporting: Brit Ltd / Brit Insurance (britinsurance.com) listed by the incransom ransomware group"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r45054d7c94",
+    "r93d2d71774",
+    "r7235037804",
+    "rf32ddf94e6",
+    "rc5478189d6"
+   ],
+   "co": "UCA General Insurance Services",
+   "updated": "2026-11-28"
+  },
+  {
+   "id": "drupal-core-1127",
+   "k": "flaw",
+   "t": "Drupal Core: Improper Check for Unusual or Exceptional Conditions",
+   "sw": "Drupal Core",
+   "cve": "CVE-2026-136716 · CVSS 9.8",
+   "sev": "crit",
+   "iso": "2026-11-27",
+   "when": "27 Nov",
+   "e": "flaw",
+   "added": "2026-11-28",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "Drupal Core contains an improper check for unusual or exceptional conditions vulnerability that allows an unauthenticated remote attacker to take over a site via the exposed Drupal installer when the site is in one of the affected unusual or incomplete installation states.",
+   "how": "Exploited in the wild, per CISA.",
+   "tl": [
+    [
+     "27 Nov",
+     "Added to CISA's exploited list."
+    ],
+    [
+     "30 Nov",
+     "CISA deadline for US federal agencies."
+    ]
+   ],
+   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+   "s": [
+    "r7947132cac"
+   ]
+  },
+  {
+   "id": "osgeo-geoserver-1127",
+   "k": "flaw",
+   "t": "OSGeo GeoServer: Incorrect Authorization",
+   "sw": "OSGeo GeoServer",
+   "cve": "CVE-2026-129243 · CVE-2026-120705",
+   "sev": "high",
+   "iso": "2026-11-27",
+   "when": "27 Nov",
+   "e": "flaw",
+   "added": "2026-11-28",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "GeoServer contains an incorrect authorization vulnerability that allows an unauthenticated remote attacker to bypass service-level role checks and invoke operations protected solely by those checks via a request with a prefixed service parameter. This vulnerability can be chained with CVE-2026-129244, CVE-2026-120705, CVE-2026-129245, and CVE-2026-129242 to achieve unauthenticated remote code… OsGeo GeoServer contains an XML injection vulnerability that allows an unauthenticated remote attacker to cause the server to read local text files accessible to the GeoServer process or fetch attacker-s",
+   "how": "Exploited in the wild, per CISA.",
+   "tl": [
+    [
+     "27 Nov",
+     "Added to CISA's exploited list."
+    ],
+    [
+     "30 Nov",
+     "CISA deadline for US federal agencies."
+    ]
+   ],
+   "fix": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+   "s": [
+    "r7947132cac"
+   ]
+  },
+  {
+   "id": "new-boston-scientific-data-breach-1127",
+   "k": "inc",
+   "t": "New Boston Scientific data breach exposes personal, medical info",
+   "sev": "high",
+   "iso": "2026-11-27",
+   "added": "2026-11-28",
+   "when": "27 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "HEALTH",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Medical technology company Boston Scientific is sending data breach notices to individuals affected by a cyberattack on the firm. [...]",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "27 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r72cf1a5347"
+   ]
+  },
+  {
+   "id": "pcloud-confirms-password-manager-hack-1127",
+   "k": "inc",
+   "t": "pCloud confirms password manager hack after suspicious login alerts",
+   "sev": "med",
+   "iso": "2026-11-27",
+   "added": "2026-11-28",
+   "when": "27 Nov",
+   "where": "Global",
+   "e": "cred",
+   "tags": [],
+   "sec": "X",
+   "reg": "GLOBAL",
+   "conf": "confirmed",
+   "sum": "The pCloud Pass password manager suffered a cyberattack, with users reporting that unknown devices had connected to their accounts even with two-factor authentication (2FA) enabled. [...]",
+   "how": "Stolen or leaked credentials and keys.",
+   "tl": [
+    [
+     "27 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "rc33ac200ed"
+   ]
+  },
+  {
+   "id": "pcloud-password-manager-hit-by-1128",
+   "k": "inc",
+   "t": "pCloud Password Manager Hit by Cyber Attack Involving Email Address Exposure and Login Attempts",
+   "sev": "med",
+   "iso": "2026-11-28",
+   "added": "2026-11-28",
+   "when": "28 Nov",
+   "where": "Switzerland",
+   "e": "cred",
+   "tags": [],
+   "sec": "X",
+   "reg": "EMEA",
+   "conf": "confirmed",
+   "sum": "Cross-platform password manager pCloud Pass has confirmed it was targeted by a cyber attack after users reported seeing unknown devices being connected to their accounts. \"A cyber attack targeting pCloud Pass occurred, which was promptly contained by the pCloud team,\" the Swiss company said in response to a number of posts on Reddit. \"Unfortunately, a small number of pCloud Pass user email",
+   "how": "Stolen or leaked credentials and keys.",
+   "tl": [
+    [
+     "28 Nov",
+     "Reported by The Hacker News"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "red56aac972"
+   ]
+  },
+  {
+   "id": "q-dir-and-desktopok-windows-1128",
+   "k": "inc",
+   "t": "Q-Dir and DesktopOK Windows utilities compromised to push Python RAT",
+   "sev": "med",
+   "iso": "2026-11-28",
+   "added": "2026-11-28",
+   "when": "28 Nov",
+   "where": "Global",
+   "e": "undisc",
+   "tags": [],
+   "sec": "IND",
+   "reg": "GLOBAL",
+   "conf": "reported",
+   "sum": "Official distribution channels for the Q-Dir and DesktopOK Windows utilities were compromised to deliver trojanized installers containing Python-based remote access malware. [...]",
+   "how": "Not disclosed.",
+   "tl": [
+    [
+     "28 Nov",
+     "Reported by BleepingComputer"
+    ]
+   ],
+   "fix": "Under investigation.",
+   "s": [
+    "r2607e0272e"
+   ],
+   "sw": "Windows"
+  }
+ ]
+}
